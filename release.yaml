@@ -32,10 +32,6 @@ docker-images:
         name: metalstack/metal-console
         tag: v0.4.1
 
-      backup-restore-sidecar:
-        name: metalstack/backup-restore-sidecar
-        tag: v0.5.1
-
     partition:
       metal-core:
         name: metalstack/metal-core
@@ -43,6 +39,11 @@ docker-images:
       pixiecore:
         name: metalstack/pixiecore
         tag: 781e3f0a698bbc3ea960c1d288c6606522db05cd
+
+    generic:
+      backup-restore-sidecar:
+        name: metalstack/backup-restore-sidecar
+        tag: v0.5.1
 
     gardener:
       gardener-extension-provider-metal:
@@ -68,9 +69,6 @@ docker-images:
       nsq:
         name: nsqio/nsq
         tag: v1.2.0
-      backup-restore-sidecar:
-        name: metalstack/backup-restore-sidecar
-        tag: v0.5.1
       ipam-db:
         name: postgres
         tag: 12-alpine
