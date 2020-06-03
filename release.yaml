@@ -1,0 +1,90 @@
+---
+binaries:
+  metal-stack:
+    metal-hammer:
+      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.5.2/metal-hammer-initrd.img.lz4
+      version: v0.5.2
+    kernel:
+      url: https://github.com/metal-stack/kernel/releases/download/5.4.42-25/metal-kernel
+      version: 5.4.42-25
+    metalctl:
+      linux:
+        url: https://github.com/metal-stack/metalctl/releases/download/v0.7.7/metalctl-linux-amd64
+      windows:
+        url: https://github.com/metal-stack/metalctl/releases/download/v0.7.7/metalctl-windows-amd64
+      darwin:
+        url: https://github.com/metal-stack/metalctl/releases/download/v0.7.7/metalctl-darwin-amd64
+      version: v0.7.7
+
+docker-images:
+  metal-stack:
+    control-plane:
+      metal-api:
+        name: metalstack/metal-api
+        tag: v0.7.5
+      metalctl:
+        name: metalstack/metalctl
+        tag: v0.7.5
+      masterdata-api:
+        name: metalstack/metal-api
+        tag: v0.7.1
+      metal-console:
+        name: metalstack/metal-console
+        tag: v0.4.1
+
+      backup-restore-sidecar:
+        name: metalstack/backup-restore-sidecar
+        tag: v0.5.1
+
+    partition:
+      metal-core:
+        name: metalstack/metal-core
+        tag: v0.5.2
+      pixiecore:
+        name: metalstack/pixiecore
+        tag: 781e3f0a698bbc3ea960c1d288c6606522db05cd
+
+    gardener:
+      gardener-extension-provider-metal:
+        name: metalstack/gardener-extension-provider-metal
+        tag: v0.9.1
+      os-metal-extension:
+        name: metalstack/os-metal-extension
+        tag: v0.4.1
+
+    kubernetes:
+      csi-lvm-controller:
+        name: metalstack/csi-lvm-controller
+        tag: v0.6.1
+      csi-lvm-provisioner:
+        name: metalstack/csi-lvm-provisioner
+        tag: v0.6.1
+      metal-ccm:
+        name: metalstack/metal-ccm
+        tag: v0.4.2
+
+  third-party:
+    control-plane:
+      nsq:
+        name: nsqio/nsq
+        tag: v1.2.0
+      backup-restore-sidecar:
+        name: metalstack/backup-restore-sidecar
+        tag: v0.5.1
+      ipam-db:
+        name: postgres
+        tag: 12-alpine
+      masterdata-db:
+        name: postgres
+        tag: 12-alpine
+      metal-db:
+        name: rethinkdb
+        tag: 2.4.0
+
+ansible-roles:
+  metal-roles:
+    repository: https://github.com/metal-stack/metal-roles
+    version: v0.1.12
+  ansible-common:
+    repository: https://github.com/metal-stack/ansible-common
+    version: v0.5.2
