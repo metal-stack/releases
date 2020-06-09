@@ -44,6 +44,9 @@ docker-images:
       backup-restore-sidecar:
         name: metalstack/backup-restore-sidecar
         tag: v0.5.1
+      deployment-base:
+        name: metalstack/metal-deployment-base
+        tag: v0.0.5
 
     gardener:
       gardener-extension-provider-metal:
