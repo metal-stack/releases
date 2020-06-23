@@ -21,10 +21,10 @@ docker-images:
     control-plane:
       metal-api:
         name: metalstack/metal-api
-        tag: v0.7.5
+        tag: v0.7.8
       metalctl:
         name: metalstack/metalctl
-        tag: v0.7.5
+        tag: v0.7.8
       masterdata-api:
         name: metalstack/masterdata-api
         tag: v0.7.1
