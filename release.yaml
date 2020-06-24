@@ -2,19 +2,19 @@
 binaries:
   metal-stack:
     metal-hammer:
-      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.5.2/metal-hammer-initrd.img.lz4
-      version: v0.5.2
+      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.5.3/metal-hammer-initrd.img.lz4
+      version: v0.5.3
     kernel:
-      url: https://github.com/metal-stack/kernel/releases/download/5.4.42-25/metal-kernel
-      version: 5.4.42-25
+      url: https://github.com/metal-stack/kernel/releases/download/5.4.46-27/metal-kernel
+      version: 5.4.46-27
     metalctl:
       linux:
-        url: https://github.com/metal-stack/metalctl/releases/download/v0.7.7/metalctl-linux-amd64
+        url: https://github.com/metal-stack/metalctl/releases/download/v0.7.8/metalctl-linux-amd64
       windows:
-        url: https://github.com/metal-stack/metalctl/releases/download/v0.7.7/metalctl-windows-amd64
+        url: https://github.com/metal-stack/metalctl/releases/download/v0.7.8/metalctl-windows-amd64
       darwin:
-        url: https://github.com/metal-stack/metalctl/releases/download/v0.7.7/metalctl-darwin-amd64
-      version: v0.7.7
+        url: https://github.com/metal-stack/metalctl/releases/download/v0.7.8/metalctl-darwin-amd64
+      version: v0.7.8
 
 docker-images:
   metal-stack:
@@ -43,7 +43,7 @@ docker-images:
     generic:
       backup-restore-sidecar:
         name: metalstack/backup-restore-sidecar
-        tag: v0.5.1
+        tag: v0.5.3
       deployment-base:
         name: metalstack/metal-deployment-base
         tag: v0.0.5
@@ -51,7 +51,7 @@ docker-images:
     gardener:
       gardener-extension-provider-metal:
         name: metalstack/gardener-extension-provider-metal
-        tag: v0.9.1
+        tag: v0.11.3
       os-metal-extension:
         name: metalstack/os-metal-extension
         tag: v0.4.1
