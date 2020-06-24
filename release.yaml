@@ -66,6 +66,9 @@ docker-images:
       metal-ccm:
         name: metalstack/metal-ccm
         tag: v0.4.2
+      splunk-audit-webhook:
+        name: metalstack/kubernetes-splunk-audit-webhook
+        tag: v0.1.0
 
   third-party:
     control-plane:
