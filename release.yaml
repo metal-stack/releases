@@ -55,6 +55,9 @@ docker-images:
       os-metal-extension:
         name: metalstack/os-metal-extension
         tag: v0.4.1
+      machine-controller-manager:
+        name: registry.fi-ts.io/gardener/machine-controller-manager
+        tag: metal
 
     kubernetes:
       csi-lvm-controller:
