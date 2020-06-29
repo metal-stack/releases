@@ -72,6 +72,10 @@ docker-images:
         repository: https://github.com/metal-stack/machine-controller-manager
         name: registry.fi-ts.io/gardener/machine-controller-manager
         tag: metal
+      firewall-controller:
+        repository: https://github.com/metal-stack/firewall-controller
+        name: metalstack/firewall-controller
+        tag: latest
 
     kubernetes:
       csi-lvm-controller:
