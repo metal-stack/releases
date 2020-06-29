@@ -2,96 +2,118 @@
 binaries:
   metal-stack:
     metal-hammer:
+      repository: https://github.com/metal-stack/metal-hammer
       url: https://github.com/metal-stack/metal-hammer/releases/download/v0.5.3/metal-hammer-initrd.img.lz4
       version: v0.5.3
     kernel:
+      repository: https://github.com/metal-stack/kernel
       url: https://github.com/metal-stack/kernel/releases/download/5.4.46-27/metal-kernel
       version: 5.4.46-27
     metalctl:
+      repository: https://github.com/metal-stack/metalctl
       linux:
-        url: https://github.com/metal-stack/metalctl/releases/download/v0.7.8/metalctl-linux-amd64
+        url: https://github.com/metal-stack/metalctl/releases/download/v0.7.9/metalctl-linux-amd64
       windows:
-        url: https://github.com/metal-stack/metalctl/releases/download/v0.7.8/metalctl-windows-amd64
+        url: https://github.com/metal-stack/metalctl/releases/download/v0.7.9/metalctl-windows-amd64
       darwin:
-        url: https://github.com/metal-stack/metalctl/releases/download/v0.7.8/metalctl-darwin-amd64
-      version: v0.7.8
+        url: https://github.com/metal-stack/metalctl/releases/download/v0.7.9/metalctl-darwin-amd64
+      version: v0.7.9
 
 docker-images:
   metal-stack:
     control-plane:
       metal-api:
+        repository: https://github.com/metal-stack/metal-api
         name: metalstack/metal-api
         tag: v0.7.8
       metalctl:
+        repository: https://github.com/metal-stack/metalctl
         name: metalstack/metalctl
         tag: v0.7.8
       masterdata-api:
+        repository: https://github.com/metal-stack/masterdata-api
         name: metalstack/masterdata-api
         tag: v0.7.1
       metal-console:
+        repository: https://github.com/metal-stack/metal-console
         name: metalstack/metal-console
         tag: v0.4.1
 
     partition:
       metal-core:
+        repository: https://github.com/metal-stack/metal-core
         name: metalstack/metal-core
         tag: v0.5.2
       pixiecore:
+        repository: https://github.com/metal-stack/netboot
         name: metalstack/pixiecore
         tag: 781e3f0a698bbc3ea960c1d288c6606522db05cd
 
     generic:
       backup-restore-sidecar:
+        repository: https://github.com/metal-stack/backup-restore-sidecar
         name: metalstack/backup-restore-sidecar
         tag: v0.5.3
       deployment-base:
+        repository: https://github.com/metal-stack/metal-dockerfiles
         name: metalstack/metal-deployment-base
         tag: v0.0.5
 
     gardener:
       gardener-extension-provider-metal:
+        repository: https://github.com/metal-stack/gardener-extension-provider-metal
         name: metalstack/gardener-extension-provider-metal
         tag: v0.11.3
       os-metal-extension:
+        repository: https://github.com/metal-stack/os-metal-extension
         name: metalstack/os-metal-extension
         tag: v0.4.1
       machine-controller-manager:
+        repository: https://github.com/metal-stack/machine-controller-manager
         name: registry.fi-ts.io/gardener/machine-controller-manager
         tag: metal
 
     kubernetes:
       csi-lvm-controller:
+        repository: https://github.com/metal-stack/csi-lvm
         name: metalstack/csi-lvm-controller
         tag: v0.6.1
       csi-lvm-provisioner:
+        repository: https://github.com/metal-stack/csi-lvm
         name: metalstack/csi-lvm-provisioner
         tag: v0.6.1
       metal-ccm:
+        repository: https://github.com/metal-stack/metal-ccm
         name: metalstack/metal-ccm
         tag: v0.4.2
       splunk-audit-webhook:
+        repository: https://github.com/metal-stack/kubernetes-splunk-audit-webhook
         name: metalstack/kubernetes-splunk-audit-webhook
         tag: v0.1.0
 
   third-party:
     control-plane:
       nsq:
+        repository: https://github.com/nsqio/nsq
         name: nsqio/nsq
         tag: v1.2.0
       ipam-db:
+        repository: https://github.com/docker-library/postgres
         name: postgres
         tag: 12-alpine
       masterdata-db:
+        repository: https://github.com/docker-library/postgres
         name: postgres
         tag: 12-alpine
       metal-db:
+        repository: https://github.com/rethinkdb/rethinkdb-dockerfiles
         name: rethinkdb
         tag: 2.4.0
 
 ansible-roles:
   metal-roles:
     repository: https://github.com/metal-stack/metal-roles
-    version: v0.1.12
+    version: v0.2.2
   ansible-common:
     repository: https://github.com/metal-stack/ansible-common
-    version: v0.5.2
+    version: v0.5.4
