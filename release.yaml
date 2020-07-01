@@ -63,7 +63,7 @@ docker-images:
       gardener-extension-provider-metal:
         repository: https://github.com/metal-stack/gardener-extension-provider-metal
         name: metalstack/gardener-extension-provider-metal
-        tag: v0.11.4
+        tag: v0.11.5
       os-metal-extension:
         repository: https://github.com/metal-stack/os-metal-extension
         name: metalstack/os-metal-extension
