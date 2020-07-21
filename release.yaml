@@ -17,13 +17,13 @@ binaries:
       version: v0.5.3
     metalctl:
       darwin:
-        url: https://github.com/metal-stack/metalctl/releases/download/v0.7.11/metalctl-darwin-amd64
+        url: https://github.com/metal-stack/metalctl/releases/download/v0.7.12/metalctl-darwin-amd64
       linux:
-        url: https://github.com/metal-stack/metalctl/releases/download/v0.7.11/metalctl-linux-amd64
+        url: https://github.com/metal-stack/metalctl/releases/download/v0.7.12/metalctl-linux-amd64
       repository: https://github.com/metal-stack/metalctl
-      version: v0.7.11
+      version: v0.7.12
       windows:
-        url: https://github.com/metal-stack/metalctl/releases/download/v0.7.11/metalctl-windows-amd64
+        url: https://github.com/metal-stack/metalctl/releases/download/v0.7.12/metalctl-windows-amd64
 docker-images:
   metal-stack:
     control-plane:
@@ -42,7 +42,7 @@ docker-images:
       metalctl:
         name: metalstack/metalctl
         repository: https://github.com/metal-stack/metalctl
-        tag: v0.7.11
+        tag: v0.7.12
     gardener:
       firewall-controller:
         name: metalstack/firewall-controller
