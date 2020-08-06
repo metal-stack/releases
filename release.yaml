@@ -117,3 +117,8 @@ docker-images:
         name: nsqio/nsq
         repository: https://github.com/nsqio/nsq
         tag: v1.2.0
+projects:
+  metal-stack:
+    mini-lab:
+      repository: https://github.com/metal-stack/mini-lab
+      version: v0.1.4
