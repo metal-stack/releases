@@ -21,7 +21,7 @@ binaries:
       linux:
         url: https://github.com/metal-stack/metalctl/releases/download/v0.8.3/metalctl-linux-amd64
       repository: https://github.com/metal-stack/metalctl
-      version: https://github.com/metal-stack/metalctl/releases/download/v0.8.3/metalctl-linux-amd64
+      version: v0.8.3
       windows:
         url: https://github.com/metal-stack/metalctl/releases/download/v0.8.3/metalctl-windows-amd64
 docker-images:
