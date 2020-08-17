@@ -20,9 +20,9 @@ jobs:
 
         rm -rf mini-lab
         git clone $(yq r release.yaml 'projects.metal-stack.mini-lab.repository')
-        git checkout $(yq r release.yaml 'projects.metal-stack.mini-lab.version')
-
         cd mini-lab
+        git checkout $(yq r release.yaml 'projects.metal-stack.mini-lab.version')
         yq w -i group_vars/all/images.yaml 'metal_stack_release_version' develop
         cat group_vars/all/images.yaml
+
         ./test.sh
