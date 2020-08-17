@@ -15,7 +15,8 @@ jobs:
     - name: Run integration tests
       shell: bash
       run: |
-        snap install yq
+        sudo curl -Lo /usr/local/bin/yq https://github.com/mikefarah/yq/releases/download/3.3.2/yq_linux_amd64
+        sudo chmod +x /usr/local/bin/yq
 
         rm -rf mini-lab
         git clone $(yq r release.yaml 'projects.metal-stack.mini-lab.repository')
