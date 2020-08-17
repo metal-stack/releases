@@ -1,0 +1,27 @@
+name: Integration tests
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  test:
+    name: Integration tests
+    runs-on: self-hosted
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Run integration tests
+      shell: bash
+      run: |
+        snap install yq
+
+        rm -rf mini-lab
+        git clone $(yq r release.yaml 'projects.metal-stack.mini-lab.repository')
+        git checkout $(yq r release.yaml 'projects.metal-stack.mini-lab.version')
+
+        cd mini-lab
+        yq w -i group_vars/all/images.yaml 'metal_stack_release_version' develop
+        cat group_vars/all/images.yaml
+        ./test.sh
