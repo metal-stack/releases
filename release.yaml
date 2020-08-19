@@ -91,10 +91,6 @@ docker-images:
         name: metalstack/bmc-proxy
         repository: https://github.com/metal-stack/metal-console
         tag: v0.4.4
-      bmc-reverse-proxy:
-        name: metalstack/bmc-reverse-proxy
-        repository: https://github.com/metal-stack/metal-console
-        tag: v0.4.4
       ipmi-catcher:
         name: metalstack/ipmi-catcher
         repository: https://github.com/metal-stack/ipmi-catcher
@@ -125,6 +121,10 @@ docker-images:
         name: nsqio/nsq
         repository: https://github.com/nsqio/nsq
         tag: v1.2.0
+      bmc-reverse-proxy:
+        name: nginx
+        repository: http://hg.nginx.org/nginx/
+        tag: 1.18
 projects:
   metal-stack:
     mini-lab:
