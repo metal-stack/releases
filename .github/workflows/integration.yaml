@@ -1,0 +1,28 @@
+name: Integration tests
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  test:
+    name: Integration tests
+    runs-on: self-hosted
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Run integration tests
+      shell: bash
+      run: |
+        sudo curl -Lo /usr/local/bin/yq https://github.com/mikefarah/yq/releases/download/3.3.2/yq_linux_amd64
+        sudo chmod +x /usr/local/bin/yq
+
+        rm -rf mini-lab
+        git clone $(yq r release.yaml 'projects.metal-stack.mini-lab.repository')
+        cd mini-lab
+        git checkout $(yq r release.yaml 'projects.metal-stack.mini-lab.version')
+        yq w -i group_vars/all/images.yaml 'metal_stack_release_version' develop
+        cat group_vars/all/images.yaml
+
+        ./test.sh
