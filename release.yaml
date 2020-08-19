@@ -87,6 +87,14 @@ docker-images:
         repository: https://github.com/metal-stack/kubernetes-splunk-audit-webhook
         tag: v0.1.2
     partition:
+      bmc-proxy:
+        name: metalstack/bmc-proxy
+        repository: https://github.com/metal-stack/metal-console
+        tag: v0.4.4
+      bmc-reverse-proxy:
+        name: metalstack/bmc-reverse-proxy
+        repository: https://github.com/metal-stack/metal-console
+        tag: v0.4.4
       ipmi-catcher:
         name: metalstack/ipmi-catcher
         repository: https://github.com/metal-stack/ipmi-catcher
