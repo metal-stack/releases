@@ -124,7 +124,7 @@ docker-images:
       bmc-reverse-proxy:
         name: nginx
         repository: http://hg.nginx.org/nginx/
-        tag: 1.18
+        tag: "1.18"
 projects:
   metal-stack:
     mini-lab:
