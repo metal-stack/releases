@@ -38,7 +38,7 @@ docker-images:
       metal-console:
         name: metalstack/metal-console
         repository: https://github.com/metal-stack/metal-console
-        tag: v0.4.4
+        tag: v0.4.5
       metalctl:
         name: metalstack/metalctl
         repository: https://github.com/metal-stack/metalctl
@@ -90,7 +90,7 @@ docker-images:
       bmc-proxy:
         name: metalstack/bmc-proxy
         repository: https://github.com/metal-stack/metal-console
-        tag: v0.4.4
+        tag: v0.4.5
       ipmi-catcher:
         name: metalstack/ipmi-catcher
         repository: https://github.com/metal-stack/ipmi-catcher
