@@ -21,7 +21,11 @@ jobs:
         rm -rf mini-lab
         git clone $(yq r release.yaml 'projects.metal-stack.mini-lab.repository')
         cd mini-lab
-        git checkout $(yq r release.yaml 'projects.metal-stack.mini-lab.version')
+        # we need to check out the latest mini-lab because the tagged one could
+        # be incompatible with the devel state of this repository's release vector
+        git checkout master
+
+        # use release vector of this repository
         yq w -i group_vars/all/images.yaml 'metal_stack_release_version' develop
         cat group_vars/all/images.yaml
 
