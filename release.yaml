@@ -4,7 +4,7 @@ ansible-roles:
     version: v0.5.4
   metal-roles:
     repository: https://github.com/metal-stack/metal-roles
-    version: v0.3.0
+    version: v0.3.2
 binaries:
   metal-stack:
     kernel:
@@ -38,7 +38,7 @@ docker-images:
       metal-console:
         name: metalstack/metal-console
         repository: https://github.com/metal-stack/metal-console
-        tag: v0.4.4
+        tag: v0.4.5
       metalctl:
         name: metalstack/metalctl
         repository: https://github.com/metal-stack/metalctl
@@ -90,7 +90,7 @@ docker-images:
       bmc-proxy:
         name: metalstack/bmc-proxy
         repository: https://github.com/metal-stack/metal-console
-        tag: v0.4.4
+        tag: v0.4.5
       ipmi-catcher:
         name: metalstack/ipmi-catcher
         repository: https://github.com/metal-stack/ipmi-catcher
@@ -114,13 +114,14 @@ docker-images:
         repository: https://github.com/docker-library/postgres
         tag: 12-alpine
       metal-db:
-        name: rethinkdb
+        name: rethinkdb@sha256
         repository: https://github.com/rethinkdb/rethinkdb-dockerfiles
-        tag: 2.4.0
+        tag: 4cb806ed8ba198cb70d0a5e78f3e41f624b59c0e5d253a74a8dfa7af12a94909
       nsq:
         name: nsqio/nsq
         repository: https://github.com/nsqio/nsq
         tag: v1.2.0
+    partition:
       bmc-reverse-proxy:
         name: nginx
         repository: http://hg.nginx.org/nginx/
