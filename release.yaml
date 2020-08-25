@@ -114,9 +114,9 @@ docker-images:
         repository: https://github.com/docker-library/postgres
         tag: 12-alpine
       metal-db:
-        name: rethinkdb@sha256
+        name: rethinkdb
         repository: https://github.com/rethinkdb/rethinkdb-dockerfiles
-        tag: 4cb806ed8ba198cb70d0a5e78f3e41f624b59c0e5d253a74a8dfa7af12a94909
+        tag: 2.4.0
       nsq:
         name: nsqio/nsq
         repository: https://github.com/nsqio/nsq
