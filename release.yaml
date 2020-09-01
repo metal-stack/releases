@@ -17,13 +17,13 @@ binaries:
       version: v0.6.1
     metalctl:
       darwin:
-        url: https://github.com/metal-stack/metalctl/releases/download/v0.8.3/metalctl-darwin-amd64
+        url: https://github.com/metal-stack/metalctl/releases/download/v0.8.4/metalctl-darwin-amd64
       linux:
-        url: https://github.com/metal-stack/metalctl/releases/download/v0.8.3/metalctl-linux-amd64
+        url: https://github.com/metal-stack/metalctl/releases/download/v0.8.4/metalctl-linux-amd64
       repository: https://github.com/metal-stack/metalctl
-      version: v0.8.3
+      version: v0.8.4
       windows:
-        url: https://github.com/metal-stack/metalctl/releases/download/v0.8.3/metalctl-windows-amd64
+        url: https://github.com/metal-stack/metalctl/releases/download/v0.8.4/metalctl-windows-amd64
 docker-images:
   metal-stack:
     control-plane:
@@ -42,7 +42,7 @@ docker-images:
       metalctl:
         name: metalstack/metalctl
         repository: https://github.com/metal-stack/metalctl
-        tag: v0.8.3
+        tag: v0.8.4
     gardener:
       firewall-controller:
         name: metalstack/firewall-controller
@@ -64,7 +64,7 @@ docker-images:
       backup-restore-sidecar:
         name: metalstack/backup-restore-sidecar
         repository: https://github.com/metal-stack/backup-restore-sidecar
-        tag: v0.5.4
+        tag: v0.5.6
       deployment-base:
         name: metalstack/metal-deployment-base
         repository: https://github.com/metal-stack/metal-dockerfiles
@@ -114,9 +114,9 @@ docker-images:
         repository: https://github.com/docker-library/postgres
         tag: 12-alpine
       metal-db:
-        name: rethinkdb@sha256
+        name: rethinkdb
         repository: https://github.com/rethinkdb/rethinkdb-dockerfiles
-        tag: 4cb806ed8ba198cb70d0a5e78f3e41f624b59c0e5d253a74a8dfa7af12a94909
+        tag: 2.4.0
       nsq:
         name: nsqio/nsq
         repository: https://github.com/nsqio/nsq
