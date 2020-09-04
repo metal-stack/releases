@@ -51,7 +51,7 @@ docker-images:
       gardener-extension-provider-metal:
         name: metalstack/gardener-extension-provider-metal
         repository: https://github.com/metal-stack/gardener-extension-provider-metal
-        tag: v0.11.7
+        tag: v0.12.0
       machine-controller-manager:
         name: registry.fi-ts.io/gardener/machine-controller-manager
         repository: https://github.com/metal-stack/machine-controller-manager
