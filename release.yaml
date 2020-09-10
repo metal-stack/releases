@@ -30,7 +30,7 @@ docker-images:
       masterdata-api:
         name: metalstack/masterdata-api
         repository: https://github.com/metal-stack/masterdata-api
-        tag: v0.8.1
+        tag: v0.8.2
       metal-api:
         name: metalstack/metal-api
         repository: https://github.com/metal-stack/metal-api
