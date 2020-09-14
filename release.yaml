@@ -55,7 +55,7 @@ docker-images:
       machine-controller-manager:
         name: eu.gcr.io/gardener-project/gardener/machine-controller-manager
         repository: https://github.com/gardener/machine-controller-manager
-        tag: v0.34.0-dev-90f8b67cc5e643feabf99ba6b8193aff47e04e79
+        tag: v0.34.0
       machine-controller-manager-provider-metal:
         name: metalstack/machine-controller-manager-provider-metal
         repository: https://github.com/metal-stack/machine-controller-manager-provider-metal
