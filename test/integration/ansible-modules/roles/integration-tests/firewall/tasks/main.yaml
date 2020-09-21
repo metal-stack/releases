@@ -1,0 +1,91 @@
+---
+- name: Allocate firewall network
+  metal_network:
+    api_url: "{{ metal_api_url }}"
+    api_hmac: "{{ metal_api_admin_key }}"
+    name: firewall
+    description: firewall network
+    partition: vagrant
+    project: 00000000-0000-0000-0000-000000000000
+  register: network
+
+- name: Allocate firewall
+  metal_firewall:
+    api_url: "{{ metal_api_url }}"
+    api_hmac: "{{ metal_api_admin_key }}"
+    name: "firewall01"
+    description: "firewall 01"
+    hostname: "firewall01"
+    project: "00000000-0000-0000-0000-000000000000"
+    partition: vagrant
+    image: firewall-ubuntu-2.0
+    size: v1-small-x86
+    networks:
+      - internet-vagrant-lab
+      - "{{ network.id }}"
+  register: firewall
+
+- name: Lookup firewall
+  set_fact:
+    look: "{{ lookup('metal', 'get', 'firewall', api_hmac=metal_api_admin_key, id=firewall.id) }}"
+
+- name: Assert firewall
+  assert:
+    fail_msg: "firewall was not created properly"
+    quiet: yes
+    that:
+      - look.allocation.name == "firewall01"
+      - look.allocation.description == "firewall 01"
+      - look.allocation.hostname == "firewall01"
+      - look.allocation.project == "00000000-0000-0000-0000-000000000000"
+      - look.partition.id == "vagrant"
+      - '"firewall-ubuntu-2.0" in look.allocation.image.id'
+      - look.size.id == "v1-small-x86"
+      - '"internet-vagrant-lab" in look.allocation.networks | map(attribute="networkid") | list'
+      - '"underlay-vagrant-lab" in look.allocation.networks | map(attribute="networkid") | list'
+      - 'network.id in look.allocation.networks | map(attribute="networkid") | list'
+
+- name: Allocate firewall again
+  metal_firewall:
+    api_url: "{{ metal_api_url }}"
+    api_hmac: "{{ metal_api_admin_key }}"
+    name: "firewall01"
+    description: "firewall 01"
+    hostname: "firewall01"
+    project: "00000000-0000-0000-0000-000000000000"
+    partition: vagrant
+    image: firewall-ubuntu-2.0
+    size: v1-small-x86
+    networks:
+      - internet-vagrant-lab
+      - "{{ network.id }}"
+  register: firewall
+
+- name: Assert firewall idempotence
+  assert:
+    fail_msg: "firewall allocation is not idempotent"
+    quiet: yes
+    that:
+      - not firewall.changed
+
+# TODO:
+# Wait for SSH
+
+- name: Delete firewall
+  metal_firewall:
+    api_url: "{{ metal_api_url }}"
+    api_hmac: "{{ metal_api_admin_key }}"
+    name: "firewall01"
+    project: "00000000-0000-0000-0000-000000000000"
+    state: absent
+
+- name: Lookup firewall
+  set_fact:
+    look: "{{ lookup('metal', 'get', 'machine', api_hmac=metal_api_admin_key, id=firewall.id) }}"
+
+- name: Assert firewall deleted
+  assert:
+    fail_msg: "machine was not deleted properly"
+    quiet: yes
+    that:
+      - look.allocation == none

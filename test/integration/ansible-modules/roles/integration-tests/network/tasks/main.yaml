@@ -1,0 +1,51 @@
+---
+- name: Allocate network
+  metal_network:
+    api_url: "{{ metal_api_url }}"
+    api_hmac: "{{ metal_api_admin_key }}"
+    name: test
+    description: test network
+    partition: vagrant
+    project: 00000000-0000-0000-0000-000000000000
+  register: network
+
+- name: Lookup project network
+  set_fact:
+    look: "{{ lookup('metal', 'get', 'network', api_hmac=metal_api_admin_key, id=network.id) }}"
+
+- name: Assert network
+  assert:
+    fail_msg: "network was not created properly"
+    quiet: yes
+    that:
+      - look.name == "test"
+      - look.description == "test network"
+      - look.partitionid == "vagrant"
+      - look.parentnetworkid == "tenant-super-network-vagrant"
+      - look.projectid == "00000000-0000-0000-0000-000000000000"
+      - look.nat == False
+      - look.underlay == False
+      - look.privatesuper == False
+      - look.vrf > 0
+
+- name: Delete network
+  metal_network:
+    api_url: "{{ metal_api_url }}"
+    api_hmac: "{{ metal_api_admin_key }}"
+    name: test
+    partition: vagrant
+    project: 00000000-0000-0000-0000-000000000000
+    state: absent
+  register: network
+
+# FIXME:
+# - name: Lookup project networks
+#   set_fact:
+#     look: "{{ lookup('metal', 'search', 'network', api_hmac=metal_api_admin_key, name='test', projectid='00000000-0000-0000-0000-000000000000') }}"
+#
+# - name: Assert networks
+#   assert:
+#     fail_msg: "network was not deleted properly"
+#     quiet: yes
+#     that:
+#       - look | length == 0

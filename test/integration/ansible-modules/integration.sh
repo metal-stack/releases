@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+set -eo pipefail
+
+cd /mini-lab
+
+pip install --upgrade pip junit-xml
+
+ansible-playbook -i inventories/control-plane.yaml obtain_role_requirements.yaml
+ansible-galaxy install --ignore-errors -r requirements.yaml
+
+cd /integration
+
+rm -f /output/*
+export ANSIBLE_CONFIG=/mini-lab/ansible.cfg
+export ANSIBLE_CALLBACK_WHITELIST=junit
+export JUNIT_OUTPUT_DIR=/output
+
+ansible-playbook -i /mini-lab/inventories/control-plane.yaml -i ~/.ansible/roles/metal-ansible-modules/inventory/metal.py integration.yaml -v

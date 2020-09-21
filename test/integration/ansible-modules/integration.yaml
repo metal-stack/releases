@@ -1,0 +1,28 @@
+---
+- name: Running Ansible integration tests
+  hosts: localhost
+  connection: local
+  gather_facts: no
+  # ignoring errors because we do integration tests and we want full playbook runs
+  ignore_errors: yes
+  vars:
+    metal_api_url: http://api.0.0.0.0.xip.io:8080/metal
+    setup_yaml:
+      - url: https://raw.githubusercontent.com/metal-stack/releases/{{ metal_stack_release_version }}/release.yaml
+        meta_var: metal_stack_release
+  pre_tasks:
+    - name: Gather releases
+      setup_yaml:
+
+    - name: Install metal-python
+      pip:
+        name:
+        - metal_python=={{ metal_api_image_tag }}
+  roles:
+    - ansible-common
+    - metal-roles
+    - metal-ansible-modules
+    - integration-tests/network
+    - integration-tests/ip
+    # - integration-tests/firewall
+    # - integration-tests/machine
