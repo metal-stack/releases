@@ -18,11 +18,23 @@
       pip:
         name:
         - metal_python=={{ metal_api_image_tag }}
+
+    - name: Wait for machines to get ready
+      command: echo
+      until:
+        - lookup('metal', 'search', 'machine', api_hmac=metal_api_admin_key) | length == 2
+        - lookup('metal', 'search', 'machine', api_hmac=metal_api_admin_key)[0]["events"]["log"][0]["event"] == "Waiting"
+        - lookup('metal', 'search', 'machine', api_hmac=metal_api_admin_key)[1]["events"]["log"][0]["event"] == "Waiting"
+      retries: 60
+      delay: 10
+      changed_when: false
+      ignore_errors: false
+
   roles:
     - ansible-common
     - metal-roles
     - metal-ansible-modules
     - integration-tests/network
     - integration-tests/ip
-    # - integration-tests/firewall
-    # - integration-tests/machine
+    - integration-tests/firewall
+    - integration-tests/machine

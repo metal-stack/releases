@@ -14,5 +14,6 @@ rm -f /output/*
 export ANSIBLE_CONFIG=/mini-lab/ansible.cfg
 export ANSIBLE_CALLBACK_WHITELIST=junit
 export JUNIT_OUTPUT_DIR=/output
+export JUNIT_FAIL_ON_IGNORE=true
 
 ansible-playbook -i /mini-lab/inventories/control-plane.yaml -i ~/.ansible/roles/metal-ansible-modules/inventory/metal.py integration.yaml -v

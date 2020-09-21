@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 set -eo pipefail
 
+# this script has the following tasks:
+# - modify the mini-lab release to deploy either a given metal-stack version or the releases of the current branch of this repository
+
 MINI_LAB_PATH=${1}
 if [ -z "$MINI_LAB_PATH" ]; then
   echo "MINI_LAB_PATH needs to be passed as an argument"
