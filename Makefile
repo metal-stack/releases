@@ -25,3 +25,15 @@ integration-ansible-modules: prep
 .PHONY: integration-mini-lab
 integration-mini-lab: prep
 	cd $(MINI_LAB_PATH) && ./test.sh
+
+.PHONY: integration-deployment
+integration-deployment: prep
+	make -C $(MINI_LAB_PATH)
+	$(eval include $(MINI_LAB_PATH)/.env)
+	docker run --rm -it \
+		-v $(MINI_LAB_PATH):/mini-lab \
+		-v $(PWD)/test/integration/deployment:/integration:ro \
+		-v $(PWD)/test/integration/deployment/output:/output \
+		-w /integration \
+		--network host \
+		metalstack/metal-deployment-base:$(DEPLOYMENT_BASE_IMAGE_TAG) /integration/integration.sh
