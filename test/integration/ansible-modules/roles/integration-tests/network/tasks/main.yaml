@@ -1,4 +1,8 @@
 ---
+- name: Prepare tests
+  import_role:
+    name: integration-tests/prep
+
 - name: Allocate network
   metal_network:
     api_url: "{{ metal_api_url }}"
@@ -38,10 +42,9 @@
     state: absent
   register: network
 
-# FIXME:
 - name: Lookup project networks
   set_fact:
-    look: "{{ lookup('metal', 'search', 'network', api_hmac=metal_api_admin_key, name='test', projectid='00000000-0000-0000-0000-000000000000') }}"
+    look: "{{ lookup('metal', 'search', 'network', api_hmac=metal_api_admin_key, _name='test', projectid='00000000-0000-0000-0000-000000000000') }}"
 
 - name: Assert networks
   assert:

@@ -1,4 +1,8 @@
 ---
+- name: Prepare tests
+  import_role:
+    name: integration-tests/prep
+
 - name: Allocate firewall network
   metal_network:
     api_url: "{{ metal_api_url }}"

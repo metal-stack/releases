@@ -1,4 +1,8 @@
 ---
+- name: Prepare tests
+  import_role:
+    name: integration-tests/prep
+
 - name: Allocate IP
   metal_ip:
     api_url: "{{ metal_api_url }}"

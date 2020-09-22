@@ -10,8 +10,8 @@ prep:
 
 .PHONY: integration-ansible-modules
 integration-ansible-modules: prep
-	# TODO: base image needs to be taken dynamically
 	make -C $(MINI_LAB_PATH)
+	$(eval include $(MINI_LAB_PATH)/.env)
 	docker run --rm -it \
 		-v $(MINI_LAB_PATH):/mini-lab \
 		-v $(PWD)/test/integration/ansible-modules:/integration:ro \
@@ -20,7 +20,7 @@ integration-ansible-modules: prep
 		-e METAL_ANSIBLE_INVENTORY_CONFIG=/root/.ansible/roles/metal-ansible-modules/inventory/metal_config.example.yaml \
 		--env-file $(MINI_LAB_PATH)/.env \
 		--network host \
-		metalstack/metal-deployment-base:v0.0.6 /integration/integration.sh
+		metalstack/metal-deployment-base:$(DEPLOYMENT_BASE_IMAGE_TAG) /integration/integration.sh
 
 .PHONY: integration-mini-lab
 integration-mini-lab: prep
