@@ -32,19 +32,18 @@ class MetalControlPlaneDeployment(unittest.TestCase):
 
         self.assertEqual(res.name, "metal-api")
 
-    # depends on: https://github.com/metal-stack/metal-api/pull/107
-    # @flaky(max_runs=36, rerun_filter=common.FlakyBackoff(10).backoff)
-    # def test_switches_have_registered(self):
-    #     api = metal_api.SwitchApi(api_client=self.driver.client)
-    #     try:
-    #         res = api.list_switches()
-    #     except Exception as exception:
-    #         self.fail("listing switches failed: %s" % exception)
-    #
-    #     self.assertEqual(len(res), 2, "no two switches have registered")
-    #     for s in res:
-    #         self.assertIsNotNone(s.last_sync, "switch has not synced: %s" % s.name)
-    #         self.assertIsNone(s.last_sync.error, "switch has sync errors: %s" % s.name)
+    @flaky(max_runs=36, rerun_filter=common.FlakyBackoff(10).backoff)
+    def test_switches_have_registered(self):
+        api = metal_api.SwitchApi(api_client=self.driver.client)
+        try:
+            res = api.list_switches()
+        except Exception as exception:
+            self.fail("listing switches failed: %s" % exception)
+
+        self.assertEqual(len(res), 2, "no two switches have registered")
+        for s in res:
+            self.assertIsNotNone(s.last_sync, "switch has not synced: %s" % s.name)
+            self.assertIsNone(s.last_sync.error, "switch has sync errors: %s" % s.name)
 
     def test_images_are_present(self):
         api = metal_api.ImageApi(api_client=self.driver.client)
