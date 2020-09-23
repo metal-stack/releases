@@ -5,12 +5,14 @@ from kubernetes import client, config
 import metal_python.api as metal_api
 from metal_python.driver import Driver
 from flaky import flaky
+import testinfra
 
 import common
 
 
-class MetalDeployment(unittest.TestCase):
-    def setUp(self):
+class MetalControlPlaneDeployment(unittest.TestCase):
+    def __init__(self, *args, **kwargs):
+        super(MetalControlPlaneDeployment, self).__init__(*args, **kwargs)
         config.load_kube_config()
         self.driver = Driver(os.getenv("METALCTL_URL"), os.getenv("METALCTL_TOKEN"), os.getenv("METALCTL_HMAC"))
         self.maxDiff = None
@@ -30,18 +32,19 @@ class MetalDeployment(unittest.TestCase):
 
         self.assertEqual(res.name, "metal-api")
 
-    @flaky(max_runs=36, rerun_filter=common.FlakyBackoff(10).backoff)
-    def test_switches_have_registered(self):
-        api = metal_api.SwitchApi(api_client=self.driver.client)
-        try:
-            res = api.list_switches()
-        except Exception as exception:
-            self.fail("listing switches failed: %s" % exception)
-
-        self.assertEqual(len(res), 2, "no two switches have registered")
-        for s in res:
-            self.assertIsNone(s.last_sync, "switch has not synced: %s" % s.name)
-            self.assertIsNotNone(s.last_sync.error, "switch has sync errors: %s" % s.name)
+    # depends on: https://github.com/metal-stack/metal-api/pull/107
+    # @flaky(max_runs=36, rerun_filter=common.FlakyBackoff(10).backoff)
+    # def test_switches_have_registered(self):
+    #     api = metal_api.SwitchApi(api_client=self.driver.client)
+    #     try:
+    #         res = api.list_switches()
+    #     except Exception as exception:
+    #         self.fail("listing switches failed: %s" % exception)
+    #
+    #     self.assertEqual(len(res), 2, "no two switches have registered")
+    #     for s in res:
+    #         self.assertIsNotNone(s.last_sync, "switch has not synced: %s" % s.name)
+    #         self.assertIsNone(s.last_sync.error, "switch has sync errors: %s" % s.name)
 
     def test_images_are_present(self):
         api = metal_api.ImageApi(api_client=self.driver.client)
@@ -51,3 +54,27 @@ class MetalDeployment(unittest.TestCase):
             self.fail("listing images failed: %s" % exception)
 
         self.assertTrue(len(res) > 0, "no images present")
+
+
+@unittest.skipUnless(os.path.isdir("/mini-lab"), "tests can only run from deployment container")
+class MetalSwitchPlaneDeployment(common.TestinfraCommon):
+    def __init__(self, *args, **kwargs):
+        super(MetalSwitchPlaneDeployment, self).__init__(*args, **kwargs)
+        self.hosts = testinfra.get_hosts(
+            ["ansible://leaf01", "ansible://leaf02"],
+            ansible_inventory="~/.ansible/roles/ansible-common/inventory/vagrant/vagrant.py")
+
+    def test_metal_core_service(self):
+        for host in self.hosts:
+            self.service_enabled_and_running(host, "metal-core")
+
+    def test_pixiecore_service(self):
+        for host in self.hosts:
+            self.service_enabled_and_running(host, "pixiecore")
+
+    def test_frr_service(self):
+        for host in self.hosts:
+            self.service_enabled_and_running(host, "frr")
+
+    def test_dhcpd_service(self):
+        self.service_enabled_and_running(self.hosts[0], "dhcpd")
