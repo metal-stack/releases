@@ -18,11 +18,17 @@ if ! which yq; then
 fi
 
 if [ -d "${MINI_LAB_PATH}" ]; then
-  make ci-prep
+  # runners are dirty after some time. we should not just delete the mini-lab folder which contains
+  # the vagrant directory. let's clean up before cloning the new folder.
+  cd ${MINI_LAB_PATH}
+  make cleanup
+  /test/ci-cleanup.sh
+  cd -
 fi
 
 rm -rf "${MINI_LAB_PATH}"
 git clone $(yq r release.yaml 'projects.metal-stack.mini-lab.repository')
+
 cd "${MINI_LAB_PATH}"
 
 # we usually need to check out the latest mini-lab from master in CI because
@@ -30,6 +36,7 @@ cd "${MINI_LAB_PATH}"
 # this repository's release vector
 git checkout "${MINI_LAB_VERSION}"
 
-make ci-prep
+make cleanup
+/test/ci-cleanup.sh
 
 cd -

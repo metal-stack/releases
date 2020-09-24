@@ -16,4 +16,5 @@ jobs:
       shell: bash
       run: |
         ./test/integration/ci-prep.sh
-        make integration-mini-lab
+        make integration-deployment
+        make integration-ansible-modules
