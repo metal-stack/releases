@@ -16,7 +16,6 @@ endef
 prep:
 	@./test/integration/prep.sh $(MINI_LAB_PATH)
 	@kind get clusters | grep metal-control-plane > /dev/null || $(MAKE) mini-lab
-	@$(call mini-lab-env)
 
 .PHONY: mini-lab
 mini-lab:
@@ -24,6 +23,7 @@ mini-lab:
 
 .PHONY: integration-ansible-modules
 integration-ansible-modules: prep
+	@$(call mini-lab-env)
 	docker run --rm -i$(DOCKER_TTY_ARG) \
 		-v $(MINI_LAB_PATH):/mini-lab \
 		-v $(PWD)/test/integration/ansible-modules:/integration:ro \
@@ -36,6 +36,7 @@ integration-ansible-modules: prep
 
 .PHONY: integration-deployment
 integration-deployment: prep
+	@$(call mini-lab-env)
 	docker run --rm -i$(DOCKER_TTY_ARG) \
 		-v $(MINI_LAB_PATH):/mini-lab \
 		-v $(PWD)/test/integration/deployment:/integration:ro \
