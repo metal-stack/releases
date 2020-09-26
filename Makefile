@@ -1,7 +1,9 @@
 ifeq ($(CI),true)
 MINI_LAB_PATH := $(PWD)/mini-lab
+DOCKER_TTY_ARG=""
 else
 MINI_LAB_PATH := $(PWD)/../mini-lab
+DOCKER_TTY_ARG=t
 endif
 
 .PHONY: prep
@@ -16,7 +18,7 @@ mini-lab:
 
 .PHONY: integration-ansible-modules
 integration-ansible-modules: prep
-	docker run --rm -it \
+	docker run --rm -i$(DOCKER_TTY_ARG) \
 		-v $(MINI_LAB_PATH):/mini-lab \
 		-v $(PWD)/test/integration/ansible-modules:/integration:ro \
 		-v $(PWD)/test/integration/ansible-modules/output:/output \
@@ -28,7 +30,7 @@ integration-ansible-modules: prep
 
 .PHONY: integration-deployment
 integration-deployment: prep
-	docker run --rm -it \
+	docker run --rm -i$(DOCKER_TTY_ARG) \
 		-v $(MINI_LAB_PATH):/mini-lab \
 		-v $(PWD)/test/integration/deployment:/integration:ro \
 		-v $(PWD)/test/integration/deployment/output:/output \
