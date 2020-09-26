@@ -6,12 +6,16 @@ endif
 
 .PHONY: prep
 prep:
-	./test/integration/prep.sh $(MINI_LAB_PATH)
+	@./test/integration/prep.sh $(MINI_LAB_PATH)
+	@kind get clusters | grep metal-control-plane > /dev/null || $(MAKE) mini-lab
+	@$(eval include $(MINI_LAB_PATH)/.env)
+
+.PHONY: mini-lab
+mini-lab:
+	make -C $(MINI_LAB_PATH)
 
 .PHONY: integration-ansible-modules
 integration-ansible-modules: prep
-	make -C $(MINI_LAB_PATH)
-	$(eval include $(MINI_LAB_PATH)/.env)
 	docker run --rm -it \
 		-v $(MINI_LAB_PATH):/mini-lab \
 		-v $(PWD)/test/integration/ansible-modules:/integration:ro \
@@ -22,14 +26,8 @@ integration-ansible-modules: prep
 		--network host \
 		metalstack/metal-deployment-base:$(DEPLOYMENT_BASE_IMAGE_TAG) /integration/integration.sh
 
-.PHONY: integration-mini-lab
-integration-mini-lab: prep
-	cd $(MINI_LAB_PATH) && ./test.sh
-
 .PHONY: integration-deployment
 integration-deployment: prep
-	make -C $(MINI_LAB_PATH)
-	$(eval include $(MINI_LAB_PATH)/.env)
 	docker run --rm -it \
 		-v $(MINI_LAB_PATH):/mini-lab \
 		-v $(PWD)/test/integration/deployment:/integration:ro \
