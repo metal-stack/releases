@@ -15,6 +15,7 @@ jobs:
     - name: Run integration tests
       shell: bash
       run: |
+        export TMPDIR=/var/tmp/
         ./test/integration/ci-prep.sh
         make integration-deployment
         make integration-ansible-modules
