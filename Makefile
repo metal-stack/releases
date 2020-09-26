@@ -1,6 +1,6 @@
 ifeq ($(CI),true)
 MINI_LAB_PATH := $(PWD)/mini-lab
-DOCKER_TTY_ARG=""
+DOCKER_TTY_ARG=
 else
 MINI_LAB_PATH := $(PWD)/../mini-lab
 DOCKER_TTY_ARG=t
