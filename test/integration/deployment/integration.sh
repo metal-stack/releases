@@ -33,4 +33,4 @@ pip install \
 # if you want to develop tests from within here, comment in the following line:
 # bash
 
-nosetests --with-flaky
+nosetests --with-flaky --no-flaky-report --with-xunit --xunit-file=/output/results_$(date "+%Y.%m.%d-%H.%M.%S").xml

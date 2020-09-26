@@ -35,3 +35,7 @@ integration-deployment: prep
 		-w /integration \
 		--network host \
 		metalstack/metal-deployment-base:$(DEPLOYMENT_BASE_IMAGE_TAG) /integration/integration.sh
+
+.PHONY: render-junit
+render-junit:
+	docker run --rm -v $(PWD)/test/integration/deployment/output:/results maxmiorim/junit-viewer > results.html

@@ -32,6 +32,16 @@ class MetalControlPlaneDeployment(unittest.TestCase):
 
         self.assertEqual(res.name, "metal-api")
 
+    def test_api_is_healthy(self):
+        api = metal_api.HealthApi(api_client=self.driver.client)
+        try:
+            res = api.health()
+        except Exception as exception:
+            self.fail("api not responsive: %s" % exception)
+
+        self.assertEqual(res.status, "healthy")
+        self.assertEqual(res.message, "OK")
+
     @flaky(max_runs=36, rerun_filter=common.FlakyBackoff(10).backoff)
     def test_switches_have_registered(self):
         api = metal_api.SwitchApi(api_client=self.driver.client)
