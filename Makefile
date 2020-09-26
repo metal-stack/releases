@@ -6,11 +6,17 @@ MINI_LAB_PATH := $(PWD)/../mini-lab
 DOCKER_TTY_ARG=t
 endif
 
+define mini-lab-env
+		$(eval ENV_FILE := $(MINI_LAB_PATH)/.env)
+		$(eval include $(MINI_LAB_PATH)/.env)
+		$(eval export sed 's/=.*//' $(MINI_LAB_PATH)/.env)
+endef
+
 .PHONY: prep
 prep:
 	@./test/integration/prep.sh $(MINI_LAB_PATH)
 	@kind get clusters | grep metal-control-plane > /dev/null || $(MAKE) mini-lab
-	@$(eval include $(MINI_LAB_PATH)/.env)
+	@$(call mini-lab-env)
 
 .PHONY: mini-lab
 mini-lab:
