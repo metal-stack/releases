@@ -38,4 +38,4 @@ integration-deployment: prep
 
 .PHONY: render-junit
 render-junit:
-	docker run --rm -v $(PWD)/test/integration/deployment/output:/results maxmiorim/junit-viewer > results.html
+	docker run --rm -v $(PWD)/test/integration/ansible-modules/output:/results maxmiorim/junit-viewer > results.html

@@ -15,9 +15,18 @@
       setup_yaml:
 
     - name: Install metal-python
-      pip:
-        name:
-        - metal_python=={{ metal_api_image_tag }}
+      block:
+        - name: Install test dependencies
+          pip:
+            name:
+            - metal_python=={{ metal_api_image_tag }}
+          ignore_errors: no
+      rescue:
+        # attempt with latest available client when fitting client is not available
+        - name: Install test dependencies (fallback)
+          pip:
+            name:
+            - metal_python
 
     - name: Wait for machines to get ready
       command: echo
@@ -28,12 +37,12 @@
       retries: 60
       delay: 10
       changed_when: false
-      ignore_errors: false
 
   roles:
     - ansible-common
     - metal-roles
     - metal-ansible-modules
+    - integration-tests/helpers
     - integration-tests/network
     - integration-tests/ip
     - integration-tests/firewall
