@@ -1,0 +1,48 @@
+---
+- name: Prepare tests
+  import_role:
+    name: integration-tests/prep
+
+- name: Allocate IP
+  metal_ip:
+    api_url: "{{ metal_api_url }}"
+    api_hmac: "{{ metal_api_admin_key }}"
+    network: internet-vagrant-lab
+    name: machine-ip
+    description: machine ip
+    project: 00000000-0000-0000-0000-000000000000
+  register: ip
+
+- name: Lookup IP
+  set_fact:
+    look: "{{ lookup('metal', 'get', 'ip', api_hmac=metal_api_admin_key, id=ip.ip) }}"
+
+- name: Assert IP
+  assert:
+    fail_msg: "ip was not created properly"
+    quiet: yes
+    that:
+      - look.name == "machine-ip"
+      - look.description == "machine ip"
+      - look.ipaddress == ip.ip
+      - look.networkid == "internet-vagrant-lab"
+      - look.projectid == "00000000-0000-0000-0000-000000000000"
+      - look.type == "ephemeral"
+
+- name: Release IP
+  metal_ip:
+    api_url: "{{ metal_api_url }}"
+    api_hmac: "{{ metal_api_admin_key }}"
+    ip: "{{ ip.ip }}"
+    state: absent
+
+- name: Lookup IPs
+  set_fact:
+    look: "{{ lookup('metal', 'search', 'ip', api_hmac=metal_api_admin_key, ipaddress=ip.ip) }}"
+
+- name: Assert IPs
+  assert:
+    fail_msg: "ip was not deleted properly"
+    quiet: yes
+    that:
+      - look | length == 0

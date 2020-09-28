@@ -10,23 +10,16 @@ jobs:
     name: Integration tests
     runs-on: self-hosted
     steps:
+    - name: Cleanup steps from prior runs
+      shell: bash
+      run: |
+        sudo chown -R $USER:$USER /var/lib/gitlab-runner/github/_work/releases
     - name: Checkout
       uses: actions/checkout@v2
     - name: Run integration tests
       shell: bash
       run: |
-        sudo curl -Lo /usr/local/bin/yq https://github.com/mikefarah/yq/releases/download/3.3.2/yq_linux_amd64
-        sudo chmod +x /usr/local/bin/yq
-
-        rm -rf mini-lab
-        git clone $(yq r release.yaml 'projects.metal-stack.mini-lab.repository')
-        cd mini-lab
-        # we need to check out the latest mini-lab because the tagged one could
-        # be incompatible with the devel state of this repository's release vector
-        git checkout master
-
-        # use release vector of this repository
-        yq w -i group_vars/all/images.yaml 'metal_stack_release_version' develop
-        cat group_vars/all/images.yaml
-
-        ./test.sh
+        export TMPDIR=/var/tmp/
+        ./test/integration/ci-prep.sh
+        make integration-deployment
+        make integration-ansible-modules

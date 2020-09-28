@@ -1,16 +1,19 @@
 ansible-roles:
   ansible-common:
     repository: https://github.com/metal-stack/ansible-common
-    version: v0.5.4
+    version: v0.5.5
+  metal-ansible-modules:
+    repository: https://github.com/metal-stack/metal-ansible-modules
+    version: v0.1.1
   metal-roles:
     repository: https://github.com/metal-stack/metal-roles
-    version: v0.3.2
+    version: v0.3.3
 binaries:
   metal-stack:
     kernel:
       repository: https://github.com/metal-stack/kernel
-      url: https://github.com/metal-stack/kernel/releases/download/5.4.46-27/metal-kernel
-      version: 5.4.46-27
+      url: https://github.com/metal-stack/kernel/releases/download/5.4.68-35/metal-kernel
+      version: 5.4.68-35
     metal-hammer:
       repository: https://github.com/metal-stack/metal-hammer
       url: https://github.com/metal-stack/metal-hammer/releases/download/v0.6.1/metal-hammer-initrd.img.lz4
@@ -30,15 +33,15 @@ docker-images:
       masterdata-api:
         name: metalstack/masterdata-api
         repository: https://github.com/metal-stack/masterdata-api
-        tag: v0.7.3
+        tag: v0.8.3
       metal-api:
         name: metalstack/metal-api
         repository: https://github.com/metal-stack/metal-api
-        tag: v0.8.4
+        tag: v0.9.3
       metal-console:
         name: metalstack/metal-console
         repository: https://github.com/metal-stack/metal-console
-        tag: v0.4.5
+        tag: v0.5.0
       metalctl:
         name: metalstack/metalctl
         repository: https://github.com/metal-stack/metalctl
@@ -47,15 +50,19 @@ docker-images:
       firewall-controller:
         name: metalstack/firewall-controller
         repository: https://github.com/metal-stack/firewall-controller
-        tag: v0.1.8
+        tag: v0.1.9
       gardener-extension-provider-metal:
         name: metalstack/gardener-extension-provider-metal
         repository: https://github.com/metal-stack/gardener-extension-provider-metal
-        tag: v0.11.7
+        tag: v0.12.7
       machine-controller-manager:
-        name: registry.fi-ts.io/gardener/machine-controller-manager
-        repository: https://github.com/metal-stack/machine-controller-manager
-        tag: metal
+        name: eu.gcr.io/gardener-project/gardener/machine-controller-manager
+        repository: https://github.com/gardener/machine-controller-manager
+        tag: v0.34.0
+      machine-controller-manager-provider-metal:
+        name: metalstack/machine-controller-manager-provider-metal
+        repository: https://github.com/metal-stack/machine-controller-manager-provider-metal
+        tag: v0.1.3
       os-metal-extension:
         name: metalstack/os-metal-extension
         repository: https://github.com/metal-stack/os-metal-extension
@@ -68,7 +75,7 @@ docker-images:
       deployment-base:
         name: metalstack/metal-deployment-base
         repository: https://github.com/metal-stack/metal-dockerfiles
-        tag: v0.0.5
+        tag: v0.0.6
     kubernetes:
       csi-lvm-controller:
         name: metalstack/csi-lvm-controller
@@ -81,16 +88,16 @@ docker-images:
       metal-ccm:
         name: metalstack/metal-ccm
         repository: https://github.com/metal-stack/metal-ccm
-        tag: v0.4.2
+        tag: v0.5.1
       splunk-audit-webhook:
         name: metalstack/kubernetes-splunk-audit-webhook
         repository: https://github.com/metal-stack/kubernetes-splunk-audit-webhook
-        tag: v0.1.2
+        tag: v0.1.3
     partition:
       bmc-proxy:
         name: metalstack/bmc-proxy
         repository: https://github.com/metal-stack/metal-console
-        tag: v0.4.5
+        tag: v0.5.0
       ipmi-catcher:
         name: metalstack/ipmi-catcher
         repository: https://github.com/metal-stack/ipmi-catcher
@@ -130,4 +137,4 @@ projects:
   metal-stack:
     mini-lab:
       repository: https://github.com/metal-stack/mini-lab
-      version: v0.0.6
+      version: v0.0.7
