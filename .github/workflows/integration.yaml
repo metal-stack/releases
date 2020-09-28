@@ -10,6 +10,10 @@ jobs:
     name: Integration tests
     runs-on: self-hosted
     steps:
+    - name: Cleanup steps from prior runs
+      shell: bash
+      run: |
+        sudo chown -R $USER:$USER /var/lib/gitlab-runner/github/_work/releases
     - name: Checkout
       uses: actions/checkout@v2
     - name: Run integration tests
