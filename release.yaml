@@ -37,7 +37,7 @@ docker-images:
       metal-api:
         name: metalstack/metal-api
         repository: https://github.com/metal-stack/metal-api
-        tag: v0.9.3
+        tag: v0.9.4
       metal-console:
         name: metalstack/metal-console
         repository: https://github.com/metal-stack/metal-console
