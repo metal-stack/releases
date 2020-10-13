@@ -12,8 +12,8 @@ binaries:
   metal-stack:
     kernel:
       repository: https://github.com/metal-stack/kernel
-      url: https://github.com/metal-stack/kernel/releases/download/5.4.68-35/metal-kernel
-      version: 5.4.68-35
+      url: https://github.com/metal-stack/kernel/releases/download/5.4.70-37/metal-kernel
+      version: 5.4.70-37
     metal-hammer:
       repository: https://github.com/metal-stack/metal-hammer
       url: https://github.com/metal-stack/metal-hammer/releases/download/v0.6.1/metal-hammer-initrd.img.lz4
@@ -54,7 +54,7 @@ docker-images:
       gardener-extension-provider-metal:
         name: metalstack/gardener-extension-provider-metal
         repository: https://github.com/metal-stack/gardener-extension-provider-metal
-        tag: v0.12.7
+        tag: v0.12.8
       machine-controller-manager:
         name: eu.gcr.io/gardener-project/gardener/machine-controller-manager
         repository: https://github.com/gardener/machine-controller-manager
