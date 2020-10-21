@@ -31,9 +31,9 @@
     - name: Wait for machines to get ready
       command: echo
       until:
-        - lookup('metal', 'search', 'machine', api_hmac=metal_api_admin_key, errors='ignore') | default([], true) | length == 2
-        - lookup('metal', 'search', 'machine', api_hmac=metal_api_admin_key)[0]["events"]["log"][0]["event"] == "Waiting"
-        - lookup('metal', 'search', 'machine', api_hmac=metal_api_admin_key)[1]["events"]["log"][0]["event"] == "Waiting"
+        - lookup('metal', 'search', 'machine', api_hmac=metal_api_edit_key, errors='ignore') | default([], true) | length == 2
+        - lookup('metal', 'search', 'machine', api_hmac=metal_api_edit_key)[0]["events"]["log"][0]["event"] == "Waiting"
+        - lookup('metal', 'search', 'machine', api_hmac=metal_api_edit_key)[1]["events"]["log"][0]["event"] == "Waiting"
       retries: 60
       delay: 10
       changed_when: false

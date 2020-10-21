@@ -6,7 +6,7 @@
 - name: Allocate network
   metal_network:
     api_url: "{{ metal_api_url }}"
-    api_hmac: "{{ metal_api_admin_key }}"
+    api_hmac: "{{ metal_api_edit_key }}"
     name: test
     description: test network
     partition: vagrant
@@ -15,7 +15,7 @@
 
 - name: Lookup project network
   set_fact:
-    look: "{{ lookup('metal', 'get', 'network', api_hmac=metal_api_admin_key, id=network.id) }}"
+    look: "{{ lookup('metal', 'get', 'network', api_hmac=metal_api_edit_key, id=network.id) }}"
 
 - name: Assert network
   assert:
@@ -35,7 +35,7 @@
 - name: Delete network
   metal_network:
     api_url: "{{ metal_api_url }}"
-    api_hmac: "{{ metal_api_admin_key }}"
+    api_hmac: "{{ metal_api_edit_key }}"
     name: test
     partition: vagrant
     project: 00000000-0000-0000-0000-000000000000
@@ -44,7 +44,7 @@
 
 - name: Lookup project networks
   set_fact:
-    look: "{{ lookup('metal', 'search', 'network', api_hmac=metal_api_admin_key, _name='test', projectid='00000000-0000-0000-0000-000000000000') }}"
+    look: "{{ lookup('metal', 'search', 'network', api_hmac=metal_api_edit_key, _name='test', projectid='00000000-0000-0000-0000-000000000000') }}"
 
 - name: Assert networks
   assert:
