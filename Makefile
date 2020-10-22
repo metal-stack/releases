@@ -27,6 +27,7 @@ wait-for-docker-images:
 		-v $(PWD):/test:ro \
 		-v /var/run/docker.sock:/var/run/docker.sock \
 		-w /test \
+		-e PYTHONUNBUFFERED=1 \
 		python:alpine sh -c 'apk add docker-cli && pip install retry pyyaml && ./test/wait_for_docker_images.py'
 
 .PHONY: integration-ansible-modules
@@ -38,6 +39,7 @@ integration-ansible-modules: prep
 		-v $(PWD)/test/integration/ansible-modules/output:/output \
 		-w /mini-lab \
 		-e METAL_ANSIBLE_INVENTORY_CONFIG=/root/.ansible/roles/metal-ansible-modules/inventory/metal_config.example.yaml \
+		-e PYTHONUNBUFFERED=1 \
 		--env-file $(MINI_LAB_PATH)/.env \
 		--network host \
 		metalstack/metal-deployment-base:$(DEPLOYMENT_BASE_IMAGE_TAG) /integration/integration.sh
@@ -50,6 +52,7 @@ integration-deployment: prep
 		-v $(PWD)/test/integration/deployment:/integration:ro \
 		-v $(PWD)/test/integration/deployment/output:/output \
 		-w /integration \
+		-e PYTHONUNBUFFERED=1 \
 		--network host \
 		metalstack/metal-deployment-base:$(DEPLOYMENT_BASE_IMAGE_TAG) /integration/integration.sh
 
