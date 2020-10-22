@@ -21,6 +21,14 @@ prep:
 mini-lab:
 	make -C $(MINI_LAB_PATH)
 
+.PHONY: wait-for-docker-images
+wait-for-docker-images:
+	docker run --rm -i$(DOCKER_TTY_ARG) \
+		-v $(PWD):/test:ro \
+		-v /var/run/docker.sock:/var/run/docker.sock \
+		-w /test \
+		python:alpine sh -c 'apk add docker-cli && pip install retry pyyaml && ./test/wait_for_docker_images.py'
+
 .PHONY: integration-ansible-modules
 integration-ansible-modules: prep
 	@$(call mini-lab-env)
