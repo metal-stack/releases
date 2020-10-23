@@ -28,7 +28,7 @@ wait-for-docker-images:
 		-v /var/run/docker.sock:/var/run/docker.sock \
 		-w /test \
 		-e PYTHONUNBUFFERED=1 \
-		python:alpine sh -c 'apk add docker-cli && pip install retry pyyaml && ./test/wait_for_docker_images.py'
+		python:alpine sh -c 'apk add docker-cli && pip install retry requests pyyaml && ./test/wait_for_images.py'
 
 .PHONY: integration-ansible-modules
 integration-ansible-modules: prep
