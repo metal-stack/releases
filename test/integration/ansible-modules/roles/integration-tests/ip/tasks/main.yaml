@@ -6,7 +6,7 @@
 - name: Allocate IP
   metal_ip:
     api_url: "{{ metal_api_url }}"
-    api_hmac: "{{ metal_api_admin_key }}"
+    api_hmac: "{{ metal_api_edit_key }}"
     network: internet-vagrant-lab
     name: machine-ip
     description: machine ip
@@ -15,7 +15,7 @@
 
 - name: Lookup IP
   set_fact:
-    look: "{{ lookup('metal', 'get', 'ip', api_hmac=metal_api_admin_key, id=ip.ip) }}"
+    look: "{{ lookup('metal', 'get', 'ip', api_hmac=metal_api_edit_key, id=ip.ip) }}"
 
 - name: Assert IP
   assert:
@@ -32,13 +32,13 @@
 - name: Release IP
   metal_ip:
     api_url: "{{ metal_api_url }}"
-    api_hmac: "{{ metal_api_admin_key }}"
+    api_hmac: "{{ metal_api_edit_key }}"
     ip: "{{ ip.ip }}"
     state: absent
 
 - name: Lookup IPs
   set_fact:
-    look: "{{ lookup('metal', 'search', 'ip', api_hmac=metal_api_admin_key, ipaddress=ip.ip) }}"
+    look: "{{ lookup('metal', 'search', 'ip', api_hmac=metal_api_edit_key, ipaddress=ip.ip) }}"
 
 - name: Assert IPs
   assert:

@@ -6,7 +6,7 @@
 - name: Allocate firewall network
   metal_network:
     api_url: "{{ metal_api_url }}"
-    api_hmac: "{{ metal_api_admin_key }}"
+    api_hmac: "{{ metal_api_edit_key }}"
     name: firewall
     description: firewall network
     partition: vagrant
@@ -16,7 +16,7 @@
 - name: Allocate firewall
   metal_firewall:
     api_url: "{{ metal_api_url }}"
-    api_hmac: "{{ metal_api_admin_key }}"
+    api_hmac: "{{ metal_api_edit_key }}"
     name: "firewall01"
     description: "firewall 01"
     hostname: "firewall01"
@@ -31,7 +31,7 @@
 
 - name: Lookup firewall
   set_fact:
-    look: "{{ lookup('metal', 'get', 'firewall', api_hmac=metal_api_admin_key, id=firewall.id) }}"
+    look: "{{ lookup('metal', 'get', 'firewall', api_hmac=metal_api_edit_key, id=firewall.id) }}"
 
 - name: Assert firewall
   assert:
@@ -52,7 +52,7 @@
 - name: Allocate firewall again
   metal_firewall:
     api_url: "{{ metal_api_url }}"
-    api_hmac: "{{ metal_api_admin_key }}"
+    api_hmac: "{{ metal_api_edit_key }}"
     name: "firewall01"
     description: "firewall 01"
     hostname: "firewall01"
@@ -78,14 +78,14 @@
 - name: Delete firewall
   metal_firewall:
     api_url: "{{ metal_api_url }}"
-    api_hmac: "{{ metal_api_admin_key }}"
+    api_hmac: "{{ metal_api_edit_key }}"
     name: "firewall01"
     project: "00000000-0000-0000-0000-000000000000"
     state: absent
 
 - name: Lookup firewall
   set_fact:
-    look: "{{ lookup('metal', 'get', 'machine', api_hmac=metal_api_admin_key, id=firewall.id) }}"
+    look: "{{ lookup('metal', 'get', 'machine', api_hmac=metal_api_edit_key, id=firewall.id) }}"
 
 - name: Assert firewall deleted
   assert:

@@ -6,7 +6,7 @@
 - name: Allocate machine network
   metal_network:
     api_url: "{{ metal_api_url }}"
-    api_hmac: "{{ metal_api_admin_key }}"
+    api_hmac: "{{ metal_api_edit_key }}"
     name: machine
     description: machine network
     partition: vagrant
@@ -16,7 +16,7 @@
 - name: Allocate machine
   metal_machine:
     api_url: "{{ metal_api_url }}"
-    api_hmac: "{{ metal_api_admin_key }}"
+    api_hmac: "{{ metal_api_edit_key }}"
     name: "machine01"
     description: "machine 01"
     hostname: "machine01"
@@ -31,7 +31,7 @@
 
 - name: Lookup machine
   set_fact:
-    look: "{{ lookup('metal', 'get', 'machine', api_hmac=metal_api_admin_key, id=machine.id) }}"
+    look: "{{ lookup('metal', 'get', 'machine', api_hmac=metal_api_edit_key, id=machine.id) }}"
 
 - name: Assert machine
   assert:
@@ -51,7 +51,7 @@
 - name: Allocate machine again
   metal_machine:
     api_url: "{{ metal_api_url }}"
-    api_hmac: "{{ metal_api_admin_key }}"
+    api_hmac: "{{ metal_api_edit_key }}"
     name: "machine01"
     description: "machine 01"
     hostname: "machine01"
@@ -77,14 +77,14 @@
 - name: Delete machine
   metal_machine:
     api_url: "{{ metal_api_url }}"
-    api_hmac: "{{ metal_api_admin_key }}"
+    api_hmac: "{{ metal_api_edit_key }}"
     name: "machine01"
     project: "00000000-0000-0000-0000-000000000000"
     state: absent
 
 - name: Lookup machine
   set_fact:
-    look: "{{ lookup('metal', 'get', 'machine', api_hmac=metal_api_admin_key, id=machine.id) }}"
+    look: "{{ lookup('metal', 'get', 'machine', api_hmac=metal_api_edit_key, id=machine.id) }}"
 
 - name: Assert machine deleted
   assert:
