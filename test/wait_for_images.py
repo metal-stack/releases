@@ -33,7 +33,7 @@ def check_image_exists(image):
 
 
 def check_url_exists(url):
-    @retry(subprocess.CalledProcessError, tries=60, delay=10)
+    @retry(RuntimeError, tries=60, delay=10)
     def check(u):
         request = requests.head(u)
         if request.status_code == 200:

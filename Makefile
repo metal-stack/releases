@@ -21,8 +21,8 @@ prep:
 mini-lab:
 	make -C $(MINI_LAB_PATH)
 
-.PHONY: wait-for-docker-images
-wait-for-docker-images:
+.PHONY: wait-for-images
+wait-for-images:
 	docker run --rm -i$(DOCKER_TTY_ARG) \
 		-v $(PWD):/test:ro \
 		-v /var/run/docker.sock:/var/run/docker.sock \
