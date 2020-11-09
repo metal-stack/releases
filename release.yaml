@@ -1,23 +1,23 @@
 ansible-roles:
   ansible-common:
     repository: https://github.com/metal-stack/ansible-common
-    version: v0.5.5
+    version: v0.6.0
   metal-ansible-modules:
     repository: https://github.com/metal-stack/metal-ansible-modules
     version: v0.2.1
   metal-roles:
     repository: https://github.com/metal-stack/metal-roles
-    version: v0.3.4
+    version: v0.3.5
 binaries:
   metal-stack:
     kernel:
       repository: https://github.com/metal-stack/kernel
-      url: https://github.com/metal-stack/kernel/releases/download/5.4.72-38/metal-kernel
-      version: 5.4.72-38
+      url: https://github.com/metal-stack/kernel/releases/download/5.4.74-39/metal-kernel
+      version: 5.4.74-39
     metal-hammer:
       repository: https://github.com/metal-stack/metal-hammer
-      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.7.1/metal-hammer-initrd.img.lz4
-      version: v0.7.1
+      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.7.2/metal-hammer-initrd.img.lz4
+      version: v0.7.2
     metalctl:
       darwin:
         url: https://github.com/metal-stack/metalctl/releases/download/v0.8.6/metalctl-darwin-amd64
@@ -37,7 +37,7 @@ docker-images:
       metal-api:
         name: metalstack/metal-api
         repository: https://github.com/metal-stack/metal-api
-        tag: v0.10.1
+        tag: v0.10.4
       metal-console:
         name: metalstack/metal-console
         repository: https://github.com/metal-stack/metal-console
@@ -66,7 +66,7 @@ docker-images:
       os-metal-extension:
         name: metalstack/os-metal-extension
         repository: https://github.com/metal-stack/os-metal-extension
-        tag: v0.5.0
+        tag: v0.5.1
     generic:
       backup-restore-sidecar:
         name: metalstack/backup-restore-sidecar
@@ -75,7 +75,7 @@ docker-images:
       deployment-base:
         name: metalstack/metal-deployment-base
         repository: https://github.com/metal-stack/metal-dockerfiles
-        tag: v0.0.7
+        tag: v0.0.8
     kubernetes:
       csi-lvm-controller:
         name: metalstack/csi-lvm-controller
@@ -94,14 +94,14 @@ docker-images:
         repository: https://github.com/metal-stack/kubernetes-splunk-audit-webhook
         tag: v0.1.3
     partition:
+      bmc-catcher:
+        name: metalstack/bmc-catcher
+        repository: https://github.com/metal-stack/bmc-catcher
+        tag: v0.2.4
       bmc-proxy:
         name: metalstack/bmc-proxy
         repository: https://github.com/metal-stack/metal-console
         tag: v0.5.0
-      ipmi-catcher:
-        name: metalstack/ipmi-catcher
-        repository: https://github.com/metal-stack/ipmi-catcher
-        tag: v0.1.3
       metal-core:
         name: metalstack/metal-core
         repository: https://github.com/metal-stack/metal-core

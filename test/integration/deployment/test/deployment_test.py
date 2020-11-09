@@ -23,6 +23,12 @@ class MetalControlPlaneDeployment(unittest.TestCase):
         for i in res.items:
             self.assertIsNone(i.status.unavailable_replicas, "not all deployment replicas running")
 
+    def test_stateful_sets(self):
+        v1 = client.AppsV1Api()
+        res = v1.list_namespaced_stateful_set("metal-control-plane")
+        for i in res.items:
+            self.assertEqual(i.status.current_replicas, i.status.replicas, "not all stateful set replicas running")
+
     def test_api_is_responsive(self):
         api = metal_api.VersionApi(api_client=self.driver.client)
         try:
