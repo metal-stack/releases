@@ -14,22 +14,22 @@ NUMBER_OF_POOLS = 6
 
 
 def check_image_exists(image):
-    @retry(subprocess.CalledProcessError, tries=60, delay=10)
+    @retry(tries=60, delay=10)
     def check(name):
-        subprocess.check_call(
+        subprocess.check_output(
             ["docker", "manifest", "inspect", name],
             env=dict(DOCKER_CLI_EXPERIMENTAL="enabled"),
-            stderr=subprocess.DEVNULL,
-            stdout=subprocess.DEVNULL,
+            stderr=subprocess.STDOUT,
+            universal_newlines=True,
         )
 
     image_name = image[0] + ":" + image[1]
     try:
         check(image_name)
         print("✅ %s" % image_name)
-    except Exception as e:
+    except subprocess.CalledProcessError as e:
         print("💥 %s" % image_name)
-        raise e
+        raise RuntimeError(e.output) from e
 
 
 def check_url_exists(url):
