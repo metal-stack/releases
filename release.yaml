@@ -75,7 +75,7 @@ docker-images:
       deployment-base:
         name: metalstack/metal-deployment-base
         repository: https://github.com/metal-stack/metal-dockerfiles
-        tag: v0.0.9
+        tag: v0.0.10
     kubernetes:
       csi-lvm-controller:
         name: metalstack/csi-lvm-controller
