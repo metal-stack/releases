@@ -73,7 +73,7 @@ docker-images:
         repository: https://github.com/metal-stack/backup-restore-sidecar
         tag: v0.5.6
       deployment-base:
-        name: metalstack/metal-deployment-base
+        name: ghcr.io/metal-stack/metal-deployment-base
         repository: https://github.com/metal-stack/metal-dockerfiles
         tag: v0.1.0
     kubernetes:
