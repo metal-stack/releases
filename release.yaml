@@ -52,7 +52,7 @@ docker-images:
         repository: https://github.com/metal-stack/firewall-controller
         tag: v0.2.0
       gardener-extension-provider-metal:
-        name: metalstack/gardener-extension-provider-metal
+        name: ghcr.io/metal-stack/gardener-extension-provider-metal
         repository: https://github.com/metal-stack/gardener-extension-provider-metal
         tag: v0.13.0
       machine-controller-manager:
