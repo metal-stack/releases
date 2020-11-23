@@ -48,7 +48,7 @@ docker-images:
         tag: v0.9.1
     gardener:
       firewall-controller:
-        name: metalstack/firewall-controller
+        name: ghcr.io/metal-stack/firewall-controller
         repository: https://github.com/metal-stack/firewall-controller
         tag: v0.2.1
       gardener-extension-provider-metal:
@@ -64,7 +64,7 @@ docker-images:
         repository: https://github.com/metal-stack/machine-controller-manager-provider-metal
         tag: v0.1.4
       os-metal-extension:
-        name: metalstack/os-metal-extension
+        name: ghcr.io/metal-stack/os-metal-extension
         repository: https://github.com/metal-stack/os-metal-extension
         tag: v0.5.2
     generic:
@@ -107,9 +107,9 @@ docker-images:
         repository: https://github.com/metal-stack/metal-core
         tag: v0.6.3
       pixiecore:
-        name: metalstack/pixiecore
+        name: ghcr.io/metal-stack/pixiecore
         repository: https://github.com/metal-stack/netboot
-        tag: 781e3f0a698bbc3ea960c1d288c6606522db05cd
+        tag: 6279d4109388df79fdfc86fada3b527d24e6c21c
   third-party:
     control-plane:
       ipam-db:
