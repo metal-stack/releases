@@ -109,7 +109,7 @@ docker-images:
       pixiecore:
         name: ghcr.io/metal-stack/pixiecore
         repository: https://github.com/metal-stack/netboot
-        tag: 6279d4109388df79fdfc86fada3b527d24e6c21c
+        tag: 8beb063c06d1dca450192f8722f3b2e1c956d6de
   third-party:
     control-plane:
       ipam-db:
