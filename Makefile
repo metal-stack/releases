@@ -42,7 +42,7 @@ integration-ansible-modules: prep
 		-e PYTHONUNBUFFERED=1 \
 		--env-file $(MINI_LAB_PATH)/.env \
 		--network host \
-		metalstack/metal-deployment-base:$(DEPLOYMENT_BASE_IMAGE_TAG) /integration/integration.sh
+		ghcr.io/metal-stack/metal-deployment-base:$(DEPLOYMENT_BASE_IMAGE_TAG) /integration/integration.sh
 
 .PHONY: integration-deployment
 integration-deployment: prep
@@ -54,7 +54,7 @@ integration-deployment: prep
 		-w /integration \
 		-e PYTHONUNBUFFERED=1 \
 		--network host \
-		metalstack/metal-deployment-base:$(DEPLOYMENT_BASE_IMAGE_TAG) /integration/integration.sh
+		ghcr.io/metal-stack/metal-deployment-base:$(DEPLOYMENT_BASE_IMAGE_TAG) /integration/integration.sh
 
 .PHONY: render-junit
 render-junit:
