@@ -95,7 +95,7 @@ docker-images:
         tag: v0.1.3
     partition:
       bmc-catcher:
-        name: metalstack/bmc-catcher
+        name: ghcr.io/metal-stack/bmc-catcher
         repository: https://github.com/metal-stack/bmc-catcher
         tag: v0.2.5
       bmc-proxy:
