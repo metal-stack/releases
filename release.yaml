@@ -92,7 +92,7 @@ docker-images:
       splunk-audit-webhook:
         name: ghcr.io/metal-stack/kubernetes-splunk-audit-webhook
         repository: https://github.com/metal-stack/kubernetes-splunk-audit-webhook
-        tag: v0.1.4
+        tag: v0.1.5
     partition:
       bmc-catcher:
         name: ghcr.io/metal-stack/bmc-catcher
