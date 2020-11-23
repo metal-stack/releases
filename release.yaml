@@ -41,7 +41,7 @@ docker-images:
       metal-console:
         name: ghcr.io/metal-stack/metal-console
         repository: https://github.com/metal-stack/metal-console
-        tag: v0.5.1
+        tag: v0.5.2
       metalctl:
         name: ghcr.io/metal-stack/metalctl
         repository: https://github.com/metal-stack/metalctl
@@ -101,7 +101,7 @@ docker-images:
       bmc-proxy:
         name: ghcr.io/metal-stack/bmc-proxy
         repository: https://github.com/metal-stack/metal-console
-        tag: v0.5.1
+        tag: v0.5.2
       metal-core:
         name: ghcr.io/metal-stack/metal-core
         repository: https://github.com/metal-stack/metal-core
