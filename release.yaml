@@ -80,11 +80,11 @@ docker-images:
       csi-lvm-controller:
         name: metalstack/csi-lvm-controller
         repository: https://github.com/metal-stack/csi-lvm
-        tag: v0.6.1
+        tag: v0.6.3
       csi-lvm-provisioner:
         name: metalstack/csi-lvm-provisioner
         repository: https://github.com/metal-stack/csi-lvm
-        tag: v0.6.1
+        tag: v0.6.3
       metal-ccm:
         name: ghcr.io/metal-stack/metal-ccm
         repository: https://github.com/metal-stack/metal-ccm
