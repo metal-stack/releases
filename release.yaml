@@ -90,7 +90,7 @@ docker-images:
         repository: https://github.com/metal-stack/metal-ccm
         tag: v0.5.5
       splunk-audit-webhook:
-        name: metalstack/kubernetes-splunk-audit-webhook
+        name: ghcr.io/metal-stack/kubernetes-splunk-audit-webhook
         repository: https://github.com/metal-stack/kubernetes-splunk-audit-webhook
         tag: v0.1.4
     partition:
