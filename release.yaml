@@ -97,7 +97,7 @@ docker-images:
       bmc-catcher:
         name: ghcr.io/metal-stack/bmc-catcher
         repository: https://github.com/metal-stack/bmc-catcher
-        tag: v0.2.5
+        tag: v0.2.6
       bmc-proxy:
         name: metalstack/bmc-proxy
         repository: https://github.com/metal-stack/metal-console
