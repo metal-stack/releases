@@ -78,11 +78,11 @@ docker-images:
         tag: v0.1.0
     kubernetes:
       csi-lvm-controller:
-        name: metalstack/csi-lvm-controller
+        name: ghcr.io/metal-stack/csi-lvm-controller
         repository: https://github.com/metal-stack/csi-lvm
         tag: v0.6.3
       csi-lvm-provisioner:
-        name: metalstack/csi-lvm-provisioner
+        name: ghcr.io/metal-stack/csi-lvm-provisioner
         repository: https://github.com/metal-stack/csi-lvm
         tag: v0.6.3
       metal-ccm:
