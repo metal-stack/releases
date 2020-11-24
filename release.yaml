@@ -50,7 +50,7 @@ docker-images:
       firewall-controller:
         name: ghcr.io/metal-stack/firewall-controller
         repository: https://github.com/metal-stack/firewall-controller
-        tag: v0.2.1
+        tag: v0.3.0
       gardener-extension-provider-metal:
         name: ghcr.io/metal-stack/gardener-extension-provider-metal
         repository: https://github.com/metal-stack/gardener-extension-provider-metal
