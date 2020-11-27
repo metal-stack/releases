@@ -1,7 +1,7 @@
 ansible-roles:
   ansible-common:
     repository: https://github.com/metal-stack/ansible-common
-    version: v0.6.0
+    version: v0.6.1
   metal-ansible-modules:
     repository: https://github.com/metal-stack/metal-ansible-modules
     version: v0.2.1
@@ -12,104 +12,104 @@ binaries:
   metal-stack:
     kernel:
       repository: https://github.com/metal-stack/kernel
-      url: https://github.com/metal-stack/kernel/releases/download/5.4.74-39/metal-kernel
-      version: 5.4.74-39
+      url: https://github.com/metal-stack/kernel/releases/download/5.4.80-42/metal-kernel
+      version: 5.4.80-42
     metal-hammer:
       repository: https://github.com/metal-stack/metal-hammer
-      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.7.2/metal-hammer-initrd.img.lz4
-      version: v0.7.2
+      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.7.5/metal-hammer-initrd.img.lz4
+      version: v0.7.5
     metalctl:
       darwin:
-        url: https://github.com/metal-stack/metalctl/releases/download/v0.8.6/metalctl-darwin-amd64
+        url: https://github.com/metal-stack/metalctl/releases/download/v0.9.1/metalctl-darwin-amd64
       linux:
-        url: https://github.com/metal-stack/metalctl/releases/download/v0.8.6/metalctl-linux-amd64
+        url: https://github.com/metal-stack/metalctl/releases/download/v0.9.1/metalctl-linux-amd64
       repository: https://github.com/metal-stack/metalctl
-      version: v0.8.6
+      version: v0.9.1
       windows:
-        url: https://github.com/metal-stack/metalctl/releases/download/v0.8.6/metalctl-windows-amd64
+        url: https://github.com/metal-stack/metalctl/releases/download/v0.9.1/metalctl-windows-amd64
 docker-images:
   metal-stack:
     control-plane:
       masterdata-api:
-        name: metalstack/masterdata-api
+        name: ghcr.io/metal-stack/masterdata-api
         repository: https://github.com/metal-stack/masterdata-api
-        tag: v0.8.3
+        tag: v0.8.4
       metal-api:
-        name: metalstack/metal-api
+        name: ghcr.io/metal-stack/metal-api
         repository: https://github.com/metal-stack/metal-api
-        tag: v0.10.4
+        tag: v0.11.4
       metal-console:
-        name: metalstack/metal-console
+        name: ghcr.io/metal-stack/metal-console
         repository: https://github.com/metal-stack/metal-console
-        tag: v0.5.0
+        tag: v0.5.2
       metalctl:
-        name: metalstack/metalctl
+        name: ghcr.io/metal-stack/metalctl
         repository: https://github.com/metal-stack/metalctl
-        tag: v0.8.6
+        tag: v0.9.1
     gardener:
       firewall-controller:
-        name: metalstack/firewall-controller
+        name: ghcr.io/metal-stack/firewall-controller
         repository: https://github.com/metal-stack/firewall-controller
-        tag: v0.1.9
+        tag: v0.3.0
       gardener-extension-provider-metal:
-        name: metalstack/gardener-extension-provider-metal
+        name: ghcr.io/metal-stack/gardener-extension-provider-metal
         repository: https://github.com/metal-stack/gardener-extension-provider-metal
-        tag: v0.12.10
+        tag: v0.13.2
       machine-controller-manager:
         name: eu.gcr.io/gardener-project/gardener/machine-controller-manager
         repository: https://github.com/gardener/machine-controller-manager
-        tag: v0.34.0
+        tag: v0.35.0
       machine-controller-manager-provider-metal:
-        name: metalstack/machine-controller-manager-provider-metal
+        name: ghcr.io/metal-stack/machine-controller-manager-provider-metal
         repository: https://github.com/metal-stack/machine-controller-manager-provider-metal
-        tag: v0.1.3
+        tag: v0.1.5
       os-metal-extension:
-        name: metalstack/os-metal-extension
+        name: ghcr.io/metal-stack/os-metal-extension
         repository: https://github.com/metal-stack/os-metal-extension
-        tag: v0.5.1
+        tag: v0.5.2
     generic:
       backup-restore-sidecar:
-        name: metalstack/backup-restore-sidecar
+        name: ghcr.io/metal-stack/backup-restore-sidecar
         repository: https://github.com/metal-stack/backup-restore-sidecar
-        tag: v0.5.6
+        tag: v0.6.0
       deployment-base:
-        name: metalstack/metal-deployment-base
+        name: ghcr.io/metal-stack/metal-deployment-base
         repository: https://github.com/metal-stack/metal-dockerfiles
-        tag: v0.0.8
+        tag: v0.1.0
     kubernetes:
       csi-lvm-controller:
-        name: metalstack/csi-lvm-controller
+        name: ghcr.io/metal-stack/csi-lvm-controller
         repository: https://github.com/metal-stack/csi-lvm
-        tag: v0.6.1
+        tag: v0.6.3
       csi-lvm-provisioner:
-        name: metalstack/csi-lvm-provisioner
+        name: ghcr.io/metal-stack/csi-lvm-provisioner
         repository: https://github.com/metal-stack/csi-lvm
-        tag: v0.6.1
+        tag: v0.6.3
       metal-ccm:
-        name: metalstack/metal-ccm
+        name: ghcr.io/metal-stack/metal-ccm
         repository: https://github.com/metal-stack/metal-ccm
-        tag: v0.5.2
+        tag: v0.5.5
       splunk-audit-webhook:
-        name: metalstack/kubernetes-splunk-audit-webhook
+        name: ghcr.io/metal-stack/kubernetes-splunk-audit-webhook
         repository: https://github.com/metal-stack/kubernetes-splunk-audit-webhook
-        tag: v0.1.3
+        tag: v0.1.5
     partition:
       bmc-catcher:
-        name: metalstack/bmc-catcher
+        name: ghcr.io/metal-stack/bmc-catcher
         repository: https://github.com/metal-stack/bmc-catcher
-        tag: v0.2.5
+        tag: v0.2.6
       bmc-proxy:
-        name: metalstack/bmc-proxy
+        name: ghcr.io/metal-stack/bmc-proxy
         repository: https://github.com/metal-stack/metal-console
-        tag: v0.5.0
+        tag: v0.5.2
       metal-core:
-        name: metalstack/metal-core
+        name: ghcr.io/metal-stack/metal-core
         repository: https://github.com/metal-stack/metal-core
-        tag: v0.6.1
+        tag: v0.6.3
       pixiecore:
-        name: metalstack/pixiecore
+        name: ghcr.io/metal-stack/pixiecore
         repository: https://github.com/metal-stack/netboot
-        tag: 781e3f0a698bbc3ea960c1d288c6606522db05cd
+        tag: 8beb063c06d1dca450192f8722f3b2e1c956d6de
   third-party:
     control-plane:
       ipam-db:
