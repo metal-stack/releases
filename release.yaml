@@ -136,7 +136,7 @@ docker-images:
 helm-charts:
   metal-stack:
     metal-control-plane:
-      repository: helm.metal-stack.io
+      repository: https://helm.metal-stack.io
       version: 0.2.1
 projects:
   metal-stack:
