@@ -133,6 +133,11 @@ docker-images:
         name: nginx
         repository: http://hg.nginx.org/nginx/
         tag: "1.18"
+helm-charts:
+  metal-stack:
+    metal-control-plane:
+      repository: helm.metal-stack.io
+      version: "0.1.0"
 projects:
   metal-stack:
     mini-lab:
