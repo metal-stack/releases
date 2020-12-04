@@ -137,7 +137,7 @@ helm-charts:
   metal-stack:
     metal-control-plane:
       repository: helm.metal-stack.io
-      version: "0.1.0"
+      version: 0.2.1
 projects:
   metal-stack:
     mini-lab:
