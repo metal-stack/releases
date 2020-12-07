@@ -10,7 +10,7 @@ env:
   SLACK_USERNAME: slackbot
   SLACK_ICON: https://github.githubassets.com/images/icons/emoji/unicode/1f916.png
   SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-  MSG_MINIMAL: true
+  MSG_MINIMAL: ref
 
 jobs:
   test:
