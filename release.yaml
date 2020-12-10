@@ -75,7 +75,7 @@ docker-images:
       deployment-base:
         name: ghcr.io/metal-stack/metal-deployment-base
         repository: https://github.com/metal-stack/metal-dockerfiles
-        tag: v0.1.0
+        tag: v0.2.0
     kubernetes:
       csi-lvm-controller:
         name: ghcr.io/metal-stack/csi-lvm-controller
