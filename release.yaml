@@ -133,6 +133,14 @@ docker-images:
         name: nginx
         repository: http://hg.nginx.org/nginx/
         tag: "1.18"
+      image-cache-coredns:
+        name: coredns/coredns
+        repository: https://github.com/coredns/coredns
+        tag: 1.7.0
+      image-cache-haproxy:
+        name: haproxy
+        repository: https://github.com/docker-library/haproxy
+        tag: 2.2-alpine
 helm-charts:
   metal-stack:
     metal-control-plane:
