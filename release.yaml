@@ -4,10 +4,10 @@ ansible-roles:
     version: v0.6.1
   metal-ansible-modules:
     repository: https://github.com/metal-stack/metal-ansible-modules
-    version: v0.2.1
+    version: v0.2.2
   metal-roles:
     repository: https://github.com/metal-stack/metal-roles
-    version: v0.5.1
+    version: v0.5.2
 binaries:
   metal-stack:
     kernel:
@@ -37,7 +37,7 @@ docker-images:
       metal-api:
         name: ghcr.io/metal-stack/metal-api
         repository: https://github.com/metal-stack/metal-api
-        tag: v0.12.0
+        tag: v0.12.1
       metal-console:
         name: ghcr.io/metal-stack/metal-console
         repository: https://github.com/metal-stack/metal-console
@@ -109,7 +109,7 @@ docker-images:
       metal-image-cache-sync:
         name: ghcr.io/metal-stack/metal-image-cache-sync
         repository: https://github.com/metal-stack/metal-image-cache-sync
-        tag: v0.1.0
+        tag: v0.1.1
       pixiecore:
         name: ghcr.io/metal-stack/pixiecore
         repository: https://github.com/metal-stack/netboot
