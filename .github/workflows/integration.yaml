@@ -33,6 +33,8 @@ jobs:
         make integration-ansible-modules
     - name: Slack Notification on Success
       uses: rtCamp/action-slack-notify@v2
+      # this step is sometimes flaky... :(
+      continue-on-error: true
       env:
         SLACK_COLOR: good
         SLACK_TITLE: 'Integration Tests succeeded'

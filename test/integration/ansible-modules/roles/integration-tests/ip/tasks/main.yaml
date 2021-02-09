@@ -29,6 +29,31 @@
       - look.projectid == "00000000-0000-0000-0000-000000000000"
       - look.type == "ephemeral"
 
+- name: Update IP
+  metal_ip:
+    api_url: "{{ metal_api_url }}"
+    api_hmac: "{{ metal_api_edit_key }}"
+    ip: "{{ ip.ip }}"
+    name: machine-ip-altered
+    description: machine ip altered
+  register: ip
+
+- name: Lookup IP
+  set_fact:
+    look: "{{ lookup('metal', 'get', 'ip', api_hmac=metal_api_edit_key, id=ip.ip) }}"
+
+- name: Assert IP
+  assert:
+    fail_msg: "ip was not updated properly"
+    quiet: yes
+    that:
+      - look.name == "machine-ip-altered"
+      - look.description == "machine ip altered"
+      - look.ipaddress == ip.ip
+      - look.networkid == "internet-vagrant-lab"
+      - look.projectid == "00000000-0000-0000-0000-000000000000"
+      - look.type == "ephemeral"
+
 - name: Release IP
   metal_ip:
     api_url: "{{ metal_api_url }}"
