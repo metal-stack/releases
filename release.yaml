@@ -73,6 +73,10 @@ docker-images:
         repository: https://github.com/metal-stack/metal-dockerfiles
         tag: v0.3.1
     kubernetes:
+      audit-forwarder:
+        name: ghcr.io/metal-stack/audit-forwarder
+        repository: https://github.com/metal-stack/audit-forwarder
+        tag: v0.1.0
       csi-lvm-controller:
         name: ghcr.io/metal-stack/csi-lvm-controller
         repository: https://github.com/metal-stack/csi-lvm
@@ -89,10 +93,6 @@ docker-images:
         name: ghcr.io/metal-stack/metal-ccm
         repository: https://github.com/metal-stack/metal-ccm
         tag: v0.5.8
-      audit-forwarder:
-        name: ghcr.io/metal-stack/audit-forwarder
-        repository: https://github.com/metal-stack/audit-forwarder
-        tag: v0.0.1
     partition:
       bmc-catcher:
         name: ghcr.io/metal-stack/bmc-catcher
