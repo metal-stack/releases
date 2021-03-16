@@ -89,10 +89,10 @@ docker-images:
         name: ghcr.io/metal-stack/metal-ccm
         repository: https://github.com/metal-stack/metal-ccm
         tag: v0.5.8
-      splunk-audit-webhook:
-        name: ghcr.io/metal-stack/kubernetes-splunk-audit-webhook
-        repository: https://github.com/metal-stack/kubernetes-splunk-audit-webhook
-        tag: v0.1.5
+      audit-forwarder:
+        name: ghcr.io/metal-stack/audit-forwarder
+        repository: https://github.com/metal-stack/audit-forwarder
+        tag: v0.0.1
     partition:
       bmc-catcher:
         name: ghcr.io/metal-stack/bmc-catcher
