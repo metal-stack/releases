@@ -7,13 +7,13 @@ ansible-roles:
     version: v0.2.3
   metal-roles:
     repository: https://github.com/metal-stack/metal-roles
-    version: v0.5.2
+    version: v0.5.3
 binaries:
   metal-stack:
     kernel:
       repository: https://github.com/metal-stack/kernel
-      url: https://github.com/metal-stack/kernel/releases/download/5.10.20-48/metal-kernel
-      version: 5.10.20-48
+      url: https://github.com/metal-stack/kernel/releases/download/5.10.22-49/metal-kernel
+      version: 5.10.22-49
     metal-hammer:
       repository: https://github.com/metal-stack/metal-hammer
       url: https://github.com/metal-stack/metal-hammer/releases/download/v0.7.6/metal-hammer-initrd.img.lz4
@@ -50,7 +50,7 @@ docker-images:
       gardener-extension-provider-metal:
         name: ghcr.io/metal-stack/gardener-extension-provider-metal
         repository: https://github.com/metal-stack/gardener-extension-provider-metal
-        tag: v0.15.4
+        tag: v0.15.5
       machine-controller-manager:
         name: eu.gcr.io/gardener-project/gardener/machine-controller-manager
         repository: https://github.com/gardener/machine-controller-manager
@@ -73,6 +73,10 @@ docker-images:
         repository: https://github.com/metal-stack/metal-dockerfiles
         tag: v0.3.1
     kubernetes:
+      audit-forwarder:
+        name: ghcr.io/metal-stack/audit-forwarder
+        repository: https://github.com/metal-stack/audit-forwarder
+        tag: v0.1.0
       csi-lvm-controller:
         name: ghcr.io/metal-stack/csi-lvm-controller
         repository: https://github.com/metal-stack/csi-lvm
@@ -89,10 +93,6 @@ docker-images:
         name: ghcr.io/metal-stack/metal-ccm
         repository: https://github.com/metal-stack/metal-ccm
         tag: v0.5.8
-      splunk-audit-webhook:
-        name: ghcr.io/metal-stack/kubernetes-splunk-audit-webhook
-        repository: https://github.com/metal-stack/kubernetes-splunk-audit-webhook
-        tag: v0.1.5
     partition:
       bmc-catcher:
         name: ghcr.io/metal-stack/bmc-catcher
