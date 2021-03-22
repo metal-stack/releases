@@ -24,7 +24,7 @@ Some further remarks:
 
 - Use semver versions with `v` prefix for your tags
 - Name your release after your release tag
-- A tag created through a Github UI release does not trigger a `push` event . This means, you're pipeline will not start to run with the `push` trigger when publishing through the UI.
+- A tag created through a Github UI release does not trigger a `push` event . This means, your pipeline will not start to run with the `push` trigger when publishing through the UI.
 
   Instead, use the `published` [release event trigger](https://docs.github.com/en/actions/reference/events-that-trigger-workflows#release) for your actions:
 
