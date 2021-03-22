@@ -14,7 +14,7 @@ The following diagram attempts to describe our current release flow:
 
 [release-drafter](https://github.com/release-drafter/release-drafter) is preferred in order to generate release notes from merged PRs for your projects. It should be triggered for pushes on your master branch.
 
-The draft is then used to create a project release. The release has to be published through the Github UI as demonstrated in the screenshot beneath.
+The draft is then used to create a project release. The release has to be published through the Github UI as demonstrated in the screenshot below.
 
 **<span style="color:red">Tagging the repository is not enough as repository tagging does not associate your release notes to your release!</span>**
 
