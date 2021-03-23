@@ -26,6 +26,7 @@ wait-for-images:
 	docker run --rm -i$(DOCKER_TTY_ARG) \
 		-v $(PWD):/test:ro \
 		-v /var/run/docker.sock:/var/run/docker.sock \
+		-v $(HOME)/.docker:/root/.docker \
 		-w /test \
 		-e PYTHONUNBUFFERED=1 \
 		python:alpine sh -c 'apk add docker-cli && pip install retry requests pyyaml && ./test/wait_for_images.py'
