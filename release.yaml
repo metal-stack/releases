@@ -93,6 +93,10 @@ docker-images:
         name: ghcr.io/metal-stack/metal-ccm
         repository: https://github.com/metal-stack/metal-ccm
         tag: v0.5.8
+      node-init:
+        name: ghcr.io/metal-stack/node-init
+        repository: https://github.com/metal-stack/node-init
+        tag: v0.0.1
     partition:
       bmc-catcher:
         name: ghcr.io/metal-stack/bmc-catcher
