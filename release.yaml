@@ -7,17 +7,17 @@ ansible-roles:
     version: v0.2.3
   metal-roles:
     repository: https://github.com/metal-stack/metal-roles
-    version: v0.5.7
+    version: v0.5.8
 binaries:
   metal-stack:
     kernel:
       repository: https://github.com/metal-stack/kernel
-      url: https://github.com/metal-stack/kernel/releases/download/5.10.26-54/metal-kernel
-      version: 5.10.26-54
+      url: https://github.com/metal-stack/kernel/releases/download/5.10.30-56/metal-kernel
+      version: 5.10.30-56
     metal-hammer:
       repository: https://github.com/metal-stack/metal-hammer
-      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.7.6/metal-hammer-initrd.img.lz4
-      version: v0.7.6
+      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.8.0/metal-hammer-initrd.img.lz4
+      version: v0.8.0
     metalctl:
       darwin:
         url: https://github.com/metal-stack/metalctl/releases/download/v0.9.5/metalctl-darwin-amd64
@@ -50,7 +50,7 @@ docker-images:
       gardener-extension-provider-metal:
         name: ghcr.io/metal-stack/gardener-extension-provider-metal
         repository: https://github.com/metal-stack/gardener-extension-provider-metal
-        tag: v0.16.0
+        tag: v0.16.2
       machine-controller-manager:
         name: eu.gcr.io/gardener-project/gardener/machine-controller-manager
         repository: https://github.com/gardener/machine-controller-manager
@@ -93,6 +93,10 @@ docker-images:
         name: ghcr.io/metal-stack/metal-ccm
         repository: https://github.com/metal-stack/metal-ccm
         tag: v0.5.8
+      node-init:
+        name: ghcr.io/metal-stack/node-init
+        repository: https://github.com/metal-stack/node-init
+        tag: v0.1.0
     partition:
       bmc-catcher:
         name: ghcr.io/metal-stack/bmc-catcher
@@ -105,7 +109,7 @@ docker-images:
       metal-core:
         name: ghcr.io/metal-stack/metal-core
         repository: https://github.com/metal-stack/metal-core
-        tag: v0.6.3
+        tag: v0.6.4
       metal-image-cache-sync:
         name: ghcr.io/metal-stack/metal-image-cache-sync
         repository: https://github.com/metal-stack/metal-image-cache-sync
@@ -149,9 +153,9 @@ helm-charts:
   metal-stack:
     metal-control-plane:
       repository: https://helm.metal-stack.io
-      version: 0.3.3
+      version: 0.3.4
 projects:
   metal-stack:
     mini-lab:
       repository: https://github.com/metal-stack/mini-lab
-      version: v0.1.1
+      version: v0.1.2
