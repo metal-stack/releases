@@ -4,7 +4,7 @@ ansible-roles:
     version: v0.6.2
   metal-ansible-modules:
     repository: https://github.com/metal-stack/metal-ansible-modules
-    version: v0.2.3
+    version: v0.2.4
   metal-roles:
     repository: https://github.com/metal-stack/metal-roles
     version: v0.5.9
@@ -12,8 +12,8 @@ binaries:
   metal-stack:
     kernel:
       repository: https://github.com/metal-stack/kernel
-      url: https://github.com/metal-stack/kernel/releases/download/5.10.34-58/metal-kernel
-      version: 5.10.34-58
+      url: https://github.com/metal-stack/kernel/releases/download/5.10.36-59/metal-kernel
+      version: 5.10.36-59
     metal-hammer:
       repository: https://github.com/metal-stack/metal-hammer
       url: https://github.com/metal-stack/metal-hammer/releases/download/v0.8.0/metal-hammer-initrd.img.lz4
@@ -50,7 +50,7 @@ docker-images:
       gardener-extension-provider-metal:
         name: ghcr.io/metal-stack/gardener-extension-provider-metal
         repository: https://github.com/metal-stack/gardener-extension-provider-metal
-        tag: v0.16.6
+        tag: v0.16.8
       machine-controller-manager:
         name: eu.gcr.io/gardener-project/gardener/machine-controller-manager
         repository: https://github.com/gardener/machine-controller-manager
@@ -62,7 +62,7 @@ docker-images:
       os-metal-extension:
         name: ghcr.io/metal-stack/os-metal-extension
         repository: https://github.com/metal-stack/os-metal-extension
-        tag: v0.5.3
+        tag: v0.5.4
     generic:
       backup-restore-sidecar:
         name: ghcr.io/metal-stack/backup-restore-sidecar
@@ -80,11 +80,11 @@ docker-images:
       csi-lvm-controller:
         name: ghcr.io/metal-stack/csi-lvm-controller
         repository: https://github.com/metal-stack/csi-lvm
-        tag: v0.6.3
+        tag: v0.6.4
       csi-lvm-provisioner:
         name: ghcr.io/metal-stack/csi-lvm-provisioner
         repository: https://github.com/metal-stack/csi-lvm
-        tag: v0.6.3
+        tag: v0.6.4
       duros-controller:
         name: ghcr.io/metal-stack/duros-controller
         repository: https://github.com/metal-stack/duros-controller
@@ -92,7 +92,7 @@ docker-images:
       metal-ccm:
         name: ghcr.io/metal-stack/metal-ccm
         repository: https://github.com/metal-stack/metal-ccm
-        tag: v0.5.10
+        tag: v0.5.11
       node-init:
         name: ghcr.io/metal-stack/node-init
         repository: https://github.com/metal-stack/node-init
