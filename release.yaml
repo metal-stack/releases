@@ -148,7 +148,7 @@ docker-images:
       image-cache-haproxy:
         name: haproxy
         repository: https://github.com/docker-library/haproxy
-        tag: 2.2-alpine
+        tag: 2.4-alpine
 helm-charts:
   metal-stack:
     metal-control-plane:
