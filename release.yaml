@@ -12,8 +12,8 @@ binaries:
   metal-stack:
     kernel:
       repository: https://github.com/metal-stack/kernel
-      url: https://github.com/metal-stack/kernel/releases/download/5.10.38-60/metal-kernel
-      version: 5.10.38-60
+      url: https://github.com/metal-stack/kernel/releases/download/5.10.42-62/metal-kernel
+      version: 5.10.42-62
     metal-hammer:
       repository: https://github.com/metal-stack/metal-hammer
       url: https://github.com/metal-stack/metal-hammer/releases/download/v0.8.0/metal-hammer-initrd.img.lz4
@@ -33,11 +33,11 @@ docker-images:
       masterdata-api:
         name: ghcr.io/metal-stack/masterdata-api
         repository: https://github.com/metal-stack/masterdata-api
-        tag: v0.8.5
+        tag: v0.8.7
       metal-api:
         name: ghcr.io/metal-stack/metal-api
         repository: https://github.com/metal-stack/metal-api
-        tag: v0.14.2
+        tag: v0.14.3
       metal-console:
         name: ghcr.io/metal-stack/metal-console
         repository: https://github.com/metal-stack/metal-console
@@ -50,7 +50,7 @@ docker-images:
       gardener-extension-provider-metal:
         name: ghcr.io/metal-stack/gardener-extension-provider-metal
         repository: https://github.com/metal-stack/gardener-extension-provider-metal
-        tag: v0.16.8
+        tag: v0.16.10
       machine-controller-manager:
         name: eu.gcr.io/gardener-project/gardener/machine-controller-manager
         repository: https://github.com/gardener/machine-controller-manager
@@ -88,7 +88,7 @@ docker-images:
       duros-controller:
         name: ghcr.io/metal-stack/duros-controller
         repository: https://github.com/metal-stack/duros-controller
-        tag: v0.1.2
+        tag: v0.2.0
       metal-ccm:
         name: ghcr.io/metal-stack/metal-ccm
         repository: https://github.com/metal-stack/metal-ccm
