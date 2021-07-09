@@ -21,8 +21,10 @@ jobs:
       shell: bash
       run: |
         sudo chown -R $USER:$USER /var/lib/gitlab-runner/github/_work/releases
+
     - name: Checkout
       uses: actions/checkout@v2
+
     - name: Run integration tests
       shell: bash
       run: |
@@ -31,6 +33,10 @@ jobs:
         make wait-for-images
         make integration-deployment
         make integration-ansible-modules
+      env:
+        DOCKER_HUB_USER: ${{ secrets.DOCKER_HUB_USER }}
+        DOCKER_HUB_TOKEN: ${{ secrets.DOCKER_HUB_TOKEN }}
+
     - name: Slack Notification on Success
       uses: rtCamp/action-slack-notify@v2
       # this step is sometimes flaky... :(
@@ -39,6 +45,7 @@ jobs:
         SLACK_COLOR: good
         SLACK_TITLE: 'Integration Tests succeeded'
       if: ${{ success() }}
+
     - name: Slack Notification on Failure
       uses: rtCamp/action-slack-notify@v2
       env:
