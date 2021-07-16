@@ -37,11 +37,10 @@ jobs:
         DOCKER_HUB_USER: ${{ secrets.DOCKER_HUB_USER }}
         DOCKER_HUB_TOKEN: ${{ secrets.DOCKER_HUB_TOKEN }}
 
-    - name: Publish Test Report
-      uses: mikepenz/action-junit-report@v2
+    - name: Publish Unit Test Results
+      uses: EnricoMi/publish-unit-test-result-action@v1
       with:
-        report_paths: test/integration/**/output/*.xml
-        require_tests: yes
+        files: test/integration/**/output/*.xml
 
     - name: Slack Notification on Success
       uses: rtCamp/action-slack-notify@v2
