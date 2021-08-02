@@ -37,6 +37,11 @@ jobs:
         DOCKER_HUB_USER: ${{ secrets.DOCKER_HUB_USER }}
         DOCKER_HUB_TOKEN: ${{ secrets.DOCKER_HUB_TOKEN }}
 
+    - name: Publish Unit Test Results
+      uses: EnricoMi/publish-unit-test-result-action@v1
+      with:
+        files: test/integration/**/output/*.xml
+
     - name: Slack Notification on Success
       uses: rtCamp/action-slack-notify@v2
       # this step is sometimes flaky... :(
