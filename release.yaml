@@ -76,7 +76,7 @@ docker-images:
       audit-forwarder:
         name: ghcr.io/metal-stack/audit-forwarder
         repository: https://github.com/metal-stack/audit-forwarder
-        tag: v0.1.4
+        tag: v0.1.5
       csi-lvm-controller:
         name: ghcr.io/metal-stack/csi-lvm-controller
         repository: https://github.com/metal-stack/csi-lvm
