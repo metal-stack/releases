@@ -12,28 +12,28 @@ binaries:
   metal-stack:
     kernel:
       repository: https://github.com/metal-stack/kernel
-      url: https://github.com/metal-stack/kernel/releases/download/5.10.60-70/metal-kernel
-      version: 5.10.60-70
+      url: https://github.com/metal-stack/kernel/releases/download/5.10.66-73/metal-kernel
+      version: 5.10.66-73
     metal-hammer:
       repository: https://github.com/metal-stack/metal-hammer
-      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.9.1/metal-hammer-initrd.img.lz4
-      version: v0.9.1
+      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.9.3/metal-hammer-initrd.img.lz4
+      version: v0.9.3
     metalctl:
       darwin:
-        url: https://github.com/metal-stack/metalctl/releases/download/v0.10.8/metalctl-darwin-amd64
+        url: https://github.com/metal-stack/metalctl/releases/download/v0.11.0/metalctl-darwin-amd64
       linux:
-        url: https://github.com/metal-stack/metalctl/releases/download/v0.10.8/metalctl-linux-amd64
+        url: https://github.com/metal-stack/metalctl/releases/download/v0.11.0/metalctl-linux-amd64
       repository: https://github.com/metal-stack/metalctl
-      version: v0.10.8
+      version: v0.11.0
       windows:
-        url: https://github.com/metal-stack/metalctl/releases/download/v0.10.8/metalctl-windows-amd64
+        url: https://github.com/metal-stack/metalctl/releases/download/v0.11.0/metalctl-windows-amd64
 docker-images:
   metal-stack:
     control-plane:
       masterdata-api:
         name: ghcr.io/metal-stack/masterdata-api
         repository: https://github.com/metal-stack/masterdata-api
-        tag: v0.8.8
+        tag: v0.8.9
       metal-api:
         name: ghcr.io/metal-stack/metal-api
         repository: https://github.com/metal-stack/metal-api
@@ -41,16 +41,16 @@ docker-images:
       metal-console:
         name: ghcr.io/metal-stack/metal-console
         repository: https://github.com/metal-stack/metal-console
-        tag: v0.5.5
+        tag: v0.5.7
       metalctl:
         name: ghcr.io/metal-stack/metalctl
         repository: https://github.com/metal-stack/metalctl
-        tag: v0.10.8
+        tag: v0.11.0
     gardener:
       gardener-extension-provider-metal:
         name: ghcr.io/metal-stack/gardener-extension-provider-metal
         repository: https://github.com/metal-stack/gardener-extension-provider-metal
-        tag: v0.16.13
+        tag: v0.17.1
       machine-controller-manager:
         name: eu.gcr.io/gardener-project/gardener/machine-controller-manager
         repository: https://github.com/gardener/machine-controller-manager
@@ -88,7 +88,7 @@ docker-images:
       duros-controller:
         name: ghcr.io/metal-stack/duros-controller
         repository: https://github.com/metal-stack/duros-controller
-        tag: v0.2.1
+        tag: v0.3.2
       metal-ccm:
         name: ghcr.io/metal-stack/metal-ccm
         repository: https://github.com/metal-stack/metal-ccm
@@ -105,7 +105,7 @@ docker-images:
       bmc-proxy:
         name: ghcr.io/metal-stack/bmc-proxy
         repository: https://github.com/metal-stack/metal-console
-        tag: v0.5.5
+        tag: v0.5.7
       metal-core:
         name: ghcr.io/metal-stack/metal-core
         repository: https://github.com/metal-stack/metal-core
@@ -113,7 +113,7 @@ docker-images:
       metal-image-cache-sync:
         name: ghcr.io/metal-stack/metal-image-cache-sync
         repository: https://github.com/metal-stack/metal-image-cache-sync
-        tag: v0.1.3
+        tag: v0.1.4
       pixiecore:
         name: ghcr.io/metal-stack/pixiecore
         repository: https://github.com/metal-stack/netboot
