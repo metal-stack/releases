@@ -135,7 +135,7 @@ docker-images:
       nsq:
         name: nsqio/nsq
         repository: https://github.com/nsqio/nsq
-        tag: v1.2.0
+        tag: v1.2.1
     partition:
       bmc-reverse-proxy:
         name: nginx
