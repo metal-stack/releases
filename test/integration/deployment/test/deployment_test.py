@@ -76,8 +76,8 @@ class MetalSwitchPlaneDeployment(common.TestinfraCommon):
     def __init__(self, *args, **kwargs):
         super(MetalSwitchPlaneDeployment, self).__init__(*args, **kwargs)
         self.hosts = testinfra.get_hosts(
-            ["ansible://leaf01", "ansible://leaf02"],
-            ansible_inventory="~/.ansible/roles/ansible-common/inventory/vagrant/vagrant.py")
+            ["ansible://mini-lab-leaf01", "ansible://mini-lab-leaf02"],
+            ansible_inventory="/mini-lab/mini-lab/ansible-inventory.yml")
 
     def test_metal_core_service(self):
         for host in self.hosts:
