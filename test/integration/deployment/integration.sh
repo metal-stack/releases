@@ -5,9 +5,6 @@ cd /mini-lab
 
 eval $(make dev-env)
 export ANSIBLE_CONFIG=/mini-lab/ansible.cfg
-export ANSIBLE_VAGRANT_USE_CACHE=1
-export ANSIBLE_VAGRANT_CACHE_FILE=/mini-lab/.ansible_vagrant_cache
-export ANSIBLE_VAGRANT_CACHE_MAX_AGE=0
 ansible-playbook \
   -i inventories/control-plane.yaml \
   obtain_role_requirements.yaml
