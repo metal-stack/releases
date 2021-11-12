@@ -14,6 +14,8 @@ mkdir -p ~/.ssh
 cat << EOF >> ~/.ssh/config
 Host *
     StrictHostKeyChecking no
+    User root
+    IdentityFile /mini-lab/files/ssh/id_rsa
 EOF
 
 cd -

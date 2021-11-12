@@ -12,7 +12,10 @@ fi
 METAL_STACK_VERSION=${2:-$(git describe --tags --exact-match 2> /dev/null || git symbolic-ref -q --short HEAD || git rev-parse --short HEAD)}
 
 # use release vector of this repository
-yq w -i "${MINI_LAB_PATH}/inventories/group_vars/all/images.yaml" 'metal_stack_release_version' "${METAL_STACK_VERSION}"
+yq_shell() {
+  docker run --rm -i -v ${MINI_LAB_PATH}:/workdir mikefarah/yq:3 /bin/sh -c "$@"
+}
+yq_shell "yq w -i /workdir/inventories/group_vars/all/images.yaml 'metal_stack_release_version' ${METAL_STACK_VERSION}"
 
 echo
 echo "Modifying metal-stack release version in mini-lab to '${METAL_STACK_VERSION}':"
