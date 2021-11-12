@@ -7,7 +7,7 @@
   metal_ip:
     api_url: "{{ metal_api_url }}"
     api_hmac: "{{ metal_api_edit_key }}"
-    network: internet-vagrant-lab
+    network: internet-mini-lab
     name: machine-ip
     description: machine ip
     project: 00000000-0000-0000-0000-000000000000
@@ -25,7 +25,7 @@
       - look.name == "machine-ip"
       - look.description == "machine ip"
       - look.ipaddress == ip.ip
-      - look.networkid == "internet-vagrant-lab"
+      - look.networkid == "internet-mini-lab"
       - look.projectid == "00000000-0000-0000-0000-000000000000"
       - look.type == "ephemeral"
 
@@ -50,7 +50,7 @@
       - look.name == "machine-ip-altered"
       - look.description == "machine ip altered"
       - look.ipaddress == ip.ip
-      - look.networkid == "internet-vagrant-lab"
+      - look.networkid == "internet-mini-lab"
       - look.projectid == "00000000-0000-0000-0000-000000000000"
       - look.type == "ephemeral"
 

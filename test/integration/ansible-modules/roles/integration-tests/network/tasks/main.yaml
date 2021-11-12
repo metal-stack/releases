@@ -9,7 +9,7 @@
     api_hmac: "{{ metal_api_edit_key }}"
     name: test
     description: test network
-    partition: vagrant
+    partition: mini-lab
     project: 00000000-0000-0000-0000-000000000000
   register: network
 
@@ -24,8 +24,8 @@
     that:
       - look.name == "test"
       - look.description == "test network"
-      - look.partitionid == "vagrant"
-      - look.parentnetworkid == "tenant-super-network-vagrant"
+      - look.partitionid == "mini-lab"
+      - look.parentnetworkid == "tenant-super-network-mini-lab"
       - look.projectid == "00000000-0000-0000-0000-000000000000"
       - look.nat == False
       - look.underlay == False
@@ -37,7 +37,7 @@
     api_url: "{{ metal_api_url }}"
     api_hmac: "{{ metal_api_edit_key }}"
     name: test
-    partition: vagrant
+    partition: mini-lab
     project: 00000000-0000-0000-0000-000000000000
     state: absent
   register: network
