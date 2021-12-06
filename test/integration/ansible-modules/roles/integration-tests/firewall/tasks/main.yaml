@@ -9,7 +9,7 @@
     api_hmac: "{{ metal_api_edit_key }}"
     name: firewall
     description: firewall network
-    partition: vagrant
+    partition: mini-lab
     project: 00000000-0000-0000-0000-000000000000
   register: network
 
@@ -21,11 +21,11 @@
     description: "firewall 01"
     hostname: "firewall01"
     project: "00000000-0000-0000-0000-000000000000"
-    partition: vagrant
+    partition: mini-lab
     image: firewall-ubuntu-2.0
     size: v1-small-x86
     networks:
-      - internet-vagrant-lab
+      - internet-mini-lab
       - "{{ network.id }}"
   register: firewall
 
@@ -42,11 +42,11 @@
       - look.allocation.description == "firewall 01"
       - look.allocation.hostname == "firewall01"
       - look.allocation.project == "00000000-0000-0000-0000-000000000000"
-      - look.partition.id == "vagrant"
+      - look.partition.id == "mini-lab"
       - '"firewall-ubuntu-2.0" in look.allocation.image.id'
       - look.size.id == "v1-small-x86"
-      - '"internet-vagrant-lab" in look.allocation.networks | map(attribute="networkid") | list'
-      - '"underlay-vagrant-lab" in look.allocation.networks | map(attribute="networkid") | list'
+      - '"internet-mini-lab" in look.allocation.networks | map(attribute="networkid") | list'
+      - '"underlay-mini-lab" in look.allocation.networks | map(attribute="networkid") | list'
       - 'network.id in look.allocation.networks | map(attribute="networkid") | list'
 
 - name: Allocate firewall again
@@ -57,11 +57,11 @@
     description: "firewall 01"
     hostname: "firewall01"
     project: "00000000-0000-0000-0000-000000000000"
-    partition: vagrant
+    partition: mini-lab
     image: firewall-ubuntu-2.0
     size: v1-small-x86
     networks:
-      - internet-vagrant-lab
+      - internet-mini-lab
       - "{{ network.id }}"
   register: firewall
 
