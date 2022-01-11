@@ -85,6 +85,10 @@ docker-images:
         name: ghcr.io/metal-stack/csi-lvm-provisioner
         repository: https://github.com/metal-stack/csi-lvm
         tag: v0.6.4
+      droptailer:
+        name: ghcr.io/metal-stack/droptailer
+        repository: https://github.com/metal-stack/droptailer
+        tag: v0.2.8
       duros-controller:
         name: ghcr.io/metal-stack/duros-controller
         repository: https://github.com/metal-stack/duros-controller
