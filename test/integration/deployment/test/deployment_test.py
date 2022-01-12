@@ -46,7 +46,7 @@ class MetalControlPlaneDeployment(unittest.TestCase):
             self.fail("api not responsive: %s" % exception)
 
         self.assertEqual(res.status, "healthy")
-        self.assertEqual(res.message, "OK")
+        self.assertEqual(res.message, "")
 
     @flaky(max_runs=36, rerun_filter=common.FlakyBackoff(10).backoff)
     def test_switches_have_registered(self):
