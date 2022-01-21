@@ -10,38 +10,12 @@
     setup_yaml:
       - url: https://raw.githubusercontent.com/metal-stack/releases/{{ metal_stack_release_version }}/release.yaml
         meta_var: metal_stack_release
-  pre_tasks:
-    - name: Gather releases
-      setup_yaml:
-
-    - name: Install metal-python
-      block:
-        - name: Install test dependencies
-          pip:
-            name:
-            - metal_python=={{ metal_api_image_tag }}
-          ignore_errors: no
-      rescue:
-        # attempt with latest available client when fitting client is not available
-        - name: Install test dependencies (fallback)
-          pip:
-            name:
-            - metal_python
-
-    - name: Wait for machines to get ready
-      command: echo
-      until:
-        - lookup('metal', 'search', 'machine', api_hmac=metal_api_edit_key, errors='ignore') | default([], true) | length == 2
-        - lookup('metal', 'search', 'machine', api_hmac=metal_api_edit_key)[0]["events"]["log"][0]["event"] == "Waiting"
-        - lookup('metal', 'search', 'machine', api_hmac=metal_api_edit_key)[1]["events"]["log"][0]["event"] == "Waiting"
-      retries: 60
-      delay: 10
-      changed_when: false
-
   roles:
     - ansible-common
     - metal-roles
     - metal-ansible-modules
+    - metal-roles/control-plane/roles/metal-python
+    - wait-for-integration-start
     - integration-tests/helpers
     - integration-tests/network
     - integration-tests/ip

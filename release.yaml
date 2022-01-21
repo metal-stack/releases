@@ -7,17 +7,17 @@ ansible-roles:
     version: v0.2.6
   metal-roles:
     repository: https://github.com/metal-stack/metal-roles
-    version: v0.6.5
+    version: v0.6.6
 binaries:
   metal-stack:
     kernel:
       repository: https://github.com/metal-stack/kernel
-      url: https://github.com/metal-stack/kernel/releases/download/5.10.80-80/metal-kernel
-      version: 5.10.80-80
+      url: https://github.com/metal-stack/kernel/releases/download/5.10.92-84/metal-kernel
+      version: 5.10.92-84
     metal-hammer:
       repository: https://github.com/metal-stack/metal-hammer
-      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.9.3/metal-hammer-initrd.img.lz4
-      version: v0.9.3
+      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.9.4/metal-hammer-initrd.img.lz4
+      version: v0.9.4
     metalctl:
       darwin:
         url: https://github.com/metal-stack/metalctl/releases/download/v0.11.5/metalctl-darwin-amd64
@@ -37,7 +37,7 @@ docker-images:
       metal-api:
         name: ghcr.io/metal-stack/metal-api
         repository: https://github.com/metal-stack/metal-api
-        tag: v0.16.1
+        tag: v0.16.2
       metal-console:
         name: ghcr.io/metal-stack/metal-console
         repository: https://github.com/metal-stack/metal-console
@@ -50,7 +50,7 @@ docker-images:
       gardener-extension-provider-metal:
         name: ghcr.io/metal-stack/gardener-extension-provider-metal
         repository: https://github.com/metal-stack/gardener-extension-provider-metal
-        tag: v0.18.1
+        tag: v0.18.5
       machine-controller-manager:
         name: eu.gcr.io/gardener-project/gardener/machine-controller-manager
         repository: https://github.com/gardener/machine-controller-manager
@@ -76,7 +76,7 @@ docker-images:
       audit-forwarder:
         name: ghcr.io/metal-stack/audit-forwarder
         repository: https://github.com/metal-stack/audit-forwarder
-        tag: v0.2.1
+        tag: v0.2.2
       csi-lvm-controller:
         name: ghcr.io/metal-stack/csi-lvm-controller
         repository: https://github.com/metal-stack/csi-lvm
@@ -85,6 +85,10 @@ docker-images:
         name: ghcr.io/metal-stack/csi-lvm-provisioner
         repository: https://github.com/metal-stack/csi-lvm
         tag: v0.6.4
+      droptailer:
+        name: ghcr.io/metal-stack/droptailer
+        repository: https://github.com/metal-stack/droptailer
+        tag: v0.2.8
       duros-controller:
         name: ghcr.io/metal-stack/duros-controller
         repository: https://github.com/metal-stack/duros-controller
@@ -92,7 +96,7 @@ docker-images:
       metal-ccm:
         name: ghcr.io/metal-stack/metal-ccm
         repository: https://github.com/metal-stack/metal-ccm
-        tag: v0.7.0
+        tag: v0.7.1
       node-init:
         name: ghcr.io/metal-stack/node-init
         repository: https://github.com/metal-stack/node-init
@@ -109,7 +113,7 @@ docker-images:
       metal-core:
         name: ghcr.io/metal-stack/metal-core
         repository: https://github.com/metal-stack/metal-core
-        tag: v0.7.6
+        tag: v0.7.7
       metal-image-cache-sync:
         name: ghcr.io/metal-stack/metal-image-cache-sync
         repository: https://github.com/metal-stack/metal-image-cache-sync
