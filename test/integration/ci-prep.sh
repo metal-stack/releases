@@ -12,13 +12,12 @@ MINI_LAB_VERSION=${1:-master}
 METAL_STACK_VERSION=${2:-$(git rev-parse --abbrev-ref HEAD)}
 MINI_LAB_PATH=./mini-lab
 
-if ! which yq; then
-  sudo curl -Lo /usr/local/bin/yq https://github.com/mikefarah/yq/releases/download/3.3.2/yq_linux_amd64
-  sudo chmod +x /usr/local/bin/yq
-fi
+yq_shell() {
+  docker run --rm -i -v $(pwd):/workdir mikefarah/yq:3 /bin/sh -c "$@"
+}
 
 rm -rf "${MINI_LAB_PATH}"
-git clone $(yq r release.yaml 'projects.metal-stack.mini-lab.repository')
+git clone $(yq_shell "yq r release.yaml 'projects.metal-stack.mini-lab.repository'")
 
 cd "${MINI_LAB_PATH}"
 
