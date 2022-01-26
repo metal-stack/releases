@@ -20,7 +20,8 @@ jobs:
     - name: Cleanup steps from prior runs
       shell: bash
       run: |
-        sudo chown -R $USER:$USER /var/lib/gitlab-runner/github/_work/releases || true
+        d=/home/github-runner/installation/_work/releases
+        [ -d "${d}" ] && sudo chown -R $USER:$USER ${d}
 
     - name: Checkout
       uses: actions/checkout@v2
