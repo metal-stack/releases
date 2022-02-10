@@ -17,10 +17,9 @@ jobs:
     name: Integration tests
     runs-on: self-hosted
     steps:
-    - name: Cleanup steps from prior runs
-      shell: bash
+    - name: Gain back workspace permissions # https://github.com/actions/checkout/issues/211
       run: |
-        sudo chown -R $USER:$USER /var/lib/gitlab-runner/github/_work/releases
+        [ -d "${GITHUB_WORKSPACE}" ] && sudo chown -R $USER:$USER ${GITHUB_WORKSPACE}
 
     - name: Checkout
       uses: actions/checkout@v2
