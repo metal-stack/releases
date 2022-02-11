@@ -162,4 +162,4 @@ projects:
   metal-stack:
     mini-lab:
       repository: https://github.com/metal-stack/mini-lab
-      version: v0.2.1
+      version: v0.2.2
