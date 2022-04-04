@@ -75,7 +75,7 @@ class MetalControlPlaneDeployment(unittest.TestCase):
 class MetalSwitchPlaneDeployment(common.TestinfraCommon):
     def __init__(self, *args, **kwargs):
         super(MetalSwitchPlaneDeployment, self).__init__(*args, **kwargs)
-        self.hosts = testinfra.get_hosts(["ssh://mini-lab-leaf01", "ssh://mini-lab-leaf02"])
+        self.hosts = testinfra.get_hosts(["ssh://leaf01", "ssh://leaf02"])
 
     def test_metal_core_service(self):
         for host in self.hosts:
