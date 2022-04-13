@@ -12,8 +12,8 @@ binaries:
   metal-stack:
     kernel:
       repository: https://github.com/metal-stack/kernel
-      url: https://github.com/metal-stack/kernel/releases/download/5.10.108-88/metal-kernel
-      version: 5.10.108-88
+      url: https://github.com/metal-stack/kernel/releases/download/5.10.110-89/metal-kernel
+      version: 5.10.110-89
     metal-hammer:
       repository: https://github.com/metal-stack/metal-hammer
       url: https://github.com/metal-stack/metal-hammer/releases/download/v0.9.4/metal-hammer-initrd.img.lz4
@@ -96,7 +96,7 @@ docker-images:
       metal-ccm:
         name: ghcr.io/metal-stack/metal-ccm
         repository: https://github.com/metal-stack/metal-ccm
-        tag: v0.7.1
+        tag: v0.7.2
       node-init:
         name: ghcr.io/metal-stack/node-init
         repository: https://github.com/metal-stack/node-init
