@@ -16,8 +16,8 @@ binaries:
       version: 5.10.110-89
     metal-hammer:
       repository: https://github.com/metal-stack/metal-hammer
-      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.9.4/metal-hammer-initrd.img.lz4
-      version: v0.9.4
+      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.9.5/metal-hammer-initrd.img.lz4
+      version: v0.9.5
     metalctl:
       darwin:
         url: https://github.com/metal-stack/metalctl/releases/download/v0.11.7/metalctl-darwin-amd64
@@ -37,7 +37,7 @@ docker-images:
       metal-api:
         name: ghcr.io/metal-stack/metal-api
         repository: https://github.com/metal-stack/metal-api
-        tag: v0.16.4
+        tag: v0.16.6
       metal-console:
         name: ghcr.io/metal-stack/metal-console
         repository: https://github.com/metal-stack/metal-console
@@ -96,7 +96,7 @@ docker-images:
       metal-ccm:
         name: ghcr.io/metal-stack/metal-ccm
         repository: https://github.com/metal-stack/metal-ccm
-        tag: v0.7.2
+        tag: v0.7.3
       node-init:
         name: ghcr.io/metal-stack/node-init
         repository: https://github.com/metal-stack/node-init
@@ -113,7 +113,7 @@ docker-images:
       metal-core:
         name: ghcr.io/metal-stack/metal-core
         repository: https://github.com/metal-stack/metal-core
-        tag: v0.7.7
+        tag: v0.7.9
       metal-image-cache-sync:
         name: ghcr.io/metal-stack/metal-image-cache-sync
         repository: https://github.com/metal-stack/metal-image-cache-sync
