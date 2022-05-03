@@ -16,8 +16,8 @@ binaries:
       version: 5.10.110-89
     metal-hammer:
       repository: https://github.com/metal-stack/metal-hammer
-      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.9.5/metal-hammer-initrd.img.lz4
-      version: v0.9.5
+      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.9.6/metal-hammer-initrd.img.lz4
+      version: v0.9.6
     metalctl:
       darwin:
         url: https://github.com/metal-stack/metalctl/releases/download/v0.11.7/metalctl-darwin-amd64
@@ -33,7 +33,7 @@ docker-images:
       masterdata-api:
         name: ghcr.io/metal-stack/masterdata-api
         repository: https://github.com/metal-stack/masterdata-api
-        tag: v0.8.11
+        tag: v0.8.12
       metal-api:
         name: ghcr.io/metal-stack/metal-api
         repository: https://github.com/metal-stack/metal-api
@@ -113,7 +113,7 @@ docker-images:
       metal-core:
         name: ghcr.io/metal-stack/metal-core
         repository: https://github.com/metal-stack/metal-core
-        tag: v0.7.9
+        tag: v0.7.10
       metal-image-cache-sync:
         name: ghcr.io/metal-stack/metal-image-cache-sync
         repository: https://github.com/metal-stack/metal-image-cache-sync
@@ -162,4 +162,4 @@ projects:
   metal-stack:
     mini-lab:
       repository: https://github.com/metal-stack/mini-lab
-      version: v0.2.2
+      version: v0.2.3
