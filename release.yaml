@@ -119,9 +119,9 @@ docker-images:
         repository: https://github.com/metal-stack/metal-image-cache-sync
         tag: v0.1.4
       pixiecore:
-        name: ghcr.io/metal-stack/pixiecore
-        repository: https://github.com/metal-stack/netboot
-        tag: 8beb063c06d1dca450192f8722f3b2e1c956d6de
+        name: ghcr.io/metal-stack/pixie
+        repository: https://github.com/metal-stack/pixie
+        tag: v0.1.1
   third-party:
     control-plane:
       ipam-db:
