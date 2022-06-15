@@ -12,7 +12,7 @@ cd /integration
 
 rm -f /output/*
 export ANSIBLE_CONFIG=/mini-lab/ansible.cfg
-export ANSIBLE_CALLBACK_WHITELIST=junit
+export ANSIBLE_CALLBACKS_ENABLED=junit
 export JUNIT_OUTPUT_DIR=/output
 export JUNIT_FAIL_ON_IGNORE=true
 
