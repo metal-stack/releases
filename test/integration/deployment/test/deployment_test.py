@@ -83,7 +83,7 @@ class MetalSwitchPlaneDeployment(common.TestinfraCommon):
 
     def test_pixiecore_service(self):
         for host in self.hosts:
-            self.service_enabled_and_running(host, "pixiecore")
+            self.service_enabled_and_running(self.hosts[0], "pixiecore")
 
     def test_frr_service(self):
         for host in self.hosts:
