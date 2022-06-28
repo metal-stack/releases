@@ -7,26 +7,26 @@ ansible-roles:
     version: v0.2.6
   metal-roles:
     repository: https://github.com/metal-stack/metal-roles
-    version: v0.7.4
+    version: v0.7.6
 binaries:
   metal-stack:
     kernel:
       repository: https://github.com/metal-stack/kernel
-      url: https://github.com/metal-stack/kernel/releases/download/5.10.122-92/metal-kernel
-      version: 5.10.122-92
+      url: https://github.com/metal-stack/kernel/releases/download/5.10.126-93/metal-kernel
+      version: 5.10.126-93
     metal-hammer:
       repository: https://github.com/metal-stack/metal-hammer
       url: https://github.com/metal-stack/metal-hammer/releases/download/v0.10.2/metal-hammer-initrd.img.lz4
       version: v0.10.2
     metalctl:
       darwin:
-        url: https://github.com/metal-stack/metalctl/releases/download/v0.11.8/metalctl-darwin-amd64
+        url: https://github.com/metal-stack/metalctl/releases/download/v0.11.9/metalctl-darwin-amd64
       linux:
-        url: https://github.com/metal-stack/metalctl/releases/download/v0.11.8/metalctl-linux-amd64
+        url: https://github.com/metal-stack/metalctl/releases/download/v0.11.9/metalctl-linux-amd64
       repository: https://github.com/metal-stack/metalctl
-      version: v0.11.8
+      version: v0.11.9
       windows:
-        url: https://github.com/metal-stack/metalctl/releases/download/v0.11.8/metalctl-windows-amd64
+        url: https://github.com/metal-stack/metalctl/releases/download/v0.11.9/metalctl-windows-amd64
 docker-images:
   metal-stack:
     control-plane:
@@ -45,7 +45,7 @@ docker-images:
       metalctl:
         name: ghcr.io/metal-stack/metalctl
         repository: https://github.com/metal-stack/metalctl
-        tag: v0.11.8
+        tag: v0.11.9
     gardener:
       gardener-extension-provider-metal:
         name: ghcr.io/metal-stack/gardener-extension-provider-metal
@@ -92,11 +92,11 @@ docker-images:
       duros-controller:
         name: ghcr.io/metal-stack/duros-controller
         repository: https://github.com/metal-stack/duros-controller
-        tag: v0.4.0
+        tag: v0.4.1
       metal-ccm:
         name: ghcr.io/metal-stack/metal-ccm
         repository: https://github.com/metal-stack/metal-ccm
-        tag: v0.7.3
+        tag: v0.7.4
       node-init:
         name: ghcr.io/metal-stack/node-init
         repository: https://github.com/metal-stack/node-init
@@ -105,7 +105,7 @@ docker-images:
       bmc-catcher:
         name: ghcr.io/metal-stack/bmc-catcher
         repository: https://github.com/metal-stack/bmc-catcher
-        tag: v0.2.11
+        tag: v0.3.0
       bmc-proxy:
         name: ghcr.io/metal-stack/bmc-proxy
         repository: https://github.com/metal-stack/metal-console
@@ -113,7 +113,7 @@ docker-images:
       metal-core:
         name: ghcr.io/metal-stack/metal-core
         repository: https://github.com/metal-stack/metal-core
-        tag: v0.8.0
+        tag: v0.8.1
       metal-image-cache-sync:
         name: ghcr.io/metal-stack/metal-image-cache-sync
         repository: https://github.com/metal-stack/metal-image-cache-sync
@@ -162,4 +162,4 @@ projects:
   metal-stack:
     mini-lab:
       repository: https://github.com/metal-stack/mini-lab
-      version: v0.2.3
+      version: v0.3.0
