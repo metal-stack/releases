@@ -20,13 +20,13 @@ binaries:
       version: v0.10.2
     metalctl:
       darwin:
-        url: https://github.com/metal-stack/metalctl/releases/download/v0.11.8/metalctl-darwin-amd64
+        url: https://github.com/metal-stack/metalctl/releases/download/v0.11.9/metalctl-darwin-amd64
       linux:
-        url: https://github.com/metal-stack/metalctl/releases/download/v0.11.8/metalctl-linux-amd64
+        url: https://github.com/metal-stack/metalctl/releases/download/v0.11.9/metalctl-linux-amd64
       repository: https://github.com/metal-stack/metalctl
-      version: v0.11.8
+      version: v0.11.9
       windows:
-        url: https://github.com/metal-stack/metalctl/releases/download/v0.11.8/metalctl-windows-amd64
+        url: https://github.com/metal-stack/metalctl/releases/download/v0.11.9/metalctl-windows-amd64
 docker-images:
   metal-stack:
     control-plane:
@@ -45,7 +45,7 @@ docker-images:
       metalctl:
         name: ghcr.io/metal-stack/metalctl
         repository: https://github.com/metal-stack/metalctl
-        tag: v0.11.8
+        tag: v0.11.9
     gardener:
       gardener-extension-provider-metal:
         name: ghcr.io/metal-stack/gardener-extension-provider-metal
