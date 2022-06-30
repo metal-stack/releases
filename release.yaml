@@ -106,10 +106,6 @@ docker-images:
         name: ghcr.io/metal-stack/bmc-catcher
         repository: https://github.com/metal-stack/bmc-catcher
         tag: v0.4.0
-      bmc-proxy:
-        name: ghcr.io/metal-stack/bmc-proxy
-        repository: https://github.com/metal-stack/metal-console
-        tag: v0.6.0
       metal-core:
         name: ghcr.io/metal-stack/metal-core
         repository: https://github.com/metal-stack/metal-core
@@ -141,10 +137,6 @@ docker-images:
         repository: https://github.com/nsqio/nsq
         tag: v1.2.1
     partition:
-      bmc-reverse-proxy:
-        name: nginx
-        repository: http://hg.nginx.org/nginx/
-        tag: "1.18"
       image-cache-coredns:
         name: coredns/coredns
         repository: https://github.com/coredns/coredns
