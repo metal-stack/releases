@@ -102,9 +102,9 @@ docker-images:
         repository: https://github.com/metal-stack/node-init
         tag: v0.1.1
     partition:
-      bmc-catcher:
-        name: ghcr.io/metal-stack/bmc-catcher
-        repository: https://github.com/metal-stack/bmc-catcher
+      metal-bmc:
+        name: ghcr.io/metal-stack/metal-bmc
+        repository: https://github.com/metal-stack/metal-bmc
         tag: v0.4.0
       metal-core:
         name: ghcr.io/metal-stack/metal-core
