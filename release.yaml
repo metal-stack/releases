@@ -7,13 +7,13 @@ ansible-roles:
     version: v0.2.6
   metal-roles:
     repository: https://github.com/metal-stack/metal-roles
-    version: v0.7.6
+    version: v0.7.10
 binaries:
   metal-stack:
     kernel:
       repository: https://github.com/metal-stack/kernel
-      url: https://github.com/metal-stack/kernel/releases/download/5.10.126-93/metal-kernel
-      version: 5.10.126-93
+      url: https://github.com/metal-stack/kernel/releases/download/5.10.128-94/metal-kernel
+      version: 5.10.128-94
     metal-hammer:
       repository: https://github.com/metal-stack/metal-hammer
       url: https://github.com/metal-stack/metal-hammer/releases/download/v0.10.2/metal-hammer-initrd.img.lz4
@@ -37,11 +37,11 @@ docker-images:
       metal-api:
         name: ghcr.io/metal-stack/metal-api
         repository: https://github.com/metal-stack/metal-api
-        tag: v0.18.6
+        tag: v0.18.7
       metal-console:
         name: ghcr.io/metal-stack/metal-console
         repository: https://github.com/metal-stack/metal-console
-        tag: v0.5.9
+        tag: v0.6.0
       metalctl:
         name: ghcr.io/metal-stack/metalctl
         repository: https://github.com/metal-stack/metalctl
@@ -50,7 +50,7 @@ docker-images:
       gardener-extension-provider-metal:
         name: ghcr.io/metal-stack/gardener-extension-provider-metal
         repository: https://github.com/metal-stack/gardener-extension-provider-metal
-        tag: v0.18.13
+        tag: v0.18.14
       machine-controller-manager:
         name: eu.gcr.io/gardener-project/gardener/machine-controller-manager
         repository: https://github.com/gardener/machine-controller-manager
@@ -67,7 +67,7 @@ docker-images:
       backup-restore-sidecar:
         name: ghcr.io/metal-stack/backup-restore-sidecar
         repository: https://github.com/metal-stack/backup-restore-sidecar
-        tag: v0.6.3
+        tag: v0.6.4
       deployment-base:
         name: ghcr.io/metal-stack/metal-deployment-base
         repository: https://github.com/metal-stack/metal-dockerfiles
@@ -102,14 +102,10 @@ docker-images:
         repository: https://github.com/metal-stack/node-init
         tag: v0.1.1
     partition:
-      bmc-catcher:
-        name: ghcr.io/metal-stack/bmc-catcher
-        repository: https://github.com/metal-stack/bmc-catcher
-        tag: v0.3.0
-      bmc-proxy:
-        name: ghcr.io/metal-stack/bmc-proxy
-        repository: https://github.com/metal-stack/metal-console
-        tag: v0.5.9
+      metal-bmc:
+        name: ghcr.io/metal-stack/metal-bmc
+        repository: https://github.com/metal-stack/metal-bmc
+        tag: v0.4.2
       metal-core:
         name: ghcr.io/metal-stack/metal-core
         repository: https://github.com/metal-stack/metal-core
@@ -141,10 +137,6 @@ docker-images:
         repository: https://github.com/nsqio/nsq
         tag: v1.2.1
     partition:
-      bmc-reverse-proxy:
-        name: nginx
-        repository: http://hg.nginx.org/nginx/
-        tag: "1.18"
       image-cache-coredns:
         name: coredns/coredns
         repository: https://github.com/coredns/coredns
@@ -157,7 +149,7 @@ helm-charts:
   metal-stack:
     metal-control-plane:
       repository: https://helm.metal-stack.io
-      version: 0.3.12
+      version: 0.3.13
 projects:
   metal-stack:
     mini-lab:
