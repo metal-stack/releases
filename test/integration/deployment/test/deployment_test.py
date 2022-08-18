@@ -14,7 +14,7 @@ class MetalControlPlaneDeployment(unittest.TestCase):
     def __init__(self, *args, **kwargs):
         super(MetalControlPlaneDeployment, self).__init__(*args, **kwargs)
         config.load_kube_config()
-        self.driver = Driver(os.getenv("METALCTL_URL"), os.getenv("METALCTL_TOKEN"), os.getenv("METALCTL_HMAC"))
+        self.driver = Driver(os.getenv("METALCTL_API_URL"), os.getenv("METALCTL_TOKEN"), os.getenv("METALCTL_HMAC"))
         self.maxDiff = None
 
     def test_deployment(self):
