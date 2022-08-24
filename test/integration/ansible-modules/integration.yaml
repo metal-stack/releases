@@ -1,4 +1,20 @@
 ---
+- name: Ansible integration tests preparation
+  hosts: localhost
+  connection: local
+  gather_facts: no
+  vars:
+    metal_api_url: http://api.172.17.0.1.nip.io:8080/metal
+    setup_yaml:
+      - url: https://raw.githubusercontent.com/metal-stack/releases/{{ metal_stack_release_version }}/release.yaml
+        meta_var: metal_stack_release
+  roles:
+    - ansible-common
+    - metal-roles
+    - metal-ansible-modules
+    - metal-roles/control-plane/roles/metal-python
+    - wait-for-integration-start
+
 - name: Running Ansible integration tests
   hosts: localhost
   connection: local
@@ -14,8 +30,6 @@
     - ansible-common
     - metal-roles
     - metal-ansible-modules
-    - metal-roles/control-plane/roles/metal-python
-    - wait-for-integration-start
     - integration-tests/helpers
     - integration-tests/network
     - integration-tests/ip
