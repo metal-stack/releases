@@ -52,9 +52,9 @@ docker-images:
         repository: https://github.com/metal-stack/gardener-extension-provider-metal
         tag: v0.18.18
       machine-controller-manager:
-        name: eu.gcr.io/gardener-project/gardener/machine-controller-manager
+        name: r.metal-stack.io/gardener/machine-controller-manager
         repository: https://github.com/gardener/machine-controller-manager
-        tag: v0.45.0
+        tag: support-ignition
       machine-controller-manager-provider-metal:
         name: ghcr.io/metal-stack/machine-controller-manager-provider-metal
         repository: https://github.com/metal-stack/machine-controller-manager-provider-metal
