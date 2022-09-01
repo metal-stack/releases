@@ -1,10 +1,8 @@
 ---
-- name: Running Ansible integration tests
+- name: Ansible integration tests preparation
   hosts: localhost
   connection: local
   gather_facts: no
-  # ignoring errors because we do integration tests and we want full playbook runs
-  ignore_errors: yes
   vars:
     metal_api_url: http://api.172.17.0.1.nip.io:8080/metal
     setup_yaml:
@@ -14,8 +12,5 @@
     - ansible-common
     - metal-roles
     - metal-ansible-modules
-    - integration-tests/helpers
-    - integration-tests/network
-    - integration-tests/ip
-    - integration-tests/firewall
-    - integration-tests/machine
+    - metal-roles/control-plane/roles/metal-python
+    - wait-for-integration-start

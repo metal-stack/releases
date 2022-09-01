@@ -10,6 +10,8 @@ ansible-galaxy install --ignore-errors -r requirements.yaml
 
 cd /integration
 
+ansible-playbook -i /mini-lab/inventories/control-plane.yaml prepare.yaml
+
 rm -f /output/*
 export ANSIBLE_CONFIG=/mini-lab/ansible.cfg
 export ANSIBLE_CALLBACKS_ENABLED=junit
