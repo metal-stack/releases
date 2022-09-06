@@ -3,7 +3,7 @@ set -eo pipefail
 
 cd /mini-lab
 
-pip install --upgrade pip junit-xml
+pip install --root-user-action=ignore --upgrade pip junit-xml
 
 ansible-playbook -i inventories/control-plane.yaml obtain_role_requirements.yaml
 ansible-galaxy install --ignore-errors -r requirements.yaml

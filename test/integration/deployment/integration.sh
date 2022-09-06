@@ -21,7 +21,7 @@ EOF
 cd -
 
 # FIXME: Install correct version of metal_python
-pip install \
+pip install --root-user-action=ignore --upgrade pip \
   coverage \
   flaky \
   mock \
