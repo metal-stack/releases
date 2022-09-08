@@ -12,8 +12,8 @@ binaries:
   metal-stack:
     kernel:
       repository: https://github.com/metal-stack/kernel
-      url: https://github.com/metal-stack/kernel/releases/download/5.10.140-98/metal-kernel
-      version: 5.10.140-98
+      url: https://github.com/metal-stack/kernel/releases/download/5.10.142-99/metal-kernel
+      version: 5.10.142-99
     metal-hammer:
       repository: https://github.com/metal-stack/metal-hammer
       url: https://github.com/metal-stack/metal-hammer/releases/download/v0.10.3/metal-hammer-initrd.img.lz4
