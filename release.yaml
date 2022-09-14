@@ -117,7 +117,7 @@ docker-images:
       pixiecore:
         name: ghcr.io/metal-stack/pixie
         repository: https://github.com/metal-stack/pixie
-        tag: v0.2.0
+        tag: v0.2.1
   third-party:
     control-plane:
       headscale:
