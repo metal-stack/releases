@@ -7,17 +7,17 @@ ansible-roles:
     version: v0.2.7
   metal-roles:
     repository: https://github.com/metal-stack/metal-roles
-    version: v0.7.10
+    version: v0.7.12
 binaries:
   metal-stack:
     kernel:
       repository: https://github.com/metal-stack/kernel
-      url: https://github.com/metal-stack/kernel/releases/download/5.10.140-98/metal-kernel
-      version: 5.10.140-98
+      url: https://github.com/metal-stack/kernel/releases/download/5.10.142-99/metal-kernel
+      version: 5.10.142-99
     metal-hammer:
       repository: https://github.com/metal-stack/metal-hammer
-      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.10.3/metal-hammer-initrd.img.lz4
-      version: v0.10.3
+      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.10.4/metal-hammer-initrd.img.lz4
+      version: v0.10.4
     metalctl:
       darwin:
         url: https://github.com/metal-stack/metalctl/releases/download/v0.12.6/metalctl-darwin-amd64
@@ -37,7 +37,7 @@ docker-images:
       metal-api:
         name: ghcr.io/metal-stack/metal-api
         repository: https://github.com/metal-stack/metal-api
-        tag: v0.19.2
+        tag: v0.21.1
       metal-console:
         name: ghcr.io/metal-stack/metal-console
         repository: https://github.com/metal-stack/metal-console
@@ -50,15 +50,15 @@ docker-images:
       gardener-extension-provider-metal:
         name: ghcr.io/metal-stack/gardener-extension-provider-metal
         repository: https://github.com/metal-stack/gardener-extension-provider-metal
-        tag: v0.18.19
+        tag: v0.18.20
       machine-controller-manager:
-        name: r.metal-stack.io/gardener/machine-controller-manager
+        name: eu.gcr.io/gardener-project/gardener/machine-controller-manager
         repository: https://github.com/gardener/machine-controller-manager
-        tag: support-ignition
+        tag: v0.47.0
       machine-controller-manager-provider-metal:
         name: ghcr.io/metal-stack/machine-controller-manager-provider-metal
         repository: https://github.com/metal-stack/machine-controller-manager-provider-metal
-        tag: v0.1.12
+        tag: v0.1.13
       os-metal-extension:
         name: ghcr.io/metal-stack/os-metal-extension
         repository: https://github.com/metal-stack/os-metal-extension
@@ -71,7 +71,7 @@ docker-images:
       deployment-base:
         name: ghcr.io/metal-stack/metal-deployment-base
         repository: https://github.com/metal-stack/metal-dockerfiles
-        tag: v0.5.0
+        tag: v0.6.0
     kubernetes:
       audit-forwarder:
         name: ghcr.io/metal-stack/audit-forwarder
@@ -92,7 +92,7 @@ docker-images:
       duros-controller:
         name: ghcr.io/metal-stack/duros-controller
         repository: https://github.com/metal-stack/duros-controller
-        tag: v0.4.1
+        tag: v0.5.0
       metal-ccm:
         name: ghcr.io/metal-stack/metal-ccm
         repository: https://github.com/metal-stack/metal-ccm
@@ -120,6 +120,14 @@ docker-images:
         tag: v0.2.0
   third-party:
     control-plane:
+      headscale:
+        name: headscale/headscale
+        repository: https://github.com/juanfont/headscale
+        tag: 0.16.4-alpine
+      headscale-db:
+        name: postgres
+        repository: https://github.com/docker-library/postgres
+        tag: 14-alpine
       ipam-db:
         name: postgres
         repository: https://github.com/docker-library/postgres
@@ -149,7 +157,7 @@ helm-charts:
   metal-stack:
     metal-control-plane:
       repository: https://helm.metal-stack.io
-      version: 0.3.14
+      version: 0.3.16
 projects:
   metal-stack:
     mini-lab:
