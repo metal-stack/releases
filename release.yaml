@@ -33,7 +33,7 @@ docker-images:
       masterdata-api:
         name: ghcr.io/metal-stack/masterdata-api
         repository: https://github.com/metal-stack/masterdata-api
-        tag: v0.8.14
+        tag: v0.9.0
       metal-api:
         name: ghcr.io/metal-stack/metal-api
         repository: https://github.com/metal-stack/metal-api
