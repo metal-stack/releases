@@ -42,10 +42,18 @@ docker-images:
         name: ghcr.io/metal-stack/metal-console
         repository: https://github.com/metal-stack/metal-console
         tag: v0.6.1
+      metal-metrics-exporter:
+        name: ghcr.io/metal-stack/metal-metrics-exporter
+        repository: https://github.com/metal-stack/metal-metrics-exporter
+        tag: v0.1.2
       metalctl:
         name: ghcr.io/metal-stack/metalctl
         repository: https://github.com/metal-stack/metalctl
         tag: v0.12.9
+      rethinkdb-exporter:
+        name: ghcr.io/metal-stack/rethinkdb-exporter
+        repository: https://github.com/metal-stack/rethinkdb-exporter
+        tag: v0.1.0
     gardener:
       gardener-extension-provider-metal:
         name: ghcr.io/metal-stack/gardener-extension-provider-metal
@@ -120,6 +128,10 @@ docker-images:
         tag: v0.2.2
   third-party:
     control-plane:
+      event-exporter:
+        name: ghcr.io/resmoio/kubernetes-event-exporter
+        repository: https://github.com/resmoio/kubernetes-event-exporter
+        tag: v1.1
       headscale:
         name: headscale/headscale
         repository: https://github.com/juanfont/headscale
@@ -154,10 +166,18 @@ docker-images:
         repository: https://github.com/docker-library/haproxy
         tag: 2.4-alpine
 helm-charts:
+  logging:
+    loki-stack:
+      repository: https://grafana.github.io/helm-charts
+      version: 2.8.9
   metal-stack:
     metal-control-plane:
       repository: https://helm.metal-stack.io
       version: 0.3.17
+  monitoring:
+    kube-prometheus-stack:
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 42.1.0
 projects:
   metal-stack:
     mini-lab:
