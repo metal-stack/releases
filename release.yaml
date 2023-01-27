@@ -178,6 +178,10 @@ helm-charts:
     kube-prometheus-stack:
       repository: https://prometheus-community.github.io/helm-charts
       version: 42.1.0
+  third-party:
+    meilisearch:
+      repository: https://meilisearch.github.io/meilisearch-kubernetes
+      version: 0.1.44
 projects:
   metal-stack:
     mini-lab:
