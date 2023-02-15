@@ -181,7 +181,7 @@ helm-charts:
   third-party:
     meilisearch:
       repository: https://meilisearch.github.io/meilisearch-kubernetes
-      version: 0.1.44
+      version: 0.1.48
 projects:
   metal-stack:
     mini-lab:
