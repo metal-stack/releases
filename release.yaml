@@ -12,8 +12,8 @@ binaries:
   metal-stack:
     kernel:
       repository: https://github.com/metal-stack/kernel
-      url: https://github.com/metal-stack/kernel/releases/download/5.10.162-105/metal-kernel
-      version: 5.10.162-105
+      url: https://github.com/metal-stack/kernel/releases/download/6.1.12-107/metal-kernel
+      version: 6.1.12-107
     metal-hammer:
       repository: https://github.com/metal-stack/metal-hammer
       url: https://github.com/metal-stack/metal-hammer/releases/download/v0.11.1/metal-hammer-initrd.img.lz4
@@ -74,7 +74,7 @@ docker-images:
       os-metal-extension:
         name: ghcr.io/metal-stack/os-metal-extension
         repository: https://github.com/metal-stack/os-metal-extension
-        tag: v0.6.1
+        tag: v0.6.2
     generic:
       backup-restore-sidecar:
         name: ghcr.io/metal-stack/backup-restore-sidecar
@@ -225,7 +225,7 @@ helm-charts:
   third-party:
     meilisearch:
       repository: https://meilisearch.github.io/meilisearch-kubernetes
-      version: 0.1.44
+      version: 0.1.48
 projects:
   metal-stack:
     mini-lab:
