@@ -54,6 +54,10 @@ docker-images:
         name: ghcr.io/metal-stack/rethinkdb-exporter
         repository: https://github.com/metal-stack/rethinkdb-exporter
         tag: v0.1.1
+      webhook-logger:
+        name: ghcr.io/multani/alertmanager-webhook-logger
+        repository: https://github.com/multani/alertmanager-webhook-logger/pkgs/container/alertmanager-webhook-logger
+        tag: v0.0.3
     gardener:
       gardener-extension-provider-metal:
         name: ghcr.io/metal-stack/gardener-extension-provider-metal
