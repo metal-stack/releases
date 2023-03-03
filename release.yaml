@@ -7,26 +7,26 @@ ansible-roles:
     version: v0.2.7
   metal-roles:
     repository: https://github.com/metal-stack/metal-roles
-    version: v0.8.0
+    version: v0.8.3
 binaries:
   metal-stack:
     kernel:
       repository: https://github.com/metal-stack/kernel
-      url: https://github.com/metal-stack/kernel/releases/download/6.1.12-107/metal-kernel
-      version: 6.1.12-107
+      url: https://github.com/metal-stack/kernel/releases/download/6.1.14-108/metal-kernel
+      version: 6.1.14-108
     metal-hammer:
       repository: https://github.com/metal-stack/metal-hammer
-      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.11.1/metal-hammer-initrd.img.lz4
-      version: v0.11.1
+      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.11.2/metal-hammer-initrd.img.lz4
+      version: v0.11.2
     metalctl:
       darwin:
-        url: https://github.com/metal-stack/metalctl/releases/download/v0.12.9/metalctl-darwin-amd64
+        url: https://github.com/metal-stack/metalctl/releases/download/v0.12.11/metalctl-darwin-amd64
       linux:
-        url: https://github.com/metal-stack/metalctl/releases/download/v0.12.9/metalctl-linux-amd64
+        url: https://github.com/metal-stack/metalctl/releases/download/v0.12.11/metalctl-linux-amd64
       repository: https://github.com/metal-stack/metalctl
-      version: v0.12.9
+      version: v0.12.11
       windows:
-        url: https://github.com/metal-stack/metalctl/releases/download/v0.12.9/metalctl-windows-amd64
+        url: https://github.com/metal-stack/metalctl/releases/download/v0.12.11/metalctl-windows-amd64
 docker-images:
   metal-stack:
     control-plane:
@@ -37,7 +37,7 @@ docker-images:
       metal-api:
         name: ghcr.io/metal-stack/metal-api
         repository: https://github.com/metal-stack/metal-api
-        tag: v0.22.0
+        tag: v0.22.2
       metal-console:
         name: ghcr.io/metal-stack/metal-console
         repository: https://github.com/metal-stack/metal-console
@@ -49,7 +49,7 @@ docker-images:
       metalctl:
         name: ghcr.io/metal-stack/metalctl
         repository: https://github.com/metal-stack/metalctl
-        tag: v0.12.9
+        tag: v0.12.11
       rethinkdb-exporter:
         name: ghcr.io/metal-stack/rethinkdb-exporter
         repository: https://github.com/metal-stack/rethinkdb-exporter
@@ -58,7 +58,7 @@ docker-images:
       gardener-extension-provider-metal:
         name: ghcr.io/metal-stack/gardener-extension-provider-metal
         repository: https://github.com/metal-stack/gardener-extension-provider-metal
-        tag: v0.18.27
+        tag: v0.18.28
       machine-controller-manager:
         name: eu.gcr.io/gardener-project/gardener/machine-controller-manager
         repository: https://github.com/gardener/machine-controller-manager
@@ -117,7 +117,7 @@ docker-images:
       metal-core:
         name: ghcr.io/metal-stack/metal-core
         repository: https://github.com/metal-stack/metal-core
-        tag: v0.8.2
+        tag: v0.8.3
       metal-image-cache-sync:
         name: ghcr.io/metal-stack/metal-image-cache-sync
         repository: https://github.com/metal-stack/metal-image-cache-sync
