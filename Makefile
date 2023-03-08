@@ -29,7 +29,10 @@ wait-for-images:
 		-v $(HOME)/.docker:/root/.docker \
 		-w /test \
 		-e PYTHONUNBUFFERED=1 \
-		python:alpine sh -c 'apk add docker-cli && pip install --upgrade pip retry requests pyyaml && ./test/wait_for_images.py'
+		python:alpine sh -c 'apk add docker-cli --repository=https://dl-cdn.alpinelinux.org/alpine/edge/community && pip install --upgrade pip retry requests pyyaml && ./test/wait_for_images.py'
+# docker-cli has to be version >= 23.x as otherwise some images will find no manifests.
+# the --repository=https://dl-cdn.alpinelinux.org/alpine/edge/community flag can be removed
+# as soon as the release went from edge into alpine's mainline.
 
 .PHONY: integration-ansible-modules
 integration-ansible-modules: prep
