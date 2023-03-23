@@ -16,8 +16,8 @@ binaries:
       version: 6.1.20-111
     metal-hammer:
       repository: https://github.com/metal-stack/metal-hammer
-      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.11.2/metal-hammer-initrd.img.lz4
-      version: v0.11.2
+      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.11.3/metal-hammer-initrd.img.lz4
+      version: v0.11.3
     metalctl:
       darwin:
         url: https://github.com/metal-stack/metalctl/releases/download/v0.12.12/metalctl-darwin-amd64
@@ -100,7 +100,7 @@ docker-images:
       droptailer:
         name: ghcr.io/metal-stack/droptailer
         repository: https://github.com/metal-stack/droptailer
-        tag: v0.2.10
+        tag: v0.2.11
       duros-controller:
         name: ghcr.io/metal-stack/duros-controller
         repository: https://github.com/metal-stack/duros-controller
@@ -139,7 +139,7 @@ docker-images:
       headscale:
         name: headscale/headscale
         repository: https://github.com/juanfont/headscale
-        tag: 0.20.0
+        tag: 0.21.0
       headscale-db:
         name: postgres
         repository: https://github.com/docker-library/postgres
@@ -229,7 +229,7 @@ helm-charts:
   third-party:
     meilisearch:
       repository: https://meilisearch.github.io/meilisearch-kubernetes
-      version: 0.1.48
+      version: 0.1.49
 projects:
   metal-stack:
     mini-lab:
