@@ -125,7 +125,7 @@ docker-images:
       metal-image-cache-sync:
         name: ghcr.io/metal-stack/metal-image-cache-sync
         repository: https://github.com/metal-stack/metal-image-cache-sync
-        tag: v0.1.5
+        tag: v0.1.6
       pixiecore:
         name: ghcr.io/metal-stack/pixie
         repository: https://github.com/metal-stack/pixie
