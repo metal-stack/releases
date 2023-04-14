@@ -184,8 +184,8 @@ docker-images:
         name: eu.gcr.io/gardener-project/gardener/gardenlet
         tag: v1.44.6
       networking-calico:
-        name: r.metal-stack.io/gardener/gardener-extension-networking-calico
-        tag: v1.18.0-metal
+        name: eu.gcr.io/gardener-project/gardener/extensions/networking-calico
+        tag: v1.24.3
       networking-cilium:
         name: r.metal-stack.io/gardener/gardener-extension-networking-cilium
         tag: f3085c79
