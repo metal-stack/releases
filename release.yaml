@@ -213,6 +213,10 @@ docker-images:
         name: haproxy
         repository: https://github.com/docker-library/haproxy
         tag: 2.4-alpine
+      ztp-nginx:
+        name: nginx
+        repository: https://github.com/nginxinc/docker-nginx
+        tag: 1.24-alpine
 helm-charts:
   logging:
     loki-stack:
