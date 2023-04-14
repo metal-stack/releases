@@ -9,6 +9,7 @@ ansible-roles:
     repository: https://github.com/metal-stack/metal-roles
     version: v0.8.5
   riemers.gitlab-runner:
+    repository: https://github.com/riemers/ansible-gitlab-runner
     version: v1.6.53
 binaries:
   metal-stack:
