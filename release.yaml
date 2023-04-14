@@ -8,6 +8,8 @@ ansible-roles:
   metal-roles:
     repository: https://github.com/metal-stack/metal-roles
     version: v0.8.5
+  riemers.gitlab-runner:
+    version: v1.6.53
 binaries:
   metal-stack:
     kernel:
