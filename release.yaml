@@ -173,6 +173,9 @@ docker-images:
         name: haproxy
         repository: https://github.com/docker-library/haproxy
         tag: 2.4-alpine
+      promtail:
+        name: grafana/promtail
+        tag: 2.7.3
 helm-charts:
   logging:
     loki:
