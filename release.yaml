@@ -139,7 +139,7 @@ docker-images:
       headscale:
         name: headscale/headscale
         repository: https://github.com/juanfont/headscale
-        tag: 0.23.0
+        tag: 0.22.0
       headscale-db:
         name: postgres
         repository: https://github.com/docker-library/postgres
