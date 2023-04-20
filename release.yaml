@@ -195,7 +195,7 @@ helm-charts:
       repository: https://meilisearch.github.io/meilisearch-kubernetes
       version: 0.1.49
       image_name: getmeili/meilisearch
-      image_tag: v1.1.0
+      image_tag: v1.1.1
 projects:
   metal-stack:
     mini-lab:
