@@ -37,7 +37,7 @@ docker-images:
       metal-api:
         name: ghcr.io/metal-stack/metal-api
         repository: https://github.com/metal-stack/metal-api
-        tag: v0.22.3
+        tag: v0.22.4
       metal-console:
         name: ghcr.io/metal-stack/metal-console
         repository: https://github.com/metal-stack/metal-console
@@ -232,10 +232,10 @@ helm-charts:
       version: 42.1.0
   third-party:
     meilisearch:
-      repository: https://meilisearch.github.io/meilisearch-kubernetes
-      version: 0.1.49
       image_name: getmeili/meilisearch
       image_tag: v1.1.1
+      repository: https://meilisearch.github.io/meilisearch-kubernetes
+      version: 0.1.49
 projects:
   metal-stack:
     mini-lab:
