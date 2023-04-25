@@ -175,7 +175,7 @@ docker-images:
         tag: 2.4-alpine
       promtail:
         name: grafana/promtail
-        tag: 2.7.3
+        tag: 2.7.5
       ztp-nginx:
         name: nginx
         repository: https://github.com/nginxinc/docker-nginx
