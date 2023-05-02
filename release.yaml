@@ -173,15 +173,18 @@ docker-images:
         name: haproxy
         repository: https://github.com/docker-library/haproxy
         tag: 2.4-alpine
+      promtail:
+        name: grafana/promtail
+        tag: 2.8.1
       ztp-nginx:
         name: nginx
         repository: https://github.com/nginxinc/docker-nginx
         tag: 1.24-alpine
 helm-charts:
   logging:
-    loki-stack:
+    loki:
       repository: https://grafana.github.io/helm-charts
-      version: 2.8.9
+      version: 5.3.1
   metal-stack:
     metal-control-plane:
       repository: https://helm.metal-stack.io
