@@ -182,9 +182,9 @@ docker-images:
         tag: 1.24-alpine
 helm-charts:
   logging:
-    loki-stack:
+    loki:
       repository: https://grafana.github.io/helm-charts
-      version: 2.8.9
+      version: 5.3.1
   metal-stack:
     metal-control-plane:
       repository: https://helm.metal-stack.io
