@@ -7,26 +7,26 @@ ansible-roles:
     version: v0.2.7
   metal-roles:
     repository: https://github.com/metal-stack/metal-roles
-    version: v0.8.5
+    version: v0.8.6
 binaries:
   metal-stack:
     kernel:
       repository: https://github.com/metal-stack/kernel
-      url: https://github.com/metal-stack/kernel/releases/download/6.1.22-112/metal-kernel
-      version: 6.1.22-112
+      url: https://github.com/metal-stack/kernel/releases/download/6.1.26-114/metal-kernel
+      version: 6.1.26-114
     metal-hammer:
       repository: https://github.com/metal-stack/metal-hammer
       url: https://github.com/metal-stack/metal-hammer/releases/download/v0.11.4/metal-hammer-initrd.img.lz4
       version: v0.11.4
     metalctl:
       darwin:
-        url: https://github.com/metal-stack/metalctl/releases/download/v0.12.13/metalctl-darwin-amd64
+        url: https://github.com/metal-stack/metalctl/releases/download/v0.12.14/metalctl-darwin-amd64
       linux:
-        url: https://github.com/metal-stack/metalctl/releases/download/v0.12.13/metalctl-linux-amd64
+        url: https://github.com/metal-stack/metalctl/releases/download/v0.12.14/metalctl-linux-amd64
       repository: https://github.com/metal-stack/metalctl
-      version: v0.12.13
+      version: v0.12.14
       windows:
-        url: https://github.com/metal-stack/metalctl/releases/download/v0.12.13/metalctl-windows-amd64
+        url: https://github.com/metal-stack/metalctl/releases/download/v0.12.14/metalctl-windows-amd64
 docker-images:
   metal-stack:
     control-plane:
@@ -37,7 +37,7 @@ docker-images:
       metal-api:
         name: ghcr.io/metal-stack/metal-api
         repository: https://github.com/metal-stack/metal-api
-        tag: v0.22.3
+        tag: v0.22.4
       metal-console:
         name: ghcr.io/metal-stack/metal-console
         repository: https://github.com/metal-stack/metal-console
@@ -49,7 +49,7 @@ docker-images:
       metalctl:
         name: ghcr.io/metal-stack/metalctl
         repository: https://github.com/metal-stack/metalctl
-        tag: v0.12.13
+        tag: v0.12.14
       rethinkdb-exporter:
         name: ghcr.io/metal-stack/rethinkdb-exporter
         repository: https://github.com/metal-stack/rethinkdb-exporter
@@ -58,11 +58,11 @@ docker-images:
       firewall-controller-manager:
         name: ghcr.io/metal-stack/firewall-controller-manager
         repository: https://github.com/metal-stack/firewall-controller-manager
-        tag: v0.1.5
+        tag: v0.2.0
       gardener-extension-provider-metal:
         name: ghcr.io/metal-stack/gardener-extension-provider-metal
         repository: https://github.com/metal-stack/gardener-extension-provider-metal
-        tag: v0.19.0
+        tag: v0.20.3
       machine-controller-manager:
         name: eu.gcr.io/gardener-project/gardener/machine-controller-manager
         repository: https://github.com/gardener/machine-controller-manager
@@ -70,7 +70,7 @@ docker-images:
       machine-controller-manager-provider-metal:
         name: ghcr.io/metal-stack/machine-controller-manager-provider-metal
         repository: https://github.com/metal-stack/machine-controller-manager-provider-metal
-        tag: v0.1.13
+        tag: v0.1.14
       os-metal-extension:
         name: ghcr.io/metal-stack/os-metal-extension
         repository: https://github.com/metal-stack/os-metal-extension
@@ -88,7 +88,7 @@ docker-images:
       audit-forwarder:
         name: ghcr.io/metal-stack/audit-forwarder
         repository: https://github.com/metal-stack/audit-forwarder
-        tag: v0.2.3
+        tag: v0.2.4
       csi-lvm-controller:
         name: ghcr.io/metal-stack/csi-lvm-controller
         repository: https://github.com/metal-stack/csi-lvm
@@ -108,11 +108,11 @@ docker-images:
       metal-ccm:
         name: ghcr.io/metal-stack/metal-ccm
         repository: https://github.com/metal-stack/metal-ccm
-        tag: v0.7.6
+        tag: v0.7.7
       node-init:
         name: ghcr.io/metal-stack/node-init
         repository: https://github.com/metal-stack/node-init
-        tag: v0.1.1
+        tag: v0.1.2
     partition:
       metal-bmc:
         name: ghcr.io/metal-stack/metal-bmc
@@ -139,7 +139,7 @@ docker-images:
       headscale:
         name: headscale/headscale
         repository: https://github.com/juanfont/headscale
-        tag: 0.21.0
+        tag: 0.22.0
       headscale-db:
         name: postgres
         repository: https://github.com/docker-library/postgres
@@ -173,6 +173,13 @@ docker-images:
         name: haproxy
         repository: https://github.com/docker-library/haproxy
         tag: 2.4-alpine
+      promtail:
+        name: grafana/promtail
+        tag: 2.8.1
+      ztp-nginx:
+        name: nginx
+        repository: https://github.com/nginxinc/docker-nginx
+        tag: 1.24-alpine
 helm-charts:
   logging:
     loki-stack:
@@ -181,13 +188,15 @@ helm-charts:
   metal-stack:
     metal-control-plane:
       repository: https://helm.metal-stack.io
-      version: 0.3.18
+      version: 0.3.20
   monitoring:
     kube-prometheus-stack:
       repository: https://prometheus-community.github.io/helm-charts
       version: 42.1.0
   third-party:
     meilisearch:
+      image_name: getmeili/meilisearch
+      image_tag: v1.1.1
       repository: https://meilisearch.github.io/meilisearch-kubernetes
       version: 0.1.49
 projects:
