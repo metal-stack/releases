@@ -175,7 +175,7 @@ docker-images:
         tag: 2.4-alpine
       promtail:
         name: grafana/promtail
-        tag: 2.7.5
+        tag: 2.8.1
       ztp-nginx:
         name: nginx
         repository: https://github.com/nginxinc/docker-nginx
@@ -183,8 +183,8 @@ docker-images:
 helm-charts:
   logging:
     loki:
-      repository: https://grafana.github.io/loki/charts
-      version: 2.8.0
+      repository: https://grafana.github.io/helm-charts
+      version: 5.3.1
   metal-stack:
     metal-control-plane:
       repository: https://helm.metal-stack.io
