@@ -1,19 +1,19 @@
 ansible-roles:
   ansible-common:
     repository: https://github.com/metal-stack/ansible-common
-    version: v0.6.5
+    version: v0.6.6
   metal-ansible-modules:
     repository: https://github.com/metal-stack/metal-ansible-modules
     version: v0.2.7
   metal-roles:
     repository: https://github.com/metal-stack/metal-roles
-    version: v0.8.6
+    version: v0.8.7
 binaries:
   metal-stack:
     kernel:
       repository: https://github.com/metal-stack/kernel
-      url: https://github.com/metal-stack/kernel/releases/download/6.1.24-113/metal-kernel
-      version: 6.1.24-113
+      url: https://github.com/metal-stack/kernel/releases/download/6.1.26-114/metal-kernel
+      version: 6.1.26-114
     metal-hammer:
       repository: https://github.com/metal-stack/metal-hammer
       url: https://github.com/metal-stack/metal-hammer/releases/download/v0.11.4/metal-hammer-initrd.img.lz4
@@ -213,15 +213,18 @@ docker-images:
         name: haproxy
         repository: https://github.com/docker-library/haproxy
         tag: 2.4-alpine
+      promtail:
+        name: grafana/promtail
+        tag: 2.8.1
       ztp-nginx:
         name: nginx
         repository: https://github.com/nginxinc/docker-nginx
         tag: 1.24-alpine
 helm-charts:
   logging:
-    loki-stack:
+    loki:
       repository: https://grafana.github.io/helm-charts
-      version: 2.8.9
+      version: 5.3.1
   metal-stack:
     metal-control-plane:
       repository: https://helm.metal-stack.io
