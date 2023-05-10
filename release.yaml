@@ -1,7 +1,7 @@
 ansible-roles:
   ansible-common:
     repository: https://github.com/metal-stack/ansible-common
-    version: v0.6.6
+    version: v0.6.7
   metal-ansible-modules:
     repository: https://github.com/metal-stack/metal-ansible-modules
     version: v0.2.7
@@ -58,11 +58,11 @@ docker-images:
       firewall-controller-manager:
         name: ghcr.io/metal-stack/firewall-controller-manager
         repository: https://github.com/metal-stack/firewall-controller-manager
-        tag: v0.2.0
+        tag: v0.2.1
       gardener-extension-provider-metal:
         name: ghcr.io/metal-stack/gardener-extension-provider-metal
         repository: https://github.com/metal-stack/gardener-extension-provider-metal
-        tag: v0.20.4
+        tag: v0.20.5
       machine-controller-manager:
         name: eu.gcr.io/gardener-project/gardener/machine-controller-manager
         repository: https://github.com/gardener/machine-controller-manager
@@ -160,6 +160,10 @@ docker-images:
         name: nsqio/nsq
         repository: https://github.com/nsqio/nsq
         tag: v1.2.1
+      thanos:
+        name: quay.io/thanos/thanos
+        repository: https://github.com/thanos-io/thanos
+        tag: v0.31.0
       webhook-logger:
         name: ghcr.io/multani/alertmanager-webhook-logger
         repository: https://github.com/multani/alertmanager-webhook-logger
@@ -192,7 +196,10 @@ helm-charts:
   monitoring:
     kube-prometheus-stack:
       repository: https://prometheus-community.github.io/helm-charts
-      version: 42.1.0
+      version: 45.24.0
+    thanos:
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.5.1
   third-party:
     meilisearch:
       image_name: getmeili/meilisearch
