@@ -27,6 +27,7 @@ def check_image_exists(image):
 
     if image_name.startswith('k8s.gcr.io'):
         print("➖ %s (skipped because registry does not allow manifest inspection)" % image_name)
+        return
 
     try:
         check(image_name)
