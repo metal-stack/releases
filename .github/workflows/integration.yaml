@@ -24,12 +24,6 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
-    - name: Log in to the container registry
-      uses: docker/login-action@v2
-      with:
-        username: ${{ secrets.DOCKER_HUB_USER }}
-        password: ${{ secrets.DOCKER_HUB_TOKEN }}
-
     - name: Run integration tests
       shell: bash
       run: |
