@@ -7,13 +7,13 @@ ansible-roles:
     version: v0.2.7
   metal-roles:
     repository: https://github.com/metal-stack/metal-roles
-    version: v0.8.9
+    version: v0.8.10
 binaries:
   metal-stack:
     kernel:
       repository: https://github.com/metal-stack/kernel
-      url: https://github.com/metal-stack/kernel/releases/download/6.1.28-115/metal-kernel
-      version: 6.1.28-115
+      url: https://github.com/metal-stack/kernel/releases/download/6.1.30-116/metal-kernel
+      version: 6.1.30-116
     metal-hammer:
       repository: https://github.com/metal-stack/metal-hammer
       url: https://github.com/metal-stack/metal-hammer/releases/download/v0.11.4/metal-hammer-initrd.img.lz4
@@ -62,7 +62,7 @@ docker-images:
       gardener-extension-provider-metal:
         name: ghcr.io/metal-stack/gardener-extension-provider-metal
         repository: https://github.com/metal-stack/gardener-extension-provider-metal
-        tag: v0.20.6
+        tag: v0.20.7
       machine-controller-manager:
         name: eu.gcr.io/gardener-project/gardener/machine-controller-manager
         repository: https://github.com/gardener/machine-controller-manager
@@ -108,7 +108,7 @@ docker-images:
       metal-ccm:
         name: ghcr.io/metal-stack/metal-ccm
         repository: https://github.com/metal-stack/metal-ccm
-        tag: v0.7.7
+        tag: v0.7.8
       node-init:
         name: ghcr.io/metal-stack/node-init
         repository: https://github.com/metal-stack/node-init
@@ -121,7 +121,7 @@ docker-images:
       metal-core:
         name: ghcr.io/metal-stack/metal-core
         repository: https://github.com/metal-stack/metal-core
-        tag: v0.8.3
+        tag: v0.9.0
       metal-image-cache-sync:
         name: ghcr.io/metal-stack/metal-image-cache-sync
         repository: https://github.com/metal-stack/metal-image-cache-sync
@@ -171,22 +171,22 @@ docker-images:
     gardener:
       admission-controller:
         name: eu.gcr.io/gardener-project/gardener/admission-controller
-        tag: v1.49.4
+        tag: v1.50.2
       api-server:
         name: eu.gcr.io/gardener-project/gardener/apiserver
-        tag: v1.49.4
+        tag: v1.50.2
       controller-manager:
         name: eu.gcr.io/gardener-project/gardener/controller-manager
-        tag: v1.49.4
+        tag: v1.50.2
       extension-provider-gcp:
         name: eu.gcr.io/gardener-project/gardener/extensions/provider-gcp
         tag: v1.23.1
       external-dns:
         name: eu.gcr.io/gardener-project/dns-controller-manager
-        tag: v0.12.6
+        tag: v0.15.3
       gardenlet:
         name: eu.gcr.io/gardener-project/gardener/gardenlet
-        tag: v1.49.4
+        tag: v1.50.2
       networking-calico:
         name: eu.gcr.io/gardener-project/gardener/extensions/networking-calico
         tag: v1.24.3
@@ -195,7 +195,7 @@ docker-images:
         tag: f3085c79
       scheduler:
         name: eu.gcr.io/gardener-project/gardener/scheduler
-        tag: v1.49.4
+        tag: v1.50.2
       shoot-cert-service:
         name: eu.gcr.io/gardener-project/gardener/extensions/shoot-cert-service
         tag: v1.23.0
@@ -258,5 +258,5 @@ repositories:
         ref: v0.15.4
         url: https://github.com/gardener/etcd-backup-restore.git
       gardener:
-        ref: v1.49.4
+        ref: v1.50.2
         url: https://github.com/gardener/gardener.git
