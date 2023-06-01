@@ -183,7 +183,7 @@ docker-images:
         tag: v1.23.1
       external-dns:
         name: eu.gcr.io/gardener-project/dns-controller-manager
-        tag: v0.12.6
+        tag: v0.15.3
       gardenlet:
         name: eu.gcr.io/gardener-project/gardener/gardenlet
         tag: v1.50.2
