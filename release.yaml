@@ -243,9 +243,9 @@ helm-charts:
   third-party:
     meilisearch:
       image_name: getmeili/meilisearch
-      image_tag: v1.1.1
+      image_tag: v1.2.0
       repository: https://meilisearch.github.io/meilisearch-kubernetes
-      version: 0.1.49
+      version: 0.2.1
 projects:
   metal-stack:
     mini-lab:
