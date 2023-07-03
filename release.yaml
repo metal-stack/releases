@@ -139,7 +139,7 @@ docker-images:
       headscale:
         name: headscale/headscale
         repository: https://github.com/juanfont/headscale
-        tag: 0.22.0
+        tag: 0.22.3
       headscale-db:
         name: postgres
         repository: https://github.com/docker-library/postgres
@@ -245,7 +245,7 @@ helm-charts:
       image_name: getmeili/meilisearch
       image_tag: v1.2.0
       repository: https://meilisearch.github.io/meilisearch-kubernetes
-      version: 0.2.1
+      version: 0.2.2
 projects:
   metal-stack:
     mini-lab:
