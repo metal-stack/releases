@@ -129,7 +129,7 @@ docker-images:
       pixiecore:
         name: ghcr.io/metal-stack/pixie
         repository: https://github.com/metal-stack/pixie
-        tag: v0.2.2
+        tag: v0.2.3
   third-party:
     control-plane:
       event-exporter:
