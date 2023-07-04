@@ -7,26 +7,26 @@ ansible-roles:
     version: v0.2.7
   metal-roles:
     repository: https://github.com/metal-stack/metal-roles
-    version: v0.8.13
+    version: v0.8.15
 binaries:
   metal-stack:
     kernel:
       repository: https://github.com/metal-stack/kernel
-      url: https://github.com/metal-stack/kernel/releases/download/6.1.32-117/metal-kernel
-      version: 6.1.32-117
+      url: https://github.com/metal-stack/kernel/releases/download/6.1.36-120/metal-kernel
+      version: 6.1.36-120
     metal-hammer:
       repository: https://github.com/metal-stack/metal-hammer
-      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.11.4/metal-hammer-initrd.img.lz4
-      version: v0.11.4
+      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.11.5/metal-hammer-initrd.img.lz4
+      version: v0.11.5
     metalctl:
       darwin:
-        url: https://github.com/metal-stack/metalctl/releases/download/v0.12.15/metalctl-darwin-amd64
+        url: https://github.com/metal-stack/metalctl/releases/download/v0.13.0/metalctl-darwin-amd64
       linux:
-        url: https://github.com/metal-stack/metalctl/releases/download/v0.12.15/metalctl-linux-amd64
+        url: https://github.com/metal-stack/metalctl/releases/download/v0.13.0/metalctl-linux-amd64
       repository: https://github.com/metal-stack/metalctl
-      version: v0.12.15
+      version: v0.13.0
       windows:
-        url: https://github.com/metal-stack/metalctl/releases/download/v0.12.15/metalctl-windows-amd64
+        url: https://github.com/metal-stack/metalctl/releases/download/v0.13.0/metalctl-windows-amd64
 docker-images:
   metal-stack:
     control-plane:
@@ -49,7 +49,7 @@ docker-images:
       metalctl:
         name: ghcr.io/metal-stack/metalctl
         repository: https://github.com/metal-stack/metalctl
-        tag: v0.12.15
+        tag: v0.13.0
       rethinkdb-exporter:
         name: ghcr.io/metal-stack/rethinkdb-exporter
         repository: https://github.com/metal-stack/rethinkdb-exporter
@@ -62,7 +62,7 @@ docker-images:
       gardener-extension-provider-metal:
         name: ghcr.io/metal-stack/gardener-extension-provider-metal
         repository: https://github.com/metal-stack/gardener-extension-provider-metal
-        tag: v0.20.10
+        tag: v0.20.11
       machine-controller-manager:
         name: eu.gcr.io/gardener-project/gardener/machine-controller-manager
         repository: https://github.com/gardener/machine-controller-manager
@@ -104,11 +104,11 @@ docker-images:
       duros-controller:
         name: ghcr.io/metal-stack/duros-controller
         repository: https://github.com/metal-stack/duros-controller
-        tag: v0.6.1
+        tag: v0.6.2
       metal-ccm:
         name: ghcr.io/metal-stack/metal-ccm
         repository: https://github.com/metal-stack/metal-ccm
-        tag: v0.7.10
+        tag: v0.7.11
       node-init:
         name: ghcr.io/metal-stack/node-init
         repository: https://github.com/metal-stack/node-init
@@ -117,7 +117,7 @@ docker-images:
       metal-bmc:
         name: ghcr.io/metal-stack/metal-bmc
         repository: https://github.com/metal-stack/metal-bmc
-        tag: v0.4.5
+        tag: v0.4.6
       metal-core:
         name: ghcr.io/metal-stack/metal-core
         repository: https://github.com/metal-stack/metal-core
@@ -129,7 +129,7 @@ docker-images:
       pixiecore:
         name: ghcr.io/metal-stack/pixie
         repository: https://github.com/metal-stack/pixie
-        tag: v0.2.2
+        tag: v0.2.3
   third-party:
     control-plane:
       event-exporter:
@@ -139,7 +139,7 @@ docker-images:
       headscale:
         name: headscale/headscale
         repository: https://github.com/juanfont/headscale
-        tag: 0.22.0
+        tag: 0.22.3
       headscale-db:
         name: postgres
         repository: https://github.com/docker-library/postgres
@@ -171,13 +171,13 @@ docker-images:
     gardener:
       admission-controller:
         name: eu.gcr.io/gardener-project/gardener/admission-controller
-        tag: v1.52.3
+        tag: v1.53.4
       api-server:
         name: eu.gcr.io/gardener-project/gardener/apiserver
-        tag: v1.52.3
+        tag: v1.53.4
       controller-manager:
         name: eu.gcr.io/gardener-project/gardener/controller-manager
-        tag: v1.52.3
+        tag: v1.53.4
       extension-provider-gcp:
         name: eu.gcr.io/gardener-project/gardener/extensions/provider-gcp
         tag: v1.23.1
@@ -186,7 +186,7 @@ docker-images:
         tag: v0.15.3
       gardenlet:
         name: eu.gcr.io/gardener-project/gardener/gardenlet
-        tag: v1.52.3
+        tag: v1.53.4
       networking-calico:
         name: eu.gcr.io/gardener-project/gardener/extensions/networking-calico
         tag: v1.24.3
@@ -195,7 +195,7 @@ docker-images:
         tag: f3085c79
       scheduler:
         name: eu.gcr.io/gardener-project/gardener/scheduler
-        tag: v1.52.3
+        tag: v1.53.4
       shoot-cert-service:
         name: eu.gcr.io/gardener-project/gardener/extensions/shoot-cert-service
         tag: v1.23.0
@@ -204,10 +204,10 @@ docker-images:
         tag: v1.21.0
       virtual-apiserver:
         name: registry.k8s.io/kube-apiserver
-        tag: v1.22.17
+        tag: v1.23.17
       virtual-controller-manager:
         name: registry.k8s.io/kube-controller-manager
-        tag: v1.22.17
+        tag: v1.23.17
     partition:
       image-cache-coredns:
         name: coredns/coredns
@@ -243,9 +243,9 @@ helm-charts:
   third-party:
     meilisearch:
       image_name: getmeili/meilisearch
-      image_tag: v1.1.1
+      image_tag: v1.2.0
       repository: https://meilisearch.github.io/meilisearch-kubernetes
-      version: 0.1.49
+      version: 0.2.2
 projects:
   metal-stack:
     mini-lab:
@@ -258,5 +258,5 @@ repositories:
         ref: v0.15.4
         url: https://github.com/gardener/etcd-backup-restore.git
       gardener:
-        ref: v1.52.3
+        ref: v1.53.4
         url: https://github.com/gardener/gardener.git
