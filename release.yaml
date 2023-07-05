@@ -191,8 +191,8 @@ docker-images:
         name: eu.gcr.io/gardener-project/gardener/extensions/networking-calico
         tag: v1.27.2
       networking-cilium:
-        name: r.metal-stack.io/gardener/gardener-extension-networking-cilium
-        tag: f3085c79
+        name: eu.gcr.io/gardener-project/gardener/extensions/networking-cilium
+        tag: v1.18.0
       scheduler:
         name: eu.gcr.io/gardener-project/gardener/scheduler
         tag: v1.54.1
