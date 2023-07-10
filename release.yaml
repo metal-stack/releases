@@ -62,7 +62,7 @@ docker-images:
       gardener-extension-provider-metal:
         name: ghcr.io/metal-stack/gardener-extension-provider-metal
         repository: https://github.com/metal-stack/gardener-extension-provider-metal
-        tag: v0.20.11
+        tag: v0.20.12
       machine-controller-manager:
         name: eu.gcr.io/gardener-project/gardener/machine-controller-manager
         repository: https://github.com/gardener/machine-controller-manager
@@ -231,7 +231,7 @@ helm-charts:
       version: 5.3.1
     promtail:
       repository: https://grafana.github.io/helm-charts
-      version: "6.11.1"
+      version: 6.11.1
   metal-stack:
     metal-control-plane:
       repository: https://helm.metal-stack.io
