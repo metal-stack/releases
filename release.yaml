@@ -229,6 +229,9 @@ helm-charts:
     loki:
       repository: https://grafana.github.io/helm-charts
       version: 5.3.1
+    promtail:
+      repository: https://grafana.github.io/helm-charts
+      version: "6.11.1"
   metal-stack:
     metal-control-plane:
       repository: https://helm.metal-stack.io
