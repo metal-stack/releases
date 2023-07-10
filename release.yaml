@@ -178,6 +178,9 @@ docker-images:
       controller-manager:
         name: eu.gcr.io/gardener-project/gardener/controller-manager
         tag: v1.54.1
+      dns-controller-manager:
+        name: eu.gcr.io/gardener-project/dns-controller-manager
+        tag: v0.15.6
       extension-provider-gcp:
         name: eu.gcr.io/gardener-project/gardener/extensions/provider-gcp
         tag: v1.23.1
