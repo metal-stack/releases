@@ -7,7 +7,7 @@ ansible-roles:
     version: v0.2.7
   metal-roles:
     repository: https://github.com/metal-stack/metal-roles
-    version: v0.8.15
+    version: v0.8.16
 binaries:
   metal-stack:
     kernel:
@@ -37,7 +37,7 @@ docker-images:
       metal-api:
         name: ghcr.io/metal-stack/metal-api
         repository: https://github.com/metal-stack/metal-api
-        tag: v0.22.6
+        tag: v0.22.7
       metal-console:
         name: ghcr.io/metal-stack/metal-console
         repository: https://github.com/metal-stack/metal-console
@@ -62,7 +62,7 @@ docker-images:
       gardener-extension-provider-metal:
         name: ghcr.io/metal-stack/gardener-extension-provider-metal
         repository: https://github.com/metal-stack/gardener-extension-provider-metal
-        tag: v0.20.11
+        tag: v0.20.12
       machine-controller-manager:
         name: eu.gcr.io/gardener-project/gardener/machine-controller-manager
         repository: https://github.com/gardener/machine-controller-manager
@@ -121,7 +121,7 @@ docker-images:
       metal-core:
         name: ghcr.io/metal-stack/metal-core
         repository: https://github.com/metal-stack/metal-core
-        tag: v0.9.0
+        tag: v0.9.1
       metal-image-cache-sync:
         name: ghcr.io/metal-stack/metal-image-cache-sync
         repository: https://github.com/metal-stack/metal-image-cache-sync
@@ -171,13 +171,16 @@ docker-images:
     gardener:
       admission-controller:
         name: eu.gcr.io/gardener-project/gardener/admission-controller
-        tag: v1.53.4
+        tag: v1.54.1
       api-server:
         name: eu.gcr.io/gardener-project/gardener/apiserver
-        tag: v1.53.4
+        tag: v1.54.1
       controller-manager:
         name: eu.gcr.io/gardener-project/gardener/controller-manager
-        tag: v1.53.4
+        tag: v1.54.1
+      dns-controller-manager:
+        name: eu.gcr.io/gardener-project/dns-controller-manager
+        tag: v0.15.6
       extension-provider-gcp:
         name: eu.gcr.io/gardener-project/gardener/extensions/provider-gcp
         tag: v1.23.1
@@ -186,28 +189,28 @@ docker-images:
         tag: v0.15.3
       gardenlet:
         name: eu.gcr.io/gardener-project/gardener/gardenlet
-        tag: v1.53.4
+        tag: v1.54.1
       networking-calico:
         name: eu.gcr.io/gardener-project/gardener/extensions/networking-calico
-        tag: v1.24.3
+        tag: v1.27.2
       networking-cilium:
-        name: r.metal-stack.io/gardener/gardener-extension-networking-cilium
-        tag: f3085c79
+        name: eu.gcr.io/gardener-project/gardener/extensions/networking-cilium
+        tag: v1.19.0
       scheduler:
         name: eu.gcr.io/gardener-project/gardener/scheduler
-        tag: v1.53.4
+        tag: v1.54.1
       shoot-cert-service:
         name: eu.gcr.io/gardener-project/gardener/extensions/shoot-cert-service
-        tag: v1.23.0
+        tag: v1.24.0
       shoot-dns-service:
         name: eu.gcr.io/gardener-project/gardener/extensions/shoot-dns-service
-        tag: v1.21.0
+        tag: v1.25.0
       virtual-apiserver:
         name: registry.k8s.io/kube-apiserver
-        tag: v1.23.17
+        tag: v1.24.15
       virtual-controller-manager:
         name: registry.k8s.io/kube-controller-manager
-        tag: v1.23.17
+        tag: v1.24.15
     partition:
       image-cache-coredns:
         name: coredns/coredns
@@ -229,6 +232,9 @@ helm-charts:
     loki:
       repository: https://grafana.github.io/helm-charts
       version: 5.3.1
+    promtail:
+      repository: https://grafana.github.io/helm-charts
+      version: 6.11.1
   metal-stack:
     metal-control-plane:
       repository: https://helm.metal-stack.io
@@ -258,5 +264,5 @@ repositories:
         ref: v0.15.4
         url: https://github.com/gardener/etcd-backup-restore.git
       gardener:
-        ref: v1.53.4
+        ref: v1.54.1
         url: https://github.com/gardener/gardener.git
