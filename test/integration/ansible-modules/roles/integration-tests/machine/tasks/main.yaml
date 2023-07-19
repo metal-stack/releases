@@ -22,7 +22,7 @@
     hostname: "machine01"
     project: "00000000-0000-0000-0000-000000000000"
     partition: mini-lab
-    image: ubuntu-20.04
+    image: ubuntu-22.04
     size: v1-small-x86
     networks:
       - internet-mini-lab
