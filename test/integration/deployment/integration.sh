@@ -16,6 +16,7 @@ Host *
     StrictHostKeyChecking no
     User root
     IdentityFile /mini-lab/files/ssh/id_rsa
+    PubkeyAcceptedKeyTypes +ssh-rsa
 EOF
 
 cd -
@@ -26,10 +27,10 @@ pip install --root-user-action=ignore --upgrade pip \
   flaky \
   mock \
   metal_python \
-  nose \
+  pytest \
   testinfra
 
 # if you want to develop tests from within here, comment in the following line:
 # bash
 
-nosetests --with-flaky --no-flaky-report --with-xunit --xunit-file=/output/results_$(date "+%Y.%m.%d-%H.%M.%S").xml
+pytest --junitxml=/output/results_$(date "+%Y.%m.%d-%H.%M.%S").xml
