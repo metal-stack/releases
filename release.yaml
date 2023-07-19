@@ -7,7 +7,7 @@ ansible-roles:
     version: v0.2.7
   metal-roles:
     repository: https://github.com/metal-stack/metal-roles
-    version: v0.8.16
+    version: v0.8.18
 binaries:
   metal-stack:
     kernel:
@@ -190,6 +190,9 @@ docker-images:
       gardenlet:
         name: eu.gcr.io/gardener-project/gardener/gardenlet
         tag: v1.56.2
+      metrics-exporter:
+        name: eu.gcr.io/gardener-project/gardener/metrics-exporter
+        tag: 0.20.0
       networking-calico:
         name: eu.gcr.io/gardener-project/gardener/extensions/networking-calico
         tag: v1.27.2
