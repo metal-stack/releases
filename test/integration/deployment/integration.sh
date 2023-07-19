@@ -28,7 +28,7 @@ pip install --root-user-action=ignore --upgrade pip \
   mock \
   metal_python \
   pytest \
-  testinfra
+  pytest-testinfra
 
 # if you want to develop tests from within here, comment in the following line:
 # bash
