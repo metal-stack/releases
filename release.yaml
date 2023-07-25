@@ -7,26 +7,26 @@ ansible-roles:
     version: v0.2.7
   metal-roles:
     repository: https://github.com/metal-stack/metal-roles
-    version: v0.8.18
+    version: v0.8.19
 binaries:
   metal-stack:
     kernel:
       repository: https://github.com/metal-stack/kernel
-      url: https://github.com/metal-stack/kernel/releases/download/6.1.36-120/metal-kernel
-      version: 6.1.36-120
+      url: https://github.com/metal-stack/kernel/releases/download/6.1.40-121/metal-kernel
+      version: 6.1.40-121
     metal-hammer:
       repository: https://github.com/metal-stack/metal-hammer
       url: https://github.com/metal-stack/metal-hammer/releases/download/v0.11.5/metal-hammer-initrd.img.lz4
       version: v0.11.5
     metalctl:
       darwin:
-        url: https://github.com/metal-stack/metalctl/releases/download/v0.13.1/metalctl-darwin-amd64
+        url: https://github.com/metal-stack/metalctl/releases/download/v0.13.2/metalctl-darwin-amd64
       linux:
-        url: https://github.com/metal-stack/metalctl/releases/download/v0.13.1/metalctl-linux-amd64
+        url: https://github.com/metal-stack/metalctl/releases/download/v0.13.2/metalctl-linux-amd64
       repository: https://github.com/metal-stack/metalctl
-      version: v0.13.1
+      version: v0.13.2
       windows:
-        url: https://github.com/metal-stack/metalctl/releases/download/v0.13.1/metalctl-windows-amd64
+        url: https://github.com/metal-stack/metalctl/releases/download/v0.13.2/metalctl-windows-amd64
 docker-images:
   metal-stack:
     control-plane:
@@ -49,7 +49,7 @@ docker-images:
       metalctl:
         name: ghcr.io/metal-stack/metalctl
         repository: https://github.com/metal-stack/metalctl
-        tag: v0.13.1
+        tag: v0.13.2
       rethinkdb-exporter:
         name: ghcr.io/metal-stack/rethinkdb-exporter
         repository: https://github.com/metal-stack/rethinkdb-exporter
@@ -62,7 +62,7 @@ docker-images:
       gardener-extension-provider-metal:
         name: ghcr.io/metal-stack/gardener-extension-provider-metal
         repository: https://github.com/metal-stack/gardener-extension-provider-metal
-        tag: v0.20.13
+        tag: v0.20.14
       machine-controller-manager:
         name: eu.gcr.io/gardener-project/gardener/machine-controller-manager
         repository: https://github.com/gardener/machine-controller-manager
@@ -104,11 +104,11 @@ docker-images:
       duros-controller:
         name: ghcr.io/metal-stack/duros-controller
         repository: https://github.com/metal-stack/duros-controller
-        tag: v0.6.2
+        tag: v0.7.1
       metal-ccm:
         name: ghcr.io/metal-stack/metal-ccm
         repository: https://github.com/metal-stack/metal-ccm
-        tag: v0.7.11
+        tag: v0.7.12
       node-init:
         name: ghcr.io/metal-stack/node-init
         repository: https://github.com/metal-stack/node-init
@@ -171,13 +171,13 @@ docker-images:
     gardener:
       admission-controller:
         name: eu.gcr.io/gardener-project/gardener/admission-controller
-        tag: v1.56.2
+        tag: v1.57.2
       api-server:
         name: eu.gcr.io/gardener-project/gardener/apiserver
-        tag: v1.56.2
+        tag: v1.57.2
       controller-manager:
         name: eu.gcr.io/gardener-project/gardener/controller-manager
-        tag: v1.56.2
+        tag: v1.57.2
       dns-controller-manager:
         name: eu.gcr.io/gardener-project/dns-controller-manager
         tag: v0.15.6
@@ -189,7 +189,7 @@ docker-images:
         tag: v0.15.3
       gardenlet:
         name: eu.gcr.io/gardener-project/gardener/gardenlet
-        tag: v1.56.2
+        tag: v1.57.2
       metrics-exporter:
         name: eu.gcr.io/gardener-project/gardener/metrics-exporter
         tag: 0.20.0
@@ -201,7 +201,7 @@ docker-images:
         tag: v1.19.0
       scheduler:
         name: eu.gcr.io/gardener-project/gardener/scheduler
-        tag: v1.56.2
+        tag: v1.57.2
       shoot-cert-service:
         name: eu.gcr.io/gardener-project/gardener/extensions/shoot-cert-service
         tag: v1.24.0
@@ -270,5 +270,5 @@ repositories:
         ref: v0.15.4
         url: https://github.com/gardener/etcd-backup-restore.git
       gardener:
-        ref: v1.56.2
+        ref: v1.57.2
         url: https://github.com/gardener/gardener.git
