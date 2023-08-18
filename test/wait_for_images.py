@@ -17,7 +17,7 @@ def check_image_exists(image):
     @retry(tries=60, delay=10)
     def check(name):
         subprocess.check_output(
-            ["docker", "manifest", "inspect", name],
+            ["docker manifest inspect " + name],
             env=dict(DOCKER_CLI_EXPERIMENTAL="enabled"),
             stderr=subprocess.STDOUT,
             shell=True, # this is required to pick up the config.json for image pull secrets
