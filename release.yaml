@@ -41,7 +41,7 @@ docker-images:
       metal-console:
         name: ghcr.io/metal-stack/metal-console
         repository: https://github.com/metal-stack/metal-console
-        tag: v0.6.2
+        tag: v0.6.3
       metal-metrics-exporter:
         name: ghcr.io/metal-stack/metal-metrics-exporter
         repository: https://github.com/metal-stack/metal-metrics-exporter
