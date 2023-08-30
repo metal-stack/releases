@@ -100,7 +100,7 @@ docker-images:
       droptailer:
         name: ghcr.io/metal-stack/droptailer
         repository: https://github.com/metal-stack/droptailer
-        tag: v0.2.11
+        tag: v0.2.12
       duros-controller:
         name: ghcr.io/metal-stack/duros-controller
         repository: https://github.com/metal-stack/duros-controller
