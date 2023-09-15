@@ -83,7 +83,7 @@ docker-images:
       deployment-base:
         name: ghcr.io/metal-stack/metal-deployment-base
         repository: https://github.com/metal-stack/metal-dockerfiles
-        tag: v0.7.0
+        tag: v0.7.1
     kubernetes:
       audit-forwarder:
         name: ghcr.io/metal-stack/audit-forwarder
