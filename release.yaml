@@ -152,6 +152,10 @@ docker-images:
         name: postgres
         repository: https://github.com/docker-library/postgres
         tag: 12-alpine
+      meilisearch:
+        name: getmeili/meilisearch
+        repository: https://github.com/meilisearch/meilisearch
+        tag: v1.3.4
       metal-db:
         name: rethinkdb
         repository: https://github.com/rethinkdb/rethinkdb-dockerfiles
@@ -252,12 +256,6 @@ helm-charts:
     thanos:
       repository: https://charts.bitnami.com/bitnami
       version: 12.8.3
-  third-party:
-    meilisearch:
-      image_name: getmeili/meilisearch
-      image_tag: v1.2.0
-      repository: https://meilisearch.github.io/meilisearch-kubernetes
-      version: 0.2.2
 projects:
   metal-stack:
     mini-lab:
