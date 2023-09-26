@@ -7,7 +7,7 @@ ansible-roles:
     version: v0.2.7
   metal-roles:
     repository: https://github.com/metal-stack/metal-roles
-    version: v0.9.1
+    version: v0.10.0
 binaries:
   metal-stack:
     kernel:
@@ -79,7 +79,7 @@ docker-images:
       backup-restore-sidecar:
         name: ghcr.io/metal-stack/backup-restore-sidecar
         repository: https://github.com/metal-stack/backup-restore-sidecar
-        tag: v0.8.0
+        tag: v0.9.0
       deployment-base:
         name: ghcr.io/metal-stack/metal-deployment-base
         repository: https://github.com/metal-stack/metal-dockerfiles
@@ -152,6 +152,10 @@ docker-images:
         name: postgres
         repository: https://github.com/docker-library/postgres
         tag: 12-alpine
+      meilisearch:
+        name: getmeili/meilisearch
+        repository: https://github.com/meilisearch/meilisearch
+        tag: v1.3.4
       metal-db:
         name: rethinkdb
         repository: https://github.com/rethinkdb/rethinkdb-dockerfiles
@@ -171,13 +175,13 @@ docker-images:
     gardener:
       admission-controller:
         name: eu.gcr.io/gardener-project/gardener/admission-controller
-        tag: v1.61.6
+        tag: v1.62.3
       api-server:
         name: eu.gcr.io/gardener-project/gardener/apiserver
-        tag: v1.61.6
+        tag: v1.62.3
       controller-manager:
         name: eu.gcr.io/gardener-project/gardener/controller-manager
-        tag: v1.61.6
+        tag: v1.62.3
       dns-controller-manager:
         name: eu.gcr.io/gardener-project/dns-controller-manager
         tag: v0.15.6
@@ -189,7 +193,7 @@ docker-images:
         tag: v0.15.3
       gardenlet:
         name: eu.gcr.io/gardener-project/gardener/gardenlet
-        tag: v1.61.6
+        tag: v1.62.3
       metrics-exporter:
         name: eu.gcr.io/gardener-project/gardener/metrics-exporter
         tag: 0.20.0
@@ -201,7 +205,7 @@ docker-images:
         tag: v1.19.0
       scheduler:
         name: eu.gcr.io/gardener-project/gardener/scheduler
-        tag: v1.61.6
+        tag: v1.62.3
       shoot-cert-service:
         name: eu.gcr.io/gardener-project/gardener/extensions/shoot-cert-service
         tag: v1.26.0
@@ -252,12 +256,6 @@ helm-charts:
     thanos:
       repository: https://charts.bitnami.com/bitnami
       version: 12.8.3
-  third-party:
-    meilisearch:
-      image_name: getmeili/meilisearch
-      image_tag: v1.2.0
-      repository: https://meilisearch.github.io/meilisearch-kubernetes
-      version: 0.2.2
 projects:
   metal-stack:
     mini-lab:
@@ -270,5 +268,5 @@ repositories:
         ref: v0.15.4
         url: https://github.com/gardener/etcd-backup-restore.git
       gardener:
-        ref: v1.61.6
+        ref: v1.62.3
         url: https://github.com/gardener/gardener.git
