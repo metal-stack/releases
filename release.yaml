@@ -12,8 +12,8 @@ binaries:
   metal-stack:
     kernel:
       repository: https://github.com/metal-stack/kernel
-      url: https://github.com/metal-stack/kernel/releases/download/6.1.56-126/metal-kernel
-      version: 6.1.56-126
+      url: https://github.com/metal-stack/kernel/releases/download/6.1.58-127/metal-kernel
+      version: 6.1.58-127
     metal-hammer:
       repository: https://github.com/metal-stack/metal-hammer
       url: https://github.com/metal-stack/metal-hammer/releases/download/v0.11.5/metal-hammer-initrd.img.lz4
@@ -37,7 +37,7 @@ docker-images:
       metal-api:
         name: ghcr.io/metal-stack/metal-api
         repository: https://github.com/metal-stack/metal-api
-        tag: v0.24.2
+        tag: v0.24.4
       metal-console:
         name: ghcr.io/metal-stack/metal-console
         repository: https://github.com/metal-stack/metal-console
@@ -45,7 +45,7 @@ docker-images:
       metal-metrics-exporter:
         name: ghcr.io/metal-stack/metal-metrics-exporter
         repository: https://github.com/metal-stack/metal-metrics-exporter
-        tag: v0.1.4
+        tag: v0.1.5
       metalctl:
         name: ghcr.io/metal-stack/metalctl
         repository: https://github.com/metal-stack/metalctl
@@ -175,13 +175,13 @@ docker-images:
     gardener:
       admission-controller:
         name: eu.gcr.io/gardener-project/gardener/admission-controller
-        tag: v1.64.4
+        tag: v1.65.4
       api-server:
         name: eu.gcr.io/gardener-project/gardener/apiserver
-        tag: v1.64.4
+        tag: v1.65.4
       controller-manager:
         name: eu.gcr.io/gardener-project/gardener/controller-manager
-        tag: v1.64.4
+        tag: v1.65.4
       dns-controller-manager:
         name: eu.gcr.io/gardener-project/dns-controller-manager
         tag: v0.15.6
@@ -193,7 +193,7 @@ docker-images:
         tag: v0.15.3
       gardenlet:
         name: eu.gcr.io/gardener-project/gardener/gardenlet
-        tag: v1.64.4
+        tag: v1.65.4
       metrics-exporter:
         name: eu.gcr.io/gardener-project/gardener/metrics-exporter
         tag: 0.20.0
@@ -205,7 +205,7 @@ docker-images:
         tag: v1.19.0
       scheduler:
         name: eu.gcr.io/gardener-project/gardener/scheduler
-        tag: v1.64.4
+        tag: v1.65.4
       shoot-cert-service:
         name: eu.gcr.io/gardener-project/gardener/extensions/shoot-cert-service
         tag: v1.26.0
@@ -268,5 +268,5 @@ repositories:
         ref: v0.15.4
         url: https://github.com/gardener/etcd-backup-restore.git
       gardener:
-        ref: v1.64.4
+        ref: v1.65.4
         url: https://github.com/gardener/gardener.git
