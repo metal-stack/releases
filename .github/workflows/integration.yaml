@@ -22,7 +22,7 @@ jobs:
         [ -d "${GITHUB_WORKSPACE}" ] && sudo chown -R $USER:$USER ${GITHUB_WORKSPACE}
 
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Run integration tests
       shell: bash
@@ -37,7 +37,7 @@ jobs:
         DOCKER_HUB_TOKEN: ${{ secrets.DOCKER_HUB_TOKEN }}
 
     - name: Publish Unit Test Results
-      uses: EnricoMi/publish-unit-test-result-action@v1
+      uses: EnricoMi/publish-unit-test-result-action@v2
       with:
         files: test/integration/**/output/*.xml
 

@@ -7,7 +7,7 @@ ansible-roles:
     version: v0.2.7
   metal-roles:
     repository: https://github.com/metal-stack/metal-roles
-    version: v0.10.1
+    version: v0.10.2
 binaries:
   metal-stack:
     kernel:
@@ -175,13 +175,13 @@ docker-images:
     gardener:
       admission-controller:
         name: eu.gcr.io/gardener-project/gardener/admission-controller
-        tag: v1.65.4
+        tag: v1.66.3
       api-server:
         name: eu.gcr.io/gardener-project/gardener/apiserver
-        tag: v1.65.4
+        tag: v1.66.3
       controller-manager:
         name: eu.gcr.io/gardener-project/gardener/controller-manager
-        tag: v1.65.4
+        tag: v1.66.3
       dns-controller-manager:
         name: eu.gcr.io/gardener-project/dns-controller-manager
         tag: v0.15.6
@@ -193,19 +193,19 @@ docker-images:
         tag: v0.15.3
       gardenlet:
         name: eu.gcr.io/gardener-project/gardener/gardenlet
-        tag: v1.65.4
+        tag: v1.66.3
       metrics-exporter:
         name: eu.gcr.io/gardener-project/gardener/metrics-exporter
         tag: 0.20.0
       networking-calico:
         name: eu.gcr.io/gardener-project/gardener/extensions/networking-calico
-        tag: v1.27.2
+        tag: v1.31.1
       networking-cilium:
         name: eu.gcr.io/gardener-project/gardener/extensions/networking-cilium
         tag: v1.19.0
       scheduler:
         name: eu.gcr.io/gardener-project/gardener/scheduler
-        tag: v1.65.4
+        tag: v1.66.3
       shoot-cert-service:
         name: eu.gcr.io/gardener-project/gardener/extensions/shoot-cert-service
         tag: v1.26.0
@@ -268,5 +268,5 @@ repositories:
         ref: v0.15.4
         url: https://github.com/gardener/etcd-backup-restore.git
       gardener:
-        ref: v1.65.4
+        ref: v1.66.3
         url: https://github.com/gardener/gardener.git
