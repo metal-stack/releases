@@ -187,7 +187,7 @@ docker-images:
         tag: v0.15.6
       extension-provider-gcp:
         name: eu.gcr.io/gardener-project/gardener/extensions/provider-gcp
-        tag: v1.23.1
+        tag: v1.31.0
       external-dns:
         name: eu.gcr.io/gardener-project/dns-controller-manager
         tag: v0.15.3
