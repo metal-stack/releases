@@ -104,7 +104,7 @@ docker-images:
       duros-controller:
         name: ghcr.io/metal-stack/duros-controller
         repository: https://github.com/metal-stack/duros-controller
-        tag: v0.7.2
+        tag: v0.7.3
       metal-ccm:
         name: ghcr.io/metal-stack/metal-ccm
         repository: https://github.com/metal-stack/metal-ccm
@@ -175,13 +175,13 @@ docker-images:
     gardener:
       admission-controller:
         name: eu.gcr.io/gardener-project/gardener/admission-controller
-        tag: v1.69.3
+        tag: v1.70.3
       api-server:
         name: eu.gcr.io/gardener-project/gardener/apiserver
-        tag: v1.69.3
+        tag: v1.70.3
       controller-manager:
         name: eu.gcr.io/gardener-project/gardener/controller-manager
-        tag: v1.69.3
+        tag: v1.70.3
       dns-controller-manager:
         name: eu.gcr.io/gardener-project/dns-controller-manager
         tag: v0.15.6
@@ -193,7 +193,7 @@ docker-images:
         tag: v0.15.3
       gardenlet:
         name: eu.gcr.io/gardener-project/gardener/gardenlet
-        tag: v1.69.3
+        tag: v1.70.3
       metrics-exporter:
         name: eu.gcr.io/gardener-project/gardener/metrics-exporter
         tag: 0.20.0
@@ -205,7 +205,7 @@ docker-images:
         tag: v1.19.0
       scheduler:
         name: eu.gcr.io/gardener-project/gardener/scheduler
-        tag: v1.69.3
+        tag: v1.70.3
       shoot-cert-service:
         name: eu.gcr.io/gardener-project/gardener/extensions/shoot-cert-service
         tag: v1.26.0
@@ -268,5 +268,5 @@ repositories:
         ref: v0.15.4
         url: https://github.com/gardener/etcd-backup-restore.git
       gardener:
-        ref: v1.69.3
+        ref: v1.70.3
         url: https://github.com/gardener/gardener.git
