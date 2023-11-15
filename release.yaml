@@ -208,10 +208,10 @@ docker-images:
         tag: v1.71.6
       shoot-cert-service:
         name: eu.gcr.io/gardener-project/gardener/extensions/shoot-cert-service
-        tag: v1.26.0
+        tag: v1.33.0
       shoot-dns-service:
         name: eu.gcr.io/gardener-project/gardener/extensions/shoot-dns-service
-        tag: v1.28.1
+        tag: v1.36.0
       virtual-apiserver:
         name: registry.k8s.io/kube-apiserver
         tag: v1.24.15
