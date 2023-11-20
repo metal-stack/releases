@@ -12,12 +12,12 @@ binaries:
   metal-stack:
     kernel:
       repository: https://github.com/metal-stack/kernel
-      url: https://github.com/metal-stack/kernel/releases/download/6.1.58-127/metal-kernel
-      version: 6.1.58-127
+      url: https://github.com/metal-stack/kernel/releases/download/6.1.62-128/metal-kernel
+      version: 6.1.62-128
     metal-hammer:
       repository: https://github.com/metal-stack/metal-hammer
-      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.11.5/metal-hammer-initrd.img.lz4
-      version: v0.11.5
+      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.11.6/metal-hammer-initrd.img.lz4
+      version: v0.11.6
     metalctl:
       darwin:
         url: https://github.com/metal-stack/metalctl/releases/download/v0.14.4/metalctl-darwin-amd64
@@ -58,11 +58,11 @@ docker-images:
       firewall-controller-manager:
         name: ghcr.io/metal-stack/firewall-controller-manager
         repository: https://github.com/metal-stack/firewall-controller-manager
-        tag: v0.3.0
+        tag: v0.3.1
       gardener-extension-provider-metal:
         name: ghcr.io/metal-stack/gardener-extension-provider-metal
         repository: https://github.com/metal-stack/gardener-extension-provider-metal
-        tag: v0.21.1
+        tag: v0.21.2
       machine-controller-manager:
         name: eu.gcr.io/gardener-project/gardener/machine-controller-manager
         repository: https://github.com/gardener/machine-controller-manager
@@ -74,7 +74,7 @@ docker-images:
       os-metal-extension:
         name: ghcr.io/metal-stack/os-metal-extension
         repository: https://github.com/metal-stack/os-metal-extension
-        tag: v0.6.4
+        tag: v0.6.5
     generic:
       backup-restore-sidecar:
         name: ghcr.io/metal-stack/backup-restore-sidecar
@@ -104,7 +104,7 @@ docker-images:
       duros-controller:
         name: ghcr.io/metal-stack/duros-controller
         repository: https://github.com/metal-stack/duros-controller
-        tag: v0.7.3
+        tag: v0.7.4
       metal-ccm:
         name: ghcr.io/metal-stack/metal-ccm
         repository: https://github.com/metal-stack/metal-ccm
@@ -175,25 +175,25 @@ docker-images:
     gardener:
       admission-controller:
         name: eu.gcr.io/gardener-project/gardener/admission-controller
-        tag: v1.70.3
+        tag: v1.71.6
       api-server:
         name: eu.gcr.io/gardener-project/gardener/apiserver
-        tag: v1.70.3
+        tag: v1.71.6
       controller-manager:
         name: eu.gcr.io/gardener-project/gardener/controller-manager
-        tag: v1.70.3
+        tag: v1.71.6
       dns-controller-manager:
         name: eu.gcr.io/gardener-project/dns-controller-manager
-        tag: v0.15.6
+        tag: v0.15.5
       extension-provider-gcp:
         name: eu.gcr.io/gardener-project/gardener/extensions/provider-gcp
-        tag: v1.23.1
+        tag: v1.31.0
       external-dns:
         name: eu.gcr.io/gardener-project/dns-controller-manager
-        tag: v0.15.3
+        tag: v0.15.10
       gardenlet:
         name: eu.gcr.io/gardener-project/gardener/gardenlet
-        tag: v1.70.3
+        tag: v1.71.6
       metrics-exporter:
         name: eu.gcr.io/gardener-project/gardener/metrics-exporter
         tag: 0.20.0
@@ -205,13 +205,13 @@ docker-images:
         tag: v1.19.0
       scheduler:
         name: eu.gcr.io/gardener-project/gardener/scheduler
-        tag: v1.70.3
+        tag: v1.71.6
       shoot-cert-service:
         name: eu.gcr.io/gardener-project/gardener/extensions/shoot-cert-service
-        tag: v1.26.0
+        tag: v1.33.0
       shoot-dns-service:
         name: eu.gcr.io/gardener-project/gardener/extensions/shoot-dns-service
-        tag: v1.28.1
+        tag: v1.36.0
       virtual-apiserver:
         name: registry.k8s.io/kube-apiserver
         tag: v1.24.15
@@ -268,5 +268,5 @@ repositories:
         ref: v0.15.4
         url: https://github.com/gardener/etcd-backup-restore.git
       gardener:
-        ref: v1.70.3
+        ref: v1.71.6
         url: https://github.com/gardener/gardener.git
