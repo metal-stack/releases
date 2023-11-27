@@ -7,7 +7,7 @@ ansible-roles:
     version: v0.2.7
   metal-roles:
     repository: https://github.com/metal-stack/metal-roles
-    version: v0.10.5
+    version: v0.10.6
 binaries:
   metal-stack:
     kernel:
@@ -175,9 +175,9 @@ docker-images:
     gardener:
       acl-extension:
         name: ghcr.io/stackitcloud/gardener-extension-acl-controller
-        webhook: ghcr.io/stackitcloud/gardener-extension-acl-webhook
         repository: https://github.com/stackitcloud/gardener-extension-acl
         tag: v0.4.0
+        webhook: ghcr.io/stackitcloud/gardener-extension-acl-webhook
       admission-controller:
         name: eu.gcr.io/gardener-project/gardener/admission-controller
         tag: v1.72.3
