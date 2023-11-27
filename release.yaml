@@ -7,7 +7,7 @@ ansible-roles:
     version: v0.2.7
   metal-roles:
     repository: https://github.com/metal-stack/metal-roles
-    version: v0.10.5
+    version: v0.10.6
 binaries:
   metal-stack:
     kernel:
@@ -37,7 +37,7 @@ docker-images:
       metal-api:
         name: ghcr.io/metal-stack/metal-api
         repository: https://github.com/metal-stack/metal-api
-        tag: v0.24.5
+        tag: v0.25.0
       metal-console:
         name: ghcr.io/metal-stack/metal-console
         repository: https://github.com/metal-stack/metal-console
@@ -173,15 +173,20 @@ docker-images:
         repository: https://github.com/multani/alertmanager-webhook-logger
         tag: v0.0.3
     gardener:
+      acl-extension:
+        name: ghcr.io/stackitcloud/gardener-extension-acl-controller
+        repository: https://github.com/stackitcloud/gardener-extension-acl
+        tag: v0.4.0
+        webhook: ghcr.io/stackitcloud/gardener-extension-acl-webhook
       admission-controller:
         name: eu.gcr.io/gardener-project/gardener/admission-controller
-        tag: v1.71.6
+        tag: v1.72.3
       api-server:
         name: eu.gcr.io/gardener-project/gardener/apiserver
-        tag: v1.71.6
+        tag: v1.72.3
       controller-manager:
         name: eu.gcr.io/gardener-project/gardener/controller-manager
-        tag: v1.71.6
+        tag: v1.72.3
       dns-controller-manager:
         name: eu.gcr.io/gardener-project/dns-controller-manager
         tag: v0.15.5
@@ -193,7 +198,7 @@ docker-images:
         tag: v0.15.10
       gardenlet:
         name: eu.gcr.io/gardener-project/gardener/gardenlet
-        tag: v1.71.6
+        tag: v1.72.3
       metrics-exporter:
         name: eu.gcr.io/gardener-project/gardener/metrics-exporter
         tag: 0.20.0
@@ -205,7 +210,7 @@ docker-images:
         tag: v1.25.0
       scheduler:
         name: eu.gcr.io/gardener-project/gardener/scheduler
-        tag: v1.71.6
+        tag: v1.72.3
       shoot-cert-service:
         name: eu.gcr.io/gardener-project/gardener/extensions/shoot-cert-service
         tag: v1.33.0
@@ -260,7 +265,7 @@ projects:
   metal-stack:
     mini-lab:
       repository: https://github.com/metal-stack/mini-lab
-      version: v0.3.3
+      version: v0.3.4
 repositories:
   third-party:
     gardener:
@@ -268,5 +273,5 @@ repositories:
         ref: v0.15.4
         url: https://github.com/gardener/etcd-backup-restore.git
       gardener:
-        ref: v1.71.6
+        ref: v1.72.3
         url: https://github.com/gardener/gardener.git
