@@ -173,6 +173,11 @@ docker-images:
         repository: https://github.com/multani/alertmanager-webhook-logger
         tag: v0.0.3
     gardener:
+      acl-extension:
+        name: ghcr.io/stackitcloud/gardener-extension-acl-controller
+        webhook: ghcr.io/stackitcloud/gardener-extension-acl-webhook
+        repository: https://github.com/stackitcloud/gardener-extension-acl
+        tag: v0.4.0
       admission-controller:
         name: eu.gcr.io/gardener-project/gardener/admission-controller
         tag: v1.72.3
