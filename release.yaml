@@ -185,13 +185,13 @@ docker-images:
         webhook: ghcr.io/stackitcloud/gardener-extension-acl-webhook
       admission-controller:
         name: eu.gcr.io/gardener-project/gardener/admission-controller
-        tag: v1.73.2
+        tag: v1.74.3
       api-server:
         name: eu.gcr.io/gardener-project/gardener/apiserver
-        tag: v1.73.2
+        tag: v1.74.3
       controller-manager:
         name: eu.gcr.io/gardener-project/gardener/controller-manager
-        tag: v1.73.2
+        tag: v1.74.3
       dns-controller-manager:
         name: eu.gcr.io/gardener-project/dns-controller-manager
         tag: v0.15.5
@@ -203,7 +203,7 @@ docker-images:
         tag: v0.15.10
       gardenlet:
         name: eu.gcr.io/gardener-project/gardener/gardenlet
-        tag: v1.73.2
+        tag: v1.74.3
       metrics-exporter:
         name: eu.gcr.io/gardener-project/gardener/metrics-exporter
         tag: 0.20.0
@@ -215,7 +215,7 @@ docker-images:
         tag: v1.25.0
       scheduler:
         name: eu.gcr.io/gardener-project/gardener/scheduler
-        tag: v1.73.2
+        tag: v1.74.3
       shoot-cert-service:
         name: eu.gcr.io/gardener-project/gardener/extensions/shoot-cert-service
         tag: v1.33.0
@@ -278,5 +278,5 @@ repositories:
         ref: v0.15.4
         url: https://github.com/gardener/etcd-backup-restore.git
       gardener:
-        ref: v1.73.2
+        ref: v1.74.3
         url: https://github.com/gardener/gardener.git
