@@ -139,7 +139,7 @@ docker-images:
       event-exporter:
         name: ghcr.io/resmoio/kubernetes-event-exporter
         repository: https://github.com/resmoio/kubernetes-event-exporter
-        tag: v1.1
+        tag: v1.6
       headscale:
         name: headscale/headscale
         repository: https://github.com/juanfont/headscale
@@ -180,7 +180,8 @@ docker-images:
       acl-extension:
         name: ghcr.io/stackitcloud/gardener-extension-acl-controller
         repository: https://github.com/stackitcloud/gardener-extension-acl
-        tag: v0.4.0
+        tag: v1.0.1
+        # TODO: remove here and metal-roles, helm charts and metal-deployment need to remove the webhook image vektor
         webhook: ghcr.io/stackitcloud/gardener-extension-acl-webhook
       admission-controller:
         name: eu.gcr.io/gardener-project/gardener/admission-controller
