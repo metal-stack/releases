@@ -178,11 +178,9 @@ docker-images:
         tag: v1.0.1
     gardener:
       acl-extension:
-        name: ghcr.io/stackitcloud/gardener-extension-acl-controller
+        name: ghcr.io/stackitcloud/gardener-extension-acl
         repository: https://github.com/stackitcloud/gardener-extension-acl
         tag: v1.0.1
-        # TODO: remove here and metal-roles, helm charts and metal-deployment need to remove the webhook image vektor
-        webhook: ghcr.io/stackitcloud/gardener-extension-acl-webhook
       admission-controller:
         name: eu.gcr.io/gardener-project/gardener/admission-controller
         tag: v1.74.3
