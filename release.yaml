@@ -167,7 +167,7 @@ docker-images:
       nsq:
         name: nsqio/nsq
         repository: https://github.com/nsqio/nsq
-        tag: v1.2.1
+        tag: v1.3.0
       thanos:
         name: quay.io/thanos/thanos
         repository: https://github.com/thanos-io/thanos
@@ -175,7 +175,7 @@ docker-images:
       webhook-logger:
         name: ghcr.io/multani/alertmanager-webhook-logger
         repository: https://github.com/multani/alertmanager-webhook-logger
-        tag: v0.0.3
+        tag: v1.0.1
     gardener:
       acl-extension:
         name: ghcr.io/stackitcloud/gardener-extension-acl-controller
