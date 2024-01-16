@@ -171,7 +171,7 @@ docker-images:
       thanos:
         name: quay.io/thanos/thanos
         repository: https://github.com/thanos-io/thanos
-        tag: v0.31.0
+        tag: v0.33.0
       webhook-logger:
         name: ghcr.io/multani/alertmanager-webhook-logger
         repository: https://github.com/multani/alertmanager-webhook-logger
