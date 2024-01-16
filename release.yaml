@@ -7,7 +7,7 @@ ansible-roles:
     version: v0.2.7
   metal-roles:
     repository: https://github.com/metal-stack/metal-roles
-    version: v0.11.3
+    version: v0.11.5
 binaries:
   metal-stack:
     kernel:
@@ -139,7 +139,7 @@ docker-images:
       event-exporter:
         name: ghcr.io/resmoio/kubernetes-event-exporter
         repository: https://github.com/resmoio/kubernetes-event-exporter
-        tag: v1.1
+        tag: v1.6
       headscale:
         name: headscale/headscale
         repository: https://github.com/juanfont/headscale
@@ -167,30 +167,29 @@ docker-images:
       nsq:
         name: nsqio/nsq
         repository: https://github.com/nsqio/nsq
-        tag: v1.2.1
+        tag: v1.3.0
       thanos:
         name: quay.io/thanos/thanos
         repository: https://github.com/thanos-io/thanos
-        tag: v0.31.0
+        tag: v0.33.0
       webhook-logger:
         name: ghcr.io/multani/alertmanager-webhook-logger
         repository: https://github.com/multani/alertmanager-webhook-logger
-        tag: v0.0.3
+        tag: v1.0.1
     gardener:
       acl-extension:
-        name: ghcr.io/stackitcloud/gardener-extension-acl-controller
+        name: ghcr.io/stackitcloud/gardener-extension-acl
         repository: https://github.com/stackitcloud/gardener-extension-acl
-        tag: v0.4.0
-        webhook: ghcr.io/stackitcloud/gardener-extension-acl-webhook
+        tag: v1.0.1
       admission-controller:
         name: eu.gcr.io/gardener-project/gardener/admission-controller
-        tag: v1.73.2
+        tag: v1.74.3
       api-server:
         name: eu.gcr.io/gardener-project/gardener/apiserver
-        tag: v1.73.2
+        tag: v1.74.3
       controller-manager:
         name: eu.gcr.io/gardener-project/gardener/controller-manager
-        tag: v1.73.2
+        tag: v1.74.3
       dns-controller-manager:
         name: eu.gcr.io/gardener-project/dns-controller-manager
         tag: v0.15.5
@@ -202,7 +201,7 @@ docker-images:
         tag: v0.15.10
       gardenlet:
         name: eu.gcr.io/gardener-project/gardener/gardenlet
-        tag: v1.73.2
+        tag: v1.74.3
       metrics-exporter:
         name: eu.gcr.io/gardener-project/gardener/metrics-exporter
         tag: 0.20.0
@@ -214,7 +213,7 @@ docker-images:
         tag: v1.25.0
       scheduler:
         name: eu.gcr.io/gardener-project/gardener/scheduler
-        tag: v1.73.2
+        tag: v1.74.3
       shoot-cert-service:
         name: eu.gcr.io/gardener-project/gardener/extensions/shoot-cert-service
         tag: v1.33.0
@@ -277,5 +276,5 @@ repositories:
         ref: v0.15.4
         url: https://github.com/gardener/etcd-backup-restore.git
       gardener:
-        ref: v1.73.2
+        ref: v1.74.3
         url: https://github.com/gardener/gardener.git
