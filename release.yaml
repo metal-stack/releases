@@ -12,12 +12,12 @@ binaries:
   metal-stack:
     kernel:
       repository: https://github.com/metal-stack/kernel
-      url: https://github.com/metal-stack/kernel/releases/download/6.1.62-128/metal-kernel
-      version: 6.1.62-128
+      url: https://github.com/metal-stack/kernel/releases/download/6.6.14-134/metal-kernel
+      version: 6.6.14-134
     metal-hammer:
       repository: https://github.com/metal-stack/metal-hammer
-      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.11.7/metal-hammer-initrd.img.lz4
-      version: v0.11.7
+      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.12.0/metal-hammer-initrd.img.lz4
+      version: v0.12.0
     metalctl:
       darwin:
         url: https://github.com/metal-stack/metalctl/releases/download/v0.15.2/metalctl-darwin-amd64
@@ -37,11 +37,11 @@ docker-images:
       metal-api:
         name: ghcr.io/metal-stack/metal-api
         repository: https://github.com/metal-stack/metal-api
-        tag: v0.26.2
+        tag: v0.26.3
       metal-console:
         name: ghcr.io/metal-stack/metal-console
         repository: https://github.com/metal-stack/metal-console
-        tag: v0.6.3
+        tag: v0.6.4
       metal-metrics-exporter:
         name: ghcr.io/metal-stack/metal-metrics-exporter
         repository: https://github.com/metal-stack/metal-metrics-exporter
@@ -58,7 +58,7 @@ docker-images:
       firewall-controller-manager:
         name: ghcr.io/metal-stack/firewall-controller-manager
         repository: https://github.com/metal-stack/firewall-controller-manager
-        tag: v0.3.1
+        tag: v0.3.2
       gardener-extension-audit:
         name: ghcr.io/metal-stack/gardener-extension-audit
         repository: https://github.com/metal-stack/gardener-extension-audit
@@ -66,7 +66,7 @@ docker-images:
       gardener-extension-provider-metal:
         name: ghcr.io/metal-stack/gardener-extension-provider-metal
         repository: https://github.com/metal-stack/gardener-extension-provider-metal
-        tag: v0.21.3
+        tag: v0.22.0
       machine-controller-manager:
         name: eu.gcr.io/gardener-project/gardener/machine-controller-manager
         repository: https://github.com/gardener/machine-controller-manager
@@ -78,7 +78,7 @@ docker-images:
       os-metal-extension:
         name: ghcr.io/metal-stack/os-metal-extension
         repository: https://github.com/metal-stack/os-metal-extension
-        tag: v0.6.5
+        tag: v0.7.0
     generic:
       backup-restore-sidecar:
         name: ghcr.io/metal-stack/backup-restore-sidecar
@@ -108,11 +108,11 @@ docker-images:
       duros-controller:
         name: ghcr.io/metal-stack/duros-controller
         repository: https://github.com/metal-stack/duros-controller
-        tag: v0.8.1
+        tag: v0.8.2
       metal-ccm:
         name: ghcr.io/metal-stack/metal-ccm
         repository: https://github.com/metal-stack/metal-ccm
-        tag: v0.7.13
+        tag: v0.8.0
       node-init:
         name: ghcr.io/metal-stack/node-init
         repository: https://github.com/metal-stack/node-init
