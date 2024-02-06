@@ -147,7 +147,7 @@ docker-images:
       headscale-db:
         name: postgres
         repository: https://github.com/docker-library/postgres
-        tag: 14-alpine
+        tag: 16-alpine
       ipam-db:
         name: postgres
         repository: https://github.com/docker-library/postgres
