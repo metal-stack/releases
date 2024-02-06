@@ -163,7 +163,7 @@ docker-images:
       metal-db:
         name: rethinkdb
         repository: https://github.com/rethinkdb/rethinkdb-dockerfiles
-        tag: 2.4.0
+        tag: 2.4.4-bookworm-slim
       nsq:
         name: nsqio/nsq
         repository: https://github.com/nsqio/nsq
