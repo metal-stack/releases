@@ -183,13 +183,13 @@ docker-images:
         tag: v1.0.1
       admission-controller:
         name: eu.gcr.io/gardener-project/gardener/admission-controller
-        tag: v1.74.3
+        tag: v1.75.2
       api-server:
         name: eu.gcr.io/gardener-project/gardener/apiserver
-        tag: v1.74.3
+        tag: v1.75.2
       controller-manager:
         name: eu.gcr.io/gardener-project/gardener/controller-manager
-        tag: v1.74.3
+        tag: v1.75.2
       dns-controller-manager:
         name: eu.gcr.io/gardener-project/dns-controller-manager
         tag: v0.15.5
@@ -201,7 +201,7 @@ docker-images:
         tag: v0.15.10
       gardenlet:
         name: eu.gcr.io/gardener-project/gardener/gardenlet
-        tag: v1.74.3
+        tag: v1.75.2
       metrics-exporter:
         name: eu.gcr.io/gardener-project/gardener/metrics-exporter
         tag: 0.20.0
@@ -213,7 +213,7 @@ docker-images:
         tag: v1.25.0
       scheduler:
         name: eu.gcr.io/gardener-project/gardener/scheduler
-        tag: v1.74.3
+        tag: v1.75.2
       shoot-cert-service:
         name: eu.gcr.io/gardener-project/gardener/extensions/shoot-cert-service
         tag: v1.33.0
@@ -276,5 +276,5 @@ repositories:
         ref: v0.15.4
         url: https://github.com/gardener/etcd-backup-restore.git
       gardener:
-        ref: v1.74.3
+        ref: v1.75.2
         url: https://github.com/gardener/gardener.git
