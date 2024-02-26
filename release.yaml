@@ -203,8 +203,8 @@ docker-images:
         name: eu.gcr.io/gardener-project/gardener/gardenlet
         tag: v1.75.2
       metrics-exporter:
-        name: eu.gcr.io/gardener-project/gardener/metrics-exporter
-        tag: 0.20.0
+        name: europe-docker.pkg.dev/gardener-project/releases/gardener/metrics-exporter
+        tag: "0.29.0"
       networking-calico:
         name: eu.gcr.io/gardener-project/gardener/extensions/networking-calico
         tag: v1.31.1
