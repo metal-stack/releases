@@ -183,25 +183,25 @@ docker-images:
         tag: v1.0.1
       admission-controller:
         name: eu.gcr.io/gardener-project/gardener/admission-controller
-        tag: v1.75.2
+        tag: v1.76.4
       api-server:
         name: eu.gcr.io/gardener-project/gardener/apiserver
-        tag: v1.75.2
+        tag: v1.76.4
       controller-manager:
         name: eu.gcr.io/gardener-project/gardener/controller-manager
-        tag: v1.75.2
+        tag: v1.76.4
       dns-controller-manager:
         name: eu.gcr.io/gardener-project/dns-controller-manager
-        tag: v0.15.5
+        tag: v0.15.8
       extension-provider-gcp:
         name: eu.gcr.io/gardener-project/gardener/extensions/provider-gcp
-        tag: v1.31.0
+        tag: v1.32.1
       external-dns:
-        name: eu.gcr.io/gardener-project/dns-controller-manager
-        tag: v0.15.10
+        name: europe-docker.pkg.dev/gardener-project/releases/dns-controller-manager
+        tag: v0.18.2
       gardenlet:
         name: eu.gcr.io/gardener-project/gardener/gardenlet
-        tag: v1.75.2
+        tag: v1.76.4
       metrics-exporter:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/metrics-exporter
         tag: 0.29.0
@@ -213,19 +213,19 @@ docker-images:
         tag: v1.25.0
       scheduler:
         name: eu.gcr.io/gardener-project/gardener/scheduler
-        tag: v1.75.2
+        tag: v1.76.4
       shoot-cert-service:
         name: eu.gcr.io/gardener-project/gardener/extensions/shoot-cert-service
-        tag: v1.33.0
+        tag: v1.34.0
       shoot-dns-service:
         name: eu.gcr.io/gardener-project/gardener/extensions/shoot-dns-service
-        tag: v1.36.0
+        tag: v1.37.1
       virtual-apiserver:
         name: registry.k8s.io/kube-apiserver
-        tag: v1.26.13
+        tag: v1.27.11
       virtual-controller-manager:
         name: registry.k8s.io/kube-controller-manager
-        tag: v1.26.13
+        tag: v1.27.11
     partition:
       image-cache-coredns:
         name: coredns/coredns
@@ -276,5 +276,5 @@ repositories:
         ref: v0.15.4
         url: https://github.com/gardener/etcd-backup-restore.git
       gardener:
-        ref: v1.75.2
+        ref: v1.76.4
         url: https://github.com/gardener/gardener.git
