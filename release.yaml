@@ -7,7 +7,7 @@ ansible-roles:
     version: v0.2.9
   metal-roles:
     repository: https://github.com/metal-stack/metal-roles
-    version: v0.11.9
+    version: v0.11.10
 binaries:
   metal-stack:
     kernel:
@@ -33,7 +33,7 @@ docker-images:
       masterdata-api:
         name: ghcr.io/metal-stack/masterdata-api
         repository: https://github.com/metal-stack/masterdata-api
-        tag: v0.10.3
+        tag: v0.11.1
       metal-api:
         name: ghcr.io/metal-stack/metal-api
         repository: https://github.com/metal-stack/metal-api
@@ -41,7 +41,7 @@ docker-images:
       metal-console:
         name: ghcr.io/metal-stack/metal-console
         repository: https://github.com/metal-stack/metal-console
-        tag: v0.6.4
+        tag: v0.6.5
       metal-metrics-exporter:
         name: ghcr.io/metal-stack/metal-metrics-exporter
         repository: https://github.com/metal-stack/metal-metrics-exporter
@@ -66,7 +66,7 @@ docker-images:
       gardener-extension-provider-metal:
         name: ghcr.io/metal-stack/gardener-extension-provider-metal
         repository: https://github.com/metal-stack/gardener-extension-provider-metal
-        tag: v0.22.2
+        tag: v0.22.3
       machine-controller-manager:
         name: eu.gcr.io/gardener-project/gardener/machine-controller-manager
         repository: https://github.com/gardener/machine-controller-manager
@@ -83,7 +83,7 @@ docker-images:
       backup-restore-sidecar:
         name: ghcr.io/metal-stack/backup-restore-sidecar
         repository: https://github.com/metal-stack/backup-restore-sidecar
-        tag: v0.10.0
+        tag: v0.10.1
       deployment-base:
         name: ghcr.io/metal-stack/metal-deployment-base
         repository: https://github.com/metal-stack/metal-dockerfiles
@@ -129,7 +129,7 @@ docker-images:
       metal-image-cache-sync:
         name: ghcr.io/metal-stack/metal-image-cache-sync
         repository: https://github.com/metal-stack/metal-image-cache-sync
-        tag: v0.1.6
+        tag: v0.1.7
       pixiecore:
         name: ghcr.io/metal-stack/pixie
         repository: https://github.com/metal-stack/pixie
@@ -183,25 +183,25 @@ docker-images:
         tag: v1.0.1
       admission-controller:
         name: eu.gcr.io/gardener-project/gardener/admission-controller
-        tag: v1.75.2
+        tag: v1.76.4
       api-server:
         name: eu.gcr.io/gardener-project/gardener/apiserver
-        tag: v1.75.2
+        tag: v1.76.4
       controller-manager:
         name: eu.gcr.io/gardener-project/gardener/controller-manager
-        tag: v1.75.2
+        tag: v1.76.4
       dns-controller-manager:
         name: eu.gcr.io/gardener-project/dns-controller-manager
-        tag: v0.15.5
+        tag: v0.15.8
       extension-provider-gcp:
         name: eu.gcr.io/gardener-project/gardener/extensions/provider-gcp
-        tag: v1.31.0
+        tag: v1.32.1
       external-dns:
-        name: eu.gcr.io/gardener-project/dns-controller-manager
-        tag: v0.15.10
+        name: europe-docker.pkg.dev/gardener-project/releases/dns-controller-manager
+        tag: v0.18.2
       gardenlet:
         name: eu.gcr.io/gardener-project/gardener/gardenlet
-        tag: v1.75.2
+        tag: v1.76.4
       metrics-exporter:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/metrics-exporter
         tag: 0.29.0
@@ -213,19 +213,19 @@ docker-images:
         tag: v1.25.0
       scheduler:
         name: eu.gcr.io/gardener-project/gardener/scheduler
-        tag: v1.75.2
+        tag: v1.76.4
       shoot-cert-service:
         name: eu.gcr.io/gardener-project/gardener/extensions/shoot-cert-service
-        tag: v1.33.0
+        tag: v1.34.0
       shoot-dns-service:
         name: eu.gcr.io/gardener-project/gardener/extensions/shoot-dns-service
-        tag: v1.36.0
+        tag: v1.37.1
       virtual-apiserver:
         name: registry.k8s.io/kube-apiserver
-        tag: v1.26.13
+        tag: v1.27.11
       virtual-controller-manager:
         name: registry.k8s.io/kube-controller-manager
-        tag: v1.26.13
+        tag: v1.27.11
     partition:
       image-cache-coredns:
         name: coredns/coredns
@@ -276,5 +276,5 @@ repositories:
         ref: v0.15.4
         url: https://github.com/gardener/etcd-backup-restore.git
       gardener:
-        ref: v1.75.2
+        ref: v1.76.4
         url: https://github.com/gardener/gardener.git
