@@ -24,7 +24,7 @@ cd -
 # FIXME: Install correct version of metal_python
 pip install --root-user-action=ignore --upgrade pip \
   coverage \
-  flaky \
+  pytest-rerunfailures \
   mock \
   metal_python \
   pytest \
