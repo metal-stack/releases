@@ -4,7 +4,7 @@ import os
 from kubernetes import client, config
 import metal_python.api as metal_api
 from metal_python.driver import Driver
-from flaky import flaky
+import pytest
 import testinfra
 
 import common
@@ -48,7 +48,7 @@ class MetalControlPlaneDeployment(unittest.TestCase):
         self.assertEqual(res.status, "healthy")
         self.assertEqual(res.message, "")
 
-    @flaky(max_runs=36, rerun_filter=common.FlakyBackoff(10).backoff)
+    @pytest.mark.flaky(reruns=36, reruns_delay=10)
     def test_switches_have_registered(self):
         api = metal_api.SwitchApi(api_client=self.driver.client)
         try:
