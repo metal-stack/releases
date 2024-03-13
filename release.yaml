@@ -58,7 +58,7 @@ docker-images:
       firewall-controller-manager:
         name: ghcr.io/metal-stack/firewall-controller-manager
         repository: https://github.com/metal-stack/firewall-controller-manager
-        tag: v0.3.2
+        tag: v0.3.3
       gardener-extension-audit:
         name: ghcr.io/metal-stack/gardener-extension-audit
         repository: https://github.com/metal-stack/gardener-extension-audit
