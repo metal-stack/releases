@@ -191,12 +191,13 @@ docker-images:
         name: eu.gcr.io/gardener-project/gardener/controller-manager
         tag: v1.80.7
       dns-controller-manager:
-        name: eu.gcr.io/gardener-project/dns-controller-manager
-        tag: v0.15.8
+        name: europe-docker.pkg.dev/gardener-project/releases/dns-controller-manager
+        tag: v0.18.4
       extension-provider-gcp:
         name: eu.gcr.io/gardener-project/gardener/extensions/provider-gcp
         tag: v1.32.1
       external-dns:
+        # FIXME: duplicate vector with dns-controller-manager ?
         name: europe-docker.pkg.dev/gardener-project/releases/dns-controller-manager
         tag: v0.18.4
       gardenlet:
