@@ -209,10 +209,10 @@ docker-images:
         tag: 0.29.0
       networking-calico:
         name: eu.gcr.io/gardener-project/gardener/extensions/networking-calico
-        tag: v1.31.1
+        tag: v1.38.0
       networking-cilium:
         name: eu.gcr.io/gardener-project/gardener/extensions/networking-cilium
-        tag: v1.25.0
+        tag: v1.32.2
       operator:
         name: eu.gcr.io/gardener-project/gardener/operator
         tag: v1.80.7
