@@ -12,8 +12,8 @@ binaries:
   metal-stack:
     kernel:
       repository: https://github.com/metal-stack/kernel
-      url: https://github.com/metal-stack/kernel/releases/download/6.6.22-138/metal-kernel
-      version: 6.6.22-138
+      url: https://github.com/metal-stack/kernel/releases/download/6.6.24-139/metal-kernel
+      version: 6.6.24-139
     metal-hammer:
       repository: https://github.com/metal-stack/metal-hammer
       url: https://github.com/metal-stack/metal-hammer/releases/download/v0.12.3/metal-hammer-initrd.img.lz4
@@ -197,8 +197,6 @@ docker-images:
         name: eu.gcr.io/gardener-project/gardener/extensions/provider-gcp
         tag: v1.32.1
       external-dns:
-        # FIXME: duplicate vector with dns-controller-manager ?
-        # FIXME: with v0.18.4 the controller-registration.yaml is gone ?
         name: europe-docker.pkg.dev/gardener-project/releases/dns-controller-manager
         tag: v0.18.2
       gardenlet:
