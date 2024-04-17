@@ -12,8 +12,8 @@ binaries:
   metal-stack:
     kernel:
       repository: https://github.com/metal-stack/kernel
-      url: https://github.com/metal-stack/kernel/releases/download/6.6.22-138/metal-kernel
-      version: 6.6.22-138
+      url: https://github.com/metal-stack/kernel/releases/download/6.6.26-140/metal-kernel
+      version: 6.6.26-140
     metal-hammer:
       repository: https://github.com/metal-stack/metal-hammer
       url: https://github.com/metal-stack/metal-hammer/releases/download/v0.12.3/metal-hammer-initrd.img.lz4
@@ -33,7 +33,7 @@ docker-images:
       masterdata-api:
         name: ghcr.io/metal-stack/masterdata-api
         repository: https://github.com/metal-stack/masterdata-api
-        tag: v0.11.1
+        tag: v0.11.2
       metal-api:
         name: ghcr.io/metal-stack/metal-api
         repository: https://github.com/metal-stack/metal-api
@@ -66,7 +66,7 @@ docker-images:
       gardener-extension-provider-metal:
         name: ghcr.io/metal-stack/gardener-extension-provider-metal
         repository: https://github.com/metal-stack/gardener-extension-provider-metal
-        tag: v0.22.8
+        tag: v0.22.9
       machine-controller-manager:
         name: eu.gcr.io/gardener-project/gardener/machine-controller-manager
         repository: https://github.com/gardener/machine-controller-manager
@@ -104,7 +104,7 @@ docker-images:
       droptailer:
         name: ghcr.io/metal-stack/droptailer
         repository: https://github.com/metal-stack/droptailer
-        tag: v0.2.12
+        tag: v0.2.14
       duros-controller:
         name: ghcr.io/metal-stack/duros-controller
         repository: https://github.com/metal-stack/duros-controller
@@ -112,7 +112,7 @@ docker-images:
       metal-ccm:
         name: ghcr.io/metal-stack/metal-ccm
         repository: https://github.com/metal-stack/metal-ccm
-        tag: v0.8.3
+        tag: v0.8.4
       node-init:
         name: ghcr.io/metal-stack/node-init
         repository: https://github.com/metal-stack/node-init
@@ -125,7 +125,7 @@ docker-images:
       metal-core:
         name: ghcr.io/metal-stack/metal-core
         repository: https://github.com/metal-stack/metal-core
-        tag: v0.10.0
+        tag: v0.10.2
       metal-image-cache-sync:
         name: ghcr.io/metal-stack/metal-image-cache-sync
         repository: https://github.com/metal-stack/metal-image-cache-sync
@@ -183,16 +183,16 @@ docker-images:
         tag: v1.0.1
       admission-controller:
         name: eu.gcr.io/gardener-project/gardener/admission-controller
-        tag: v1.79.3
+        tag: v1.80.7
       api-server:
         name: eu.gcr.io/gardener-project/gardener/apiserver
-        tag: v1.79.3
+        tag: v1.80.7
       controller-manager:
         name: eu.gcr.io/gardener-project/gardener/controller-manager
-        tag: v1.79.3
+        tag: v1.80.7
       dns-controller-manager:
         name: eu.gcr.io/gardener-project/dns-controller-manager
-        tag: v0.15.8
+        tag: v0.15.9
       extension-provider-gcp:
         name: eu.gcr.io/gardener-project/gardener/extensions/provider-gcp
         tag: v1.32.1
@@ -201,28 +201,28 @@ docker-images:
         tag: v0.18.2
       gardenlet:
         name: eu.gcr.io/gardener-project/gardener/gardenlet
-        tag: v1.79.3
+        tag: v1.80.7
       metrics-exporter:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/metrics-exporter
         tag: 0.29.0
       networking-calico:
         name: eu.gcr.io/gardener-project/gardener/extensions/networking-calico
-        tag: v1.31.1
+        tag: v1.37.0
       networking-cilium:
         name: eu.gcr.io/gardener-project/gardener/extensions/networking-cilium
-        tag: v1.25.0
+        tag: v1.26.0
       operator:
         name: eu.gcr.io/gardener-project/gardener/operator
-        tag: v1.79.3
+        tag: v1.80.7
       scheduler:
         name: eu.gcr.io/gardener-project/gardener/scheduler
-        tag: v1.79.3
+        tag: v1.80.7
       shoot-cert-service:
         name: eu.gcr.io/gardener-project/gardener/extensions/shoot-cert-service
-        tag: v1.34.0
+        tag: v1.38.0
       shoot-dns-service:
         name: eu.gcr.io/gardener-project/gardener/extensions/shoot-dns-service
-        tag: v1.37.1
+        tag: v1.39.0
       virtual-apiserver:
         name: registry.k8s.io/kube-apiserver
         tag: v1.27.11
@@ -271,7 +271,7 @@ projects:
   metal-stack:
     mini-lab:
       repository: https://github.com/metal-stack/mini-lab
-      version: v0.3.5
+      version: v0.3.6
 repositories:
   third-party:
     gardener:
@@ -279,5 +279,5 @@ repositories:
         ref: v0.15.4
         url: https://github.com/gardener/etcd-backup-restore.git
       gardener:
-        ref: v1.79.3
+        ref: v1.80.7
         url: https://github.com/gardener/gardener.git
