@@ -27,7 +27,6 @@ cd "${MINI_LAB_PATH}"
 git checkout "${MINI_LAB_VERSION}"
 
 # self hosted runners get dirty, we need to clean up first
-make cleanup
 ./test/ci-cleanup.sh
 
 cd -

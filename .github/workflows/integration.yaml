@@ -16,6 +16,15 @@ jobs:
   test:
     name: Integration tests
     runs-on: self-hosted
+
+    strategy:
+      matrix:
+        flavors:
+          - name: sonic
+            env: MINI_LAB_FLAVOR=sonic
+          - name: cumulus
+            env: MINI_LAB_FLAVOR=cumulus
+
     steps:
     - name: Gain back workspace permissions # https://github.com/actions/checkout/issues/211
       run: |
@@ -40,6 +49,7 @@ jobs:
       uses: EnricoMi/publish-unit-test-result-action@v2
       with:
         files: test/integration/**/output/*.xml
+      if: ${{ matrix.flavors.name == 'sonic' }}
 
     - name: Slack Notification on Success
       uses: rtCamp/action-slack-notify@v2
@@ -48,11 +58,11 @@ jobs:
       env:
         SLACK_COLOR: good
         SLACK_TITLE: 'Integration Tests succeeded'
-      if: ${{ success() }}
+      if: ${{ matrix.flavors.name == 'sonic' && success() }}
 
     - name: Slack Notification on Failure
       uses: rtCamp/action-slack-notify@v2
       env:
         SLACK_COLOR: red
         SLACK_TITLE: 'Integration Tests failed'
-      if: ${{ failure() }}
+      if: ${{ matrix.flavors.name == 'sonic' && failure() }}
