@@ -21,9 +21,7 @@ jobs:
       matrix:
         flavors:
           - name: sonic
-            env: MINI_LAB_FLAVOR=sonic
           - name: cumulus
-            env: MINI_LAB_FLAVOR=cumulus
 
     steps:
     - name: Gain back workspace permissions # https://github.com/actions/checkout/issues/211
@@ -42,6 +40,7 @@ jobs:
         make integration-deployment
         make integration-ansible-modules
       env:
+        MINI_LAB_FLAVOR: ${{ matrix.flavors.name }}
         DOCKER_HUB_USER: ${{ secrets.DOCKER_HUB_USER }}
         DOCKER_HUB_TOKEN: ${{ secrets.DOCKER_HUB_TOKEN }}
 
