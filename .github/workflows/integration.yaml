@@ -16,10 +16,25 @@ jobs:
   test:
     name: Integration tests
     runs-on: self-hosted
+
+    strategy:
+      matrix:
+        flavors:
+          - name: sonic
+          - name: cumulus
+
     steps:
     - name: Gain back workspace permissions # https://github.com/actions/checkout/issues/211
       run: |
         [ -d "${GITHUB_WORKSPACE}" ] && sudo chown -R $USER:$USER ${GITHUB_WORKSPACE}
+
+    - name: Setup Containerlab
+      run: |
+        bash -c "$(curl -sL https://get.containerlab.dev)"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # we can remove desired version again after this fix was released: https://github.com/srl-labs/containerlab/pull/2000
+        DESIRED_VERSION: v0.52.0
 
     - name: Checkout
       uses: actions/checkout@v4
@@ -33,6 +48,7 @@ jobs:
         make integration-deployment
         make integration-ansible-modules
       env:
+        MINI_LAB_FLAVOR: ${{ matrix.flavors.name }}
         DOCKER_HUB_USER: ${{ secrets.DOCKER_HUB_USER }}
         DOCKER_HUB_TOKEN: ${{ secrets.DOCKER_HUB_TOKEN }}
 
@@ -40,6 +56,7 @@ jobs:
       uses: EnricoMi/publish-unit-test-result-action@v2
       with:
         files: test/integration/**/output/*.xml
+      if: ${{ matrix.flavors.name == 'sonic' }}
 
     - name: Slack Notification on Success
       uses: rtCamp/action-slack-notify@v2
@@ -48,11 +65,11 @@ jobs:
       env:
         SLACK_COLOR: good
         SLACK_TITLE: 'Integration Tests succeeded'
-      if: ${{ success() }}
+      if: ${{ matrix.flavors.name == 'sonic' && success() }}
 
     - name: Slack Notification on Failure
       uses: rtCamp/action-slack-notify@v2
       env:
         SLACK_COLOR: red
         SLACK_TITLE: 'Integration Tests failed'
-      if: ${{ failure() }}
+      if: ${{ matrix.flavors.name == 'sonic' && failure() }}

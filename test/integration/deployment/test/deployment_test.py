@@ -76,18 +76,24 @@ class MetalSwitchPlaneDeployment(common.TestinfraCommon):
     def __init__(self, *args, **kwargs):
         super(MetalSwitchPlaneDeployment, self).__init__(*args, **kwargs)
         self.hosts = testinfra.get_hosts(["ssh://leaf01", "ssh://leaf02"])
+        self.is_sonic = self.hosts[0].file("/etc/sonic/sonic_version.yml").exists
 
     def test_metal_core_service(self):
         for host in self.hosts:
             self.service_enabled_and_running(host, "metal-core")
 
     def test_pixiecore_service(self):
-        for host in self.hosts:
-            self.service_enabled_and_running(self.hosts[0], "pixiecore")
+        self.service_enabled_and_running(self.hosts[0], "pixiecore")
 
     def test_frr_service(self):
         for host in self.hosts:
-            self.service_enabled_and_running(host, "frr")
+            if self.is_sonic:
+                self.service_enabled_and_running(host, "bgp")
+            else:
+                self.service_enabled_and_running(host, "frr")
 
     def test_dhcpd_service(self):
-        self.service_enabled_and_running(self.hosts[0], "dhcpd")
+        if self.is_sonic:
+            self.service_enabled_and_running(self.hosts[0], "isc-dhcp-server")
+        else:
+            self.service_enabled_and_running(self.hosts[0], "dhcpd")
