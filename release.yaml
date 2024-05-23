@@ -7,7 +7,7 @@ ansible-roles:
     version: v0.2.9
   metal-roles:
     repository: https://github.com/metal-stack/metal-roles
-    version: v0.11.15
+    version: v0.11.16
 binaries:
   metal-stack:
     kernel:
