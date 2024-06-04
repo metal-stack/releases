@@ -7,17 +7,17 @@ ansible-roles:
     version: v0.2.9
   metal-roles:
     repository: https://github.com/metal-stack/metal-roles
-    version: v0.11.15
+    version: v0.11.16
 binaries:
   metal-stack:
     kernel:
       repository: https://github.com/metal-stack/kernel
-      url: https://github.com/metal-stack/kernel/releases/download/6.6.30-142/metal-kernel
-      version: 6.6.30-142
+      url: https://github.com/metal-stack/kernel/releases/download/6.6.32-143/metal-kernel
+      version: 6.6.32-143
     metal-hammer:
       repository: https://github.com/metal-stack/metal-hammer
-      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.13.0/metal-hammer-initrd.img.lz4
-      version: v0.13.0
+      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.13.2/metal-hammer-initrd.img.lz4
+      version: v0.13.2
     metalctl:
       darwin:
         url: https://github.com/metal-stack/metalctl/releases/download/v0.16.2/metalctl-darwin-amd64
@@ -33,11 +33,11 @@ docker-images:
       masterdata-api:
         name: ghcr.io/metal-stack/masterdata-api
         repository: https://github.com/metal-stack/masterdata-api
-        tag: v0.11.2
+        tag: v0.11.3
       metal-api:
         name: ghcr.io/metal-stack/metal-api
         repository: https://github.com/metal-stack/metal-api
-        tag: v0.29.0
+        tag: v0.31.2
       metal-console:
         name: ghcr.io/metal-stack/metal-console
         repository: https://github.com/metal-stack/metal-console
@@ -58,7 +58,7 @@ docker-images:
       firewall-controller-manager:
         name: ghcr.io/metal-stack/firewall-controller-manager
         repository: https://github.com/metal-stack/firewall-controller-manager
-        tag: v0.3.5
+        tag: v0.4.0
       gardener-extension-audit:
         name: ghcr.io/metal-stack/gardener-extension-audit
         repository: https://github.com/metal-stack/gardener-extension-audit
@@ -66,7 +66,7 @@ docker-images:
       gardener-extension-provider-metal:
         name: ghcr.io/metal-stack/gardener-extension-provider-metal
         repository: https://github.com/metal-stack/gardener-extension-provider-metal
-        tag: v0.22.11
+        tag: v0.22.13
       machine-controller-manager:
         name: eu.gcr.io/gardener-project/gardener/machine-controller-manager
         repository: https://github.com/gardener/machine-controller-manager
@@ -74,7 +74,7 @@ docker-images:
       machine-controller-manager-provider-metal:
         name: ghcr.io/metal-stack/machine-controller-manager-provider-metal
         repository: https://github.com/metal-stack/machine-controller-manager-provider-metal
-        tag: v0.1.18
+        tag: v0.1.19
       os-metal-extension:
         name: ghcr.io/metal-stack/os-metal-extension
         repository: https://github.com/metal-stack/os-metal-extension
@@ -180,7 +180,7 @@ docker-images:
       acl-extension:
         name: ghcr.io/stackitcloud/gardener-extension-acl
         repository: https://github.com/stackitcloud/gardener-extension-acl
-        tag: v1.0.1
+        tag: v1.1.1
       admission-controller:
         name: eu.gcr.io/gardener-project/gardener/admission-controller
         tag: v1.80.7
