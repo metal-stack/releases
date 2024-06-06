@@ -139,7 +139,7 @@ docker-images:
       event-exporter:
         name: ghcr.io/resmoio/kubernetes-event-exporter
         repository: https://github.com/resmoio/kubernetes-event-exporter
-        tag: v1.6
+        tag: v1.7
       headscale:
         name: headscale/headscale
         repository: https://github.com/juanfont/headscale
@@ -175,7 +175,7 @@ docker-images:
       webhook-logger:
         name: ghcr.io/multani/alertmanager-webhook-logger
         repository: https://github.com/multani/alertmanager-webhook-logger
-        tag: v1.0.1
+        tag: v1.1.1
     gardener:
       acl-extension:
         name: ghcr.io/stackitcloud/gardener-extension-acl
