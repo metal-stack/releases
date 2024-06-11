@@ -30,6 +30,10 @@ binaries:
 docker-images:
   metal-stack:
     control-plane:
+      ipam:
+        name: ghcr.io/metal-stack/go-ipam
+        repository: https://github.com/metal-stack/go-ipam
+        tag: v1.13.1
       masterdata-api:
         name: ghcr.io/metal-stack/masterdata-api
         repository: https://github.com/metal-stack/masterdata-api
