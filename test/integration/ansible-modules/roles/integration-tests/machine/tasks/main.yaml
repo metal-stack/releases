@@ -22,7 +22,7 @@
     hostname: "machine01"
     project: "00000000-0000-0000-0000-000000000000"
     partition: mini-lab
-    image: ubuntu-22.04
+    image: ubuntu-24.04
     size: v1-small-x86
     networks:
       - internet-mini-lab
@@ -43,7 +43,7 @@
       - look.allocation.hostname == "machine01"
       - look.allocation.project == "00000000-0000-0000-0000-000000000000"
       - look.partition.id == "mini-lab"
-      - '"ubuntu-22.04" in look.allocation.image.id'
+      - '"ubuntu-24.04" in look.allocation.image.id'
       - look.size.id == "v1-small-x86"
       - '"internet-mini-lab" in look.allocation.networks | map(attribute="networkid") | list'
       - 'network.id in look.allocation.networks | map(attribute="networkid") | list'
@@ -57,7 +57,7 @@
     hostname: "machine01"
     project: "00000000-0000-0000-0000-000000000000"
     partition: mini-lab
-    image: ubuntu-22.04
+    image: ubuntu-24.04
     size: v1-small-x86
     networks:
       - internet-mini-lab
