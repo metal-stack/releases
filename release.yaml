@@ -263,7 +263,7 @@ helm-charts:
   metal-stack:
     metal-control-plane:
       repository: https://helm.metal-stack.io
-      version: 0.4.1
+      version: 0.4.2
   monitoring:
     kube-prometheus-stack:
       repository: https://prometheus-community.github.io/helm-charts
