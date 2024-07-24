@@ -241,7 +241,7 @@ docker-images:
       image-cache-haproxy:
         name: haproxy
         repository: https://github.com/docker-library/haproxy
-        tag: 2.4-alpine
+        tag: 3.0-alpine
       prometheus:
         name: prom/prometheus
         tag: v2.44.0
