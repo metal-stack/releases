@@ -251,7 +251,7 @@ docker-images:
       ztp-nginx:
         name: nginx
         repository: https://github.com/nginxinc/docker-nginx
-        tag: 1.24-alpine
+        tag: 1.27-alpine
 helm-charts:
   logging:
     loki:
