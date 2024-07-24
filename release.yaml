@@ -237,7 +237,7 @@ docker-images:
       image-cache-coredns:
         name: coredns/coredns
         repository: https://github.com/coredns/coredns
-        tag: 1.7.0
+        tag: 1.11.1
       image-cache-haproxy:
         name: haproxy
         repository: https://github.com/docker-library/haproxy
