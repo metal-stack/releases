@@ -1,23 +1,23 @@
 ansible-roles:
   ansible-common:
     repository: https://github.com/metal-stack/ansible-common
-    version: v0.6.11
+    version: v0.6.12
   metal-ansible-modules:
     repository: https://github.com/metal-stack/metal-ansible-modules
     version: v0.2.9
   metal-roles:
     repository: https://github.com/metal-stack/metal-roles
-    version: v0.12.1
+    version: v0.12.3
 binaries:
   metal-stack:
     kernel:
       repository: https://github.com/metal-stack/kernel
-      url: https://github.com/metal-stack/kernel/releases/download/6.6.38-20/metal-kernel
-      version: 6.6.38-20
+      url: https://github.com/metal-stack/kernel/releases/download/6.6.42-26/metal-kernel
+      version: 6.6.42-26
     metal-hammer:
       repository: https://github.com/metal-stack/metal-hammer
-      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.13.2/metal-hammer-initrd.img.lz4
-      version: v0.13.2
+      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.13.3/metal-hammer-initrd.img.lz4
+      version: v0.13.3
     metalctl:
       darwin:
         url: https://github.com/metal-stack/metalctl/releases/download/v0.16.5/metalctl-darwin-amd64
@@ -33,7 +33,7 @@ docker-images:
       ipam:
         name: ghcr.io/metal-stack/go-ipam
         repository: https://github.com/metal-stack/go-ipam
-        tag: v1.14.1
+        tag: v1.14.4
       masterdata-api:
         name: ghcr.io/metal-stack/masterdata-api
         repository: https://github.com/metal-stack/masterdata-api
@@ -41,7 +41,7 @@ docker-images:
       metal-api:
         name: ghcr.io/metal-stack/metal-api
         repository: https://github.com/metal-stack/metal-api
-        tag: v0.32.2
+        tag: v0.32.3
       metal-console:
         name: ghcr.io/metal-stack/metal-console
         repository: https://github.com/metal-stack/metal-console
@@ -70,7 +70,7 @@ docker-images:
       gardener-extension-provider-metal:
         name: ghcr.io/metal-stack/gardener-extension-provider-metal
         repository: https://github.com/metal-stack/gardener-extension-provider-metal
-        tag: v0.24.1
+        tag: v0.24.2
       machine-controller-manager:
         name: eu.gcr.io/gardener-project/gardener/machine-controller-manager
         repository: https://github.com/gardener/machine-controller-manager
@@ -82,7 +82,7 @@ docker-images:
       os-metal-extension:
         name: ghcr.io/metal-stack/os-metal-extension
         repository: https://github.com/metal-stack/os-metal-extension
-        tag: v0.7.1
+        tag: v0.7.2
     generic:
       backup-restore-sidecar:
         name: ghcr.io/metal-stack/backup-restore-sidecar
@@ -187,25 +187,25 @@ docker-images:
         tag: v1.2.0
       admission-controller:
         name: eu.gcr.io/gardener-project/gardener/admission-controller
-        tag: v1.83.3
+        tag: v1.84.3
       api-server:
         name: eu.gcr.io/gardener-project/gardener/apiserver
-        tag: v1.83.3
+        tag: v1.84.3
       controller-manager:
         name: eu.gcr.io/gardener-project/gardener/controller-manager
-        tag: v1.83.3
+        tag: v1.84.3
       dns-controller-manager:
         name: eu.gcr.io/gardener-project/dns-controller-manager
         tag: v0.15.9
       extension-provider-gcp:
         name: eu.gcr.io/gardener-project/gardener/extensions/provider-gcp
-        tag: v1.32.1
+        tag: v1.33.1
       external-dns:
         name: europe-docker.pkg.dev/gardener-project/releases/dns-controller-manager
         tag: v0.18.2
       gardenlet:
         name: eu.gcr.io/gardener-project/gardener/gardenlet
-        tag: v1.83.3
+        tag: v1.84.3
       metrics-exporter:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/metrics-exporter
         tag: 0.29.0
@@ -217,10 +217,10 @@ docker-images:
         tag: v1.26.0
       operator:
         name: eu.gcr.io/gardener-project/gardener/operator
-        tag: v1.83.3
+        tag: v1.84.3
       scheduler:
         name: eu.gcr.io/gardener-project/gardener/scheduler
-        tag: v1.83.3
+        tag: v1.84.3
       shoot-cert-service:
         name: eu.gcr.io/gardener-project/gardener/extensions/shoot-cert-service
         tag: v1.38.0
@@ -237,11 +237,11 @@ docker-images:
       image-cache-coredns:
         name: coredns/coredns
         repository: https://github.com/coredns/coredns
-        tag: 1.7.0
+        tag: 1.11.1
       image-cache-haproxy:
         name: haproxy
         repository: https://github.com/docker-library/haproxy
-        tag: 2.4-alpine
+        tag: 3.0-alpine
       prometheus:
         name: prom/prometheus
         tag: v2.44.0
@@ -251,7 +251,7 @@ docker-images:
       ztp-nginx:
         name: nginx
         repository: https://github.com/nginxinc/docker-nginx
-        tag: 1.24-alpine
+        tag: 1.27-alpine
 helm-charts:
   logging:
     loki:
@@ -283,5 +283,5 @@ repositories:
         ref: v0.15.4
         url: https://github.com/gardener/etcd-backup-restore.git
       gardener:
-        ref: v1.83.3
+        ref: v1.84.3
         url: https://github.com/gardener/gardener.git
