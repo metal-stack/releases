@@ -72,7 +72,7 @@ docker-images:
         repository: https://github.com/metal-stack/gardener-extension-provider-metal
         tag: v0.24.2
       machine-controller-manager:
-        name: eu.gcr.io/gardener-project/gardener/machine-controller-manager
+        name: europe-docker.pkg.dev/gardener-project/releases/gardener/machine-controller-manager
         repository: https://github.com/gardener/machine-controller-manager
         tag: v0.50.1
       machine-controller-manager-provider-metal:
@@ -186,25 +186,25 @@ docker-images:
         repository: https://github.com/stackitcloud/gardener-extension-acl
         tag: v1.2.0
       admission-controller:
-        name: eu.gcr.io/gardener-project/gardener/admission-controller
+        name: europe-docker.pkg.dev/gardener-project/releases/gardener/admission-controller
         tag: v1.87.4
       api-server:
-        name: eu.gcr.io/gardener-project/gardener/apiserver
+        name: europe-docker.pkg.dev/gardener-project/releases/gardener/apiserver
         tag: v1.87.4
       controller-manager:
-        name: eu.gcr.io/gardener-project/gardener/controller-manager
+        name: europe-docker.pkg.dev/gardener-project/releases/gardener/controller-manager
         tag: v1.87.4
       dns-controller-manager:
-        name: eu.gcr.io/gardener-project/dns-controller-manager
+        name: europe-docker.pkg.dev/gardener-project/releases/dns-controller-manager
         tag: v0.15.9
       extension-provider-gcp:
-        name: eu.gcr.io/gardener-project/gardener/extensions/provider-gcp
+        name: europe-docker.pkg.dev/gardener-project/releases/gardener/extensions/provider-gcp
         tag: v1.33.1
       external-dns:
         name: europe-docker.pkg.dev/gardener-project/releases/dns-controller-manager
         tag: v0.18.2
       gardenlet:
-        name: eu.gcr.io/gardener-project/gardener/gardenlet
+        name: europe-docker.pkg.dev/gardener-project/releases/gardener/gardenlet
         tag: v1.87.4
       metrics-exporter:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/metrics-exporter
@@ -216,10 +216,10 @@ docker-images:
         name: eu.gcr.io/gardener-project/gardener/extensions/networking-cilium
         tag: v1.32.2
       operator:
-        name: eu.gcr.io/gardener-project/gardener/operator
+        name: europe-docker.pkg.dev/gardener-project/releases/gardener/operator
         tag: v1.87.4
       scheduler:
-        name: eu.gcr.io/gardener-project/gardener/scheduler
+        name: europe-docker.pkg.dev/gardener-project/releases/gardener/scheduler
         tag: v1.87.4
       shoot-cert-service:
         name: eu.gcr.io/gardener-project/gardener/extensions/shoot-cert-service
