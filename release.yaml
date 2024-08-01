@@ -229,10 +229,10 @@ docker-images:
         tag: v1.44.0
       virtual-apiserver:
         name: registry.k8s.io/kube-apiserver
-        tag: v1.27.11
+        tag: v1.27.16
       virtual-controller-manager:
         name: registry.k8s.io/kube-controller-manager
-        tag: v1.27.11
+        tag: v1.27.16
     partition:
       image-cache-coredns:
         name: coredns/coredns
