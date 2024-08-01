@@ -199,7 +199,7 @@ docker-images:
         tag: v0.15.9
       extension-provider-gcp:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/extensions/provider-gcp
-        tag: v1.33.1
+        tag: v1.34.2
       external-dns:
         name: europe-docker.pkg.dev/gardener-project/releases/dns-controller-manager
         tag: v0.18.2
@@ -222,7 +222,7 @@ docker-images:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/scheduler
         tag: v1.87.4
       shoot-cert-service:
-        name: europe-docker.pkg.dev/gardener-project/releases/gardener/extensions/shoot-cert-service
+        name: eu.gcr.io/gardener-project/gardener/extensions/shoot-cert-service
         tag: v1.39.0
       shoot-dns-service:
         name: europe-docker.pkg.dev/gardener-project/public/gardener/extensions/shoot-dns-service
