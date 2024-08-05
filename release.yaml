@@ -222,8 +222,8 @@ docker-images:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/scheduler
         tag: v1.87.4
       shoot-cert-service:
-        name: eu.gcr.io/gardener-project/gardener/extensions/shoot-cert-service
-        tag: v1.39.0
+        name: europe-docker.pkg.dev/gardener-project/releases/gardener/extensions/shoot-cert-service
+        tag: v1.41.0
       shoot-dns-service:
         name: europe-docker.pkg.dev/gardener-project/public/gardener/extensions/shoot-dns-service
         tag: v1.44.0
