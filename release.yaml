@@ -16,8 +16,8 @@ binaries:
       version: 6.6.44-29
     metal-hammer:
       repository: https://github.com/metal-stack/metal-hammer
-      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.13.3/metal-hammer-initrd.img.lz4
-      version: v0.13.3
+      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.13.4/metal-hammer-initrd.img.lz4
+      version: v0.13.4
     metalctl:
       darwin:
         url: https://github.com/metal-stack/metalctl/releases/download/v0.16.6/metalctl-darwin-amd64
