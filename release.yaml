@@ -196,7 +196,7 @@ docker-images:
         tag: v1.91.4
       dns-controller-manager:
         name: europe-docker.pkg.dev/gardener-project/releases/dns-controller-manager
-        tag: v0.17.1
+        tag: v0.18.4
       extension-provider-gcp:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/extensions/provider-gcp
         tag: v1.34.2
@@ -220,10 +220,10 @@ docker-images:
         tag: v1.91.4
       shoot-cert-service:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/extensions/shoot-cert-service
-        tag: v1.41.0
+        tag: v1.42.0
       shoot-dns-service:
         name: europe-docker.pkg.dev/gardener-project/public/gardener/extensions/shoot-dns-service
-        tag: v1.44.0
+        tag: v1.46.0
       virtual-apiserver:
         name: registry.k8s.io/kube-apiserver
         tag: v1.29.8
