@@ -180,7 +180,7 @@ docker-images:
       acl-extension:
         name: ghcr.io/stackitcloud/gardener-extension-acl
         repository: https://github.com/stackitcloud/gardener-extension-acl
-        tag: v1.3.1
+        tag: v1.4.0
       admission-controller:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/admission-controller
         tag: v1.95.6
@@ -192,7 +192,7 @@ docker-images:
         tag: v1.95.6
       dns-controller-manager:
         name: europe-docker.pkg.dev/gardener-project/releases/dns-controller-manager
-        tag: v0.18.4
+        tag: v0.22.0
       extension-provider-gcp:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/extensions/provider-gcp
         tag: v1.34.2
@@ -201,7 +201,7 @@ docker-images:
         tag: v1.95.6
       metrics-exporter:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/metrics-exporter
-        tag: 0.29.0
+        tag: 0.30.0
       networking-calico:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/extensions/networking-calico
         tag: v1.39.1
