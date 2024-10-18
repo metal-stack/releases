@@ -16,8 +16,8 @@ binaries:
       version: 6.6.52-40
     metal-hammer:
       repository: https://github.com/metal-stack/metal-hammer
-      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.13.6/metal-hammer-initrd.img.lz4
-      version: v0.13.6
+      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.13.7/metal-hammer-initrd.img.lz4
+      version: v0.13.7
     metalctl:
       darwin:
         url: https://github.com/metal-stack/metalctl/releases/download/v0.17.1/metalctl-darwin-amd64
@@ -125,7 +125,7 @@ docker-images:
       metal-core:
         name: ghcr.io/metal-stack/metal-core
         repository: https://github.com/metal-stack/metal-core
-        tag: v0.12.0
+        tag: v0.12.1
       metal-image-cache-sync:
         name: ghcr.io/metal-stack/metal-image-cache-sync
         repository: https://github.com/metal-stack/metal-image-cache-sync
@@ -180,28 +180,25 @@ docker-images:
       acl-extension:
         name: ghcr.io/stackitcloud/gardener-extension-acl
         repository: https://github.com/stackitcloud/gardener-extension-acl
-        tag: v1.3.1
+        tag: v1.4.0
       admission-controller:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/admission-controller
-        tag: v1.94.5
+        tag: v1.95.6
       api-server:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/apiserver
-        tag: v1.94.5
+        tag: v1.95.6
       controller-manager:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/controller-manager
-        tag: v1.94.5
-      dns-controller-manager:
-        name: europe-docker.pkg.dev/gardener-project/releases/dns-controller-manager
-        tag: v0.18.4
+        tag: v1.95.6
       extension-provider-gcp:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/extensions/provider-gcp
-        tag: v1.34.2
+        tag: v1.36.2
       gardenlet:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/gardenlet
-        tag: v1.94.5
+        tag: v1.95.6
       metrics-exporter:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/metrics-exporter
-        tag: 0.29.0
+        tag: 0.30.0
       networking-calico:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/extensions/networking-calico
         tag: v1.39.1
@@ -210,16 +207,16 @@ docker-images:
         tag: v1.33.0
       operator:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/operator
-        tag: v1.94.5
+        tag: v1.95.6
       scheduler:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/scheduler
-        tag: v1.94.5
+        tag: v1.95.6
       shoot-cert-service:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/extensions/shoot-cert-service
         tag: v1.42.0
       shoot-dns-service:
         name: europe-docker.pkg.dev/gardener-project/public/gardener/extensions/shoot-dns-service
-        tag: v1.46.0
+        tag: v1.48.0
       virtual-apiserver:
         name: registry.k8s.io/kube-apiserver
         tag: v1.29.8
@@ -276,5 +273,5 @@ repositories:
         ref: v0.15.4
         url: https://github.com/gardener/etcd-backup-restore.git
       gardener:
-        ref: v1.94.5
+        ref: v1.95.6
         url: https://github.com/gardener/gardener.git
