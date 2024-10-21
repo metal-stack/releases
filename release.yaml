@@ -204,7 +204,7 @@ docker-images:
         tag: v1.39.1
       networking-cilium:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/extensions/networking-cilium
-        tag: v1.33.0
+        tag: v1.35.0
       operator:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/operator
         tag: v1.95.6
