@@ -192,7 +192,7 @@ docker-images:
         tag: v1.96.6
       extension-provider-gcp:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/extensions/provider-gcp
-        tag: v1.36.2
+        tag: v1.37.2
       gardenlet:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/gardenlet
         tag: v1.96.6
