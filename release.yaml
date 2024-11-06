@@ -7,13 +7,13 @@ ansible-roles:
     version: v0.2.9
   metal-roles:
     repository: https://github.com/metal-stack/metal-roles
-    version: v0.14.0
+    version: v0.14.2
 binaries:
   metal-stack:
     kernel:
       repository: https://github.com/metal-stack/kernel
-      url: https://github.com/metal-stack/kernel/releases/download/6.6.52-40/metal-kernel
-      version: 6.6.52-40
+      url: https://github.com/metal-stack/kernel/releases/download/6.6.58-47/metal-kernel
+      version: 6.6.58-47
     metal-hammer:
       repository: https://github.com/metal-stack/metal-hammer
       url: https://github.com/metal-stack/metal-hammer/releases/download/v0.13.7/metal-hammer-initrd.img.lz4
@@ -37,7 +37,7 @@ docker-images:
       masterdata-api:
         name: ghcr.io/metal-stack/masterdata-api
         repository: https://github.com/metal-stack/masterdata-api
-        tag: v0.11.4
+        tag: v0.11.5
       metal-api:
         name: ghcr.io/metal-stack/metal-api
         repository: https://github.com/metal-stack/metal-api
@@ -66,11 +66,11 @@ docker-images:
       gardener-extension-audit:
         name: ghcr.io/metal-stack/gardener-extension-audit
         repository: https://github.com/metal-stack/gardener-extension-audit
-        tag: v0.1.7
+        tag: v0.1.9
       gardener-extension-provider-metal:
         name: ghcr.io/metal-stack/gardener-extension-provider-metal
         repository: https://github.com/metal-stack/gardener-extension-provider-metal
-        tag: v0.25.0
+        tag: v0.25.2
       machine-controller-manager-provider-metal:
         name: ghcr.io/metal-stack/machine-controller-manager-provider-metal
         repository: https://github.com/metal-stack/machine-controller-manager-provider-metal
@@ -78,12 +78,12 @@ docker-images:
       os-metal-extension:
         name: ghcr.io/metal-stack/os-metal-extension
         repository: https://github.com/metal-stack/os-metal-extension
-        tag: v0.8.1
+        tag: v0.8.2
     generic:
       backup-restore-sidecar:
         name: ghcr.io/metal-stack/backup-restore-sidecar
         repository: https://github.com/metal-stack/backup-restore-sidecar
-        tag: v0.10.3
+        tag: v0.11.0
       deployment-base:
         name: ghcr.io/metal-stack/metal-deployment-base
         repository: https://github.com/metal-stack/metal-dockerfiles
@@ -112,7 +112,7 @@ docker-images:
       metal-ccm:
         name: ghcr.io/metal-stack/metal-ccm
         repository: https://github.com/metal-stack/metal-ccm
-        tag: v0.9.1
+        tag: v0.9.3
       node-init:
         name: ghcr.io/metal-stack/node-init
         repository: https://github.com/metal-stack/node-init
@@ -183,19 +183,19 @@ docker-images:
         tag: v1.4.0
       admission-controller:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/admission-controller
-        tag: v1.95.6
+        tag: v1.96.6
       api-server:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/apiserver
-        tag: v1.95.6
+        tag: v1.96.6
       controller-manager:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/controller-manager
-        tag: v1.95.6
+        tag: v1.96.6
       extension-provider-gcp:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/extensions/provider-gcp
-        tag: v1.36.2
+        tag: v1.37.2
       gardenlet:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/gardenlet
-        tag: v1.95.6
+        tag: v1.96.6
       metrics-exporter:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/metrics-exporter
         tag: 0.30.0
@@ -207,10 +207,10 @@ docker-images:
         tag: v1.35.0
       operator:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/operator
-        tag: v1.95.6
+        tag: v1.96.6
       scheduler:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/scheduler
-        tag: v1.95.6
+        tag: v1.96.6
       shoot-cert-service:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/extensions/shoot-cert-service
         tag: v1.44.2
@@ -265,7 +265,7 @@ projects:
   metal-stack:
     mini-lab:
       repository: https://github.com/metal-stack/mini-lab
-      version: v0.4.1
+      version: v0.4.2
 repositories:
   third-party:
     gardener:
@@ -273,5 +273,5 @@ repositories:
         ref: v0.15.4
         url: https://github.com/gardener/etcd-backup-restore.git
       gardener:
-        ref: v1.95.6
+        ref: v1.96.6
         url: https://github.com/gardener/gardener.git
