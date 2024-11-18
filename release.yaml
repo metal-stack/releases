@@ -201,7 +201,7 @@ docker-images:
         tag: 0.30.0
       networking-calico:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/extensions/networking-calico
-        tag: v1.39.1
+        tag: v1.40.0
       networking-cilium:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/extensions/networking-cilium
         tag: v1.36.0
