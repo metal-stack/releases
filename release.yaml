@@ -67,6 +67,14 @@ docker-images:
         name: ghcr.io/metal-stack/gardener-extension-audit
         repository: https://github.com/metal-stack/gardener-extension-audit
         tag: v0.1.9
+      gardener-extension-backup-s3:
+        name: ghcr.io/metal-stack/gardener-extension-backup-s3
+        repository: https://github.com/metal-stack/gardener-extension-backup-s3
+        tag: v0.6.0
+      gardener-extension-dns-powerdns:
+        name: ghcr.io/metal-stack/gardener-extension-dns-powerdns
+        repository: https://github.com/metal-stack/gardener-extension-dns-powerdns
+        tag: v0.6.0
       gardener-extension-provider-metal:
         name: ghcr.io/metal-stack/gardener-extension-provider-metal
         repository: https://github.com/metal-stack/gardener-extension-provider-metal
