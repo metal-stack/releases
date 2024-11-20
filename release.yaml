@@ -70,7 +70,7 @@ docker-images:
       gardener-extension-backup-s3:
         name: ghcr.io/metal-stack/gardener-extension-backup-s3
         repository: https://github.com/metal-stack/gardener-extension-backup-s3
-        tag: v0.6.0
+        tag: v0.7.0
       gardener-extension-dns-powerdns:
         name: ghcr.io/metal-stack/gardener-extension-dns-powerdns
         repository: https://github.com/metal-stack/gardener-extension-dns-powerdns
