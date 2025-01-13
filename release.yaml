@@ -70,7 +70,7 @@ docker-images:
       gardener-extension-backup-s3:
         name: ghcr.io/metal-stack/gardener-extension-backup-s3
         repository: https://github.com/metal-stack/gardener-extension-backup-s3
-        tag: v0.7.0
+        tag: v0.7.1
       gardener-extension-csi-driver-lvm:
         name: ghcr.io/metal-stack/gardener-extension-csi-driver-lvm
         repository: https://github.com/metal-stack/gardener-extension-csi-driver-lvm
