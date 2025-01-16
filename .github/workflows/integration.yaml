@@ -27,6 +27,7 @@ jobs:
     steps:
     - name: Gain back workspace permissions # https://github.com/actions/checkout/issues/211
       run: |
+        [ -d "${GITHUB_WORKSPACE}/mini-lab/.ansible/tmp/extension-provider-metal/.git" ] && sudo chown -R $USER:$USER ${GITHUB_WORKSPACE}/mini-lab/.ansible/tmp/extension-provider-metal/.git
         [ -d "${GITHUB_WORKSPACE}" ] && sudo chown -R $USER:$USER ${GITHUB_WORKSPACE}
 
     - name: Setup Containerlab

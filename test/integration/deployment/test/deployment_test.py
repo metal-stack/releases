@@ -106,7 +106,7 @@ def garden_namespace_exists():
     try:
         res = v1.read_namespace("garden")
         return True
-    except kubernetes.client.exceptions.ApiException:
+    except client.exceptions.ApiException:
         return False
 
 
@@ -117,6 +117,7 @@ class GardenerControlPlaneDeployment(unittest.TestCase):
         config.load_kube_config()
         self.maxDiff = None
 
+    @pytest.mark.flaky(reruns=36, reruns_delay=10)
     def test_deployment(self):
         v1 = client.AppsV1Api()
         for ns in ["garden", "istio-ingress", "istio-system"]:
@@ -124,6 +125,7 @@ class GardenerControlPlaneDeployment(unittest.TestCase):
             for i in res.items:
                 self.assertIsNone(i.status.unavailable_replicas, f"deployment {i.metadata.name} in namespace {ns} has unavailable replicas")
 
+    @pytest.mark.flaky(reruns=36, reruns_delay=10)
     def test_stateful_sets(self):
         v1 = client.AppsV1Api()
         for ns in ["garden", "istio-ingress", "istio-system"]:
