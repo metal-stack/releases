@@ -19,7 +19,7 @@ prep:
 
 .PHONY: mini-lab
 mini-lab:
-	make -C $(MINI_LAB_PATH)
+	cd $(MINI_LAB_PATH) && make
 
 .PHONY: wait-for-images
 wait-for-images:

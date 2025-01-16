@@ -6,8 +6,9 @@ import metal_python.api as metal_api
 from metal_python.driver import Driver
 import pytest
 import testinfra
-
+import yaml
 import common
+import base64
 
 
 class MetalControlPlaneDeployment(unittest.TestCase):
@@ -97,3 +98,49 @@ class MetalSwitchPlaneDeployment(common.TestinfraCommon):
             self.service_enabled_and_running(self.hosts[0], "isc-dhcp-server")
         else:
             self.service_enabled_and_running(self.hosts[0], "dhcpd")
+
+
+def garden_namespace_exists():
+    config.load_kube_config()
+    v1 = client.CoreV1Api()
+    try:
+        res = v1.read_namespace("garden")
+        return True
+    except kubernetes.client.exceptions.ApiException:
+        return False
+
+
+@unittest.skipUnless(garden_namespace_exists(), "test only if gardener flavor was used")
+class GardenerControlPlaneDeployment(unittest.TestCase):
+    def __init__(self, *args, **kwargs):
+        super(GardenerControlPlaneDeployment, self).__init__(*args, **kwargs)
+        config.load_kube_config()
+        self.maxDiff = None
+
+    def test_deployment(self):
+        v1 = client.AppsV1Api()
+        for ns in ["garden", "istio-ingress", "istio-system"]:
+            res = v1.list_namespaced_deployment(ns)
+            for i in res.items:
+                self.assertIsNone(i.status.unavailable_replicas, f"deployment {i.metadata.name} in namespace {ns} has unavailable replicas")
+
+    def test_stateful_sets(self):
+        v1 = client.AppsV1Api()
+        for ns in ["garden", "istio-ingress", "istio-system"]:
+            res = v1.list_namespaced_stateful_set(ns)
+            for i in res.items:
+                self.assertEqual(i.status.current_replicas, i.status.replicas, f"stateful set {i.metadata.name} in namespace {ns} has unready replicas")
+
+    @pytest.mark.flaky(reruns=36, reruns_delay=10)
+    def test_seed_ready(self):
+        v1 = client.CoreV1Api()
+        secret = v1.read_namespaced_secret("garden-kubeconfig-for-admin", "garden")
+        garden_client = config.new_client_from_config_dict(yaml.safe_load(base64.b64decode(secret.data["kubeconfig"])))
+
+        custom = client.CustomObjectsApi(api_client=garden_client)
+
+        seeds = custom.list_cluster_custom_object("core.gardener.cloud", "v1beta1", "seeds")
+
+        self.assertTrue(len(seeds["items"]) == 1, "no seed object found")
+        self.assertEqual(seeds["items"][0]["status"]["lastOperation"]["state"], "Succeeded")
+        self.assertEqual(seeds["items"][0]["status"]["lastOperation"]["progress"], 100)

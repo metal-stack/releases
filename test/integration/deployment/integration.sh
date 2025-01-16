@@ -33,4 +33,4 @@ pip install --root-user-action=ignore --upgrade pip \
 # if you want to develop tests from within here, comment in the following line:
 # bash
 
-pytest --junitxml=/output/results_$(date "+%Y.%m.%d-%H.%M.%S").xml
+pytest -o cache_dir=/tmp/.pytest-cache --junitxml=/output/results_$(date "+%Y.%m.%d-%H.%M.%S").xml
