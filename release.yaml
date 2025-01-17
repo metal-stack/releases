@@ -277,7 +277,7 @@ projects:
   metal-stack:
     mini-lab:
       repository: https://github.com/metal-stack/mini-lab
-      version: v0.4.2
+      version: v0.4.3
 repositories:
   third-party:
     gardener:
