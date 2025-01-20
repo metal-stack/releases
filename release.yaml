@@ -7,7 +7,7 @@ ansible-roles:
     version: v0.2.9
   metal-roles:
     repository: https://github.com/metal-stack/metal-roles
-    version: v0.14.7
+    version: v0.14.8
 binaries:
   metal-stack:
     kernel:
@@ -70,7 +70,7 @@ docker-images:
       gardener-extension-backup-s3:
         name: ghcr.io/metal-stack/gardener-extension-backup-s3
         repository: https://github.com/metal-stack/gardener-extension-backup-s3
-        tag: v0.7.0
+        tag: v0.7.1
       gardener-extension-csi-driver-lvm:
         name: ghcr.io/metal-stack/gardener-extension-csi-driver-lvm
         repository: https://github.com/metal-stack/gardener-extension-csi-driver-lvm
@@ -78,7 +78,7 @@ docker-images:
       gardener-extension-dns-powerdns:
         name: ghcr.io/metal-stack/gardener-extension-dns-powerdns
         repository: https://github.com/metal-stack/gardener-extension-dns-powerdns
-        tag: v0.7.0
+        tag: v0.7.1
       gardener-extension-provider-metal:
         name: ghcr.io/metal-stack/gardener-extension-provider-metal
         repository: https://github.com/metal-stack/gardener-extension-provider-metal
@@ -120,7 +120,7 @@ docker-images:
       duros-controller:
         name: ghcr.io/metal-stack/duros-controller
         repository: https://github.com/metal-stack/duros-controller
-        tag: v0.11.1
+        tag: v0.11.2
       metal-ccm:
         name: ghcr.io/metal-stack/metal-ccm
         repository: https://github.com/metal-stack/metal-ccm
@@ -195,19 +195,19 @@ docker-images:
         tag: v1.4.0
       admission-controller:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/admission-controller
-        tag: v1.100.2
+        tag: v1.101.3
       api-server:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/apiserver
-        tag: v1.100.2
+        tag: v1.101.3
       controller-manager:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/controller-manager
-        tag: v1.100.2
+        tag: v1.101.3
       extension-provider-gcp:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/extensions/provider-gcp
         tag: v1.37.2
       gardenlet:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/gardenlet
-        tag: v1.100.2
+        tag: v1.101.3
       metrics-exporter:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/metrics-exporter
         tag: 0.30.0
@@ -219,10 +219,10 @@ docker-images:
         tag: v1.36.0
       operator:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/operator
-        tag: v1.100.2
+        tag: v1.101.3
       scheduler:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/scheduler
-        tag: v1.100.2
+        tag: v1.101.3
       shoot-cert-service:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/extensions/shoot-cert-service
         tag: v1.44.2
@@ -277,7 +277,7 @@ projects:
   metal-stack:
     mini-lab:
       repository: https://github.com/metal-stack/mini-lab
-      version: v0.4.2
+      version: v0.4.3
 repositories:
   third-party:
     gardener:
@@ -285,5 +285,5 @@ repositories:
         ref: v0.15.4
         url: https://github.com/gardener/etcd-backup-restore.git
       gardener:
-        ref: v1.100.2
+        ref: v1.101.3
         url: https://github.com/gardener/gardener.git

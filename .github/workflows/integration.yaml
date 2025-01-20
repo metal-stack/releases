@@ -22,10 +22,12 @@ jobs:
         flavors:
           - name: sonic
           - name: cumulus
+          - name: gardener
 
     steps:
     - name: Gain back workspace permissions # https://github.com/actions/checkout/issues/211
       run: |
+        [ -d "${GITHUB_WORKSPACE}/mini-lab/.ansible/tmp/extension-provider-metal/.git" ] && sudo chown -R $USER:$USER ${GITHUB_WORKSPACE}/mini-lab/.ansible/tmp/extension-provider-metal/.git
         [ -d "${GITHUB_WORKSPACE}" ] && sudo chown -R $USER:$USER ${GITHUB_WORKSPACE}
 
     - name: Setup Containerlab
@@ -34,7 +36,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         # we can remove desired version again after this fix was released: https://github.com/srl-labs/containerlab/pull/2000
-        DESIRED_VERSION: v0.56.0
+        # DESIRED_VERSION:
 
     - name: Checkout
       uses: actions/checkout@v4
