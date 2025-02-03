@@ -20,13 +20,13 @@ binaries:
       version: v0.13.10
     metalctl:
       darwin:
-        url: https://github.com/metal-stack/metalctl/releases/download/v0.17.6/metalctl-darwin-amd64
+        url: https://github.com/metal-stack/metalctl/releases/download/v0.17.7/metalctl-darwin-amd64
       linux:
-        url: https://github.com/metal-stack/metalctl/releases/download/v0.17.6/metalctl-linux-amd64
+        url: https://github.com/metal-stack/metalctl/releases/download/v0.17.7/metalctl-linux-amd64
       repository: https://github.com/metal-stack/metalctl
-      version: v0.17.6
+      version: v0.17.7
       windows:
-        url: https://github.com/metal-stack/metalctl/releases/download/v0.17.6/metalctl-windows-amd64
+        url: https://github.com/metal-stack/metalctl/releases/download/v0.17.7/metalctl-windows-amd64
 docker-images:
   metal-stack:
     control-plane:
@@ -53,7 +53,7 @@ docker-images:
       metalctl:
         name: ghcr.io/metal-stack/metalctl
         repository: https://github.com/metal-stack/metalctl
-        tag: v0.17.6
+        tag: v0.17.7
       rethinkdb-exporter:
         name: ghcr.io/metal-stack/rethinkdb-exporter
         repository: https://github.com/metal-stack/rethinkdb-exporter
