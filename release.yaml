@@ -204,7 +204,7 @@ docker-images:
         tag: v1.104.3
       extension-provider-gcp:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/extensions/provider-gcp
-        tag: v1.37.2
+        tag: v1.39.1
       gardenlet:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/gardenlet
         tag: v1.104.3
@@ -213,10 +213,10 @@ docker-images:
         tag: 0.30.0
       networking-calico:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/extensions/networking-calico
-        tag: v1.40.0
+        tag: v1.42.0
       networking-cilium:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/extensions/networking-cilium
-        tag: v1.36.0
+        tag: v1.37.0
       operator:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/operator
         tag: v1.104.3
