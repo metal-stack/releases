@@ -202,6 +202,12 @@ docker-images:
       controller-manager:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/controller-manager
         tag: v1.105.3
+      etcd:
+        name: ghcr.io/metal-stack/gardener/etcd
+        tag: v3.4.13-bootstrap-1
+      etcdbrctl:
+        name: ghcr.io/metal-stack/gardener/etcdbrctl
+        tag: v0.15.4
       extension-provider-gcp:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/extensions/provider-gcp
         tag: v1.39.1
