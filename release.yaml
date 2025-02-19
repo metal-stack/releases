@@ -214,7 +214,7 @@ docker-images:
         tag: v0.15.4
       extension-provider-gcp:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/extensions/provider-gcp
-        tag: v1.39.1
+        tag: v1.41.1
       gardenlet:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/gardenlet
         tag: v1.106.2
