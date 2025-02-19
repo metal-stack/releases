@@ -180,6 +180,10 @@ docker-images:
         name: nsqio/nsq
         repository: https://github.com/nsqio/nsq
         tag: v1.3.0
+      timescaledb:
+        name: timescale/timescaledb
+        repository: https://github.com/timescale/timescaledb
+        tag: 2.18.2-pg17
       thanos:
         name: quay.io/thanos/thanos
         repository: https://github.com/thanos-io/thanos
