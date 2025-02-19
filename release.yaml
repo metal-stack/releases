@@ -41,7 +41,7 @@ docker-images:
       metal-api:
         name: ghcr.io/metal-stack/metal-api
         repository: https://github.com/metal-stack/metal-api
-        tag: v0.39.9
+        tag: v0.40.0
       metal-console:
         name: ghcr.io/metal-stack/metal-console
         repository: https://github.com/metal-stack/metal-console
@@ -180,14 +180,14 @@ docker-images:
         name: nsqio/nsq
         repository: https://github.com/nsqio/nsq
         tag: v1.3.0
-      timescaledb:
-        name: timescale/timescaledb
-        repository: https://github.com/timescale/timescaledb
-        tag: 2.18.2-pg17
       thanos:
         name: quay.io/thanos/thanos
         repository: https://github.com/thanos-io/thanos
         tag: v0.33.0
+      timescaledb:
+        name: timescale/timescaledb
+        repository: https://github.com/timescale/timescaledb
+        tag: 2.18.2-pg17
       webhook-logger:
         name: ghcr.io/multani/alertmanager-webhook-logger
         repository: https://github.com/multani/alertmanager-webhook-logger
