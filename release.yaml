@@ -7,7 +7,7 @@ ansible-roles:
     version: v0.2.9
   metal-roles:
     repository: https://github.com/metal-stack/metal-roles
-    version: v0.15.2
+    version: v0.15.3
 binaries:
   metal-stack:
     kernel:
@@ -41,7 +41,7 @@ docker-images:
       metal-api:
         name: ghcr.io/metal-stack/metal-api
         repository: https://github.com/metal-stack/metal-api
-        tag: v0.40.3
+        tag: v0.40.4
       metal-console:
         name: ghcr.io/metal-stack/metal-console
         repository: https://github.com/metal-stack/metal-console
@@ -137,7 +137,7 @@ docker-images:
       metal-core:
         name: ghcr.io/metal-stack/metal-core
         repository: https://github.com/metal-stack/metal-core
-        tag: v0.12.4
+        tag: v0.12.5
       metal-image-cache-sync:
         name: ghcr.io/metal-stack/metal-image-cache-sync
         repository: https://github.com/metal-stack/metal-image-cache-sync
@@ -199,13 +199,13 @@ docker-images:
         tag: v1.4.0
       admission-controller:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/admission-controller
-        tag: v1.106.2
+        tag: v1.107.3
       api-server:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/apiserver
-        tag: v1.106.2
+        tag: v1.107.3
       controller-manager:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/controller-manager
-        tag: v1.106.2
+        tag: v1.107.3
       etcd:
         name: ghcr.io/metal-stack/gardener/etcd
         tag: v3.4.13-bootstrap-1
@@ -217,7 +217,7 @@ docker-images:
         tag: v1.41.1
       gardenlet:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/gardenlet
-        tag: v1.106.2
+        tag: v1.107.3
       metrics-exporter:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/metrics-exporter
         tag: 0.30.0
@@ -229,10 +229,10 @@ docker-images:
         tag: v1.37.0
       operator:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/operator
-        tag: v1.106.2
+        tag: v1.107.3
       scheduler:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/scheduler
-        tag: v1.106.2
+        tag: v1.107.3
       shoot-cert-service:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/extensions/shoot-cert-service
         tag: v1.45.0
@@ -295,5 +295,5 @@ repositories:
         ref: v0.15.4
         url: https://github.com/gardener/etcd-backup-restore.git
       gardener:
-        ref: v1.106.2
+        ref: v1.107.3
         url: https://github.com/gardener/gardener.git
