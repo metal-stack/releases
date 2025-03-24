@@ -82,7 +82,7 @@ docker-images:
       gardener-extension-provider-metal:
         name: ghcr.io/metal-stack/gardener-extension-provider-metal
         repository: https://github.com/metal-stack/gardener-extension-provider-metal
-        tag: v0.25.8
+        tag: v0.25.9
       machine-controller-manager-provider-metal:
         name: ghcr.io/metal-stack/machine-controller-manager-provider-metal
         repository: https://github.com/metal-stack/machine-controller-manager-provider-metal
