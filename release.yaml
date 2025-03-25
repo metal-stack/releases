@@ -272,7 +272,7 @@ helm-charts:
   key-value-store:
     valkey:
       repository: oci://registry-1.docker.io/bitnamicharts/valkey
-      version: "2.4.5"
+      version: 2.4.5
   logging:
     loki:
       repository: https://grafana.github.io/helm-charts
@@ -283,7 +283,7 @@ helm-charts:
   metal-stack:
     metal-control-plane:
       repository: https://helm.metal-stack.io
-      version: 0.5.1
+      version: 0.6.0
   monitoring:
     kube-prometheus-stack:
       repository: https://prometheus-community.github.io/helm-charts
