@@ -70,7 +70,7 @@ docker-images:
       gardener-extension-audit:
         name: ghcr.io/metal-stack/gardener-extension-audit
         repository: https://github.com/metal-stack/gardener-extension-audit
-        tag: v0.1.11
+        tag: v0.1.12
       gardener-extension-backup-s3:
         name: ghcr.io/metal-stack/gardener-extension-backup-s3
         repository: https://github.com/metal-stack/gardener-extension-backup-s3
