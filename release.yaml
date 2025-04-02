@@ -132,7 +132,7 @@ docker-images:
       node-init:
         name: ghcr.io/metal-stack/node-init
         repository: https://github.com/metal-stack/node-init
-        tag: v0.1.6
+        tag: v0.1.7
     partition:
       metal-bmc:
         name: ghcr.io/metal-stack/metal-bmc
