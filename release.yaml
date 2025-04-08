@@ -7,7 +7,7 @@ ansible-roles:
     version: v0.2.10
   metal-roles:
     repository: https://github.com/metal-stack/metal-roles
-    version: v0.15.13
+    version: v0.15.15
 binaries:
   metal-stack:
     kernel:
@@ -132,7 +132,7 @@ docker-images:
       node-init:
         name: ghcr.io/metal-stack/node-init
         repository: https://github.com/metal-stack/node-init
-        tag: v0.1.6
+        tag: v0.1.7
     partition:
       metal-bmc:
         name: ghcr.io/metal-stack/metal-bmc
@@ -207,13 +207,13 @@ docker-images:
         tag: v1.4.0
       admission-controller:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/admission-controller
-        tag: v1.111.4
+        tag: v1.112.4
       api-server:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/apiserver
-        tag: v1.111.4
+        tag: v1.112.4
       controller-manager:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/controller-manager
-        tag: v1.111.4
+        tag: v1.112.4
       etcd:
         name: ghcr.io/metal-stack/gardener/etcd
         tag: v3.4.13-bootstrap-1
@@ -225,7 +225,7 @@ docker-images:
         tag: v1.41.1
       gardenlet:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/gardenlet
-        tag: v1.111.4
+        tag: v1.112.4
       metrics-exporter:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/metrics-exporter
         tag: 0.36.0
@@ -237,10 +237,10 @@ docker-images:
         tag: v1.39.0
       operator:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/operator
-        tag: v1.111.4
+        tag: v1.112.4
       scheduler:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/scheduler
-        tag: v1.111.4
+        tag: v1.112.4
       shoot-cert-service:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/extensions/shoot-cert-service
         tag: v1.47.0
@@ -299,7 +299,7 @@ projects:
   metal-stack:
     mini-lab:
       repository: https://github.com/metal-stack/mini-lab
-      version: v0.4.3
+      version: v0.4.4
 repositories:
   third-party:
     gardener:
@@ -307,5 +307,5 @@ repositories:
         ref: v0.15.4
         url: https://github.com/gardener/etcd-backup-restore.git
       gardener:
-        ref: v1.111.4
+        ref: v1.112.4
         url: https://github.com/gardener/gardener.git
