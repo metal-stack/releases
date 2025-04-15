@@ -154,6 +154,10 @@ docker-images:
         name: ghcr.io/metal-stack/sonic-configdb-utils
         repository: https://github.com/metal-stack/sonic-configdb-utils
         tag: v0.2.1
+      go-dhcp-relay:
+        name: ghcr.io/metal-stack/go-dhcp-relay
+        repository: https://github.com/metal-stack/go-dhcp-relay
+        tag: v0.1.0
   third-party:
     control-plane:
       event-exporter:
