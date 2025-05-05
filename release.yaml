@@ -153,7 +153,7 @@ docker-images:
       sonic-configdb-utils:
         name: ghcr.io/metal-stack/sonic-configdb-utils
         repository: https://github.com/metal-stack/sonic-configdb-utils
-        tag: v0.2.1
+        tag: v0.2.2
   third-party:
     control-plane:
       event-exporter:
