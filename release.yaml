@@ -292,7 +292,7 @@ docker-images:
         name: registry.k8s.io/kube-controller-manager
         tag: v1.30.7
       virtual-garden-apiserver:
-        version: v1.31.9
+        tag: v1.31.9
     partition:
       image-cache-coredns:
         name: coredns/coredns
