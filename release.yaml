@@ -284,7 +284,7 @@ docker-images:
           extension:  europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/shoot-dns-service
           runtime: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/admission-shoot-dns-service-runtime
         name: europe-docker.pkg.dev/gardener-project/public/gardener/extensions/shoot-dns-service
-        tag: v1.56.0
+        tag: v1.61.0
       virtual-apiserver:
         name: registry.k8s.io/kube-apiserver
         tag: v1.30.7
