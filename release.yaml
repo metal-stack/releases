@@ -222,7 +222,7 @@ docker-images:
           runtime: ghcr.io/stackitcloud/charts/gardener-extension-admission-acl-runtime
         name: ghcr.io/stackitcloud/gardener-extension-acl
         repository: https://github.com/stackitcloud/gardener-extension-acl
-        tag: v1.4.0
+        tag: v1.7.0
       admission-controller:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/admission-controller
         tag: v1.113.3
