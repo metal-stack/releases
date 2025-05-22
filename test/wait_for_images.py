@@ -56,11 +56,15 @@ def check_url_exists(url):
         raise e
 
 
-def get_recursively(search_dict, fields):
+def get_recursively(search_dict, fields, excludes=[]):
     fields_found = []
 
     matches = []
     for key, value in search_dict.items():
+        if key in excludes:
+            print("️🕳️ skipping %s" % key)
+            continue
+
         if isinstance(fields, tuple):
             for field in fields:
                 if key == field:
@@ -74,15 +78,19 @@ def get_recursively(search_dict, fields):
         fields_found.append(tuple(matches))
 
     for key, value in search_dict.items():
+        if key in excludes:
+            print("️🕳️ skipping %s" % key)
+            continue
+
         if isinstance(value, dict):
-            results = get_recursively(value, fields)
+            results = get_recursively(value, fields, excludes)
             for result in results:
                 fields_found.append(result)
 
         elif isinstance(value, list):
             for item in value:
                 if isinstance(item, dict):
-                    more_results = get_recursively(item, fields)
+                    more_results = get_recursively(item, fields, excludes)
                     for another_result in more_results:
                         fields_found.append(another_result)
 
@@ -90,7 +98,8 @@ def get_recursively(search_dict, fields):
 
 
 if __name__ == '__main__':
-    images = get_recursively(release.get("docker-images", dict()), ("name", "tag"))
+    # virtual-garden-apiserver is just for setting the kubernetes version in the garden resource, no direct image reference
+    images = get_recursively(release.get("docker-images", dict()), ("name", "tag"), excludes=["virtual-garden-apiserver"])
     binaries = get_recursively(release.get("binaries", dict()), "url")
 
     with Pool(NUMBER_OF_POOLS) as pool:
