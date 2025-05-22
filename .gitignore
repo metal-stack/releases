@@ -3,3 +3,4 @@ __pycache__
 .idea
 results.html
 .vscode
+release.tar.gz
