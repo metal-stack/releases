@@ -108,7 +108,7 @@ docker-images:
           extension: ghcr.io/metal-stack/charts/os-metal-extension
         name: ghcr.io/metal-stack/os-metal-extension
         repository: https://github.com/metal-stack/os-metal-extension
-        tag: v0.8.7
+        tag: v0.8.8
     generic:
       backup-restore-sidecar:
         name: ghcr.io/metal-stack/backup-restore-sidecar
