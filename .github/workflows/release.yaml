@@ -1,0 +1,22 @@
+---
+name: Release artifacts
+on:
+  release:
+    types:
+      - published
+
+
+jobs:
+  release-artifacts:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Upload Release Asset
+        uses: softprops/action-gh-release@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          files: |
+            cosign.pub
