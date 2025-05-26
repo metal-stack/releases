@@ -12,8 +12,8 @@ binaries:
   metal-stack:
     kernel:
       repository: https://github.com/metal-stack/kernel
-      url: https://github.com/metal-stack/kernel/releases/download/6.12.28-87/metal-kernel
-      version: 6.12.28-87
+      url: https://github.com/metal-stack/kernel/releases/download/6.12.30-90/metal-kernel
+      version: 6.12.30-90
     metal-hammer:
       repository: https://github.com/metal-stack/metal-hammer
       url: https://github.com/metal-stack/metal-hammer/releases/download/v0.13.11/metal-hammer-initrd.img.lz4
@@ -105,7 +105,7 @@ docker-images:
         tag: v0.1.25
       os-metal-extension:
         charts:
-          extension:  ghcr.io/metal-stack/charts/os-metal-extension
+          extension: ghcr.io/metal-stack/charts/os-metal-extension
         name: ghcr.io/metal-stack/os-metal-extension
         repository: https://github.com/metal-stack/os-metal-extension
         tag: v0.8.7
@@ -281,7 +281,7 @@ docker-images:
       shoot-dns-service:
         charts:
           application: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/admission-shoot-dns-service-application
-          extension:  europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/shoot-dns-service
+          extension: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/shoot-dns-service
           runtime: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/admission-shoot-dns-service-runtime
         name: europe-docker.pkg.dev/gardener-project/public/gardener/extensions/shoot-dns-service
         tag: v1.61.0
