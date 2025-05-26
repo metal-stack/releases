@@ -90,7 +90,7 @@ docker-images:
           extension: ghcr.io/metal-stack/charts/gardener-extension-dns-powerdns
         name: ghcr.io/metal-stack/gardener-extension-dns-powerdns
         repository: https://github.com/metal-stack/gardener-extension-dns-powerdns
-        tag: v0.7.1
+        tag: v0.7.2
       gardener-extension-provider-metal:
         charts:
           application: ghcr.io/metal-stack/charts/gardener-extension-admission-metal-application
