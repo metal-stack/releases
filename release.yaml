@@ -175,31 +175,31 @@ docker-images:
         repository: https://github.com/resmoio/kubernetes-event-exporter
         tag: v1.7
       headscale:
-        name: headscale/headscale
+        name: docker.io/headscale/headscale
         repository: https://github.com/juanfont/headscale
         tag: 0.23.0
       headscale-db:
-        name: postgres
+        name: docker.io/library/postgres
         repository: https://github.com/docker-library/postgres
         tag: 16-alpine
       ipam-db:
-        name: postgres
+        name: docker.io/library/postgres
         repository: https://github.com/docker-library/postgres
         tag: 12-alpine
       masterdata-db:
-        name: postgres
+        name: docker.io/library/postgres
         repository: https://github.com/docker-library/postgres
         tag: 12-alpine
       meilisearch:
-        name: getmeili/meilisearch
+        name: docker.io/getmeili/meilisearch
         repository: https://github.com/meilisearch/meilisearch
         tag: v1.9.0
       metal-db:
-        name: rethinkdb
+        name: docker.io/library/rethinkdb
         repository: https://github.com/rethinkdb/rethinkdb-dockerfiles
         tag: 2.4.4-bookworm-slim
       nsq:
-        name: nsqio/nsq
+        name: docker.io/nsqio/nsq
         repository: https://github.com/nsqio/nsq
         tag: v1.3.0
       thanos:
@@ -207,7 +207,7 @@ docker-images:
         repository: https://github.com/thanos-io/thanos
         tag: v0.33.0
       timescaledb:
-        name: timescale/timescaledb
+        name: docker.io/timescale/timescaledb
         repository: https://github.com/timescale/timescaledb
         tag: 2.18.2-pg17
       webhook-logger:
@@ -295,21 +295,21 @@ docker-images:
         tag: v1.31.9
     partition:
       image-cache-coredns:
-        name: coredns/coredns
+        name: docker.io/coredns/coredns
         repository: https://github.com/coredns/coredns
         tag: 1.12.0
       image-cache-haproxy:
-        name: haproxy
+        name: docker.io/library/haproxy
         repository: https://github.com/docker-library/haproxy
         tag: 3.0-alpine
       prometheus:
-        name: prom/prometheus
+        name: docker.io/prom/prometheus
         tag: v2.44.0
       promtail:
-        name: grafana/promtail
+        name: docker.io/grafana/promtail
         tag: 2.8.2
       ztp-nginx:
-        name: nginx
+        name: docker.io/library/nginx
         repository: https://github.com/nginxinc/docker-nginx
         tag: 1.27-alpine
 helm-charts:
