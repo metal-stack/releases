@@ -225,7 +225,7 @@ docker-images:
         tag: v1.7.0
       admission-controller:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/admission-controller
-        tag: v1.113.3
+        tag: v1.113.3-preview5
       api-server:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/apiserver
         tag: v1.113.3
@@ -249,7 +249,7 @@ docker-images:
         charts:
           ref: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/gardenlet
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/gardenlet
-        tag: v1.113.3
+        tag: v1.113.3-preview5
       metrics-exporter:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/metrics-exporter
         tag: 0.37.0
