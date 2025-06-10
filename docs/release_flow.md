@@ -18,7 +18,7 @@ Answer: It's not on purpose if we miss a PR to be included into a metal-stack re
 
 **Question: Who is responsible for the releases? Who can freeze a release?**
 
-Answer: Every repository in metal-stack has a `CODEOWNERS` file pointing to a maintainer team. This is also true for this repository. Only release repository maintainers are allowed to `/freeze` a release (meaning the metal-robot does not automatically append new component releases to the release vector anymore).
+Answer: Every repository in metal-stack has a `CODEOWNERS` file pointing to a maintainer team. This is also true for the releases repository. Only release repository maintainers are allowed to `/freeze` a release (meaning the metal-robot does not automatically append new component releases to the release vector anymore).
 
 **Question: I can't push to the `develop` branch of this repository? How can I request changes to the release vector?**
 
