@@ -14,11 +14,11 @@ The following diagram attempts to describe our current release flow:
 
 **Question: I need PR <xyz> to go into the release, why did you not include it?**
 
-Answer: It's not on purpose if we miss a PR to be included into a metal-stack release. Please use the pending pull request from `develop` into `master` as soon as it is open and comment which pull request you want to have included into the release. Also consider attending our planning meetings if you have urgent requirements that need to be dealt with.
+Answer: It's not on purpose if we miss a PR to be included into a metal-stack release. Please use the pending pull request from `develop` into `master` as soon as it is open and comment which pull request you want to have included into the release. Also consider attending our planning meetings or contact us in our Slack channel if you have urgent requirements that need to be dealt with.
 
 **Question: Who is responsible for the releases? Who can freeze a release?**
 
-Answer: Every repository in metal-stack has a `CODEOWNERS` file pointing to a maintainer team. This is also true for this repository. Only release repository maintainers are allowed to `/freeze` a release.
+Answer: Every repository in metal-stack has a `CODEOWNERS` file pointing to a maintainer team. This is also true for this repository. Only release repository maintainers are allowed to `/freeze` a release (meaning the metal-robot does not automatically append new component releases to the release vector anymore).
 
 **Question: I can't push to the `develop` branch of this repository? How can I request changes to the release vector?**
 
