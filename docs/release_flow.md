@@ -12,7 +12,7 @@ The following diagram attempts to describe our current release flow:
 
 ## FAQ
 
-**Question: I need PR <xyz> to go into the release, why did you not include it?**
+**Question: I need PR #xyz to go into the release, why did you not include it?**
 
 Answer: It's not on purpose if we miss a PR to be included into a metal-stack release. Please use the pending pull request from `develop` into `master` as soon as it is open and comment which pull request you want to have included into the release. Also consider attending our planning meetings or contact us in our Slack channel if you have urgent requirements that need to be dealt with.
 
