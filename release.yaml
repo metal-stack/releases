@@ -234,11 +234,15 @@ docker-images:
       etcdbrctl:
         name: ghcr.io/metal-stack/gardener/etcdbrctl
         tag: v0.15.4
-      extension-provider-gcp:
+      extension-admission-gcp:
         charts:
           application: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/admission-gcp-application
-          extension: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/provider-gcp
           runtime: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/admission-gcp-runtime
+        name: europe-docker.pkg.dev/gardener-project/releases/gardener/extensions/admission-gcp
+        tag: v1.43.2
+      extension-provider-gcp:
+        charts:
+          extension: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/provider-gcp
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/extensions/provider-gcp
         tag: v1.43.2
       gardenlet:
