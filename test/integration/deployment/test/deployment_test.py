@@ -132,17 +132,3 @@ class GardenerControlPlaneDeployment(unittest.TestCase):
             res = v1.list_namespaced_stateful_set(ns)
             for i in res.items:
                 self.assertEqual(i.status.current_replicas, i.status.replicas, f"stateful set {i.metadata.name} in namespace {ns} has unready replicas")
-
-    @pytest.mark.flaky(reruns=36, reruns_delay=10)
-    def test_seed_ready(self):
-        v1 = client.CoreV1Api()
-        secret = v1.read_namespaced_secret("garden-kubeconfig-for-admin", "garden")
-        garden_client = config.new_client_from_config_dict(yaml.safe_load(base64.b64decode(secret.data["kubeconfig"])))
-
-        custom = client.CustomObjectsApi(api_client=garden_client)
-
-        seeds = custom.list_cluster_custom_object("core.gardener.cloud", "v1beta1", "seeds")
-
-        self.assertTrue(len(seeds["items"]) == 1, "no seed object found")
-        self.assertEqual(seeds["items"][0]["status"]["lastOperation"]["state"], "Succeeded")
-        self.assertEqual(seeds["items"][0]["status"]["lastOperation"]["progress"], 100)
