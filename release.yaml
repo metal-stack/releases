@@ -221,13 +221,13 @@ docker-images:
         tag: v1.7.0
       admission-controller:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/admission-controller
-        tag: v1.115.4-preview5
+        tag: v1.116.4
       api-server:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/apiserver
-        tag: v1.115.4
+        tag: v1.116.4
       controller-manager:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/controller-manager
-        tag: v1.115.4
+        tag: v1.116.4
       etcd:
         name: ghcr.io/metal-stack/gardener/etcd
         tag: v3.4.13-bootstrap-1
@@ -249,10 +249,10 @@ docker-images:
         charts:
           ref: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/gardenlet
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/gardenlet
-        tag: v1.115.4-preview5
+        tag: v1.116.4
       metrics-exporter:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/metrics-exporter
-        tag: 0.37.0
+        tag: 0.39.0
       networking-calico:
         charts:
           application: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/admission-calico-application
@@ -271,22 +271,22 @@ docker-images:
         charts:
           ref: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/operator
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/operator
-        tag: v1.115.4
+        tag: v1.116.4
       scheduler:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/scheduler
-        tag: v1.115.4
+        tag: v1.116.4
       shoot-cert-service:
         charts:
           extension: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/shoot-cert-service
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/extensions/shoot-cert-service
-        tag: v1.48.0
+        tag: v1.49.0
       shoot-dns-service:
         charts:
           application: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/admission-shoot-dns-service-application
           extension: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/shoot-dns-service
           runtime: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/admission-shoot-dns-service-runtime
         name: europe-docker.pkg.dev/gardener-project/public/gardener/extensions/shoot-dns-service
-        tag: v1.61.0
+        tag: v1.62.1
       virtual-apiserver:
         name: registry.k8s.io/kube-apiserver
         tag: v1.30.7
@@ -349,5 +349,5 @@ repositories:
         ref: v0.15.4
         url: https://github.com/gardener/etcd-backup-restore.git
       gardener:
-        ref: v1.115.4
+        ref: v1.116.4
         url: https://github.com/gardener/gardener.git
