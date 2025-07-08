@@ -12,8 +12,8 @@ binaries:
   metal-stack:
     kernel:
       repository: https://github.com/metal-stack/kernel
-      url: https://github.com/metal-stack/kernel/releases/download/6.12.32-93/metal-kernel
-      version: 6.12.32-93
+      url: https://github.com/metal-stack/kernel/releases/download/6.12.36-98/metal-kernel
+      version: 6.12.36-98
     metal-hammer:
       repository: https://github.com/metal-stack/metal-hammer
       url: https://github.com/metal-stack/metal-hammer/releases/download/v0.13.11/metal-hammer-initrd.img.lz4
@@ -98,7 +98,7 @@ docker-images:
           runtime: ghcr.io/metal-stack/charts/gardener-extension-admission-metal-runtime
         name: ghcr.io/metal-stack/gardener-extension-provider-metal
         repository: https://github.com/metal-stack/gardener-extension-provider-metal
-        tag: v0.26.0
+        tag: v0.26.2
       machine-controller-manager-provider-metal:
         name: ghcr.io/metal-stack/machine-controller-manager-provider-metal
         repository: https://github.com/metal-stack/machine-controller-manager-provider-metal
@@ -181,15 +181,15 @@ docker-images:
       headscale-db:
         name: docker.io/library/postgres
         repository: https://github.com/docker-library/postgres
-        tag: 16-alpine
+        tag: 16.9-alpine
       ipam-db:
         name: docker.io/library/postgres
         repository: https://github.com/docker-library/postgres
-        tag: 12-alpine
+        tag: 12.22-alpine
       masterdata-db:
         name: docker.io/library/postgres
         repository: https://github.com/docker-library/postgres
-        tag: 12-alpine
+        tag: 12.22-alpine
       metal-db:
         name: docker.io/library/rethinkdb
         repository: https://github.com/rethinkdb/rethinkdb-dockerfiles
@@ -221,13 +221,13 @@ docker-images:
         tag: v1.7.0
       admission-controller:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/admission-controller
-        tag: v1.114.3-preview5
+        tag: v1.115.4-preview5
       api-server:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/apiserver
-        tag: v1.114.3
+        tag: v1.115.4
       controller-manager:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/controller-manager
-        tag: v1.114.3
+        tag: v1.115.4
       etcd:
         name: ghcr.io/metal-stack/gardener/etcd
         tag: v3.4.13-bootstrap-1
@@ -249,7 +249,7 @@ docker-images:
         charts:
           ref: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/gardenlet
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/gardenlet
-        tag: v1.114.3-preview5
+        tag: v1.115.4-preview5
       metrics-exporter:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/metrics-exporter
         tag: 0.37.0
@@ -271,10 +271,10 @@ docker-images:
         charts:
           ref: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/operator
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/operator
-        tag: v1.114.3
+        tag: v1.115.4
       scheduler:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/scheduler
-        tag: v1.114.3
+        tag: v1.115.4
       shoot-cert-service:
         charts:
           extension: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/shoot-cert-service
@@ -349,5 +349,5 @@ repositories:
         ref: v0.15.4
         url: https://github.com/gardener/etcd-backup-restore.git
       gardener:
-        ref: v1.114.3
+        ref: v1.115.4
         url: https://github.com/gardener/gardener.git
