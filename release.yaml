@@ -45,7 +45,7 @@ docker-images:
       metal-apiserver:
         name: ghcr.io/metal-stack/metal-apiserver
         repository: https://github.com/metal-stack/metal-apiserver
-        tag: v0.0.3
+        tag: v0.0.4
       metal-console:
         name: ghcr.io/metal-stack/metal-console
         repository: https://github.com/metal-stack/metal-console
