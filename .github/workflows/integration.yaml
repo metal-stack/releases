@@ -22,7 +22,6 @@ jobs:
       matrix:
         flavors:
           - name: sonic
-          - name: cumulus
           - name: gardener
 
     steps:
@@ -36,17 +35,6 @@ jobs:
         bash -c "$(curl -sL https://get.containerlab.dev)"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        DESIRED_VERSION: v0.59.0
-      if: ${{ matrix.flavors.name == 'cumulus' }}
-
-    - name: Setup Containerlab
-      run: |
-        bash -c "$(curl -sL https://get.containerlab.dev)"
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        # we can remove desired version again after this fix was released: https://github.com/srl-labs/containerlab/pull/2000
-        # DESIRED_VERSION:
-      if: ${{ matrix.flavors.name != 'cumulus' }}
 
     - name: Checkout
       uses: actions/checkout@v4
