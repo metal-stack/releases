@@ -7,7 +7,7 @@ ansible-roles:
     version: v0.2.10
   metal-roles:
     repository: https://github.com/metal-stack/metal-roles
-    version: v0.17.4
+    version: v0.17.7
 binaries:
   metal-stack:
     kernel:
@@ -16,8 +16,8 @@ binaries:
       version: 6.12.36-98
     metal-hammer:
       repository: https://github.com/metal-stack/metal-hammer
-      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.13.11/metal-hammer-initrd.img.lz4
-      version: v0.13.11
+      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.13.13/metal-hammer-initrd.img.lz4
+      version: v0.13.13
     metalctl:
       darwin:
         url: https://github.com/metal-stack/metalctl/releases/download/v0.18.1/metalctl-darwin-amd64
@@ -45,7 +45,7 @@ docker-images:
       metal-apiserver:
         name: ghcr.io/metal-stack/metal-apiserver
         repository: https://github.com/metal-stack/metal-apiserver
-        tag: v0.0.3
+        tag: v0.0.4
       metal-console:
         name: ghcr.io/metal-stack/metal-console
         repository: https://github.com/metal-stack/metal-console
@@ -53,7 +53,7 @@ docker-images:
       metal-metrics-exporter:
         name: ghcr.io/metal-stack/metal-metrics-exporter
         repository: https://github.com/metal-stack/metal-metrics-exporter
-        tag: v0.2.1
+        tag: v0.3.0
       metalctl:
         name: ghcr.io/metal-stack/metalctl
         repository: https://github.com/metal-stack/metalctl
@@ -72,7 +72,7 @@ docker-images:
           extension: ghcr.io/metal-stack/charts/gardener-extension-audit
         name: ghcr.io/metal-stack/gardener-extension-audit
         repository: https://github.com/metal-stack/gardener-extension-audit
-        tag: v0.1.14
+        tag: v0.1.15
       gardener-extension-backup-s3:
         charts:
           extension: ghcr.io/metal-stack/charts/gardener-extension-backup-s3
@@ -91,6 +91,12 @@ docker-images:
         name: ghcr.io/metal-stack/gardener-extension-dns-powerdns
         repository: https://github.com/metal-stack/gardener-extension-dns-powerdns
         tag: v0.7.2
+      gardener-extension-ontap:
+        charts:
+          extension: ghcr.io/metal-stack/charts/gardener-extension-ontap
+        name: ghcr.io/metal-stack/gardener-extension-ontap
+        repository: https://github.com/metal-stack/gardener-extension-ontap
+        tag: main
       gardener-extension-provider-metal:
         charts:
           application: ghcr.io/metal-stack/charts/gardener-extension-admission-metal-application
@@ -98,11 +104,11 @@ docker-images:
           runtime: ghcr.io/metal-stack/charts/gardener-extension-admission-metal-runtime
         name: ghcr.io/metal-stack/gardener-extension-provider-metal
         repository: https://github.com/metal-stack/gardener-extension-provider-metal
-        tag: v0.26.2
+        tag: v0.26.3
       machine-controller-manager-provider-metal:
         name: ghcr.io/metal-stack/machine-controller-manager-provider-metal
         repository: https://github.com/metal-stack/machine-controller-manager-provider-metal
-        tag: v0.1.25
+        tag: v0.1.26
       os-metal-extension:
         charts:
           extension: ghcr.io/metal-stack/charts/os-metal-extension
@@ -113,7 +119,7 @@ docker-images:
       backup-restore-sidecar:
         name: ghcr.io/metal-stack/backup-restore-sidecar
         repository: https://github.com/metal-stack/backup-restore-sidecar
-        tag: v0.12.0
+        tag: v0.12.1
       deployment-base:
         name: ghcr.io/metal-stack/metal-deployment-base
         repository: https://github.com/metal-stack/metal-dockerfiles
@@ -167,7 +173,7 @@ docker-images:
       sonic-configdb-utils:
         name: ghcr.io/metal-stack/sonic-configdb-utils
         repository: https://github.com/metal-stack/sonic-configdb-utils
-        tag: v0.2.2
+        tag: v0.3.0
   third-party:
     control-plane:
       event-exporter:
@@ -221,13 +227,13 @@ docker-images:
         tag: v1.7.0
       admission-controller:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/admission-controller
-        tag: v1.115.4-preview5
+        tag: v1.116.4
       api-server:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/apiserver
-        tag: v1.115.4
+        tag: v1.116.4
       controller-manager:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/controller-manager
-        tag: v1.115.4
+        tag: v1.116.4
       etcd:
         name: ghcr.io/metal-stack/gardener/etcd
         tag: v3.4.13-bootstrap-1
@@ -249,10 +255,10 @@ docker-images:
         charts:
           ref: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/gardenlet
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/gardenlet
-        tag: v1.115.4-preview5
+        tag: v1.116.4
       metrics-exporter:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/metrics-exporter
-        tag: 0.37.0
+        tag: 0.39.0
       networking-calico:
         charts:
           application: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/admission-calico-application
@@ -271,30 +277,30 @@ docker-images:
         charts:
           ref: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/operator
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/operator
-        tag: v1.115.4
+        tag: v1.116.4
       scheduler:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/scheduler
-        tag: v1.115.4
+        tag: v1.116.4
       shoot-cert-service:
         charts:
           extension: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/shoot-cert-service
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/extensions/shoot-cert-service
-        tag: v1.48.0
+        tag: v1.49.0
       shoot-dns-service:
         charts:
           application: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/admission-shoot-dns-service-application
           extension: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/shoot-dns-service
           runtime: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/admission-shoot-dns-service-runtime
         name: europe-docker.pkg.dev/gardener-project/public/gardener/extensions/shoot-dns-service
-        tag: v1.61.0
+        tag: v1.62.1
       virtual-apiserver:
         name: registry.k8s.io/kube-apiserver
-        tag: v1.30.7
+        tag: v1.31.10
       virtual-controller-manager:
         name: registry.k8s.io/kube-controller-manager
-        tag: v1.30.7
+        tag: v1.31.10
       virtual-garden-apiserver:
-        tag: v1.31.9
+        tag: v1.31.10
     partition:
       image-cache-coredns:
         name: docker.io/coredns/coredns
@@ -349,5 +355,5 @@ repositories:
         ref: v0.15.4
         url: https://github.com/gardener/etcd-backup-restore.git
       gardener:
-        ref: v1.115.4
+        ref: v1.116.4
         url: https://github.com/gardener/gardener.git

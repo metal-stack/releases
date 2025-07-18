@@ -8,6 +8,6 @@ The metal-stack is a compound of microservices, which all have their individual 
 
 ## Release Flow
 
-When you're a maintainer of a metal-stack project, please get familiar with the release flow as described [here](docs/release_flow.md). Keep an eye on the integration tests as for the integration tests it is essential that _you_ care about their results.
+When you're a maintainer of a metal-stack project, please get familiar with the release flow as described [here](https://docs.metal-stack.io/stable/developers/release-flow/). Keep an eye on the integration tests as for the integration tests it is essential that _you_ care about their results.
 
 The outcome of integration tests are published in the #integration channel of our [metal-stack Slack workspace](https://metal-stack.slack.com/).
