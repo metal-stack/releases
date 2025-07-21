@@ -96,7 +96,7 @@ docker-images:
           extension: ghcr.io/metal-stack/charts/gardener-extension-ontap
         name: ghcr.io/metal-stack/gardener-extension-ontap
         repository: https://github.com/metal-stack/gardener-extension-ontap
-        tag: main
+        tag: v0.1.0
       gardener-extension-provider-metal:
         charts:
           application: ghcr.io/metal-stack/charts/gardener-extension-admission-metal-application
