@@ -4,7 +4,7 @@ ansible-roles:
     version: v0.7.0
   metal-ansible-modules:
     repository: https://github.com/metal-stack/metal-ansible-modules
-    version: v0.2.10
+    version: v0.2.11
   metal-roles:
     repository: https://github.com/metal-stack/metal-roles
     version: v0.17.7
