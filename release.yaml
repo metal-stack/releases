@@ -2,11 +2,11 @@ ansible-roles:
   ansible-common:
     repository: https://github.com/metal-stack/ansible-common
     oci: ghcr.io/metal-stack/ansible-common
-    version: v0.7.0
+    version: v0.7.1
   metal-ansible-modules:
     repository: https://github.com/metal-stack/metal-ansible-modules
     oci: ghcr.io/metal-stack/metal-ansible-modules
-    version: v0.2.10
+    version: v0.2.11
   metal-roles:
     repository: https://github.com/metal-stack/metal-roles
     oci: ghcr.io/metal-stack/metal-roles
@@ -75,7 +75,7 @@ docker-images:
           extension: ghcr.io/metal-stack/charts/gardener-extension-audit
         name: ghcr.io/metal-stack/gardener-extension-audit
         repository: https://github.com/metal-stack/gardener-extension-audit
-        tag: v0.1.15
+        tag: v0.2.0
       gardener-extension-backup-s3:
         charts:
           extension: ghcr.io/metal-stack/charts/gardener-extension-backup-s3
@@ -99,7 +99,7 @@ docker-images:
           extension: ghcr.io/metal-stack/charts/gardener-extension-ontap
         name: ghcr.io/metal-stack/gardener-extension-ontap
         repository: https://github.com/metal-stack/gardener-extension-ontap
-        tag: v0.1.0
+        tag: v0.1.1
       gardener-extension-provider-metal:
         charts:
           application: ghcr.io/metal-stack/charts/gardener-extension-admission-metal-application
