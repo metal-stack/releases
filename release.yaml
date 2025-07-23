@@ -1,15 +1,15 @@
 ansible-roles:
   ansible-common:
-    repository: https://github.com/metal-stack/ansible-common
     oci: ghcr.io/metal-stack/ansible-common
+    repository: https://github.com/metal-stack/ansible-common
     version: v0.7.1
   metal-ansible-modules:
-    repository: https://github.com/metal-stack/metal-ansible-modules
     oci: ghcr.io/metal-stack/metal-ansible-modules
+    repository: https://github.com/metal-stack/metal-ansible-modules
     version: v0.2.11
   metal-roles:
-    repository: https://github.com/metal-stack/metal-roles
     oci: ghcr.io/metal-stack/metal-roles
+    repository: https://github.com/metal-stack/metal-roles
     version: v0.17.7
 binaries:
   metal-stack:
@@ -99,7 +99,7 @@ docker-images:
           extension: ghcr.io/metal-stack/charts/gardener-extension-ontap
         name: ghcr.io/metal-stack/gardener-extension-ontap
         repository: https://github.com/metal-stack/gardener-extension-ontap
-        tag: v0.1.1
+        tag: v0.1.2
       gardener-extension-provider-metal:
         charts:
           application: ghcr.io/metal-stack/charts/gardener-extension-admission-metal-application
@@ -128,14 +128,14 @@ docker-images:
         repository: https://github.com/metal-stack/metal-dockerfiles
         tag: v0.7.7
     kubernetes:
-      cluster-api-provider-metal-stack-controller:
-        name: ghcr.io/metal-stack/cluster-api-metal-stack-controller
-        repository: https://github.com/metal-stack/cluster-api-provider-metal-stack
-        tag: v0.6.0
       audit-forwarder:
         name: ghcr.io/metal-stack/audit-forwarder
         repository: https://github.com/metal-stack/audit-forwarder
         tag: v0.2.5
+      cluster-api-provider-metal-stack-controller:
+        name: ghcr.io/metal-stack/cluster-api-metal-stack-controller
+        repository: https://github.com/metal-stack/cluster-api-provider-metal-stack
+        tag: v0.6.0
       csi-lvm-controller:
         name: ghcr.io/metal-stack/csi-lvm-controller
         repository: https://github.com/metal-stack/csi-lvm
