@@ -10,7 +10,7 @@ ansible-roles:
   metal-roles:
     oci: ghcr.io/metal-stack/metal-roles
     repository: https://github.com/metal-stack/metal-roles
-    version: v0.17.11
+    version: v0.17.12
 binaries:
   metal-stack:
     kernel:
