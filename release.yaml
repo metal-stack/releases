@@ -15,8 +15,8 @@ binaries:
   metal-stack:
     kernel:
       repository: https://github.com/metal-stack/kernel
-      url: https://github.com/metal-stack/kernel/releases/download/6.12.40-103/metal-kernel
-      version: 6.12.40-103
+      url: https://github.com/metal-stack/kernel/releases/download/6.12.44-106/metal-kernel
+      version: 6.12.44-106
     metal-hammer:
       repository: https://github.com/metal-stack/metal-hammer
       url: https://github.com/metal-stack/metal-hammer/releases/download/v0.13.13/metal-hammer-initrd.img.lz4
@@ -36,7 +36,7 @@ docker-images:
       ipam:
         name: ghcr.io/metal-stack/go-ipam
         repository: https://github.com/metal-stack/go-ipam
-        tag: v1.14.12
+        tag: v1.14.13
       masterdata-api:
         name: ghcr.io/metal-stack/masterdata-api
         repository: https://github.com/metal-stack/masterdata-api
@@ -44,7 +44,7 @@ docker-images:
       metal-api:
         name: ghcr.io/metal-stack/metal-api
         repository: https://github.com/metal-stack/metal-api
-        tag: v0.42.2
+        tag: v0.42.3
       metal-apiserver:
         name: ghcr.io/metal-stack/metal-apiserver
         repository: https://github.com/metal-stack/metal-apiserver
@@ -52,7 +52,7 @@ docker-images:
       metal-console:
         name: ghcr.io/metal-stack/metal-console
         repository: https://github.com/metal-stack/metal-console
-        tag: v0.7.4
+        tag: v0.7.5
       metal-metrics-exporter:
         name: ghcr.io/metal-stack/metal-metrics-exporter
         repository: https://github.com/metal-stack/metal-metrics-exporter
@@ -164,7 +164,7 @@ docker-images:
       metal-bmc:
         name: ghcr.io/metal-stack/metal-bmc
         repository: https://github.com/metal-stack/metal-bmc
-        tag: v0.5.8
+        tag: v0.6.0
       metal-core:
         name: ghcr.io/metal-stack/metal-core
         repository: https://github.com/metal-stack/metal-core
@@ -234,13 +234,13 @@ docker-images:
         tag: v1.7.0
       admission-controller:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/admission-controller
-        tag: v1.117.6
+        tag: v1.118.3
       api-server:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/apiserver
-        tag: v1.117.6
+        tag: v1.118.3
       controller-manager:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/controller-manager
-        tag: v1.117.6
+        tag: v1.118.3
       etcd:
         name: ghcr.io/metal-stack/gardener/etcd
         tag: v3.4.13-bootstrap-1
@@ -262,7 +262,7 @@ docker-images:
         charts:
           ref: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/gardenlet
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/gardenlet
-        tag: v1.117.6
+        tag: v1.118.3
       metrics-exporter:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/metrics-exporter
         tag: 0.39.0
@@ -279,15 +279,15 @@ docker-images:
           extension: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/networking-cilium
           runtime: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/admission-cilium-runtime
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/extensions/networking-cilium
-        tag: v1.40.1
+        tag: v1.41.3
       operator:
         charts:
           ref: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/operator
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/operator
-        tag: v1.117.6
+        tag: v1.118.3
       scheduler:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/scheduler
-        tag: v1.117.6
+        tag: v1.118.3
       shoot-cert-service:
         charts:
           extension: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/shoot-cert-service
@@ -362,5 +362,5 @@ repositories:
         ref: v0.15.4
         url: https://github.com/gardener/etcd-backup-restore.git
       gardener:
-        ref: v1.117.6
+        ref: v1.118.3
         url: https://github.com/gardener/gardener.git
