@@ -194,15 +194,15 @@ docker-images:
       headscale-db:
         name: docker.io/library/postgres
         repository: https://github.com/docker-library/postgres
-        tag: 16.9-alpine
+        tag: 16.10-alpine
       ipam-db:
         name: docker.io/library/postgres
         repository: https://github.com/docker-library/postgres
-        tag: 14.10-alpine
+        tag: 14.19-alpine
       masterdata-db:
         name: docker.io/library/postgres
         repository: https://github.com/docker-library/postgres
-        tag: 14.10-alpine
+        tag: 14.19-alpine
       metal-db:
         name: docker.io/library/rethinkdb
         repository: https://github.com/rethinkdb/rethinkdb-dockerfiles
