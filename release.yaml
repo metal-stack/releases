@@ -272,14 +272,14 @@ docker-images:
           extension: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/networking-calico
           runtime: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/admission-calico-runtime
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/extensions/networking-calico
-        tag: v1.49.0
+        tag: v1.48.1
       networking-cilium:
         charts:
           application: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/admission-cilium-application
           extension: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/networking-cilium
           runtime: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/admission-cilium-runtime
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/extensions/networking-cilium
-        tag: v1.42.2
+        tag: v1.41.3
       operator:
         charts:
           ref: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/operator
@@ -292,14 +292,14 @@ docker-images:
         charts:
           extension: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/shoot-cert-service
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/extensions/shoot-cert-service
-        tag: v1.52.0
+        tag: v1.50.1
       shoot-dns-service:
         charts:
           application: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/admission-shoot-dns-service-application
           extension: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/shoot-dns-service
           runtime: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/admission-shoot-dns-service-runtime
         name: europe-docker.pkg.dev/gardener-project/public/gardener/extensions/shoot-dns-service
-        tag: v1.66.0
+        tag: v1.64.3
       virtual-apiserver:
         name: registry.k8s.io/kube-apiserver
         tag: v1.31.10
