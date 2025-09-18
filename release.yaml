@@ -111,7 +111,7 @@ docker-images:
       machine-controller-manager-provider-metal:
         name: ghcr.io/metal-stack/machine-controller-manager-provider-metal
         repository: https://github.com/metal-stack/machine-controller-manager-provider-metal
-        tag: v0.1.26
+        tag: v0.1.27
       os-metal-extension:
         charts:
           extension: ghcr.io/metal-stack/charts/os-metal-extension
