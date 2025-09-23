@@ -328,10 +328,6 @@ docker-images:
         repository: https://github.com/nginxinc/docker-nginx
         tag: 1.27-alpine
 helm-charts:
-  key-value-store:
-    valkey:
-      repository: oci://registry-1.docker.io/bitnamicharts/valkey
-      version: 2.4.5
   logging:
     loki:
       repository: https://grafana.github.io/helm-charts
@@ -343,6 +339,9 @@ helm-charts:
     metal-control-plane:
       repository: https://helm.metal-stack.io
       version: 0.6.0
+    valkey:
+      repository: https://helm.metal-stack.io
+      version: 0.1.0
   monitoring:
     kube-prometheus-stack:
       repository: https://prometheus-community.github.io/helm-charts
