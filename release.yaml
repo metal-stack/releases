@@ -351,6 +351,9 @@ helm-charts:
       version: 12.8.3
 projects:
   metal-stack:
+    api:
+      repository: https://github.com/metal-stack/api
+      version: v0.0.31
     mini-lab:
       repository: https://github.com/metal-stack/mini-lab
       version: v0.4.4
