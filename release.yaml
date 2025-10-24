@@ -135,7 +135,7 @@ docker-images:
       cluster-api-provider-metal-stack-controller:
         name: ghcr.io/metal-stack/cluster-api-metal-stack-controller
         repository: https://github.com/metal-stack/cluster-api-provider-metal-stack
-        tag: v0.6.0
+        tag: v0.6.2
       csi-lvm-controller:
         name: ghcr.io/metal-stack/csi-lvm-controller
         repository: https://github.com/metal-stack/csi-lvm
