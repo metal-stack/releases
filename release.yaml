@@ -300,8 +300,7 @@ docker-images:
           runtime: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/admission-shoot-dns-service-runtime
         name: europe-docker.pkg.dev/gardener-project/public/gardener/extensions/shoot-dns-service
         tag: v1.64.3
-      virtual-apiserver:
-        name: registry.k8s.io/kube-apiserver
+      virtual-garden-apiserver:
         tag: v1.31.10
     partition:
       image-cache-coredns:
