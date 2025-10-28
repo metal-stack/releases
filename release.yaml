@@ -10,13 +10,13 @@ ansible-roles:
   metal-roles:
     oci: ghcr.io/metal-stack/metal-roles
     repository: https://github.com/metal-stack/metal-roles
-    version: v0.17.17
+    version: v0.17.19
 binaries:
   metal-stack:
     kernel:
       repository: https://github.com/metal-stack/kernel
-      url: https://github.com/metal-stack/kernel/releases/download/6.12.46-109/metal-kernel
-      version: 6.12.46-109
+      url: https://github.com/metal-stack/kernel/releases/download/6.12.52-115/metal-kernel
+      version: 6.12.52-115
     metal-hammer:
       repository: https://github.com/metal-stack/metal-hammer
       url: https://github.com/metal-stack/metal-hammer/releases/download/v0.13.15/metal-hammer-initrd.img.lz4
@@ -48,7 +48,7 @@ docker-images:
       metal-apiserver:
         name: ghcr.io/metal-stack/metal-apiserver
         repository: https://github.com/metal-stack/metal-apiserver
-        tag: v0.0.7
+        tag: v0.0.9
       metal-console:
         name: ghcr.io/metal-stack/metal-console
         repository: https://github.com/metal-stack/metal-console
@@ -75,7 +75,7 @@ docker-images:
           extension: ghcr.io/metal-stack/charts/gardener-extension-audit
         name: ghcr.io/metal-stack/gardener-extension-audit
         repository: https://github.com/metal-stack/gardener-extension-audit
-        tag: v0.2.3
+        tag: v0.3.0
       gardener-extension-backup-s3:
         charts:
           extension: ghcr.io/metal-stack/charts/gardener-extension-backup-s3
@@ -99,7 +99,7 @@ docker-images:
           extension: ghcr.io/metal-stack/charts/gardener-extension-ontap
         name: ghcr.io/metal-stack/gardener-extension-ontap
         repository: https://github.com/metal-stack/gardener-extension-ontap
-        tag: v0.2.6
+        tag: v0.2.8
       gardener-extension-provider-metal:
         charts:
           application: ghcr.io/metal-stack/charts/gardener-extension-admission-metal-application
@@ -126,7 +126,7 @@ docker-images:
       deployment-base:
         name: ghcr.io/metal-stack/metal-deployment-base
         repository: https://github.com/metal-stack/metal-dockerfiles
-        tag: v0.7.7
+        tag: v0.8.0
     kubernetes:
       audit-forwarder:
         name: ghcr.io/metal-stack/audit-forwarder
@@ -135,7 +135,7 @@ docker-images:
       cluster-api-provider-metal-stack-controller:
         name: ghcr.io/metal-stack/cluster-api-metal-stack-controller
         repository: https://github.com/metal-stack/cluster-api-provider-metal-stack
-        tag: v0.6.0
+        tag: v0.6.2
       csi-lvm-controller:
         name: ghcr.io/metal-stack/csi-lvm-controller
         repository: https://github.com/metal-stack/csi-lvm
@@ -168,7 +168,7 @@ docker-images:
       metal-core:
         name: ghcr.io/metal-stack/metal-core
         repository: https://github.com/metal-stack/metal-core
-        tag: v0.13.1
+        tag: v0.13.5
       metal-image-cache-sync:
         name: ghcr.io/metal-stack/metal-image-cache-sync
         repository: https://github.com/metal-stack/metal-image-cache-sync
@@ -351,6 +351,9 @@ helm-charts:
       version: 12.8.3
 projects:
   metal-stack:
+    api:
+      repository: https://github.com/metal-stack/api
+      version: v0.0.31
     mini-lab:
       repository: https://github.com/metal-stack/mini-lab
       version: v0.4.4
