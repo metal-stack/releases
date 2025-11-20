@@ -341,7 +341,7 @@ projects:
   metal-stack:
     api:
       repository: https://github.com/metal-stack/api
-      version: v0.0.33
+      version: v0.0.34
     mini-lab:
       repository: https://github.com/metal-stack/mini-lab
       version: v0.4.4
