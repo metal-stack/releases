@@ -127,6 +127,10 @@ docker-images:
         name: ghcr.io/metal-stack/metal-deployment-base
         repository: https://github.com/metal-stack/metal-dockerfiles
         tag: v0.9.0
+      oci-mirror:
+        name: ghcr.io/metal-stack/oci-mirror
+        repository: https://github.com/metal-stack/oci-mirror
+        tag: v0.2.8
     kubernetes:
       audit-forwarder:
         name: ghcr.io/metal-stack/audit-forwarder
