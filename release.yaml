@@ -10,7 +10,7 @@ ansible-roles:
   metal-roles:
     oci: ghcr.io/metal-stack/metal-roles
     repository: https://github.com/metal-stack/metal-roles
-    version: v0.17.27
+    version: v0.17.28
 binaries:
   metal-stack:
     kernel:
@@ -48,7 +48,7 @@ docker-images:
       metal-apiserver:
         name: ghcr.io/metal-stack/metal-apiserver
         repository: https://github.com/metal-stack/metal-apiserver
-        tag: v0.1.0
+        tag: v0.1.1
       metal-console:
         name: ghcr.io/metal-stack/metal-console
         repository: https://github.com/metal-stack/metal-console
@@ -334,7 +334,7 @@ helm-charts:
   metal-stack:
     metal-control-plane:
       repository: https://helm.metal-stack.io
-      version: 0.6.0
+      version: 0.7.0
     valkey:
       repository: https://helm.metal-stack.io
       version: 0.1.0
