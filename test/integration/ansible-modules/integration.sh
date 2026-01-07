@@ -5,8 +5,7 @@ cd /mini-lab
 
 pip install --root-user-action=ignore --upgrade pip junit-xml
 
-ansible-playbook -i inventories/control-plane.yaml obtain_role_requirements.yaml
-ansible-galaxy install --ignore-errors -r requirements.yaml
+ansible -m metalstack.base.metal_stack_release_vector localhost -i inventories/control-plane.yaml
 
 cd /integration
 
