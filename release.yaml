@@ -244,8 +244,8 @@ docker-images:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/admission-controller
         tag: v1.122.3
       api-server:
-        name: europe-docker.pkg.dev/gardener-project/releases/gardener/apiserver
-        tag: v1.122.3
+        name: r.metal-stack.io/gardener/gardener-apiserver
+        tag: v1.122-image-defaulting
       controller-manager:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/controller-manager
         tag: v1.122.3
