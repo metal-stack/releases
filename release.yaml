@@ -277,11 +277,11 @@ docker-images:
         tag: v1.49.0
       networking-cilium:
         charts:
-          application: r.metal-stack.io/charts/admission-cilium-application
-          extension: r.metal-stack.io/charts/networking-cilium
-          runtime: r.metal-stack.io/charts/admission-cilium-runtime
-        name: r.metal-stack.io/gardener/gardener-extension-networking-cilium
-        tag: v1.41.3-ebpfmasqbackport
+          application: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/admission-cilium-application
+          extension: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/networking-cilium
+          runtime: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/admission-cilium-runtime
+        name: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/networking-cilium
+        tag: v1.42.3
       operator:
         charts:
           ref: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/operator
