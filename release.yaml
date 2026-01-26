@@ -126,7 +126,7 @@ docker-images:
       deployment-base:
         name: ghcr.io/metal-stack/metal-deployment-base
         repository: https://github.com/metal-stack/metal-dockerfiles
-        tag: v0.9.0
+        tag: v0.9.1
       oci-mirror:
         name: ghcr.io/metal-stack/oci-mirror
         repository: https://github.com/metal-stack/oci-mirror
