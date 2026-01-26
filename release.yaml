@@ -303,7 +303,7 @@ docker-images:
         name: europe-docker.pkg.dev/gardener-project/public/gardener/extensions/shoot-dns-service
         tag: v1.66.0
       virtual-garden-apiserver:
-        tag: v1.32.10
+        tag: v1.33.7
     partition:
       image-cache-coredns:
         name: docker.io/coredns/coredns
