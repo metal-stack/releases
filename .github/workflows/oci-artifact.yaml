@@ -10,6 +10,9 @@ on:
   push:
     branches:
       - master
+    tags-ignore:
+      # this is handled by release publish trigger
+      - 'v[0-9]+.[0-9]+.[0-9]+'
 
 env:
   REGISTRY: ghcr.io
@@ -33,6 +36,11 @@ jobs:
         [ "${GITHUB_EVENT_NAME}" == 'pull_request' ] && echo "tag=${GITHUB_HEAD_REF##*/}" >> $GITHUB_ENV || true
         [ "${GITHUB_EVENT_NAME}" == 'release' ] && echo "tag=${GITHUB_REF##*/}" >> $GITHUB_ENV || true
         [ "${GITHUB_EVENT_NAME}" == 'push' ] && echo "tag=latest" >> $GITHUB_ENV || true
+
+    - name: Overwrite tag if necessary
+      run: |
+        [ "${GITHUB_EVENT_NAME}" == 'push' ] && echo "tag=${GITHUB_REF##*/}" >> $GITHUB_ENV || true
+      if: github.ref_type == 'tag'
 
     - name: Checkout
       uses: actions/checkout@v4
