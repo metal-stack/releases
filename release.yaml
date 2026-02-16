@@ -202,7 +202,7 @@ docker-images:
       ipam-db:
         name: docker.io/library/postgres
         repository: https://github.com/docker-library/postgres
-        tag: 14.19-alpine
+        tag: 15.16-alpine
       masterdata-db:
         name: docker.io/library/postgres
         repository: https://github.com/docker-library/postgres
@@ -348,7 +348,7 @@ helm-charts:
   oidc:
     zitadel:
       repository: https://charts.zitadel.com/
-      version: 9.13.0
+      version: 9.23.0
 projects:
   metal-stack:
     api:
