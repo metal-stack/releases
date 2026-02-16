@@ -6,7 +6,7 @@ ansible-roles:
   metal-ansible-modules:
     oci: ghcr.io/metal-stack/metal-ansible-modules
     repository: https://github.com/metal-stack/metal-ansible-modules
-    version: v0.2.11
+    version: v0.2.12
   metal-roles:
     oci: ghcr.io/metal-stack/metal-roles
     repository: https://github.com/metal-stack/metal-roles
