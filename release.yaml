@@ -222,7 +222,7 @@ docker-images:
       timescaledb:
         name: docker.io/timescale/timescaledb
         repository: https://github.com/timescale/timescaledb
-        tag: 2.18.2-pg17
+        tag: 2.25.1-pg17
       webhook-logger:
         name: ghcr.io/multani/alertmanager-webhook-logger
         repository: https://github.com/multani/alertmanager-webhook-logger
