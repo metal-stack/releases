@@ -206,7 +206,7 @@ docker-images:
       masterdata-db:
         name: docker.io/library/postgres
         repository: https://github.com/docker-library/postgres
-        tag: 14.19-alpine
+        tag: 15.16-alpine
       metal-db:
         name: docker.io/library/rethinkdb
         repository: https://github.com/rethinkdb/rethinkdb-dockerfiles
