@@ -168,7 +168,7 @@ docker-images:
       metal-bmc:
         name: ghcr.io/metal-stack/metal-bmc
         repository: https://github.com/metal-stack/metal-bmc
-        tag: v0.6.1
+        tag: v0.7.0
       metal-core:
         name: ghcr.io/metal-stack/metal-core
         repository: https://github.com/metal-stack/metal-core
