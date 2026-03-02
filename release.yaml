@@ -218,7 +218,7 @@ docker-images:
       thanos:
         name: quay.io/thanos/thanos
         repository: https://github.com/thanos-io/thanos
-        tag: v0.33.0
+        tag: v0.39.2
       timescaledb:
         name: docker.io/timescale/timescaledb
         repository: https://github.com/timescale/timescaledb
@@ -341,7 +341,7 @@ helm-charts:
   monitoring:
     kube-prometheus-stack:
       repository: https://prometheus-community.github.io/helm-charts
-      version: 73.2.3
+      version: 82.4.3
     thanos:
       repository: https://charts.bitnami.com/bitnami
       version: 17.3.1
