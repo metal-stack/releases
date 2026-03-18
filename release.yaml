@@ -348,7 +348,7 @@ helm-charts:
   oidc:
     zitadel:
       repository: https://charts.zitadel.com/
-      version: 9.23.0
+      version: 9.26.0
 projects:
   metal-stack:
     api:
