@@ -338,7 +338,7 @@ helm-charts:
   metal-stack:
     metal-control-plane:
       repository: https://helm.metal-stack.io
-      version: 0.7.4
+      version: 0.7.5
     valkey:
       repository: https://helm.metal-stack.io
       version: 0.1.0
