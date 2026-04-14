@@ -337,9 +337,11 @@ helm-charts:
       version: 6.11.5
   metal-stack:
     metal-control-plane:
+      oci: ghcr.io/metal-stack/helm-charts/metal-control-plane
       repository: https://helm.metal-stack.io
       version: 0.7.5
     valkey:
+      oci: ghcr.io/metal-stack/helm-charts/valkey
       repository: https://helm.metal-stack.io
       version: 0.1.0
   monitoring:
