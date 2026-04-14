@@ -339,10 +339,12 @@ helm-charts:
     metal-control-plane:
       oci: ghcr.io/metal-stack/helm-charts/metal-control-plane
       repository: https://helm.metal-stack.io
+      tag: v0.7.5
       version: 0.7.5
     valkey:
       oci: ghcr.io/metal-stack/helm-charts/valkey
       repository: https://helm.metal-stack.io
+      tag: v0.1.0
       version: 0.1.0
   monitoring:
     kube-prometheus-stack:
