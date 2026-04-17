@@ -13,8 +13,7 @@ cat << EOF >> ~/.ssh/config
 Host *
     StrictHostKeyChecking no
     User root
-    IdentityFile /mini-lab/files/ssh/id_rsa
-    PubkeyAcceptedKeyTypes +ssh-rsa
+    IdentityFile /mini-lab/files/ssh/id_ed25519
 EOF
 
 cd -
