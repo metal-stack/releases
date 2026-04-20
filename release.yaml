@@ -134,7 +134,7 @@ docker-images:
       zitadel-init:
         name: ghcr.io/metal-stack/zitadel-init
         repository: https://github.com/metal-stack/zitadel-init
-        tag: v0.3.2
+        tag: v0.3.3
     kubernetes:
       audit-forwarder:
         name: ghcr.io/metal-stack/audit-forwarder
