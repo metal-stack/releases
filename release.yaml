@@ -335,6 +335,9 @@ helm-charts:
     loki:
       repository: https://grafana.github.io/helm-charts
       version: 5.8.9
+    promtail:
+      repository: https://grafana.github.io/helm-charts
+      version: 6.11.5
   metal-stack:
     metal-control-plane:
       oci: ghcr.io/metal-stack/helm-charts/metal-control-plane
