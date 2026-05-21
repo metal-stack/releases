@@ -309,6 +309,9 @@ docker-images:
       virtual-garden-apiserver:
         tag: v1.33.7
     partition:
+      alloy:
+        name: docker.io/grafana/alloy
+        tag: v1.16.0
       image-cache-coredns:
         name: docker.io/coredns/coredns
         repository: https://github.com/coredns/coredns
