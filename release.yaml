@@ -332,6 +332,9 @@ docker-images:
         tag: 1.27-alpine
 helm-charts:
   logging:
+    alloy:
+      repository: https://grafana.github.io/helm-charts
+      version: 1.8.0
     loki:
       repository: https://grafana.github.io/helm-charts
       version: 5.8.9
