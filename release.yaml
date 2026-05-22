@@ -118,6 +118,10 @@ docker-images:
         name: ghcr.io/metal-stack/os-metal-extension
         repository: https://github.com/metal-stack/os-metal-extension
         tag: v0.8.10
+      virtual-garden-kubeconfig-refresher:
+        name: ghcr.io/metal-stack/virtual-garden-kubeconfig-refresher
+        repository: https://github.com/metal-stack/virtual-garden-kubeconfig-refresher
+        tag: v0.1.2
     generic:
       backup-restore-sidecar:
         name: ghcr.io/metal-stack/backup-restore-sidecar
