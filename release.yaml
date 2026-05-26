@@ -117,7 +117,7 @@ docker-images:
           extension: ghcr.io/metal-stack/charts/os-metal-extension
         name: ghcr.io/metal-stack/os-metal-extension
         repository: https://github.com/metal-stack/os-metal-extension
-        tag: v0.8.10
+        tag: v0.8.11
       virtual-garden-kubeconfig-refresher:
         name: ghcr.io/metal-stack/virtual-garden-kubeconfig-refresher
         repository: https://github.com/metal-stack/virtual-garden-kubeconfig-refresher
