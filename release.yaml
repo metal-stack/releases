@@ -262,12 +262,12 @@ docker-images:
           application: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/admission-gcp-application
           runtime: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/admission-gcp-runtime
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/extensions/admission-gcp
-        tag: v1.45.1
+        tag: v1.48.3
       extension-provider-gcp:
         charts:
           extension: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/provider-gcp
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/extensions/provider-gcp
-        tag: v1.45.1
+        tag: v1.48.3
       gardenlet:
         charts:
           ref: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/gardenlet
