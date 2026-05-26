@@ -134,7 +134,7 @@ docker-images:
       oci-mirror:
         name: ghcr.io/metal-stack/oci-mirror
         repository: https://github.com/metal-stack/oci-mirror
-        tag: v0.2.8
+        tag: v0.3.0
       zitadel-init:
         name: ghcr.io/metal-stack/zitadel-init
         repository: https://github.com/metal-stack/zitadel-init
