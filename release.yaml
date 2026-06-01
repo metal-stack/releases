@@ -65,6 +65,10 @@ docker-images:
         name: ghcr.io/metal-stack/rethinkdb-exporter
         repository: https://github.com/metal-stack/rethinkdb-exporter
         tag: v0.1.4
+      tenant-apiserver:
+        name: ghcr.io/metal-stack/tenant-apiserver
+        repository: https://github.com/metal-stack/tenant-apiserver
+        tag: v0.0.1
     gardener:
       firewall-controller-manager:
         name: ghcr.io/metal-stack/firewall-controller-manager
