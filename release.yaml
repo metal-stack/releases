@@ -68,7 +68,7 @@ docker-images:
       tenant-apiserver:
         name: ghcr.io/metal-stack/tenant-apiserver
         repository: https://github.com/metal-stack/tenant-apiserver
-        tag: v0.0.1
+        tag: v0.1.0
     gardener:
       firewall-controller-manager:
         name: ghcr.io/metal-stack/firewall-controller-manager
