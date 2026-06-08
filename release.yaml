@@ -370,7 +370,7 @@ helm-charts:
   oidc:
     zitadel:
       repository: https://charts.zitadel.com/
-      version: 9.26.0
+      version: 10.0.2
 projects:
   metal-stack:
     api:
