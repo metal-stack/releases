@@ -62,15 +62,7 @@ integration-deployment: prep
 
 .PHONY: integration-conformance
 integration-deployment: prep
-	@$(call mini-lab-env)
-	docker run --rm -i$(DOCKER_TTY_ARG) \
-		-v $(MINI_LAB_PATH):/mini-lab \
-		-v $(PWD)/test/integration/conformance:/conformance:ro \
-		-w /conformance \
-		-e PYTHONUNBUFFERED=1 \
-		--network host \
-		ghcr.io/metal-stack/metal-deployment-base:$(DEPLOYMENT_BASE_IMAGE_TAG) /conformance/conformance.sh
-
+	cd test/integration/conformance && ./conformance.sh
 
 .PHONY: render-junit
 render-junit:
