@@ -60,9 +60,9 @@ integration-deployment: prep
 		--network host \
 		ghcr.io/metal-stack/metal-deployment-base:$(DEPLOYMENT_BASE_IMAGE_TAG) /integration/integration.sh
 
-.PHONY: integration-conformance
-integration-deployment: prep
-	cd test/integration/conformance && ./conformance.sh
+.PHONY: integration-api-conformance
+integration-api-conformance: prep
+	cd test/integration/api-conformance && ./conformance.sh
 
 .PHONY: render-junit
 render-junit:

@@ -53,8 +53,8 @@ jobs:
         ./test/integration/ci-prep.sh
         make wait-for-images
         make integration-deployment
+        make integration-api-conformance
         make integration-ansible-modules
-        make integration-conformance
       env:
         MINI_LAB_FLAVOR: ${{ matrix.flavors.name }}
         DOCKER_HUB_USER: ${{ secrets.DOCKER_HUB_USER }}
