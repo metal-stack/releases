@@ -3,7 +3,7 @@ set -eo pipefail
 
 cd /mini-lab
 
-eval "$(make dev-env)"
+eval $(make dev-env)
 export ANSIBLE_CONFIG=/mini-lab/ansible.cfg
 
 ansible -m metalstack.base.metal_stack_release_vector localhost -i inventories/control-plane.yaml

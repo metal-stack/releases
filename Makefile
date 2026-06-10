@@ -62,7 +62,7 @@ integration-deployment: prep
 
 .PHONY: integration-api-conformance
 integration-api-conformance: prep
-	cd test/integration/api-conformance && ./conformance.sh
+	cd test/integration/api-conformance && MINI_LAB_PATH=$(MINI_LAB_PATH)/.. ./conformance.sh
 
 .PHONY: render-junit
 render-junit:
