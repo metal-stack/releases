@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - develop
+  pull_request:
+    branches:
+      - develop
 
 env:
   SLACK_CHANNEL: integration
@@ -37,7 +40,12 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
+
+    - name: Set up Go 1.26
+      uses: actions/setup-go@v6
+      with:
+        go-version: '1.26.x'
 
     - name: Run integration tests
       shell: bash
@@ -46,6 +54,7 @@ jobs:
         ./test/integration/ci-prep.sh
         make wait-for-images
         make integration-deployment
+        make integration-api-conformance
         make integration-ansible-modules
       env:
         MINI_LAB_FLAVOR: ${{ matrix.flavors.name }}
