@@ -53,6 +53,10 @@ docker-images:
         name: ghcr.io/metal-stack/metal-console
         repository: https://github.com/metal-stack/metal-console
         tag: v0.7.5
+      metal-console-v2:
+        name: ghcr.io/metal-stack/metal-console
+        repository: https://github.com/metal-stack/metal-console
+        tag: pr-migrate-to-metal-apiserver-token-renewal
       metal-metrics-exporter:
         name: ghcr.io/metal-stack/metal-metrics-exporter
         repository: https://github.com/metal-stack/metal-metrics-exporter
@@ -362,7 +366,7 @@ helm-charts:
     metal-console:
       oci: ghcr.io/metal-stack/helm-charts/metal-console
       repository: https://helm.metal-stack.io
-      tag: v0.1.0
+      tag: v0.1.0-pull-request.161
       version: 0.1.0
     valkey:
       oci: ghcr.io/metal-stack/helm-charts/valkey
