@@ -60,6 +60,10 @@ integration-deployment: prep
 		--network host \
 		ghcr.io/metal-stack/metal-deployment-base:$(DEPLOYMENT_BASE_IMAGE_TAG) /integration/integration.sh
 
+.PHONY: integration-api-conformance
+integration-api-conformance: prep
+	cd test/integration/api-conformance && MINI_LAB_PATH=$(MINI_LAB_PATH)/.. ./conformance.sh
+
 .PHONY: render-junit
 render-junit:
 	docker run --rm -v $(PWD)/test/integration/ansible-modules/output:/results maxmiorim/junit-viewer > results.html

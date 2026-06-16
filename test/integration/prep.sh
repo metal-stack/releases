@@ -9,11 +9,11 @@ if [ -z "$MINI_LAB_PATH" ]; then
   echo "MINI_LAB_PATH needs to be passed as an argument"
 fi
 
-METAL_STACK_VERSION=${2:-$(git describe --tags --exact-match 2> /dev/null || git symbolic-ref -q --short HEAD || git rev-parse --short HEAD)}
+METAL_STACK_VERSION=${2:-$(git describe --tags --exact-match 2> /dev/null || echo ${GITHUB_HEAD_REF##*/} )}
 
 # use release vector of this repository
 yq_shell() {
-  docker run --rm -i -v ${MINI_LAB_PATH}:/workdir mikefarah/yq:3 /bin/sh -c "$@"
+  docker run --rm -i -v "${MINI_LAB_PATH}":/workdir mikefarah/yq:3 /bin/sh -c "$@"
 }
 yq_shell "yq w -i /workdir/inventories/group_vars/all/release_vector.yaml 'metal_stack_release_version' ${METAL_STACK_VERSION}"
 
