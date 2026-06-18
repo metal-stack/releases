@@ -9,15 +9,14 @@ set -eo pipefail
 # not intended to be run locally!
 
 MINI_LAB_VERSION=${1:-master}
-METAL_STACK_VERSION=${2:-$(git rev-parse --abbrev-ref HEAD)}
 MINI_LAB_PATH=./mini-lab
 
 yq_shell() {
-  docker run --rm -i -v $(pwd):/workdir mikefarah/yq:3 /bin/sh -c "$@"
+  docker run --rm -i -v "$(pwd)":/workdir mikefarah/yq:3 /bin/sh -c "$@"
 }
 
 rm -rf "${MINI_LAB_PATH}"
-git clone $(yq_shell "yq r release.yaml 'projects.metal-stack.mini-lab.repository'")
+git clone "$(yq_shell "yq r release.yaml 'projects.metal-stack.mini-lab.repository'")"
 
 cd "${MINI_LAB_PATH}"
 
