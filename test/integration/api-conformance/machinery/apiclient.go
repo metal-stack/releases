@@ -61,7 +61,9 @@ func GetV2Client(t *testing.T, log *slog.Logger, tokenRoles *adminv2.TokenServic
 
 	var tenant *apiv2.Tenant
 	tenants, err := apiv2ClientAdmin.Adminv2().Tenant().List(t.Context(), &adminv2.TenantServiceListRequest{
-		Name: tokenRoles.User,
+		Query: &apiv2.TenantQuery{
+			Login: tokenRoles.User,
+		},
 	})
 	require.NoError(t, err)
 	if len(tenants.Tenants) == 0 {
