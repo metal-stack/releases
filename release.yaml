@@ -319,7 +319,7 @@ docker-images:
         name: europe-docker.pkg.dev/gardener-project/public/gardener/extensions/shoot-dns-service
         tag: v1.77.2
       virtual-garden-apiserver:
-        tag: v1.34.9
+        tag: v1.35.6
     partition:
       alloy:
         name: docker.io/grafana/alloy
