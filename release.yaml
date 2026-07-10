@@ -176,6 +176,10 @@ docker-images:
         name: ghcr.io/metal-stack/node-init
         repository: https://github.com/metal-stack/node-init
         tag: v0.1.8
+      metal-token-refresher:
+        name: ghcr.io/metal-stack/metal-token-refresher
+        repository: https://github.com/metal-stack/metal-token-refresher
+        tag: pr-1-initial-implementation
     partition:
       metal-bmc:
         name: ghcr.io/metal-stack/metal-bmc
