@@ -49,6 +49,7 @@ func GetV2Client(t *testing.T, log *slog.Logger, tokenRoles *adminv2.TokenServic
 		tokenRoles = adminTokenCreateRequest
 	}
 
+	// FIXME fetch admin token from secret
 	apiV2TokenAdmin, err := generateApiServerToken(t.Context(), adminTokenCreateRequest.TokenCreateRequest)
 	require.NoError(t, err)
 
