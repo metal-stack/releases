@@ -6,11 +6,11 @@ ansible-roles:
   metal-ansible-modules:
     oci: ghcr.io/metal-stack/metal-ansible-modules
     repository: https://github.com/metal-stack/metal-ansible-modules
-    version: v0.2.12
+    version: v0.3.0
   metal-roles:
     oci: ghcr.io/metal-stack/metal-roles
     repository: https://github.com/metal-stack/metal-roles
-    version: v0.28.1
+    version: v0.28.3
 binaries:
   metal-stack:
     kernel:
@@ -125,7 +125,7 @@ docker-images:
       virtual-garden-kubeconfig-refresher:
         name: ghcr.io/metal-stack/virtual-garden-kubeconfig-refresher
         repository: https://github.com/metal-stack/virtual-garden-kubeconfig-refresher
-        tag: v0.1.5
+        tag: v0.1.6
     generic:
       backup-restore-sidecar:
         name: ghcr.io/metal-stack/backup-restore-sidecar
