@@ -352,8 +352,8 @@ helm-charts:
       repository: https://grafana.github.io/helm-charts
       version: 1.8.0
     loki:
-      repository: https://grafana.github.io/helm-charts
-      version: 5.8.9
+      repository: oci://ghcr.io/grafana-community/helm-charts/loki
+      version: 18.5.4
     promtail:
       repository: https://grafana.github.io/helm-charts
       version: 6.11.5
