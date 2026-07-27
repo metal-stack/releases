@@ -193,15 +193,34 @@ func TestFilesystemLayout(t *testing.T) {
 		TokenCreateRequest: &apiv2.TokenServiceCreateRequest{
 			Description: "filesystem-layout-conformance-tests",
 			Expires:     durationpb.New(10 * time.Minute),
-			Permissions: []*apiv2.MethodPermission{
+			Permissions: []*apiv2.PermissionsByVisibility{
 				{
-					Subject: "*",
-					Methods: []string{
-						apiv2connect.FilesystemServiceGetProcedure,
-						apiv2connect.VersionServiceGetProcedure,
-						apiv2connect.TokenServiceListProcedure,
-						adminv2connect.FilesystemServiceCreateProcedure,
-						adminv2connect.FilesystemServiceDeleteProcedure,
+					Visibility: &apiv2.PermissionsByVisibility_Self{
+						Self: &apiv2.SelfPermissions{
+							Methods: []string{
+								apiv2connect.FilesystemServiceGetProcedure,
+								apiv2connect.TokenServiceListProcedure,
+							},
+						},
+					},
+				},
+				{
+					Visibility: &apiv2.PermissionsByVisibility_Admin{
+						Admin: &apiv2.AdminPermissions{
+							Methods: []string{
+								adminv2connect.FilesystemServiceCreateProcedure,
+								adminv2connect.FilesystemServiceDeleteProcedure,
+							},
+						},
+					},
+				},
+				{
+					Visibility: &apiv2.PermissionsByVisibility_Public{
+						Public: &apiv2.PublicPermissions{
+							Methods: []string{
+								apiv2connect.VersionServiceGetProcedure,
+							},
+						},
 					},
 				},
 			},

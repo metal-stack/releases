@@ -42,21 +42,28 @@ func TestGenerateTokenCommand(t *testing.T) {
 			name: "with permissions",
 			req: &apiv2.TokenServiceCreateRequest{
 				Description: "perm-token",
-				Permissions: []*apiv2.MethodPermission{
+				Permissions: []*apiv2.PermissionsByVisibility{
 					{
-						Subject: "*",
-						Methods: []string{
-							apiv2connect.TokenServiceGetProcedure,
-							apiv2connect.TokenServiceListProcedure,
+						Visibility: &apiv2.PermissionsByVisibility_Self{
+							Self: &apiv2.SelfPermissions{
+								Methods: []string{
+									apiv2connect.TokenServiceGetProcedure,
+									apiv2connect.TokenServiceListProcedure,
+								},
+							},
 						},
 					},
 					{
-						Subject: "project-id-1",
-						Methods: []string{apiv2connect.ProjectServiceGetProcedure}},
+						Visibility: &apiv2.PermissionsByVisibility_Tenant{
+							Tenant: &apiv2.TenantPermissions{
+								Login:   "project-id-1",
+								Methods: []string{apiv2connect.ProjectServiceGetProcedure}},
+						},
+					},
 				},
 			},
 			want: []string{"/server", "token", "--description", "perm-token",
-				"--permissions", "*=/metalstack.api.v2.TokenService/Get:/metalstack.api.v2.TokenService/List",
+				"--permissions", "/metalstack.api.v2.TokenService/Get:/metalstack.api.v2.TokenService/List",
 				"--permissions", "project-id-1=/metalstack.api.v2.ProjectService/Get",
 			},
 		},
@@ -125,8 +132,14 @@ func TestGenerateTokenCommand(t *testing.T) {
 			req: &apiv2.TokenServiceCreateRequest{
 				Description: "full-token",
 				Expires:     durationpb.New(30 * time.Minute),
-				Permissions: []*apiv2.MethodPermission{
-					{Subject: "*", Methods: []string{apiv2connect.ImageServiceGetProcedure}},
+				Permissions: []*apiv2.PermissionsByVisibility{
+					{
+						Visibility: &apiv2.PermissionsByVisibility_Self{
+							Self: &apiv2.SelfPermissions{
+								Methods: []string{apiv2connect.ImageServiceGetProcedure},
+							},
+						},
+					},
 				},
 				ProjectRoles: map[string]apiv2.ProjectRole{
 					"prj-1": apiv2.ProjectRole_PROJECT_ROLE_EDITOR,
@@ -142,7 +155,7 @@ func TestGenerateTokenCommand(t *testing.T) {
 			},
 			want: []string{"/server", "token", "--description", "full-token",
 				"--expiration", "30m0s",
-				"--permissions", "*=/metalstack.api.v2.ImageService/Get",
+				"--permissions", "/metalstack.api.v2.ImageService/Get",
 				"--project-roles", "prj-1=PROJECT_ROLE_EDITOR",
 				"--tenant-roles", "tnt-1=TENANT_ROLE_OWNER",
 				"--admin-role", "ADMIN_ROLE_VIEWER",

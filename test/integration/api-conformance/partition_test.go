@@ -73,13 +73,33 @@ func TestPartition(t *testing.T) {
 		TokenCreateRequest: &apiv2.TokenServiceCreateRequest{
 			Description: "partition-conformance-tests",
 			Expires:     durationpb.New(10 * time.Minute),
-			Permissions: []*apiv2.MethodPermission{
+
+			Permissions: []*apiv2.PermissionsByVisibility{
 				{
-					Subject: "*",
-					Methods: []string{
-						apiv2connect.PartitionServiceGetProcedure,
-						apiv2connect.VersionServiceGetProcedure,
-						adminv2connect.PartitionServiceCreateProcedure,
+					Visibility: &apiv2.PermissionsByVisibility_Self{
+						Self: &apiv2.SelfPermissions{
+							Methods: []string{
+								apiv2connect.PartitionServiceGetProcedure,
+							},
+						},
+					},
+				},
+				{
+					Visibility: &apiv2.PermissionsByVisibility_Admin{
+						Admin: &apiv2.AdminPermissions{
+							Methods: []string{
+								adminv2connect.PartitionServiceCreateProcedure,
+							},
+						},
+					},
+				},
+				{
+					Visibility: &apiv2.PermissionsByVisibility_Public{
+						Public: &apiv2.PublicPermissions{
+							Methods: []string{
+								apiv2connect.VersionServiceGetProcedure,
+							},
+						},
 					},
 				},
 			},
