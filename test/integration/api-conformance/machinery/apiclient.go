@@ -1,6 +1,9 @@
 package machinery
 
 import (
+	"crypto/tls"
+	"crypto/x509"
+	"encoding/base64"
 	"log/slog"
 	"os"
 	"testing"
@@ -18,12 +21,22 @@ import (
 
 func GetV1Client(t *testing.T) metalgo.Client {
 	var (
-		metalURL   = os.Getenv("METALCTL_API_URL")
-		metalHMAC  = os.Getenv("METALCTL_HMAC")
-		metalToken = os.Getenv("METALCTL_TOKEN")
+		metalURL  = os.Getenv("METALCTL_API_URL")
+		metalHMAC = os.Getenv("METALCTL_HMAC")
+		metalCA   = os.Getenv("METALCTL_CERTIFICATE_AUTHORITY_DATA")
 	)
 
-	apiv1Client, err := metalgo.NewDriver(metalURL, metalToken, metalHMAC, metalgo.AuthType("Metal-Admin"))
+	caCert := make([]byte, base64.StdEncoding.DecodedLen(len(metalCA)))
+	_, err := base64.StdEncoding.Decode(caCert, []byte(metalCA))
+	require.NoError(t, err)
+
+	caCertPool := x509.NewCertPool()
+	caCertPool.AppendCertsFromPEM(caCert)
+
+	apiv1Client, err := metalgo.NewClient(metalURL, metalgo.HMACAuth(metalHMAC, "Metal-Admin"), metalgo.TLSClientConfig(&tls.Config{
+		RootCAs:    caCertPool,
+		MinVersion: tls.VersionTLS12,
+	}))
 	require.NoError(t, err)
 
 	v, err := apiv1Client.Version().Info(&version.InfoParams{}, nil)
