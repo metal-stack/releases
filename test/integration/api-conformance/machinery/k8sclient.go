@@ -83,7 +83,36 @@ func generateTokenCommands(req *apiv2.TokenServiceCreateRequest) []string {
 		commands = append(commands, "--expiration", req.Expires.AsDuration().String())
 	}
 	for _, perm := range req.Permissions {
-		commands = append(commands, "--permissions", perm.Subject+"="+strings.Join(perm.Methods, ":"))
+		var (
+			subject string
+			methods []string
+		)
+
+		switch perm.Visibility.(type) {
+		case *apiv2.PermissionsByVisibility_Admin:
+			methods = perm.GetAdmin().Methods
+		case *apiv2.PermissionsByVisibility_Infra:
+			methods = perm.GetInfra().Methods
+		case *apiv2.PermissionsByVisibility_Public:
+			methods = perm.GetPublic().Methods
+		case *apiv2.PermissionsByVisibility_Self:
+			methods = perm.GetSelf().Methods
+		case *apiv2.PermissionsByVisibility_Machine:
+			subject = perm.GetMachine().GetUuid()
+			methods = perm.GetMachine().Methods
+		case *apiv2.PermissionsByVisibility_Project:
+			subject = perm.GetProject().GetProject()
+			methods = perm.GetProject().Methods
+		case *apiv2.PermissionsByVisibility_Tenant:
+			subject = perm.GetTenant().Login
+			methods = perm.GetTenant().Methods
+		}
+
+		if subject == "" {
+			commands = append(commands, "--permissions", strings.Join(methods, ":"))
+		} else {
+			commands = append(commands, "--permissions", subject+"="+strings.Join(methods, ":"))
+		}
 	}
 	for project, role := range req.ProjectRoles {
 		commands = append(commands, "--project-roles", project+"="+role.String())
