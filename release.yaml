@@ -6,11 +6,11 @@ ansible-roles:
   metal-ansible-modules:
     oci: ghcr.io/metal-stack/metal-ansible-modules
     repository: https://github.com/metal-stack/metal-ansible-modules
-    version: v0.2.12
+    version: v0.3.2
   metal-roles:
     oci: ghcr.io/metal-stack/metal-roles
     repository: https://github.com/metal-stack/metal-roles
-    version: v0.28.1
+    version: v0.30.0
 binaries:
   metal-stack:
     kernel:
@@ -19,8 +19,8 @@ binaries:
       version: 6.18.38-172
     metal-hammer:
       repository: https://github.com/metal-stack/metal-hammer
-      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.15.0/metal-hammer-initrd.img.lz4
-      version: v0.15.0
+      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.15.2/metal-hammer-initrd.img.lz4
+      version: v0.15.2
     metalctl:
       darwin:
         url: https://github.com/metal-stack/metalctl/releases/download/v0.19.0/metalctl-darwin-amd64
@@ -48,7 +48,7 @@ docker-images:
       metal-apiserver:
         name: ghcr.io/metal-stack/metal-apiserver
         repository: https://github.com/metal-stack/metal-apiserver
-        tag: v0.7.1
+        tag: v0.9.1
       metal-console:
         name: ghcr.io/metal-stack/metal-console
         repository: https://github.com/metal-stack/metal-console
@@ -68,7 +68,7 @@ docker-images:
       tenant-apiserver:
         name: ghcr.io/metal-stack/tenant-apiserver
         repository: https://github.com/metal-stack/tenant-apiserver
-        tag: v0.1.0
+        tag: v0.1.1
     gardener:
       firewall-controller-manager:
         name: ghcr.io/metal-stack/firewall-controller-manager
@@ -103,7 +103,7 @@ docker-images:
           extension: ghcr.io/metal-stack/charts/gardener-extension-ontap
         name: ghcr.io/metal-stack/gardener-extension-ontap
         repository: https://github.com/metal-stack/gardener-extension-ontap
-        tag: v0.2.20
+        tag: v0.2.21
       gardener-extension-provider-metal:
         charts:
           application: ghcr.io/metal-stack/charts/gardener-extension-admission-metal-application
@@ -125,12 +125,12 @@ docker-images:
       virtual-garden-kubeconfig-refresher:
         name: ghcr.io/metal-stack/virtual-garden-kubeconfig-refresher
         repository: https://github.com/metal-stack/virtual-garden-kubeconfig-refresher
-        tag: v0.1.5
+        tag: v0.1.6
     generic:
       backup-restore-sidecar:
         name: ghcr.io/metal-stack/backup-restore-sidecar
         repository: https://github.com/metal-stack/backup-restore-sidecar
-        tag: v0.13.0
+        tag: v0.14.0
       deployment-base:
         name: ghcr.io/metal-stack/metal-deployment-base
         repository: https://github.com/metal-stack/metal-dockerfiles
@@ -167,7 +167,7 @@ docker-images:
       duros-controller:
         name: ghcr.io/metal-stack/duros-controller
         repository: https://github.com/metal-stack/duros-controller
-        tag: v0.12.1
+        tag: v0.12.2
       metal-ccm:
         name: ghcr.io/metal-stack/metal-ccm
         repository: https://github.com/metal-stack/metal-ccm
@@ -262,13 +262,13 @@ docker-images:
         tag: v1.16.0
       admission-controller:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/admission-controller
-        tag: v1.138.3
+        tag: v1.139.4
       api-server:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/apiserver
-        tag: v1.138.3
+        tag: v1.139.4
       controller-manager:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/controller-manager
-        tag: v1.138.3
+        tag: v1.139.4
       extension-admission-gcp:
         charts:
           application: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/admission-gcp-application
@@ -284,7 +284,7 @@ docker-images:
         charts:
           ref: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/gardenlet
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/gardenlet
-        tag: v1.138.3
+        tag: v1.139.4
       metrics-exporter:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/metrics-exporter
         tag: 0.39.0
@@ -306,10 +306,10 @@ docker-images:
         charts:
           ref: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/operator
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/operator
-        tag: v1.138.3
+        tag: v1.139.4
       scheduler:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/scheduler
-        tag: v1.138.3
+        tag: v1.139.4
       shoot-cert-service:
         charts:
           extension: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/shoot-cert-service
@@ -328,6 +328,10 @@ docker-images:
       alloy:
         name: docker.io/grafana/alloy
         tag: v1.16.0
+      gnmic:
+        name: ghcr.io/openconfig/gnmic
+        repository: https://github.com/openconfig/gnmic
+        tag: 0.46.0
       image-cache-coredns:
         name: docker.io/coredns/coredns
         repository: https://github.com/coredns/coredns
@@ -361,8 +365,8 @@ helm-charts:
     metal-control-plane:
       oci: ghcr.io/metal-stack/helm-charts/metal-control-plane
       repository: https://helm.metal-stack.io
-      tag: v0.8.8
-      version: 0.8.8
+      tag: v0.8.9
+      version: 0.8.9
     valkey:
       oci: ghcr.io/metal-stack/helm-charts/valkey
       repository: https://helm.metal-stack.io
@@ -383,13 +387,13 @@ projects:
   metal-stack:
     api:
       repository: https://github.com/metal-stack/api
-      version: v0.3.0
+      version: v0.4.4
     mini-lab:
       repository: https://github.com/metal-stack/mini-lab
-      version: v0.6.0
+      version: v0.7.0
 repositories:
   third-party:
     gardener:
       gardener:
-        ref: v1.138.3
+        ref: v1.139.4
         url: https://github.com/gardener/gardener.git

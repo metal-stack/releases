@@ -51,14 +51,33 @@ func TestImage(t *testing.T) {
 		TokenCreateRequest: &apiv2.TokenServiceCreateRequest{
 			Description: "image-conformance-tests",
 			Expires:     durationpb.New(10 * time.Minute),
-			Permissions: []*apiv2.MethodPermission{
+			Permissions: []*apiv2.PermissionsByVisibility{
 				{
-					Subject: "*",
-					Methods: []string{
-						apiv2connect.ImageServiceGetProcedure,
-						apiv2connect.VersionServiceGetProcedure,
-						adminv2connect.ImageServiceCreateProcedure,
-						adminv2connect.ImageServiceDeleteProcedure,
+					Visibility: &apiv2.PermissionsByVisibility_Self{
+						Self: &apiv2.SelfPermissions{
+							Methods: []string{
+								apiv2connect.ImageServiceGetProcedure,
+							},
+						},
+					},
+				},
+				{
+					Visibility: &apiv2.PermissionsByVisibility_Admin{
+						Admin: &apiv2.AdminPermissions{
+							Methods: []string{
+								adminv2connect.ImageServiceCreateProcedure,
+								adminv2connect.ImageServiceDeleteProcedure,
+							},
+						},
+					},
+				},
+				{
+					Visibility: &apiv2.PermissionsByVisibility_Public{
+						Public: &apiv2.PublicPermissions{
+							Methods: []string{
+								apiv2connect.VersionServiceGetProcedure,
+							},
+						},
 					},
 				},
 			},

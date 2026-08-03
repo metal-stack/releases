@@ -31,15 +31,45 @@ func TestIP(t *testing.T) {
 		TokenCreateRequest: &apiv2.TokenServiceCreateRequest{
 			Description: "ip-conformance-tests-user",
 			Expires:     durationpb.New(10 * time.Minute),
-			Permissions: []*apiv2.MethodPermission{
+			Permissions: []*apiv2.PermissionsByVisibility{
 				{
-					Subject: "*",
-					Methods: []string{
-						apiv2connect.IPServiceGetProcedure,
-						apiv2connect.IPServiceCreateProcedure,
-						apiv2connect.IPServiceDeleteProcedure,
-						apiv2connect.ProjectServiceCreateProcedure,
-						apiv2connect.VersionServiceGetProcedure,
+					Visibility: &apiv2.PermissionsByVisibility_Self{
+						Self: &apiv2.SelfPermissions{
+							Methods: []string{
+								apiv2connect.PartitionServiceGetProcedure,
+							},
+						},
+					},
+				},
+				{
+					Visibility: &apiv2.PermissionsByVisibility_Tenant{
+						Tenant: &apiv2.TenantPermissions{
+							Login: "*",
+							Methods: []string{
+								apiv2connect.ProjectServiceCreateProcedure,
+							},
+						},
+					},
+				},
+				{
+					Visibility: &apiv2.PermissionsByVisibility_Project{
+						Project: &apiv2.ProjectPermissions{
+							Project: "*",
+							Methods: []string{
+								apiv2connect.IPServiceGetProcedure,
+								apiv2connect.IPServiceCreateProcedure,
+								apiv2connect.IPServiceDeleteProcedure,
+							},
+						},
+					},
+				},
+				{
+					Visibility: &apiv2.PermissionsByVisibility_Public{
+						Public: &apiv2.PublicPermissions{
+							Methods: []string{
+								apiv2connect.VersionServiceGetProcedure,
+							},
+						},
 					},
 				},
 			},
