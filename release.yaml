@@ -317,9 +317,9 @@ docker-images:
         tag: v1.60.0
       shoot-dns-service:
         charts:
-          application: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/admission-shoot-dns-service-application
+          application: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/shoot-dns-service-admission-application
           extension: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/shoot-dns-service
-          runtime: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/admission-shoot-dns-service-runtime
+          runtime: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/shoot-dns-service-admission-runtime
         name: europe-docker.pkg.dev/gardener-project/public/gardener/extensions/shoot-dns-service
         tag: v1.82.0
       virtual-garden-apiserver:
