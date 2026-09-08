@@ -85,7 +85,7 @@ docker-images:
           extension: ghcr.io/metal-stack/charts/gardener-extension-backup-s3
         name: ghcr.io/metal-stack/gardener-extension-backup-s3
         repository: https://github.com/metal-stack/gardener-extension-backup-s3
-        tag: v0.8.5
+        tag: v0.8.6
       gardener-extension-csi-driver-lvm:
         charts:
           extension: ghcr.io/metal-stack/charts/gardener-extension-csi-driver-lvm
@@ -242,11 +242,11 @@ docker-images:
       valkey:
         name: ghcr.io/valkey-io/valkey
         repository: https://github.com/valkey-io/valkey
-        tag: 9.1-alpine
+        tag: 9.1.2-alpine
       webhook-logger:
         name: ghcr.io/multani/alertmanager-webhook-logger
         repository: https://github.com/multani/alertmanager-webhook-logger
-        tag: v1.1.1
+        tag: v1.1.5
       zitadel-db:
         name: docker.io/library/postgres
         repository: https://github.com/docker-library/postgres
