@@ -196,7 +196,7 @@ docker-images:
       pixiecore:
         name: ghcr.io/metal-stack/pixie
         repository: https://github.com/metal-stack/pixie
-        tag: v0.4.1
+        tag: v0.5.0
       sonic-configdb-utils:
         name: ghcr.io/metal-stack/sonic-configdb-utils
         repository: https://github.com/metal-stack/sonic-configdb-utils
