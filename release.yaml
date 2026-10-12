@@ -19,8 +19,8 @@ binaries:
       version: 6.18.48-185
     metal-hammer:
       repository: https://github.com/metal-stack/metal-hammer
-      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.16.1/metal-hammer-initrd.img.lz4
-      version: v0.16.1
+      url: https://github.com/metal-stack/metal-hammer/releases/download/v0.16.3/metal-hammer-initrd.img.lz4
+      version: v0.16.3
     metalctl:
       darwin:
         url: https://github.com/metal-stack/metalctl/releases/download/v0.19.1/metalctl-darwin-amd64
@@ -103,7 +103,7 @@ docker-images:
           extension: ghcr.io/metal-stack/charts/gardener-extension-ontap
         name: ghcr.io/metal-stack/gardener-extension-ontap
         repository: https://github.com/metal-stack/gardener-extension-ontap
-        tag: v0.2.21
+        tag: v0.2.22
       gardener-extension-provider-metal:
         charts:
           application: ghcr.io/metal-stack/charts/gardener-extension-admission-metal-application
@@ -111,7 +111,7 @@ docker-images:
           runtime: ghcr.io/metal-stack/charts/gardener-extension-admission-metal-runtime
         name: ghcr.io/metal-stack/gardener-extension-provider-metal
         repository: https://github.com/metal-stack/gardener-extension-provider-metal
-        tag: v0.27.13
+        tag: v0.27.14
       machine-controller-manager-provider-metal:
         name: ghcr.io/metal-stack/machine-controller-manager-provider-metal
         repository: https://github.com/metal-stack/machine-controller-manager-provider-metal
@@ -294,14 +294,14 @@ docker-images:
           extension: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/networking-calico
           runtime: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/admission-calico-runtime
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/extensions/networking-calico
-        tag: v1.59.0
+        tag: v1.58.0
       networking-cilium:
         charts:
           application: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/admission-cilium-application
           extension: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/networking-cilium
           runtime: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/admission-cilium-runtime
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/extensions/networking-cilium
-        tag: v1.48.4
+        tag: v1.47.0
       operator:
         charts:
           ref: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/operator
