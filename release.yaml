@@ -171,7 +171,7 @@ docker-images:
       metal-ccm:
         name: ghcr.io/metal-stack/metal-ccm
         repository: https://github.com/metal-stack/metal-ccm
-        tag: v0.9.10
+        tag: v0.10.0
       metal-token-refresher:
         name: ghcr.io/metal-stack/metal-token-refresher
         repository: https://github.com/metal-stack/metal-token-refresher
