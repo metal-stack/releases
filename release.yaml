@@ -70,6 +70,10 @@ docker-images:
         name: ghcr.io/metal-stack/metalctl
         repository: https://github.com/metal-stack/metalctl
         tag: v0.19.1
+      metalctlv2:
+        name: ghcr.io/metal-stack/cli
+        repository: https://github.com/metal-stack/cli
+        tag: v0.2.0
       rethinkdb-exporter:
         name: ghcr.io/metal-stack/rethinkdb-exporter
         repository: https://github.com/metal-stack/rethinkdb-exporter
