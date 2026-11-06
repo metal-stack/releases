@@ -81,7 +81,11 @@ func GetV2Client(t *testing.T, log *slog.Logger, tokenRoles *adminv2.TokenServic
 	})
 	require.NoError(t, err)
 	if len(tenants.Tenants) == 0 {
-		resp, err := apiv2ClientAdmin.Adminv2().Tenant().Create(t.Context(), &adminv2.TenantServiceCreateRequest{Name: *tokenRoles.User})
+		resp, err := apiv2ClientAdmin.Adminv2().Tenant().Create(t.Context(), &adminv2.TenantServiceCreateRequest{
+			Tenant: &apiv2.TenantServiceCreateRequest{
+				Name: *tokenRoles.User,
+			},
+		})
 		require.NoError(t, err)
 		require.NotNil(t, resp)
 		tenant = resp.Tenant
