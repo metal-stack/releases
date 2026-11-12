@@ -110,7 +110,7 @@ docker-images:
           extension: ghcr.io/metal-stack/charts/gardener-extension-dns-powerdns
         name: ghcr.io/metal-stack/gardener-extension-dns-powerdns
         repository: https://github.com/metal-stack/gardener-extension-dns-powerdns
-        tag: v0.8.1
+        tag: v0.9.0
       gardener-extension-ontap:
         charts:
           extension: ghcr.io/metal-stack/charts/gardener-extension-ontap
