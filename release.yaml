@@ -92,13 +92,13 @@ docker-images:
           extension: ghcr.io/metal-stack/charts/gardener-extension-audit
         name: ghcr.io/metal-stack/gardener-extension-audit
         repository: https://github.com/metal-stack/gardener-extension-audit
-        tag: v0.7.0
+        tag: v0.7.1
       gardener-extension-backup-s3:
         charts:
           extension: ghcr.io/metal-stack/charts/gardener-extension-backup-s3
         name: ghcr.io/metal-stack/gardener-extension-backup-s3
         repository: https://github.com/metal-stack/gardener-extension-backup-s3
-        tag: v0.8.7
+        tag: v0.9.0
       gardener-extension-csi-driver-lvm:
         charts:
           extension: ghcr.io/metal-stack/charts/gardener-extension-csi-driver-lvm
@@ -110,7 +110,7 @@ docker-images:
           extension: ghcr.io/metal-stack/charts/gardener-extension-dns-powerdns
         name: ghcr.io/metal-stack/gardener-extension-dns-powerdns
         repository: https://github.com/metal-stack/gardener-extension-dns-powerdns
-        tag: v0.8.1
+        tag: v0.9.0
       gardener-extension-ontap:
         charts:
           extension: ghcr.io/metal-stack/charts/gardener-extension-ontap
@@ -128,7 +128,7 @@ docker-images:
       machine-controller-manager-provider-metal:
         name: ghcr.io/metal-stack/machine-controller-manager-provider-metal
         repository: https://github.com/metal-stack/machine-controller-manager-provider-metal
-        tag: v0.1.30
+        tag: v0.1.31
       os-metal-extension:
         charts:
           extension: ghcr.io/metal-stack/charts/os-metal-extension
@@ -151,7 +151,7 @@ docker-images:
       oci-mirror:
         name: ghcr.io/metal-stack/oci-mirror
         repository: https://github.com/metal-stack/oci-mirror
-        tag: v0.3.2
+        tag: v0.4.0
       zitadel-init:
         name: ghcr.io/metal-stack/zitadel-init
         repository: https://github.com/metal-stack/zitadel-init
@@ -197,7 +197,7 @@ docker-images:
       metal-bmc:
         name: ghcr.io/metal-stack/metal-bmc
         repository: https://github.com/metal-stack/metal-bmc
-        tag: v0.8.1
+        tag: v0.9.0
       metal-core:
         name: ghcr.io/metal-stack/metal-core
         repository: https://github.com/metal-stack/metal-core
@@ -227,15 +227,15 @@ docker-images:
       headscale-db:
         name: docker.io/library/postgres
         repository: https://github.com/docker-library/postgres
-        tag: 17.11-alpine
+        tag: 17.12-alpine
       ipam-db:
         name: docker.io/library/postgres
         repository: https://github.com/docker-library/postgres
-        tag: 17.11-alpine
+        tag: 17.12-alpine
       masterdata-db:
         name: docker.io/library/postgres
         repository: https://github.com/docker-library/postgres
-        tag: 17.11-alpine
+        tag: 17.12-alpine
       metal-db:
         name: docker.io/library/rethinkdb
         repository: https://github.com/rethinkdb/rethinkdb-dockerfiles
@@ -263,7 +263,7 @@ docker-images:
       zitadel-db:
         name: docker.io/library/postgres
         repository: https://github.com/docker-library/postgres
-        tag: 17.11-alpine
+        tag: 17.12-alpine
     gardener:
       acl-extension:
         charts:
@@ -275,13 +275,13 @@ docker-images:
         tag: v1.19.0
       admission-controller:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/admission-controller
-        tag: v1.148.5
+        tag: v1.149.5
       api-server:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/apiserver
-        tag: v1.148.5
+        tag: v1.149.5
       controller-manager:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/controller-manager
-        tag: v1.148.5
+        tag: v1.149.5
       extension-admission-gcp:
         charts:
           application: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/admission-gcp-application
@@ -297,7 +297,7 @@ docker-images:
         charts:
           ref: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/gardenlet
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/gardenlet
-        tag: v1.148.5
+        tag: v1.149.5
       metrics-exporter:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/metrics-exporter
         tag: 0.44.0
@@ -319,10 +319,10 @@ docker-images:
         charts:
           ref: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/operator
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/operator
-        tag: v1.148.5
+        tag: v1.149.5
       scheduler:
         name: europe-docker.pkg.dev/gardener-project/releases/gardener/scheduler
-        tag: v1.148.5
+        tag: v1.149.5
       shoot-cert-service:
         charts:
           extension: europe-docker.pkg.dev/gardener-project/releases/charts/gardener/extensions/shoot-cert-service
@@ -378,8 +378,8 @@ helm-charts:
     metal-control-plane:
       oci: ghcr.io/metal-stack/helm-charts/metal-control-plane
       repository: https://helm.metal-stack.io
-      tag: v0.9.3
-      version: 0.9.3
+      tag: v0.9.4
+      version: 0.9.4
     valkey:
       oci: ghcr.io/metal-stack/helm-charts/valkey
       repository: https://helm.metal-stack.io
@@ -408,5 +408,5 @@ repositories:
   third-party:
     gardener:
       gardener:
-        ref: v1.148.5
+        ref: v1.149.5
         url: https://github.com/gardener/gardener.git
